@@ -1,4 +1,5 @@
 package Qt::Core::QGenericReturnArgument;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QGenericReturnArgument
 # file     : QtCore/qobjectdefs.h
 
@@ -6,12 +7,11 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
-our $ISA     = qw/QGenericArgument/;
+our $VERSION = '0.01_02';
+our $ISA     = qw/Qt::Core::QGenericArgument/;
 
 
 # FIXME: operator overload
-
 
 
 1;
@@ -24,13 +24,18 @@ Qt::Core::QGenericReturnArgument
 
 =over
 
-=item    QGenericReturnArgument(const char * aName, void * aData = 0)
+=item   QGenericReturnArgument(const char * aName, void * aData)
 
-=item    QGenericReturnArgument(const char * aName, void * aData)
+=item   QGenericReturnArgument(const char * aName, void * aData = 0)
 
-=item    QGenericReturnArgument(const char * aName = 0, void * aData = 0)
+=item   QGenericReturnArgument(const char * aName = 0, void * aData = 0)
 
-=item    QGenericReturnArgument(const char * aName, void * aData = 0)
+
+=back
+
+=head1 ENUM VALUES
+
+=over
 
 
 =back

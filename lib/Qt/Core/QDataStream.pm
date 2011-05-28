@@ -1,4 +1,5 @@
 package Qt::Core::QDataStream;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QDataStream
 # file     : QtCore/qdatastream.h
 
@@ -6,33 +7,10 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
+our $VERSION = '0.01_02';
 
 
 # FIXME: operator overload
-
-# enums
-# enum value in perl is enum item index number
-sub Qt_1_0() { 0 }
-sub Qt_2_0() { 1 }
-sub Qt_2_1() { 2 }
-sub Qt_3_0() { 3 }
-sub Qt_3_1() { 4 }
-sub Qt_3_3() { 5 }
-sub Qt_4_0() { 6 }
-sub Qt_4_1() { 7 }
-sub Qt_4_2() { 8 }
-sub Qt_4_3() { 9 }
-sub Qt_4_4() { 10 }
-sub Qt_4_5() { 11 }
-sub Qt_4_6() { 12 }
-sub BigEndian() { 0 }
-sub LittleEndian() { 1 }
-sub Ok() { 0 }
-sub ReadPastEnd() { 1 }
-sub ReadCorruptData() { 2 }
-sub SinglePrecision() { 0 }
-sub DoublePrecision() { 1 }
 
 
 1;
@@ -45,97 +23,148 @@ Qt::Core::QDataStream
 
 =over
 
-=item    QDataStream()
+=item   QDataStream()
 
-=item    QDataStream(QIODevice * arg0)
+=item   QDataStream(QIODevice * arg0)
 
-=item    QDataStream(const QByteArray & arg0)
+=item   QDataStream(const QByteArray & arg0)
 
-=item    ~QDataStream()
+=item   QDataStream(QByteArray * arg0, QFlags<QIODevice::OpenModeFlag> flags)
 
-=item   bool atEnd()
+=item   ~QDataStream()
 
-=item   QDataStream::ByteOrder byteOrder()
+=item  bool atEnd()
 
-=item   QIODevice * device()
+=item  QDataStream::ByteOrder byteOrder()
 
-=item   QDataStream::FloatingPointPrecision floatingPointPrecision()
+=item  QIODevice * device()
 
-=item   QDataStream & operator<<(qint8 i)
+=item  QDataStream::FloatingPointPrecision floatingPointPrecision()
 
-=item   QDataStream & operator<<(quint8 i)
+=item  QDataStream & operator<<(qint8 i)
 
-=item   QDataStream & operator<<(qint16 i)
+=item  QDataStream & operator<<(quint8 i)
 
-=item   QDataStream & operator<<(quint16 i)
+=item  QDataStream & operator<<(qint16 i)
 
-=item   QDataStream & operator<<(qint32 i)
+=item  QDataStream & operator<<(quint16 i)
 
-=item   QDataStream & operator<<(quint32 i)
+=item  QDataStream & operator<<(qint32 i)
 
-=item   QDataStream & operator<<(qint64 i)
+=item  QDataStream & operator<<(quint32 i)
 
-=item   QDataStream & operator<<(quint64 i)
+=item  QDataStream & operator<<(qint64 i)
 
-=item   QDataStream & operator<<(bool i)
+=item  QDataStream & operator<<(quint64 i)
 
-=item   QDataStream & operator<<(float f)
+=item  QDataStream & operator<<(bool i)
 
-=item   QDataStream & operator<<(double f)
+=item  QDataStream & operator<<(float f)
 
-=item   QDataStream & operator<<(const char * str)
+=item  QDataStream & operator<<(double f)
 
-=item   QDataStream & operator>>(qint8 & i)
+=item  QDataStream & operator<<(const char * str)
 
-=item   QDataStream & operator>>(quint8 & i)
+=item  QDataStream & operator>>(qint8 & i)
 
-=item   QDataStream & operator>>(qint16 & i)
+=item  QDataStream & operator>>(quint8 & i)
 
-=item   QDataStream & operator>>(quint16 & i)
+=item  QDataStream & operator>>(qint16 & i)
 
-=item   QDataStream & operator>>(qint32 & i)
+=item  QDataStream & operator>>(quint16 & i)
 
-=item   QDataStream & operator>>(quint32 & i)
+=item  QDataStream & operator>>(qint32 & i)
 
-=item   QDataStream & operator>>(qint64 & i)
+=item  QDataStream & operator>>(quint32 & i)
 
-=item   QDataStream & operator>>(quint64 & i)
+=item  QDataStream & operator>>(qint64 & i)
 
-=item   QDataStream & operator>>(bool & i)
+=item  QDataStream & operator>>(quint64 & i)
 
-=item   QDataStream & operator>>(float & f)
+=item  QDataStream & operator>>(bool & i)
 
-=item   QDataStream & operator>>(double & f)
+=item  QDataStream & operator>>(float & f)
 
-=item   QDataStream & operator>>(char *& str)
+=item  QDataStream & operator>>(double & f)
 
-=item   QDataStream & readBytes(char *& arg0, uint & len)
+=item  QDataStream & operator>>(char *& str)
 
-=item   int readRawData(char * arg0, int len)
+=item  QDataStream & readBytes(char *& arg0, uint & len)
 
-=item   void resetStatus()
+=item  int readRawData(char * arg0, int len)
 
-=item   void setByteOrder(QDataStream::ByteOrder arg0)
+=item  void resetStatus()
 
-=item   void setDevice(QIODevice * arg0)
+=item  void setByteOrder(QDataStream::ByteOrder arg0)
 
-=item   void setFloatingPointPrecision(QDataStream::FloatingPointPrecision precision)
+=item  void setDevice(QIODevice * arg0)
 
-=item   void setStatus(QDataStream::Status status)
+=item  void setFloatingPointPrecision(QDataStream::FloatingPointPrecision precision)
 
-=item   void setVersion(int arg0)
+=item  void setStatus(QDataStream::Status status)
 
-=item   int skipRawData(int len)
+=item  void setVersion(int arg0)
 
-=item   QDataStream::Status status()
+=item  int skipRawData(int len)
 
-=item   void unsetDevice()
+=item  QDataStream::Status status()
 
-=item   int version()
+=item  void unsetDevice()
 
-=item   QDataStream & writeBytes(const char * arg0, uint len)
+=item  int version()
 
-=item   int writeRawData(const char * arg0, int len)
+=item  QDataStream & writeBytes(const char * arg0, uint len)
+
+=item  int writeRawData(const char * arg0, int len)
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
+
+=item Qt_1_0
+
+=item Qt_2_0
+
+=item Qt_2_1
+
+=item Qt_3_0
+
+=item Qt_3_1
+
+=item Qt_3_3
+
+=item Qt_4_0
+
+=item Qt_4_1
+
+=item Qt_4_2
+
+=item Qt_4_3
+
+=item Qt_4_4
+
+=item Qt_4_5
+
+=item Qt_4_6
+
+=item Qt_4_7
+
+=item BigEndian
+
+=item LittleEndian
+
+=item Ok
+
+=item ReadPastEnd
+
+=item ReadCorruptData
+
+=item SinglePrecision
+
+=item DoublePrecision
 
 
 =back

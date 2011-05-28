@@ -1,4 +1,5 @@
 package Qt::Core::QCharRef;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QCharRef
 # file     : QtCore/qstring.h
 
@@ -6,11 +7,10 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
+our $VERSION = '0.01_02';
 
 
 # FIXME: operator overload
-
 
 
 1;
@@ -23,89 +23,96 @@ Qt::Core::QCharRef
 
 =over
 
-=item   QChar::Category category()
+=item  QChar::Category category()
 
-=item   uchar cell()
+=item  uchar cell()
 
-=item   uchar combiningClass()
+=item  uchar combiningClass()
 
-=item   QString decomposition()
+=item  QString decomposition()
 
-=item   QChar::Decomposition decompositionTag()
+=item  QChar::Decomposition decompositionTag()
 
-=item   int digitValue()
+=item  int digitValue()
 
-=item   QChar::Direction direction()
+=item  QChar::Direction direction()
 
-=item   bool hasMirrored()
+=item  bool hasMirrored()
 
-=item   bool isDigit()
+=item  bool isDigit()
 
-=item   bool isLetter()
+=item  bool isLetter()
 
-=item   bool isLetterOrNumber()
+=item  bool isLetterOrNumber()
 
-=item   bool isLower()
+=item  bool isLower()
 
-=item   bool isMark()
+=item  bool isMark()
 
-=item   bool isNull()
+=item  bool isNull()
 
-=item   bool isNumber()
+=item  bool isNumber()
 
-=item   bool isPrint()
+=item  bool isPrint()
 
-=item   bool isPunct()
+=item  bool isPunct()
 
-=item   bool isSpace()
+=item  bool isSpace()
 
-=item   bool isTitleCase()
+=item  bool isTitleCase()
 
-=item   bool isUpper()
+=item  bool isUpper()
 
-=item   QChar::Joining joining()
+=item  QChar::Joining joining()
 
-=item   QChar mirroredChar()
+=item  QChar mirroredChar()
 
-=item   QChar operator QChar()
+=item  QChar operator QChar()
 
-=item   QCharRef & operator=(const QChar & c)
+=item  QCharRef & operator=(const QChar & c)
 
-=item   QCharRef & operator=(char c)
+=item  QCharRef & operator=(char c)
 
-=item   QCharRef & operator=(uchar c)
+=item  QCharRef & operator=(uchar c)
 
-=item   QCharRef & operator=(const QCharRef & c)
+=item  QCharRef & operator=(const QCharRef & c)
 
-=item   QCharRef & operator=(ushort rc)
+=item  QCharRef & operator=(ushort rc)
 
-=item   QCharRef & operator=(short rc)
+=item  QCharRef & operator=(short rc)
 
-=item   QCharRef & operator=(uint rc)
+=item  QCharRef & operator=(uint rc)
 
-=item   QCharRef & operator=(int rc)
+=item  QCharRef & operator=(int rc)
 
-=item   uchar row()
+=item  uchar row()
 
-=item   void setCell(uchar cell)
+=item  void setCell(uchar cell)
 
-=item   void setRow(uchar row)
+=item  void setRow(uchar row)
 
-=item   char toAscii()
+=item  char toAscii()
 
-=item   char toLatin1()
+=item  char toLatin1()
 
-=item   QChar toLower()
+=item  QChar toLower()
 
-=item   QChar toTitleCase()
+=item  QChar toTitleCase()
 
-=item   QChar toUpper()
+=item  QChar toUpper()
 
-=item   ushort unicode()
+=item  ushort unicode()
 
-=item   ushort & unicode()
+=item  ushort & unicode()
 
-=item   QChar::UnicodeVersion unicodeVersion()
+=item  QChar::UnicodeVersion unicodeVersion()
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
 
 
 =back

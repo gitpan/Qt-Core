@@ -1,4 +1,5 @@
 package Qt::Core::QTextStreamManipulator;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QTextStreamManipulator
 # file     : QtCore/qtextstream.h
 
@@ -6,11 +7,10 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
+our $VERSION = '0.01_02';
 
 
 # FIXME: operator overload
-
 
 
 1;
@@ -23,11 +23,18 @@ Qt::Core::QTextStreamManipulator
 
 =over
 
-=item    QTextStreamManipulator(QTextStream::T_FPOINTER_QTSMFI_QTEXTSTREAM m, int a)
+=item   QTextStreamManipulator(QTextStream::T_FPOINTER_QTSMFI_QTEXTSTREAM m, int a)
 
-=item    QTextStreamManipulator(QTextStream::T_FPOINTER_QTSMFC_QTEXTSTREAM m, QChar c)
+=item   QTextStreamManipulator(QTextStream::T_FPOINTER_QTSMFC_QTEXTSTREAM m, QChar c)
 
-=item   void exec(QTextStream & s)
+=item  void exec(QTextStream & s)
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
 
 
 =back

@@ -1,4 +1,5 @@
 package Qt::Core::QState;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QState
 # file     : QtCore/qstate.h
 
@@ -6,16 +7,11 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
-our $ISA     = qw/QAbstractState/;
+our $VERSION = '0.01_02';
+our $ISA     = qw/Qt::Core::QAbstractState/;
 
 
 # FIXME: operator overload
-
-# enums
-# enum value in perl is enum item index number
-sub ExclusiveStates() { 0 }
-sub ParallelStates() { 1 }
 
 
 1;
@@ -28,37 +24,48 @@ Qt::Core::QState
 
 =over
 
-=item    QState(QState * parent = 0)
+=item   QState(QState * parent)
 
-=item    QState(QState * parent)
+=item   QState(QState * parent = 0)
 
-=item    QState(QState::ChildMode childMode, QState * parent = 0)
+=item   QState(QState::ChildMode childMode, QState * parent)
 
-=item    QState(QState::ChildMode childMode, QState * parent)
+=item   QState(QState::ChildMode childMode, QState * parent = 0)
 
-=item    ~QState()
+=item   ~QState()
 
-=item   void addTransition(QAbstractTransition * transition)
+=item  void addTransition(QAbstractTransition * transition)
 
-=item   QAbstractTransition * addTransition(QAbstractState * target)
+=item  QAbstractTransition * addTransition(QAbstractState * target)
 
-=item   QSignalTransition * addTransition(QObject * sender, const char * signal, QAbstractState * target)
+=item  QSignalTransition * addTransition(QObject * sender, const char * signal, QAbstractState * target)
 
-=item   void assignProperty(QObject * object, const char * name, const QVariant & value)
+=item  void assignProperty(QObject * object, const char * name, const QVariant & value)
 
-=item   QState::ChildMode childMode()
+=item  QState::ChildMode childMode()
 
-=item   QAbstractState * errorState()
+=item  QAbstractState * errorState()
 
-=item   QAbstractState * initialState()
+=item  QAbstractState * initialState()
 
-=item   void removeTransition(QAbstractTransition * transition)
+=item  void removeTransition(QAbstractTransition * transition)
 
-=item   void setChildMode(QState::ChildMode mode)
+=item  void setChildMode(QState::ChildMode mode)
 
-=item   void setErrorState(QAbstractState * state)
+=item  void setErrorState(QAbstractState * state)
 
-=item   void setInitialState(QAbstractState * state)
+=item  void setInitialState(QAbstractState * state)
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
+
+=item ExclusiveStates
+
+=item ParallelStates
 
 
 =back

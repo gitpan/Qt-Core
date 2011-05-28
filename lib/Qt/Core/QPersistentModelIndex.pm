@@ -1,4 +1,5 @@
 package Qt::Core::QPersistentModelIndex;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QPersistentModelIndex
 # file     : QtCore/qabstractitemmodel.h
 
@@ -6,11 +7,10 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
+our $VERSION = '0.01_02';
 
 
 # FIXME: operator overload
-
 
 
 1;
@@ -23,51 +23,60 @@ Qt::Core::QPersistentModelIndex
 
 =over
 
-=item    QPersistentModelIndex()
+=item   QPersistentModelIndex()
 
-=item    QPersistentModelIndex(const QModelIndex & index)
+=item   QPersistentModelIndex(const QModelIndex & index)
 
-=item    QPersistentModelIndex(const QPersistentModelIndex & other)
+=item   QPersistentModelIndex(const QPersistentModelIndex & other)
 
-=item    ~QPersistentModelIndex()
+=item   ~QPersistentModelIndex()
 
-=item   QModelIndex child(int row, int column)
+=item  QModelIndex child(int row, int column)
 
-=item   int column()
+=item  int column()
 
-=item   QVariant data(int role = Qt::DisplayRole)
+=item  QVariant data(int role)
 
-=item   QVariant data(int role)
+=item  QVariant data(int role = Qt::DisplayRole)
 
-=item   qint64 internalId()
+=item  QFlags<Qt::ItemFlag> flags()
 
-=item   void * internalPointer()
+=item  qint64 internalId()
 
-=item   bool isValid()
+=item  void * internalPointer()
 
-=item   const QAbstractItemModel * model()
+=item  bool isValid()
 
-=item   const QModelIndex & operator const QModelIndex &()
+=item  const QAbstractItemModel * model()
 
-=item   bool operator!=(const QPersistentModelIndex & other)
+=item  const QModelIndex & operator const QModelIndex &()
 
-=item   bool operator!=(const QModelIndex & other)
+=item  bool operator!=(const QPersistentModelIndex & other)
 
-=item   bool operator<(const QPersistentModelIndex & other)
+=item  bool operator!=(const QModelIndex & other)
 
-=item   QPersistentModelIndex & operator=(const QPersistentModelIndex & other)
+=item  bool operator<(const QPersistentModelIndex & other)
 
-=item   QPersistentModelIndex & operator=(const QModelIndex & other)
+=item  QPersistentModelIndex & operator=(const QPersistentModelIndex & other)
 
-=item   bool operator==(const QPersistentModelIndex & other)
+=item  QPersistentModelIndex & operator=(const QModelIndex & other)
 
-=item   bool operator==(const QModelIndex & other)
+=item  bool operator==(const QPersistentModelIndex & other)
 
-=item   QModelIndex parent()
+=item  bool operator==(const QModelIndex & other)
 
-=item   int row()
+=item  QModelIndex parent()
 
-=item   QModelIndex sibling(int row, int column)
+=item  int row()
+
+=item  QModelIndex sibling(int row, int column)
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
 
 
 =back

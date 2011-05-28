@@ -1,4 +1,5 @@
 package Qt::Core::QBuffer;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QBuffer
 # file     : QtCore/qbuffer.h
 
@@ -6,12 +7,11 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
-our $ISA     = qw/QIODevice/;
+our $VERSION = '0.01_02';
+our $ISA     = qw/Qt::Core::QIODevice/;
 
 
 # FIXME: operator overload
-
 
 
 1;
@@ -24,39 +24,48 @@ Qt::Core::QBuffer
 
 =over
 
-=item    QBuffer(QObject * parent = 0)
+=item   QBuffer(QObject * parent)
 
-=item    QBuffer(QObject * parent)
+=item   QBuffer(QObject * parent = 0)
 
-=item    QBuffer(QByteArray * buf, QObject * parent = 0)
+=item   QBuffer(QByteArray * buf, QObject * parent)
 
-=item    QBuffer(QByteArray * buf, QObject * parent)
+=item   QBuffer(QByteArray * buf, QObject * parent = 0)
 
-=item    ~QBuffer()
+=item   ~QBuffer()
 
-=item   bool atEnd()
+=item  bool atEnd()
 
-=item   QByteArray & buffer()
+=item  QByteArray & buffer()
 
-=item   const QByteArray & buffer()
+=item  const QByteArray & buffer()
 
-=item   bool canReadLine()
+=item  bool canReadLine()
 
-=item   void close()
+=item  void close()
 
-=item   const QByteArray & data()
+=item  const QByteArray & data()
 
-=item   qint64 pos()
+=item  bool open(QFlags<QIODevice::OpenModeFlag> openMode)
 
-=item   bool seek(qint64 off)
+=item  qint64 pos()
 
-=item   void setBuffer(QByteArray * a)
+=item  bool seek(qint64 off)
 
-=item   void setData(const QByteArray & data)
+=item  void setBuffer(QByteArray * a)
 
-=item   void setData(const char * data, int len)
+=item  void setData(const QByteArray & data)
 
-=item   qint64 size()
+=item  void setData(const char * data, int len)
+
+=item  qint64 size()
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
 
 
 =back

@@ -5,7 +5,7 @@
 
 # change 'tests => 1' to 'tests => last_test_to_print';
 
-use Test::More tests => 151;
+use Test::More tests => 152;
 BEGIN {
 use_ok('Qt::Core');
 use_ok('Qt::Core');
@@ -103,6 +103,7 @@ use_ok('Qt::Core::QHashData');
 use_ok('Qt::Core::QXmlStreamReader');
 use_ok('Qt::Core::QEventLoop');
 use_ok('Qt::Core::QTime');
+use_ok('Qt::Core::QElapsedTimer');
 use_ok('Qt::Core::QSocketNotifier');
 use_ok('Qt::Core::QMetaProperty');
 use_ok('Qt::Core::QLibrary');

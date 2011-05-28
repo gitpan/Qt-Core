@@ -1,4 +1,5 @@
 package Qt::Core::QByteArrayMatcher;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QByteArrayMatcher
 # file     : QtCore/qbytearraymatcher.h
 
@@ -6,11 +7,10 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
+our $VERSION = '0.01_02';
 
 
 # FIXME: operator overload
-
 
 
 1;
@@ -23,29 +23,36 @@ Qt::Core::QByteArrayMatcher
 
 =over
 
-=item    QByteArrayMatcher()
+=item   QByteArrayMatcher()
 
-=item    QByteArrayMatcher(const QByteArray & pattern)
+=item   QByteArrayMatcher(const QByteArray & pattern)
 
-=item    QByteArrayMatcher(const QByteArrayMatcher & other)
+=item   QByteArrayMatcher(const QByteArrayMatcher & other)
 
-=item    QByteArrayMatcher(const char * pattern, int length)
+=item   QByteArrayMatcher(const char * pattern, int length)
 
-=item    ~QByteArrayMatcher()
+=item   ~QByteArrayMatcher()
 
-=item   int indexIn(const QByteArray & ba, int from = 0)
+=item  int indexIn(const QByteArray & ba, int from)
 
-=item   int indexIn(const QByteArray & ba, int from)
+=item  int indexIn(const QByteArray & ba, int from = 0)
 
-=item   int indexIn(const char * str, int len, int from = 0)
+=item  int indexIn(const char * str, int len, int from)
 
-=item   int indexIn(const char * str, int len, int from)
+=item  int indexIn(const char * str, int len, int from = 0)
 
-=item   QByteArrayMatcher & operator=(const QByteArrayMatcher & other)
+=item  QByteArrayMatcher & operator=(const QByteArrayMatcher & other)
 
-=item   QByteArray pattern()
+=item  QByteArray pattern()
 
-=item   void setPattern(const QByteArray & pattern)
+=item  void setPattern(const QByteArray & pattern)
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
 
 
 =back

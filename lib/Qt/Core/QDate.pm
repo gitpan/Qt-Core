@@ -1,4 +1,5 @@
 package Qt::Core::QDate;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QDate
 # file     : QtCore/qdatetime.h
 
@@ -6,15 +7,10 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
+our $VERSION = '0.01_02';
 
 
 # FIXME: operator overload
-
-# enums
-# enum value in perl is enum item index number
-sub DateFormat() { 0 }
-sub StandaloneFormat() { 1 }
 
 
 1;
@@ -27,99 +23,110 @@ Qt::Core::QDate
 
 =over
 
-=item    QDate()
+=item   QDate()
 
-=item    QDate(int y, int m, int d)
+=item   QDate(int y, int m, int d)
 
-=item   QDate addDays(int days)
+=item  QDate addDays(int days)
 
-=item   QDate addMonths(int months)
+=item  QDate addMonths(int months)
 
-=item   QDate addYears(int years)
+=item  QDate addYears(int years)
 
-=item   static QDate currentDate()
+=item  static QDate currentDate()
 
-=item   int day()
+=item  int day()
 
-=item   int dayOfWeek()
+=item  int dayOfWeek()
 
-=item   int dayOfYear()
+=item  int dayOfYear()
 
-=item   int daysInMonth()
+=item  int daysInMonth()
 
-=item   int daysInYear()
+=item  int daysInYear()
 
-=item   int daysTo(const QDate & arg0)
+=item  int daysTo(const QDate & arg0)
 
-=item   static QDate fromJulianDay(int jd)
+=item  static QDate fromJulianDay(int jd)
 
-=item   static QDate fromString(const QString & s, Qt::DateFormat f = Qt::TextDate)
+=item  static QDate fromString(const QString & s, Qt::DateFormat f)
 
-=item   static QDate fromString(const QString & s, Qt::DateFormat f)
+=item  static QDate fromString(const QString & s, Qt::DateFormat f = Qt::TextDate)
 
-=item   static QDate fromString(const QString & s, const QString & format)
+=item  static QDate fromString(const QString & s, const QString & format)
 
-=item   void getDate(int * year, int * month, int * day)
+=item  void getDate(int * year, int * month, int * day)
 
-=item   static uint gregorianToJulian(int y, int m, int d)
+=item  static uint gregorianToJulian(int y, int m, int d)
 
-=item   static bool isLeapYear(int year)
+=item  static bool isLeapYear(int year)
 
-=item   bool isNull()
+=item  bool isNull()
 
-=item   bool isValid()
+=item  bool isValid()
 
-=item   static bool isValid(int y, int m, int d)
+=item  static bool isValid(int y, int m, int d)
 
-=item   static void julianToGregorian(uint jd, int & y, int & m, int & d)
+=item  static void julianToGregorian(uint jd, int & y, int & m, int & d)
 
-=item   static QString longDayName(int weekday)
+=item  static QString longDayName(int weekday)
 
-=item   static QString longDayName(int weekday, QDate::MonthNameType type)
+=item  static QString longDayName(int weekday, QDate::MonthNameType type)
 
-=item   static QString longMonthName(int month)
+=item  static QString longMonthName(int month)
 
-=item   static QString longMonthName(int month, QDate::MonthNameType type)
+=item  static QString longMonthName(int month, QDate::MonthNameType type)
 
-=item   int month()
+=item  int month()
 
-=item   bool operator!=(const QDate & other)
+=item  bool operator!=(const QDate & other)
 
-=item   bool operator<(const QDate & other)
+=item  bool operator<(const QDate & other)
 
-=item   bool operator<=(const QDate & other)
+=item  bool operator<=(const QDate & other)
 
-=item   bool operator==(const QDate & other)
+=item  bool operator==(const QDate & other)
 
-=item   bool operator>(const QDate & other)
+=item  bool operator>(const QDate & other)
 
-=item   bool operator>=(const QDate & other)
+=item  bool operator>=(const QDate & other)
 
-=item   bool setDate(int year, int month, int day)
+=item  bool setDate(int year, int month, int day)
 
-=item   bool setYMD(int y, int m, int d)
+=item  bool setYMD(int y, int m, int d)
 
-=item   static QString shortDayName(int weekday)
+=item  static QString shortDayName(int weekday)
 
-=item   static QString shortDayName(int weekday, QDate::MonthNameType type)
+=item  static QString shortDayName(int weekday, QDate::MonthNameType type)
 
-=item   static QString shortMonthName(int month)
+=item  static QString shortMonthName(int month)
 
-=item   static QString shortMonthName(int month, QDate::MonthNameType type)
+=item  static QString shortMonthName(int month, QDate::MonthNameType type)
 
-=item   int toJulianDay()
+=item  int toJulianDay()
 
-=item   QString toString(Qt::DateFormat f = Qt::TextDate)
+=item  QString toString(Qt::DateFormat f)
 
-=item   QString toString(Qt::DateFormat f)
+=item  QString toString(Qt::DateFormat f = Qt::TextDate)
 
-=item   QString toString(const QString & format)
+=item  QString toString(const QString & format)
 
-=item   int weekNumber(int * yearNum = 0)
+=item  int weekNumber(int * yearNum)
 
-=item   int weekNumber(int * yearNum)
+=item  int weekNumber(int * yearNum = 0)
 
-=item   int year()
+=item  int year()
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
+
+=item DateFormat
+
+=item StandaloneFormat
 
 
 =back

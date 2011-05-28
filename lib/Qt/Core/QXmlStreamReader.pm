@@ -1,4 +1,5 @@
 package Qt::Core::QXmlStreamReader;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QXmlStreamReader
 # file     : QtCore/qxmlstream.h
 
@@ -6,32 +7,10 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
+our $VERSION = '0.01_02';
 
 
 # FIXME: operator overload
-
-# enums
-# enum value in perl is enum item index number
-sub NoToken() { 0 }
-sub Invalid() { 1 }
-sub StartDocument() { 2 }
-sub EndDocument() { 3 }
-sub StartElement() { 4 }
-sub EndElement() { 5 }
-sub Characters() { 6 }
-sub Comment() { 7 }
-sub DTD() { 8 }
-sub EntityReference() { 9 }
-sub ProcessingInstruction() { 10 }
-sub ErrorOnUnexpectedElement() { 0 }
-sub IncludeChildElements() { 1 }
-sub SkipChildElements() { 2 }
-sub NoError() { 0 }
-sub UnexpectedElementError() { 1 }
-sub CustomError() { 2 }
-sub NotWellFormedError() { 3 }
-sub PrematureEndOfDocumentError() { 4 }
 
 
 1;
@@ -44,121 +23,166 @@ Qt::Core::QXmlStreamReader
 
 =over
 
-=item    QXmlStreamReader()
+=item   QXmlStreamReader()
 
-=item    QXmlStreamReader(QIODevice * device)
+=item   QXmlStreamReader(QIODevice * device)
 
-=item    QXmlStreamReader(const QByteArray & data)
+=item   QXmlStreamReader(const QByteArray & data)
 
-=item    QXmlStreamReader(const QString & data)
+=item   QXmlStreamReader(const QString & data)
 
-=item    QXmlStreamReader(const char * data)
+=item   QXmlStreamReader(const char * data)
 
-=item    ~QXmlStreamReader()
+=item   ~QXmlStreamReader()
 
-=item   void addData(const QByteArray & data)
+=item  void addData(const QByteArray & data)
 
-=item   void addData(const QString & data)
+=item  void addData(const QString & data)
 
-=item   void addData(const char * data)
+=item  void addData(const char * data)
 
-=item   void addExtraNamespaceDeclaration(const QXmlStreamNamespaceDeclaration & extraNamespaceDeclaraction)
+=item  void addExtraNamespaceDeclaration(const QXmlStreamNamespaceDeclaration & extraNamespaceDeclaraction)
 
-=item   bool atEnd()
+=item  bool atEnd()
 
-=item   QXmlStreamAttributes attributes()
+=item  QXmlStreamAttributes attributes()
 
-=item   qint64 characterOffset()
+=item  qint64 characterOffset()
 
-=item   void clear()
+=item  void clear()
 
-=item   qint64 columnNumber()
+=item  qint64 columnNumber()
 
-=item   QIODevice * device()
+=item  QIODevice * device()
 
-=item   QStringRef documentEncoding()
+=item  QStringRef documentEncoding()
 
-=item   QStringRef documentVersion()
+=item  QStringRef documentVersion()
 
-=item   QStringRef dtdName()
+=item  QStringRef dtdName()
 
-=item   QStringRef dtdPublicId()
+=item  QStringRef dtdPublicId()
 
-=item   QStringRef dtdSystemId()
+=item  QStringRef dtdSystemId()
 
-=item   QXmlStreamEntityResolver * entityResolver()
+=item  QXmlStreamEntityResolver * entityResolver()
 
-=item   QXmlStreamReader::Error error()
+=item  QXmlStreamReader::Error error()
 
-=item   QString errorString()
+=item  QString errorString()
 
-=item   bool hasError()
+=item  bool hasError()
 
-=item   bool isCDATA()
+=item  bool isCDATA()
 
-=item   bool isCharacters()
+=item  bool isCharacters()
 
-=item   bool isComment()
+=item  bool isComment()
 
-=item   bool isDTD()
+=item  bool isDTD()
 
-=item   bool isEndDocument()
+=item  bool isEndDocument()
 
-=item   bool isEndElement()
+=item  bool isEndElement()
 
-=item   bool isEntityReference()
+=item  bool isEntityReference()
 
-=item   bool isProcessingInstruction()
+=item  bool isProcessingInstruction()
 
-=item   bool isStandaloneDocument()
+=item  bool isStandaloneDocument()
 
-=item   bool isStartDocument()
+=item  bool isStartDocument()
 
-=item   bool isStartElement()
+=item  bool isStartElement()
 
-=item   bool isWhitespace()
+=item  bool isWhitespace()
 
-=item   qint64 lineNumber()
+=item  qint64 lineNumber()
 
-=item   QStringRef name()
+=item  QStringRef name()
 
-=item   bool namespaceProcessing()
+=item  bool namespaceProcessing()
 
-=item   QStringRef namespaceUri()
+=item  QStringRef namespaceUri()
 
-=item   QStringRef prefix()
+=item  QStringRef prefix()
 
-=item   QStringRef processingInstructionData()
+=item  QStringRef processingInstructionData()
 
-=item   QStringRef processingInstructionTarget()
+=item  QStringRef processingInstructionTarget()
 
-=item   QStringRef qualifiedName()
+=item  QStringRef qualifiedName()
 
-=item   void raiseError(const QString & message = QString())
+=item  void raiseError(const QString & message)
 
-=item   void raiseError(const QString & message)
+=item  void raiseError(const QString & message = QString())
 
-=item   QString readElementText()
+=item  QString readElementText()
 
-=item   QString readElementText(QXmlStreamReader::ReadElementTextBehaviour behaviour)
+=item  QString readElementText(QXmlStreamReader::ReadElementTextBehaviour behaviour)
 
-=item   QXmlStreamReader::TokenType readNext()
+=item  QXmlStreamReader::TokenType readNext()
 
-=item   bool readNextStartElement()
+=item  bool readNextStartElement()
 
-=item   void setDevice(QIODevice * device)
+=item  void setDevice(QIODevice * device)
 
-=item   void setEntityResolver(QXmlStreamEntityResolver * resolver)
+=item  void setEntityResolver(QXmlStreamEntityResolver * resolver)
 
-=item   void setNamespaceProcessing(bool arg0)
+=item  void setNamespaceProcessing(bool arg0)
 
-=item   void skipCurrentElement()
+=item  void skipCurrentElement()
 
-=item   QStringRef text()
+=item  QStringRef text()
 
-=item   QString tokenString()
+=item  QString tokenString()
 
-=item   QXmlStreamReader::TokenType tokenType()
+=item  QXmlStreamReader::TokenType tokenType()
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
+
+=item NoToken
+
+=item Invalid
+
+=item StartDocument
+
+=item EndDocument
+
+=item StartElement
+
+=item EndElement
+
+=item Characters
+
+=item Comment
+
+=item DTD
+
+=item EntityReference
+
+=item ProcessingInstruction
+
+=item ErrorOnUnexpectedElement
+
+=item IncludeChildElements
+
+=item SkipChildElements
+
+=item NoError
+
+=item UnexpectedElementError
+
+=item CustomError
+
+=item NotWellFormedError
+
+=item PrematureEndOfDocumentError
 
 
 =back

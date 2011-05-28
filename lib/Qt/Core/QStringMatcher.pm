@@ -1,4 +1,5 @@
 package Qt::Core::QStringMatcher;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QStringMatcher
 # file     : QtCore/qstringmatcher.h
 
@@ -6,11 +7,10 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
+our $VERSION = '0.01_02';
 
 
 # FIXME: operator overload
-
 
 
 1;
@@ -23,37 +23,44 @@ Qt::Core::QStringMatcher
 
 =over
 
-=item    QStringMatcher()
+=item   QStringMatcher()
 
-=item    QStringMatcher(const QStringMatcher & other)
+=item   QStringMatcher(const QStringMatcher & other)
 
-=item    QStringMatcher(const QString & pattern, Qt::CaseSensitivity cs = Qt::CaseSensitive)
+=item   QStringMatcher(const QString & pattern, Qt::CaseSensitivity cs)
 
-=item    QStringMatcher(const QString & pattern, Qt::CaseSensitivity cs)
+=item   QStringMatcher(const QString & pattern, Qt::CaseSensitivity cs = Qt::CaseSensitive)
 
-=item    QStringMatcher(const QChar * uc, int len, Qt::CaseSensitivity cs = Qt::CaseSensitive)
+=item   QStringMatcher(const QChar * uc, int len, Qt::CaseSensitivity cs)
 
-=item    QStringMatcher(const QChar * uc, int len, Qt::CaseSensitivity cs)
+=item   QStringMatcher(const QChar * uc, int len, Qt::CaseSensitivity cs = Qt::CaseSensitive)
 
-=item    ~QStringMatcher()
+=item   ~QStringMatcher()
 
-=item   Qt::CaseSensitivity caseSensitivity()
+=item  Qt::CaseSensitivity caseSensitivity()
 
-=item   int indexIn(const QString & str, int from = 0)
+=item  int indexIn(const QString & str, int from)
 
-=item   int indexIn(const QString & str, int from)
+=item  int indexIn(const QString & str, int from = 0)
 
-=item   int indexIn(const QChar * str, int length, int from = 0)
+=item  int indexIn(const QChar * str, int length, int from)
 
-=item   int indexIn(const QChar * str, int length, int from)
+=item  int indexIn(const QChar * str, int length, int from = 0)
 
-=item   QStringMatcher & operator=(const QStringMatcher & other)
+=item  QStringMatcher & operator=(const QStringMatcher & other)
 
-=item   QString pattern()
+=item  QString pattern()
 
-=item   void setCaseSensitivity(Qt::CaseSensitivity cs)
+=item  void setCaseSensitivity(Qt::CaseSensitivity cs)
 
-=item   void setPattern(const QString & pattern)
+=item  void setPattern(const QString & pattern)
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
 
 
 =back

@@ -1,4 +1,5 @@
 package Qt::Core::QObjectCleanupHandler;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QObjectCleanupHandler
 # file     : QtCore/qobjectcleanuphandler.h
 
@@ -6,12 +7,11 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
-our $ISA     = qw/QObject/;
+our $VERSION = '0.01_02';
+our $ISA     = qw/Qt::Core::QObject/;
 
 
 # FIXME: operator overload
-
 
 
 1;
@@ -24,17 +24,24 @@ Qt::Core::QObjectCleanupHandler
 
 =over
 
-=item    QObjectCleanupHandler()
+=item   QObjectCleanupHandler()
 
-=item    ~QObjectCleanupHandler()
+=item   ~QObjectCleanupHandler()
 
-=item   QObject * add(QObject * object)
+=item  QObject * add(QObject * object)
 
-=item   void clear()
+=item  void clear()
 
-=item   bool isEmpty()
+=item  bool isEmpty()
 
-=item   void remove(QObject * object)
+=item  void remove(QObject * object)
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
 
 
 =back

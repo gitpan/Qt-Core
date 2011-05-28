@@ -1,4 +1,5 @@
 package Qt::Core::QtConcurrent::Exception;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QtConcurrent::Exception
 # file     : QtCore/qtconcurrentexception.h
 
@@ -6,11 +7,10 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
+our $VERSION = '0.01_02';
 
 
 # FIXME: operator overload
-
 
 
 1;
@@ -23,9 +23,16 @@ Qt::Core::QtConcurrent::Exception
 
 =over
 
-=item   QtConcurrent::Exception * clone()
+=item  QtConcurrent::Exception * clone()
 
-=item   void raise()
+=item  void raise()
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
 
 
 =back

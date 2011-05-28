@@ -1,4 +1,5 @@
 package Qt::Core::QObject;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QObject
 # file     : QtCore/qobject.h
 
@@ -6,11 +7,10 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
+our $VERSION = '0.01_02';
 
 
 # FIXME: operator overload
-
 
 
 1;
@@ -23,85 +23,88 @@ Qt::Core::QObject
 
 =over
 
-=item    QObject(QObject * parent = 0)
+=item   QObject(QObject * parent)
 
-=item    QObject(QObject * parent)
+=item   QObject(QObject * parent = 0)
 
-=item    ~QObject()
+=item   ~QObject()
 
-=item   bool blockSignals(bool b)
+=item  bool blockSignals(bool b)
 
-=item   bool connect(const QObject * sender, const char * signal, const char * member, Qt::ConnectionType type = Qt::AutoConnection)
+=item  bool connect(const QObject * sender, const char * signal, const char * member, Qt::ConnectionType type)
 
-=item   bool connect(const QObject * sender, const char * signal, const char * member, Qt::ConnectionType type)
+=item  bool connect(const QObject * sender, const char * signal, const char * member, Qt::ConnectionType type = Qt::AutoConnection)
 
-=item   static bool connect(const QObject * sender, const char * signal, const QObject * receiver, const char * member, Qt::ConnectionType arg4 = Qt::AutoConnection)
+=item  static bool connect(const QObject * sender, const char * signal, const QObject * receiver, const char * member, Qt::ConnectionType arg4)
 
-=item   static bool connect(const QObject * sender, const char * signal, const QObject * receiver, const char * member, Qt::ConnectionType arg4)
+=item  static bool connect(const QObject * sender, const char * signal, const QObject * receiver, const char * member, Qt::ConnectionType arg4 = Qt::AutoConnection)
 
-=item   void deleteLater()
+=item  void deleteLater()
 
-=item   bool disconnect(const QObject * receiver, const char * member = 0)
+=item  bool disconnect(const QObject * receiver, const char * member)
 
-=item   bool disconnect(const QObject * receiver, const char * member)
+=item  bool disconnect(const QObject * receiver, const char * member = 0)
 
-=item   bool disconnect(const char * signal, const QObject * receiver, const char * member = 0)
+=item  bool disconnect(const char * signal, const QObject * receiver, const char * member)
 
-=item   bool disconnect(const char * signal, const QObject * receiver, const char * member)
+=item  bool disconnect(const char * signal, const QObject * receiver, const char * member = 0)
 
-=item   bool disconnect(const char * signal, const QObject * receiver = 0, const char * member = 0)
+=item  bool disconnect(const char * signal, const QObject * receiver = 0, const char * member = 0)
 
-=item   bool disconnect(const char * signal, const QObject * receiver, const char * member = 0)
+=item  bool disconnect(const char * signal = 0, const QObject * receiver = 0, const char * member = 0)
 
-=item   bool disconnect(const char * signal = 0, const QObject * receiver = 0, const char * member = 0)
+=item  static bool disconnect(const QObject * sender, const char * signal, const QObject * receiver, const char * member)
 
-=item   bool disconnect(const char * signal, const QObject * receiver = 0, const char * member = 0)
+=item  void dumpObjectInfo()
 
-=item   static bool disconnect(const QObject * sender, const char * signal, const QObject * receiver, const char * member)
+=item  void dumpObjectTree()
 
-=item   void dumpObjectInfo()
+=item  bool event(QEvent * arg0)
 
-=item   void dumpObjectTree()
+=item  bool eventFilter(QObject * arg0, QEvent * arg1)
 
-=item   bool event(QEvent * arg0)
+=item  bool inherits(const char * classname)
 
-=item   bool eventFilter(QObject * arg0, QEvent * arg1)
+=item  void installEventFilter(QObject * arg0)
 
-=item   bool inherits(const char * classname)
+=item  bool isWidgetType()
 
-=item   void installEventFilter(QObject * arg0)
+=item  void killTimer(int id)
 
-=item   bool isWidgetType()
+=item  void moveToThread(QThread * thread)
 
-=item   void killTimer(int id)
+=item  QString objectName()
 
-=item   void moveToThread(QThread * thread)
+=item  QObject * parent()
 
-=item   QString objectName()
+=item  QVariant property(const char * name)
 
-=item   QObject * parent()
+=item  static uint registerUserData()
 
-=item   QVariant property(const char * name)
+=item  void removeEventFilter(QObject * arg0)
 
-=item   static uint registerUserData()
+=item  void setObjectName(const QString & name)
 
-=item   void removeEventFilter(QObject * arg0)
+=item  void setParent(QObject * arg0)
 
-=item   void setObjectName(const QString & name)
+=item  bool setProperty(const char * name, const QVariant & value)
 
-=item   void setParent(QObject * arg0)
+=item  void setUserData(uint id, QObjectUserData * data)
 
-=item   bool setProperty(const char * name, const QVariant & value)
+=item  bool signalsBlocked()
 
-=item   void setUserData(uint id, QObjectUserData * data)
+=item  int startTimer(int interval)
 
-=item   bool signalsBlocked()
+=item  QThread * thread()
 
-=item   int startTimer(int interval)
+=item  QObjectUserData * userData(uint id)
 
-=item   QThread * thread()
 
-=item   QObjectUserData * userData(uint id)
+=back
+
+=head1 ENUM VALUES
+
+=over
 
 
 =back

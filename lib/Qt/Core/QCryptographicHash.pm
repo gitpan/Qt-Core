@@ -1,4 +1,5 @@
 package Qt::Core::QCryptographicHash;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QCryptographicHash
 # file     : QtCore/qcryptographichash.h
 
@@ -6,16 +7,10 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
+our $VERSION = '0.01_02';
 
 
 # FIXME: operator overload
-
-# enums
-# enum value in perl is enum item index number
-sub Md4() { 0 }
-sub Md5() { 1 }
-sub Sha1() { 2 }
 
 
 1;
@@ -28,19 +23,32 @@ Qt::Core::QCryptographicHash
 
 =over
 
-=item    QCryptographicHash(QCryptographicHash::Algorithm method)
+=item   QCryptographicHash(QCryptographicHash::Algorithm method)
 
-=item    ~QCryptographicHash()
+=item   ~QCryptographicHash()
 
-=item   void addData(const QByteArray & data)
+=item  void addData(const QByteArray & data)
 
-=item   void addData(const char * data, int length)
+=item  void addData(const char * data, int length)
 
-=item   static QByteArray hash(const QByteArray & data, QCryptographicHash::Algorithm method)
+=item  static QByteArray hash(const QByteArray & data, QCryptographicHash::Algorithm method)
 
-=item   void reset()
+=item  void reset()
 
-=item   QByteArray result()
+=item  QByteArray result()
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
+
+=item Md4
+
+=item Md5
+
+=item Sha1
 
 
 =back

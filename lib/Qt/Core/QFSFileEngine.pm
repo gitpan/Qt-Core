@@ -1,4 +1,5 @@
 package Qt::Core::QFSFileEngine;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QFSFileEngine
 # file     : QtCore/qfsfileengine.h
 
@@ -6,12 +7,11 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
-our $ISA     = qw/QAbstractFileEngine/;
+our $VERSION = '0.01_02';
+our $ISA     = qw/Qt::Core::QAbstractFileEngine/;
 
 
 # FIXME: operator overload
-
 
 
 1;
@@ -24,85 +24,102 @@ Qt::Core::QFSFileEngine
 
 =over
 
-=item    QFSFileEngine()
+=item   QFSFileEngine()
 
-=item    QFSFileEngine(const QString & file)
+=item   QFSFileEngine(const QString & file)
 
-=item    ~QFSFileEngine()
+=item   ~QFSFileEngine()
 
-=item   bool caseSensitive()
+=item  QAbstractFileEngineIterator * beginEntryList(QFlags<QDir::Filter> filters, const QStringList & filterNames)
 
-=item   bool close()
+=item  bool caseSensitive()
 
-=item   bool copy(const QString & newName)
+=item  bool close()
 
-=item   static QString currentPath(const QString & path = QString())
+=item  bool copy(const QString & newName)
 
-=item   static QString currentPath(const QString & path)
+=item  static QString currentPath(const QString & path)
 
-=item   QAbstractFileEngineIterator * endEntryList()
+=item  static QString currentPath(const QString & path = QString())
 
-=item   bool extension(QAbstractFileEngine::Extension extension, const QAbstractFileEngine::ExtensionOption * option, QAbstractFileEngine::ExtensionReturn * output = 0)
+=item  QAbstractFileEngineIterator * endEntryList()
 
-=item   bool extension(QAbstractFileEngine::Extension extension, const QAbstractFileEngine::ExtensionOption * option, QAbstractFileEngine::ExtensionReturn * output)
+=item  QStringList entryList(QFlags<QDir::Filter> filters, const QStringList & filterNames)
 
-=item   bool extension(QAbstractFileEngine::Extension extension, const QAbstractFileEngine::ExtensionOption * option = 0, QAbstractFileEngine::ExtensionReturn * output = 0)
+=item  bool extension(QAbstractFileEngine::Extension extension, const QAbstractFileEngine::ExtensionOption * option, QAbstractFileEngine::ExtensionReturn * output)
 
-=item   bool extension(QAbstractFileEngine::Extension extension, const QAbstractFileEngine::ExtensionOption * option, QAbstractFileEngine::ExtensionReturn * output = 0)
+=item  bool extension(QAbstractFileEngine::Extension extension, const QAbstractFileEngine::ExtensionOption * option, QAbstractFileEngine::ExtensionReturn * output = 0)
 
-=item   QString fileName(QAbstractFileEngine::FileName file)
+=item  bool extension(QAbstractFileEngine::Extension extension, const QAbstractFileEngine::ExtensionOption * option = 0, QAbstractFileEngine::ExtensionReturn * output = 0)
 
-=item   QDateTime fileTime(QAbstractFileEngine::FileTime time)
+=item  QFlags<QAbstractFileEngine::FileFlag> fileFlags(QFlags<QAbstractFileEngine::FileFlag> type)
 
-=item   bool flush()
+=item  QString fileName(QAbstractFileEngine::FileName file)
 
-=item   int handle()
+=item  QDateTime fileTime(QAbstractFileEngine::FileTime time)
 
-=item   static QString homePath()
+=item  bool flush()
 
-=item   bool isRelativePath()
+=item  int handle()
 
-=item   bool isSequential()
+=item  static QString homePath()
 
-=item   bool link(const QString & newName)
+=item  bool isRelativePath()
 
-=item   bool mkdir(const QString & dirName, bool createParentDirectories)
+=item  bool isSequential()
 
-=item   QString owner(QAbstractFileEngine::FileOwner arg0)
+=item  bool link(const QString & newName)
 
-=item   uint ownerId(QAbstractFileEngine::FileOwner arg0)
+=item  bool mkdir(const QString & dirName, bool createParentDirectories)
 
-=item   qint64 pos()
+=item  bool open(QFlags<QIODevice::OpenModeFlag> openMode)
 
-=item   qint64 read(char * data, qint64 maxlen)
+=item  bool open(QFlags<QIODevice::OpenModeFlag> flags, FILE * fh)
 
-=item   qint64 readLine(char * data, qint64 maxlen)
+=item  bool open(QFlags<QIODevice::OpenModeFlag> flags, int fd)
 
-=item   bool remove()
+=item  QString owner(QAbstractFileEngine::FileOwner arg0)
 
-=item   bool rename(const QString & newName)
+=item  uint ownerId(QAbstractFileEngine::FileOwner arg0)
 
-=item   bool rmdir(const QString & dirName, bool recurseParentDirectories)
+=item  qint64 pos()
 
-=item   static QString rootPath()
+=item  qint64 read(char * data, qint64 maxlen)
 
-=item   bool seek(qint64 arg0)
+=item  qint64 readLine(char * data, qint64 maxlen)
 
-=item   static bool setCurrentPath(const QString & path)
+=item  bool remove()
 
-=item   void setFileName(const QString & file)
+=item  bool rename(const QString & newName)
 
-=item   bool setPermissions(uint perms)
+=item  bool rmdir(const QString & dirName, bool recurseParentDirectories)
 
-=item   bool setSize(qint64 size)
+=item  static QString rootPath()
 
-=item   qint64 size()
+=item  bool seek(qint64 arg0)
 
-=item   bool supportsExtension(QAbstractFileEngine::Extension extension)
+=item  static bool setCurrentPath(const QString & path)
 
-=item   static QString tempPath()
+=item  void setFileName(const QString & file)
 
-=item   qint64 write(const char * data, qint64 len)
+=item  bool setPermissions(uint perms)
+
+=item  bool setSize(qint64 size)
+
+=item  qint64 size()
+
+=item  bool supportsExtension(QAbstractFileEngine::Extension extension)
+
+=item  static QString tempPath()
+
+=item  qint64 write(const char * data, qint64 len)
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
 
 
 =back

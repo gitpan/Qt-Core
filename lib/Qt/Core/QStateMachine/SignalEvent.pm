@@ -1,4 +1,5 @@
 package Qt::Core::QStateMachine::SignalEvent;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QStateMachine::SignalEvent
 # file     : QtCore/qstatemachine.h
 
@@ -6,12 +7,11 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
-our $ISA     = qw/QEvent/;
+our $VERSION = '0.01_02';
+our $ISA     = qw/Qt::Core::QEvent/;
 
 
 # FIXME: operator overload
-
 
 
 1;
@@ -24,11 +24,18 @@ Qt::Core::QStateMachine::SignalEvent
 
 =over
 
-=item    ~SignalEvent()
+=item   ~SignalEvent()
 
-=item   QObject * sender()
+=item  QObject * sender()
 
-=item   int signalIndex()
+=item  int signalIndex()
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
 
 
 =back

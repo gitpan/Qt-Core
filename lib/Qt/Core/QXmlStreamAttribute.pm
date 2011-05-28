@@ -1,4 +1,5 @@
 package Qt::Core::QXmlStreamAttribute;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QXmlStreamAttribute
 # file     : QtCore/qxmlstream.h
 
@@ -6,11 +7,10 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
+our $VERSION = '0.01_02';
 
 
 # FIXME: operator overload
-
 
 
 1;
@@ -23,33 +23,40 @@ Qt::Core::QXmlStreamAttribute
 
 =over
 
-=item    QXmlStreamAttribute()
+=item   QXmlStreamAttribute()
 
-=item    QXmlStreamAttribute(const QXmlStreamAttribute & arg0)
+=item   QXmlStreamAttribute(const QXmlStreamAttribute & arg0)
 
-=item    QXmlStreamAttribute(const QString & qualifiedName, const QString & value)
+=item   QXmlStreamAttribute(const QString & qualifiedName, const QString & value)
 
-=item    QXmlStreamAttribute(const QString & namespaceUri, const QString & name, const QString & value)
+=item   QXmlStreamAttribute(const QString & namespaceUri, const QString & name, const QString & value)
 
-=item    ~QXmlStreamAttribute()
+=item   ~QXmlStreamAttribute()
 
-=item   bool isDefault()
+=item  bool isDefault()
 
-=item   QStringRef name()
+=item  QStringRef name()
 
-=item   QStringRef namespaceUri()
+=item  QStringRef namespaceUri()
 
-=item   bool operator!=(const QXmlStreamAttribute & other)
+=item  bool operator!=(const QXmlStreamAttribute & other)
 
-=item   QXmlStreamAttribute & operator=(const QXmlStreamAttribute & arg0)
+=item  QXmlStreamAttribute & operator=(const QXmlStreamAttribute & arg0)
 
-=item   bool operator==(const QXmlStreamAttribute & other)
+=item  bool operator==(const QXmlStreamAttribute & other)
 
-=item   QStringRef prefix()
+=item  QStringRef prefix()
 
-=item   QStringRef qualifiedName()
+=item  QStringRef qualifiedName()
 
-=item   QStringRef value()
+=item  QStringRef value()
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
 
 
 =back

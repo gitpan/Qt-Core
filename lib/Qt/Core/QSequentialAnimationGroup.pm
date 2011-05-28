@@ -1,4 +1,5 @@
 package Qt::Core::QSequentialAnimationGroup;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QSequentialAnimationGroup
 # file     : QtCore/qsequentialanimationgroup.h
 
@@ -6,12 +7,11 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
-our $ISA     = qw/QAnimationGroup/;
+our $VERSION = '0.01_02';
+our $ISA     = qw/Qt::Core::QAnimationGroup/;
 
 
 # FIXME: operator overload
-
 
 
 1;
@@ -24,19 +24,26 @@ Qt::Core::QSequentialAnimationGroup
 
 =over
 
-=item    QSequentialAnimationGroup(QObject * parent = 0)
+=item   QSequentialAnimationGroup(QObject * parent)
 
-=item    QSequentialAnimationGroup(QObject * parent)
+=item   QSequentialAnimationGroup(QObject * parent = 0)
 
-=item    ~QSequentialAnimationGroup()
+=item   ~QSequentialAnimationGroup()
 
-=item   QPauseAnimation * addPause(int msecs)
+=item  QPauseAnimation * addPause(int msecs)
 
-=item   QAbstractAnimation * currentAnimation()
+=item  QAbstractAnimation * currentAnimation()
 
-=item   int duration()
+=item  int duration()
 
-=item   QPauseAnimation * insertPause(int index, int msecs)
+=item  QPauseAnimation * insertPause(int index, int msecs)
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
 
 
 =back

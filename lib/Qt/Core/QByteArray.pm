@@ -1,4 +1,5 @@
 package Qt::Core::QByteArray;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QByteArray
 # file     : QtCore/qbytearray.h
 
@@ -6,11 +7,10 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
+our $VERSION = '0.01_02';
 
 
 # FIXME: operator overload
-
 
 
 1;
@@ -23,427 +23,410 @@ Qt::Core::QByteArray
 
 =over
 
-=item    QByteArray()
+=item   QByteArray()
 
-=item    QByteArray(const char * arg0)
+=item   QByteArray(const char * arg0)
 
-=item    QByteArray(const QByteArray & arg0)
+=item   QByteArray(const QByteArray & arg0)
 
-=item    QByteArray(const char * arg0, int size)
+=item   QByteArray(const char * arg0, int size)
 
-=item    QByteArray(int size, char c)
+=item   QByteArray(int size, char c)
 
-=item    QByteArray(int size, Qt::Initialization arg1)
+=item   QByteArray(int size, Qt::Initialization arg1)
 
-=item    ~QByteArray()
+=item   ~QByteArray()
 
-=item   QByteArray & append(char c)
+=item  QByteArray & append(char c)
 
-=item   QByteArray & append(const char * s)
+=item  QByteArray & append(const char * s)
 
-=item   QByteArray & append(const QByteArray & a)
+=item  QByteArray & append(const QByteArray & a)
 
-=item   QByteArray & append(const QString & s)
+=item  QByteArray & append(const QString & s)
 
-=item   QByteArray & append(const char * s, int len)
+=item  QByteArray & append(const char * s, int len)
 
-=item   char at(int i)
+=item  char at(int i)
 
-=item   char * begin()
+=item  char * begin()
 
-=item   const char * begin()
+=item  const char * begin()
 
-=item   int capacity()
+=item  int capacity()
 
-=item   void chop(int n)
+=item  void chop(int n)
 
-=item   void clear()
+=item  void clear()
 
-=item   const char * constBegin()
+=item  const char * constBegin()
 
-=item   const char * constData()
+=item  const char * constData()
 
-=item   const char * constEnd()
+=item  const char * constEnd()
 
-=item   QBool contains(char c)
+=item  QBool contains(char c)
 
-=item   QBool contains(const char * a)
+=item  QBool contains(const char * a)
 
-=item   QBool contains(const QByteArray & a)
+=item  QBool contains(const QByteArray & a)
 
-=item   int count()
+=item  int count()
 
-=item   int count(char c)
+=item  int count(char c)
 
-=item   int count(const char * a)
+=item  int count(const char * a)
 
-=item   int count(const QByteArray & a)
+=item  int count(const QByteArray & a)
 
-=item   char * data()
+=item  char * data()
 
-=item   const char * data()
+=item  const char * data()
 
-=item   void detach()
+=item  void detach()
 
-=item   char * end()
+=item  char * end()
 
-=item   const char * end()
+=item  const char * end()
 
-=item   bool endsWith(const QByteArray & a)
+=item  bool endsWith(const QByteArray & a)
 
-=item   bool endsWith(char c)
+=item  bool endsWith(char c)
 
-=item   bool endsWith(const char * c)
+=item  bool endsWith(const char * c)
 
-=item   QByteArray & fill(char c, int size = -1)
+=item  QByteArray & fill(char c, int size)
 
-=item   QByteArray & fill(char c, int size)
+=item  QByteArray & fill(char c, int size = -1)
 
-=item   static QByteArray fromBase64(const QByteArray & base64)
+=item  static QByteArray fromBase64(const QByteArray & base64)
 
-=item   static QByteArray fromHex(const QByteArray & hexEncoded)
+=item  static QByteArray fromHex(const QByteArray & hexEncoded)
 
-=item   static QByteArray fromPercentEncoding(const QByteArray & pctEncoded, char percent = '%')
+=item  static QByteArray fromPercentEncoding(const QByteArray & pctEncoded, char percent)
 
-=item   static QByteArray fromPercentEncoding(const QByteArray & pctEncoded, char percent)
+=item  static QByteArray fromPercentEncoding(const QByteArray & pctEncoded, char percent = '%')
 
-=item   static QByteArray fromRawData(const char * arg0, int size)
+=item  static QByteArray fromRawData(const char * arg0, int size)
 
-=item   int indexOf(char c, int from = 0)
+=item  int indexOf(char c, int from)
 
-=item   int indexOf(char c, int from)
+=item  int indexOf(char c, int from = 0)
 
-=item   int indexOf(const char * c, int from = 0)
+=item  int indexOf(const char * c, int from)
 
-=item   int indexOf(const char * c, int from)
+=item  int indexOf(const char * c, int from = 0)
 
-=item   int indexOf(const QByteArray & a, int from = 0)
+=item  int indexOf(const QByteArray & a, int from)
 
-=item   int indexOf(const QByteArray & a, int from)
+=item  int indexOf(const QByteArray & a, int from = 0)
 
-=item   int indexOf(const QString & s, int from = 0)
+=item  int indexOf(const QString & s, int from)
 
-=item   int indexOf(const QString & s, int from)
+=item  int indexOf(const QString & s, int from = 0)
 
-=item   QByteArray & insert(int i, char c)
+=item  QByteArray & insert(int i, char c)
 
-=item   QByteArray & insert(int i, const char * s)
+=item  QByteArray & insert(int i, const char * s)
 
-=item   QByteArray & insert(int i, const QByteArray & a)
+=item  QByteArray & insert(int i, const QByteArray & a)
 
-=item   QByteArray & insert(int i, const QString & s)
+=item  QByteArray & insert(int i, const QString & s)
 
-=item   QByteArray & insert(int i, const char * s, int len)
+=item  QByteArray & insert(int i, const char * s, int len)
 
-=item   bool isDetached()
+=item  bool isDetached()
 
-=item   bool isEmpty()
+=item  bool isEmpty()
 
-=item   bool isNull()
+=item  bool isNull()
 
-=item   int lastIndexOf(char c, int from = -1)
+=item  bool isSharedWith(const QByteArray & other)
 
-=item   int lastIndexOf(char c, int from)
+=item  int lastIndexOf(char c, int from)
 
-=item   int lastIndexOf(const char * c, int from = -1)
+=item  int lastIndexOf(char c, int from = -1)
 
-=item   int lastIndexOf(const char * c, int from)
+=item  int lastIndexOf(const char * c, int from)
 
-=item   int lastIndexOf(const QByteArray & a, int from = -1)
+=item  int lastIndexOf(const char * c, int from = -1)
 
-=item   int lastIndexOf(const QByteArray & a, int from)
+=item  int lastIndexOf(const QByteArray & a, int from)
 
-=item   int lastIndexOf(const QString & s, int from = -1)
+=item  int lastIndexOf(const QByteArray & a, int from = -1)
 
-=item   int lastIndexOf(const QString & s, int from)
+=item  int lastIndexOf(const QString & s, int from)
 
-=item   QByteArray left(int len)
+=item  int lastIndexOf(const QString & s, int from = -1)
 
-=item   QByteArray leftJustified(int width, char fill, bool truncate = false)
+=item  QByteArray left(int len)
 
-=item   QByteArray leftJustified(int width, char fill, bool truncate)
+=item  QByteArray leftJustified(int width, char fill, bool truncate)
 
-=item   QByteArray leftJustified(int width, char fill = ' ', bool truncate = false)
+=item  QByteArray leftJustified(int width, char fill, bool truncate = false)
 
-=item   QByteArray leftJustified(int width, char fill, bool truncate = false)
+=item  QByteArray leftJustified(int width, char fill = ' ', bool truncate = false)
 
-=item   int length()
+=item  int length()
 
-=item   QByteArray mid(int index, int len = -1)
+=item  QByteArray mid(int index, int len)
 
-=item   QByteArray mid(int index, int len)
+=item  QByteArray mid(int index, int len = -1)
 
-=item   static QByteArray number(int arg0, int base = 10)
+=item  static QByteArray number(int arg0, int base)
 
-=item   static QByteArray number(int arg0, int base)
+=item  static QByteArray number(int arg0, int base = 10)
 
-=item   static QByteArray number(uint arg0, int base = 10)
+=item  static QByteArray number(uint arg0, int base)
 
-=item   static QByteArray number(uint arg0, int base)
+=item  static QByteArray number(uint arg0, int base = 10)
 
-=item   static QByteArray number(qlonglong arg0, int base = 10)
+=item  static QByteArray number(qlonglong arg0, int base)
 
-=item   static QByteArray number(qlonglong arg0, int base)
+=item  static QByteArray number(qlonglong arg0, int base = 10)
 
-=item   static QByteArray number(qulonglong arg0, int base = 10)
+=item  static QByteArray number(qulonglong arg0, int base)
 
-=item   static QByteArray number(qulonglong arg0, int base)
+=item  static QByteArray number(qulonglong arg0, int base = 10)
 
-=item   static QByteArray number(double arg0, char f, int prec = 6)
+=item  static QByteArray number(double arg0, char f, int prec)
 
-=item   static QByteArray number(double arg0, char f, int prec)
+=item  static QByteArray number(double arg0, char f, int prec = 6)
 
-=item   static QByteArray number(double arg0, char f = 'g', int prec = 6)
+=item  static QByteArray number(double arg0, char f = 'g', int prec = 6)
 
-=item   static QByteArray number(double arg0, char f, int prec = 6)
+=item  const char * operator const char *()
 
-=item   const char * operator const char *()
+=item  const void * operator const void *()
 
-=item   const void * operator const void *()
+=item  bool operator!=(const QString & s2)
 
-=item   bool operator!=(const QString & s2)
+=item  QByteArray & operator+=(char c)
 
-=item   QByteArray & operator+=(char c)
+=item  QByteArray & operator+=(const char * s)
 
-=item   QByteArray & operator+=(const char * s)
+=item  QByteArray & operator+=(const QByteArray & a)
 
-=item   QByteArray & operator+=(const QByteArray & a)
+=item  QByteArray & operator+=(const QString & s)
 
-=item   QByteArray & operator+=(const QString & s)
+=item  bool operator<(const QString & s2)
 
-=item   bool operator<(const QString & s2)
+=item  bool operator<=(const QString & s2)
 
-=item   bool operator<=(const QString & s2)
+=item  QByteArray & operator=(const QByteArray & arg0)
 
-=item   QByteArray & operator=(const QByteArray & arg0)
+=item  QByteArray & operator=(const char * str)
 
-=item   QByteArray & operator=(const char * str)
+=item  bool operator==(const QString & s2)
 
-=item   bool operator==(const QString & s2)
+=item  bool operator>(const QString & s2)
 
-=item   bool operator>(const QString & s2)
+=item  bool operator>=(const QString & s2)
 
-=item   bool operator>=(const QString & s2)
+=item  char operator[](int i)
 
-=item   char operator[](int i)
+=item  char operator[](uint i)
 
-=item   char operator[](uint i)
+=item  QByteRef operator[](int i)
 
-=item   QByteRef operator[](int i)
+=item  QByteRef operator[](uint i)
 
-=item   QByteRef operator[](uint i)
+=item  QByteArray & prepend(char c)
 
-=item   QByteArray & prepend(char c)
+=item  QByteArray & prepend(const char * s)
 
-=item   QByteArray & prepend(const char * s)
+=item  QByteArray & prepend(const QByteArray & a)
 
-=item   QByteArray & prepend(const QByteArray & a)
+=item  QByteArray & prepend(const char * s, int len)
 
-=item   QByteArray & prepend(const char * s, int len)
+=item  void push_back(char c)
 
-=item   void push_back(char c)
+=item  void push_back(const char * c)
 
-=item   void push_back(const char * c)
+=item  void push_back(const QByteArray & a)
 
-=item   void push_back(const QByteArray & a)
+=item  void push_front(char c)
 
-=item   void push_front(char c)
+=item  void push_front(const char * c)
 
-=item   void push_front(const char * c)
+=item  void push_front(const QByteArray & a)
 
-=item   void push_front(const QByteArray & a)
+=item  QByteArray & remove(int index, int len)
 
-=item   QByteArray & remove(int index, int len)
+=item  QByteArray repeated(int times)
 
-=item   QByteArray repeated(int times)
+=item  QByteArray & replace(char before, const char * after)
 
-=item   QByteArray & replace(char before, const char * after)
+=item  QByteArray & replace(char before, const QByteArray & after)
 
-=item   QByteArray & replace(char before, const QByteArray & after)
+=item  QByteArray & replace(const char * before, const char * after)
 
-=item   QByteArray & replace(const char * before, const char * after)
+=item  QByteArray & replace(const QByteArray & before, const QByteArray & after)
 
-=item   QByteArray & replace(const QByteArray & before, const QByteArray & after)
+=item  QByteArray & replace(const QByteArray & before, const char * after)
 
-=item   QByteArray & replace(const QByteArray & before, const char * after)
+=item  QByteArray & replace(const char * before, const QByteArray & after)
 
-=item   QByteArray & replace(const char * before, const QByteArray & after)
+=item  QByteArray & replace(char before, char after)
 
-=item   QByteArray & replace(char before, char after)
+=item  QByteArray & replace(const QString & before, const char * after)
 
-=item   QByteArray & replace(const QString & before, const char * after)
+=item  QByteArray & replace(char c, const QString & after)
 
-=item   QByteArray & replace(char c, const QString & after)
+=item  QByteArray & replace(const QString & before, const QByteArray & after)
 
-=item   QByteArray & replace(const QString & before, const QByteArray & after)
+=item  QByteArray & replace(int index, int len, const char * s)
 
-=item   QByteArray & replace(int index, int len, const char * s)
+=item  QByteArray & replace(int index, int len, const QByteArray & s)
 
-=item   QByteArray & replace(int index, int len, const QByteArray & s)
+=item  QByteArray & replace(int index, int len, const char * s, int alen)
 
-=item   QByteArray & replace(const char * before, int bsize, const char * after, int asize)
+=item  QByteArray & replace(const char * before, int bsize, const char * after, int asize)
 
-=item   void reserve(int size)
+=item  void reserve(int size)
 
-=item   void resize(int size)
+=item  void resize(int size)
 
-=item   QByteArray right(int len)
+=item  QByteArray right(int len)
 
-=item   QByteArray rightJustified(int width, char fill, bool truncate = false)
+=item  QByteArray rightJustified(int width, char fill, bool truncate)
 
-=item   QByteArray rightJustified(int width, char fill, bool truncate)
+=item  QByteArray rightJustified(int width, char fill, bool truncate = false)
 
-=item   QByteArray rightJustified(int width, char fill = ' ', bool truncate = false)
+=item  QByteArray rightJustified(int width, char fill = ' ', bool truncate = false)
 
-=item   QByteArray rightJustified(int width, char fill, bool truncate = false)
+=item  QByteArray & setNum(short arg0, int base)
 
-=item   QByteArray & setNum(short arg0, int base = 10)
+=item  QByteArray & setNum(short arg0, int base = 10)
 
-=item   QByteArray & setNum(short arg0, int base)
+=item  QByteArray & setNum(ushort arg0, int base)
 
-=item   QByteArray & setNum(ushort arg0, int base = 10)
+=item  QByteArray & setNum(ushort arg0, int base = 10)
 
-=item   QByteArray & setNum(ushort arg0, int base)
+=item  QByteArray & setNum(int arg0, int base)
 
-=item   QByteArray & setNum(int arg0, int base = 10)
+=item  QByteArray & setNum(int arg0, int base = 10)
 
-=item   QByteArray & setNum(int arg0, int base)
+=item  QByteArray & setNum(uint arg0, int base)
 
-=item   QByteArray & setNum(uint arg0, int base = 10)
+=item  QByteArray & setNum(uint arg0, int base = 10)
 
-=item   QByteArray & setNum(uint arg0, int base)
+=item  QByteArray & setNum(qlonglong arg0, int base)
 
-=item   QByteArray & setNum(qlonglong arg0, int base = 10)
+=item  QByteArray & setNum(qlonglong arg0, int base = 10)
 
-=item   QByteArray & setNum(qlonglong arg0, int base)
+=item  QByteArray & setNum(qulonglong arg0, int base)
 
-=item   QByteArray & setNum(qulonglong arg0, int base = 10)
+=item  QByteArray & setNum(qulonglong arg0, int base = 10)
 
-=item   QByteArray & setNum(qulonglong arg0, int base)
+=item  QByteArray & setNum(float arg0, char f, int prec)
 
-=item   QByteArray & setNum(float arg0, char f, int prec = 6)
+=item  QByteArray & setNum(float arg0, char f, int prec = 6)
 
-=item   QByteArray & setNum(float arg0, char f, int prec)
+=item  QByteArray & setNum(float arg0, char f = 'g', int prec = 6)
 
-=item   QByteArray & setNum(float arg0, char f = 'g', int prec = 6)
+=item  QByteArray & setNum(double arg0, char f, int prec)
 
-=item   QByteArray & setNum(float arg0, char f, int prec = 6)
+=item  QByteArray & setNum(double arg0, char f, int prec = 6)
 
-=item   QByteArray & setNum(double arg0, char f, int prec = 6)
+=item  QByteArray & setNum(double arg0, char f = 'g', int prec = 6)
 
-=item   QByteArray & setNum(double arg0, char f, int prec)
+=item  QByteArray & setRawData(const char * a, uint n)
 
-=item   QByteArray & setNum(double arg0, char f = 'g', int prec = 6)
+=item  QByteArray simplified()
 
-=item   QByteArray & setNum(double arg0, char f, int prec = 6)
+=item  int size()
 
-=item   QByteArray simplified()
+=item  void squeeze()
 
-=item   int size()
+=item  bool startsWith(const QByteArray & a)
 
-=item   void squeeze()
+=item  bool startsWith(char c)
 
-=item   bool startsWith(const QByteArray & a)
+=item  bool startsWith(const char * c)
 
-=item   bool startsWith(char c)
+=item  QByteArray toBase64()
 
-=item   bool startsWith(const char * c)
+=item  double toDouble(bool * ok)
 
-=item   QByteArray toBase64()
+=item  double toDouble(bool * ok = 0)
 
-=item   double toDouble(bool * ok = 0)
+=item  float toFloat(bool * ok)
 
-=item   double toDouble(bool * ok)
+=item  float toFloat(bool * ok = 0)
 
-=item   float toFloat(bool * ok = 0)
+=item  QByteArray toHex()
 
-=item   float toFloat(bool * ok)
+=item  int toInt(bool * ok, int base)
 
-=item   QByteArray toHex()
+=item  int toInt(bool * ok, int base = 10)
 
-=item   int toInt(bool * ok, int base = 10)
+=item  int toInt(bool * ok = 0, int base = 10)
 
-=item   int toInt(bool * ok, int base)
+=item  long toLong(bool * ok, int base)
 
-=item   int toInt(bool * ok = 0, int base = 10)
+=item  long toLong(bool * ok, int base = 10)
 
-=item   int toInt(bool * ok, int base = 10)
+=item  long toLong(bool * ok = 0, int base = 10)
 
-=item   long toLong(bool * ok, int base = 10)
+=item  qlonglong toLongLong(bool * ok, int base)
 
-=item   long toLong(bool * ok, int base)
+=item  qlonglong toLongLong(bool * ok, int base = 10)
 
-=item   long toLong(bool * ok = 0, int base = 10)
+=item  qlonglong toLongLong(bool * ok = 0, int base = 10)
 
-=item   long toLong(bool * ok, int base = 10)
+=item  QByteArray toLower()
 
-=item   qlonglong toLongLong(bool * ok, int base = 10)
+=item  QByteArray toPercentEncoding(const QByteArray & exclude, const QByteArray & include, char percent)
 
-=item   qlonglong toLongLong(bool * ok, int base)
+=item  QByteArray toPercentEncoding(const QByteArray & exclude, const QByteArray & include, char percent = '%')
 
-=item   qlonglong toLongLong(bool * ok = 0, int base = 10)
+=item  QByteArray toPercentEncoding(const QByteArray & exclude, const QByteArray & include = QByteArray(), char percent = '%')
 
-=item   qlonglong toLongLong(bool * ok, int base = 10)
+=item  QByteArray toPercentEncoding(const QByteArray & exclude = QByteArray(), const QByteArray & include = QByteArray(), char percent = '%')
 
-=item   QByteArray toLower()
+=item  short toShort(bool * ok, int base)
 
-=item   QByteArray toPercentEncoding(const QByteArray & exclude, const QByteArray & include, char percent = '%')
+=item  short toShort(bool * ok, int base = 10)
 
-=item   QByteArray toPercentEncoding(const QByteArray & exclude, const QByteArray & include, char percent)
+=item  short toShort(bool * ok = 0, int base = 10)
 
-=item   QByteArray toPercentEncoding(const QByteArray & exclude, const QByteArray & include = QByteArray(), char percent = '%')
+=item  uint toUInt(bool * ok, int base)
 
-=item   QByteArray toPercentEncoding(const QByteArray & exclude, const QByteArray & include, char percent = '%')
+=item  uint toUInt(bool * ok, int base = 10)
 
-=item   QByteArray toPercentEncoding(const QByteArray & exclude = QByteArray(), const QByteArray & include = QByteArray(), char percent = '%')
+=item  uint toUInt(bool * ok = 0, int base = 10)
 
-=item   QByteArray toPercentEncoding(const QByteArray & exclude, const QByteArray & include = QByteArray(), char percent = '%')
+=item  ulong toULong(bool * ok, int base)
 
-=item   short toShort(bool * ok, int base = 10)
+=item  ulong toULong(bool * ok, int base = 10)
 
-=item   short toShort(bool * ok, int base)
+=item  ulong toULong(bool * ok = 0, int base = 10)
 
-=item   short toShort(bool * ok = 0, int base = 10)
+=item  qulonglong toULongLong(bool * ok, int base)
 
-=item   short toShort(bool * ok, int base = 10)
+=item  qulonglong toULongLong(bool * ok, int base = 10)
 
-=item   uint toUInt(bool * ok, int base = 10)
+=item  qulonglong toULongLong(bool * ok = 0, int base = 10)
 
-=item   uint toUInt(bool * ok, int base)
+=item  ushort toUShort(bool * ok, int base)
 
-=item   uint toUInt(bool * ok = 0, int base = 10)
+=item  ushort toUShort(bool * ok, int base = 10)
 
-=item   uint toUInt(bool * ok, int base = 10)
+=item  ushort toUShort(bool * ok = 0, int base = 10)
 
-=item   ulong toULong(bool * ok, int base = 10)
+=item  QByteArray toUpper()
 
-=item   ulong toULong(bool * ok, int base)
+=item  QByteArray trimmed()
 
-=item   ulong toULong(bool * ok = 0, int base = 10)
+=item  void truncate(int pos)
 
-=item   ulong toULong(bool * ok, int base = 10)
 
-=item   qulonglong toULongLong(bool * ok, int base = 10)
+=back
 
-=item   qulonglong toULongLong(bool * ok, int base)
+=head1 ENUM VALUES
 
-=item   qulonglong toULongLong(bool * ok = 0, int base = 10)
-
-=item   qulonglong toULongLong(bool * ok, int base = 10)
-
-=item   ushort toUShort(bool * ok, int base = 10)
-
-=item   ushort toUShort(bool * ok, int base)
-
-=item   ushort toUShort(bool * ok = 0, int base = 10)
-
-=item   ushort toUShort(bool * ok, int base = 10)
-
-=item   QByteArray toUpper()
-
-=item   QByteArray trimmed()
-
-=item   void truncate(int pos)
+=over
 
 
 =back

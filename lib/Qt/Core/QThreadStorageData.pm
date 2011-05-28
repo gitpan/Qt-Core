@@ -1,4 +1,5 @@
 package Qt::Core::QThreadStorageData;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QThreadStorageData
 # file     : QtCore/qthreadstorage.h
 
@@ -6,11 +7,10 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
+our $VERSION = '0.01_02';
 
 
 # FIXME: operator overload
-
 
 
 1;
@@ -23,15 +23,22 @@ Qt::Core::QThreadStorageData
 
 =over
 
-=item    QThreadStorageData(T_FPOINTER_FUNC_QTHREADSTORAGE void (*T_FPOINTER_FUNC_QTHREADSTORAGE)(void *))
+=item   QThreadStorageData(T_FPOINTER_FUNC_QTHREADSTORAGE void (*T_FPOINTER_FUNC_QTHREADSTORAGE)(void *))
 
-=item    ~QThreadStorageData()
+=item   ~QThreadStorageData()
 
-=item   static void finish(void ** arg0)
+=item  static void finish(void ** arg0)
 
-=item   void ** get()
+=item  void ** get()
 
-=item   void ** set(void * p)
+=item  void ** set(void * p)
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
 
 
 =back

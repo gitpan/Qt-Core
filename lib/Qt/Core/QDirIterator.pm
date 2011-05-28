@@ -1,4 +1,5 @@
 package Qt::Core::QDirIterator;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QDirIterator
 # file     : QtCore/qdiriterator.h
 
@@ -6,16 +7,10 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
+our $VERSION = '0.01_02';
 
 
 # FIXME: operator overload
-
-# enums
-# enum value in perl is enum item index number
-sub NoIteratorFlags() { 0 }
-sub FollowSymlinks() { 1 }
-sub Subdirectories() { 2 }
 
 
 1;
@@ -28,19 +23,50 @@ Qt::Core::QDirIterator
 
 =over
 
-=item    ~QDirIterator()
+=item   QDirIterator(const QDir & dir, QFlags<QDirIterator::IteratorFlag> flags)
 
-=item   QFileInfo fileInfo()
+=item   QDirIterator(const QDir & dir, QFlags<QDirIterator::IteratorFlag> flags = QDirIterator::NoIteratorFlags)
 
-=item   QString fileName()
+=item   QDirIterator(const QString & path, QFlags<QDirIterator::IteratorFlag> flags)
 
-=item   QString filePath()
+=item   QDirIterator(const QString & path, QFlags<QDirIterator::IteratorFlag> flags = QDirIterator::NoIteratorFlags)
 
-=item   bool hasNext()
+=item   QDirIterator(const QString & path, QFlags<QDir::Filter> filter, QFlags<QDirIterator::IteratorFlag> flags)
 
-=item   QString next()
+=item   QDirIterator(const QString & path, QFlags<QDir::Filter> filter, QFlags<QDirIterator::IteratorFlag> flags = QDirIterator::NoIteratorFlags)
 
-=item   QString path()
+=item   QDirIterator(const QString & path, const QStringList & nameFilters, QFlags<QDir::Filter> filters, QFlags<QDirIterator::IteratorFlag> flags)
+
+=item   QDirIterator(const QString & path, const QStringList & nameFilters, QFlags<QDir::Filter> filters, QFlags<QDirIterator::IteratorFlag> flags = QDirIterator::NoIteratorFlags)
+
+=item   QDirIterator(const QString & path, const QStringList & nameFilters, QFlags<QDir::Filter> filters = QDir::NoFilter, QFlags<QDirIterator::IteratorFlag> flags = QDirIterator::NoIteratorFlags)
+
+=item   ~QDirIterator()
+
+=item  QFileInfo fileInfo()
+
+=item  QString fileName()
+
+=item  QString filePath()
+
+=item  bool hasNext()
+
+=item  QString next()
+
+=item  QString path()
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
+
+=item NoIteratorFlags
+
+=item FollowSymlinks
+
+=item Subdirectories
 
 
 =back

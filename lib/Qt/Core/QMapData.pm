@@ -1,4 +1,5 @@
 package Qt::Core::QMapData;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QMapData
 # file     : QtCore/qmap.h
 
@@ -6,15 +7,10 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
+our $VERSION = '0.01_02';
 
 
 # FIXME: operator overload
-
-# enums
-# enum value in perl is enum item index number
-sub LastLevel() { 0 }
-sub Sparseness() { 1 }
 
 
 1;
@@ -27,17 +23,28 @@ Qt::Core::QMapData
 
 =over
 
-=item   void continueFreeData(int offset)
+=item  void continueFreeData(int offset)
 
-=item   static QMapData * createData()
+=item  static QMapData * createData()
 
-=item   static QMapData * createData(int alignment)
+=item  static QMapData * createData(int alignment)
 
-=item   QMapData::Node * node_create(T_ARRAY_UPDATE Node ** T_ARRAY_UPDATE, int offset)
+=item  QMapData::Node * node_create(T_ARRAY_UPDATE Node ** T_ARRAY_UPDATE, int offset)
 
-=item   QMapData::Node * node_create(T_ARRAY_UPDATE Node ** T_ARRAY_UPDATE, int offset, int alignment)
+=item  QMapData::Node * node_create(T_ARRAY_UPDATE Node ** T_ARRAY_UPDATE, int offset, int alignment)
 
-=item   void node_delete(T_ARRAY_UPDATE Node ** T_ARRAY_UPDATE, int offset, QMapData::Node * node)
+=item  void node_delete(T_ARRAY_UPDATE Node ** T_ARRAY_UPDATE, int offset, QMapData::Node * node)
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
+
+=item LastLevel
+
+=item Sparseness
 
 
 =back

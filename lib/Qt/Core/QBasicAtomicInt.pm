@@ -1,4 +1,5 @@
 package Qt::Core::QBasicAtomicInt;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QBasicAtomicInt
 # file     : QtCore/qbasicatomic.h
 
@@ -6,11 +7,10 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
+our $VERSION = '0.01_02';
 
 
 # FIXME: operator overload
-
 
 
 1;
@@ -23,59 +23,66 @@ Qt::Core::QBasicAtomicInt
 
 =over
 
-=item   bool deref()
+=item  bool deref()
 
-=item   int fetchAndAddAcquire(int valueToAdd)
+=item  int fetchAndAddAcquire(int valueToAdd)
 
-=item   int fetchAndAddOrdered(int valueToAdd)
+=item  int fetchAndAddOrdered(int valueToAdd)
 
-=item   int fetchAndAddRelaxed(int valueToAdd)
+=item  int fetchAndAddRelaxed(int valueToAdd)
 
-=item   int fetchAndAddRelease(int valueToAdd)
+=item  int fetchAndAddRelease(int valueToAdd)
 
-=item   int fetchAndStoreAcquire(int newValue)
+=item  int fetchAndStoreAcquire(int newValue)
 
-=item   int fetchAndStoreOrdered(int newValue)
+=item  int fetchAndStoreOrdered(int newValue)
 
-=item   int fetchAndStoreRelaxed(int newValue)
+=item  int fetchAndStoreRelaxed(int newValue)
 
-=item   int fetchAndStoreRelease(int newValue)
+=item  int fetchAndStoreRelease(int newValue)
 
-=item   static bool isFetchAndAddNative()
+=item  static bool isFetchAndAddNative()
 
-=item   static bool isFetchAndAddWaitFree()
+=item  static bool isFetchAndAddWaitFree()
 
-=item   static bool isFetchAndStoreNative()
+=item  static bool isFetchAndStoreNative()
 
-=item   static bool isFetchAndStoreWaitFree()
+=item  static bool isFetchAndStoreWaitFree()
 
-=item   static bool isReferenceCountingNative()
+=item  static bool isReferenceCountingNative()
 
-=item   static bool isReferenceCountingWaitFree()
+=item  static bool isReferenceCountingWaitFree()
 
-=item   static bool isTestAndSetNative()
+=item  static bool isTestAndSetNative()
 
-=item   static bool isTestAndSetWaitFree()
+=item  static bool isTestAndSetWaitFree()
 
-=item   int operator int()
+=item  int operator int()
 
-=item   bool operator!()
+=item  bool operator!()
 
-=item   bool operator!=(int value)
+=item  bool operator!=(int value)
 
-=item   QBasicAtomicInt & operator=(int value)
+=item  QBasicAtomicInt & operator=(int value)
 
-=item   bool operator==(int value)
+=item  bool operator==(int value)
 
-=item   bool ref()
+=item  bool ref()
 
-=item   bool testAndSetAcquire(int expectedValue, int newValue)
+=item  bool testAndSetAcquire(int expectedValue, int newValue)
 
-=item   bool testAndSetOrdered(int expectedValue, int newValue)
+=item  bool testAndSetOrdered(int expectedValue, int newValue)
 
-=item   bool testAndSetRelaxed(int expectedValue, int newValue)
+=item  bool testAndSetRelaxed(int expectedValue, int newValue)
 
-=item   bool testAndSetRelease(int expectedValue, int newValue)
+=item  bool testAndSetRelease(int expectedValue, int newValue)
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
 
 
 =back

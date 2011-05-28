@@ -1,4 +1,5 @@
 package Qt::Core::QFlag;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QFlag
 # file     : QtCore/qglobal.h
 
@@ -6,11 +7,10 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
+our $VERSION = '0.01_02';
 
 
 # FIXME: operator overload
-
 
 
 1;
@@ -23,9 +23,16 @@ Qt::Core::QFlag
 
 =over
 
-=item    QFlag(int i)
+=item   QFlag(int i)
 
-=item   int operator int()
+=item  int operator int()
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
 
 
 =back

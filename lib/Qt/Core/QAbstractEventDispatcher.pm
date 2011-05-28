@@ -1,4 +1,5 @@
 package Qt::Core::QAbstractEventDispatcher;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QAbstractEventDispatcher
 # file     : QtCore/qabstracteventdispatcher.h
 
@@ -6,12 +7,11 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
-our $ISA     = qw/QObject/;
+our $VERSION = '0.01_02';
+our $ISA     = qw/Qt::Core::QObject/;
 
 
 # FIXME: operator overload
-
 
 
 1;
@@ -24,43 +24,52 @@ Qt::Core::QAbstractEventDispatcher
 
 =over
 
-=item    QAbstractEventDispatcher(QObject * parent = 0)
+=item   QAbstractEventDispatcher(QObject * parent)
 
-=item    QAbstractEventDispatcher(QObject * parent)
+=item   QAbstractEventDispatcher(QObject * parent = 0)
 
-=item    ~QAbstractEventDispatcher()
+=item   ~QAbstractEventDispatcher()
 
-=item   void closingDown()
+=item  void closingDown()
 
-=item   bool filterEvent(void * message)
+=item  bool filterEvent(void * message)
 
-=item   void flush()
+=item  void flush()
 
-=item   bool hasPendingEvents()
+=item  bool hasPendingEvents()
 
-=item   static QAbstractEventDispatcher * instance(QThread * thread = 0)
+=item  static QAbstractEventDispatcher * instance(QThread * thread)
 
-=item   static QAbstractEventDispatcher * instance(QThread * thread)
+=item  static QAbstractEventDispatcher * instance(QThread * thread = 0)
 
-=item   void interrupt()
+=item  void interrupt()
 
-=item   void registerSocketNotifier(QSocketNotifier * notifier)
+=item  bool processEvents(QFlags<QEventLoop::ProcessEventsFlag> flags)
 
-=item   int registerTimer(int interval, QObject * object)
+=item  void registerSocketNotifier(QSocketNotifier * notifier)
 
-=item   void registerTimer(int timerId, int interval, QObject * object)
+=item  int registerTimer(int interval, QObject * object)
 
-=item   QAbstractEventDispatcher::EventFilter setEventFilter(QAbstractEventDispatcher::EventFilter filter)
+=item  void registerTimer(int timerId, int interval, QObject * object)
 
-=item   void startingUp()
+=item  QAbstractEventDispatcher::EventFilter setEventFilter(QAbstractEventDispatcher::EventFilter filter)
 
-=item   void unregisterSocketNotifier(QSocketNotifier * notifier)
+=item  void startingUp()
 
-=item   bool unregisterTimer(int timerId)
+=item  void unregisterSocketNotifier(QSocketNotifier * notifier)
 
-=item   bool unregisterTimers(QObject * object)
+=item  bool unregisterTimer(int timerId)
 
-=item   void wakeUp()
+=item  bool unregisterTimers(QObject * object)
+
+=item  void wakeUp()
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
 
 
 =back

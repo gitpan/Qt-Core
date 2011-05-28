@@ -1,4 +1,5 @@
 package Qt::Core::QGenericArgument;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QGenericArgument
 # file     : QtCore/qobjectdefs.h
 
@@ -6,11 +7,10 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
+our $VERSION = '0.01_02';
 
 
 # FIXME: operator overload
-
 
 
 1;
@@ -23,17 +23,22 @@ Qt::Core::QGenericArgument
 
 =over
 
-=item    QGenericArgument(const char * aName, const void * aData = 0)
+=item   QGenericArgument(const char * aName, const void * aData)
 
-=item    QGenericArgument(const char * aName, const void * aData)
+=item   QGenericArgument(const char * aName, const void * aData = 0)
 
-=item    QGenericArgument(const char * aName = 0, const void * aData = 0)
+=item   QGenericArgument(const char * aName = 0, const void * aData = 0)
 
-=item    QGenericArgument(const char * aName, const void * aData = 0)
+=item  void * data()
 
-=item   void * data()
+=item  const char * name()
 
-=item   const char * name()
+
+=back
+
+=head1 ENUM VALUES
+
+=over
 
 
 =back

@@ -1,4 +1,5 @@
 package Qt::Core::QMetaEnum;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QMetaEnum
 # file     : QtCore/qmetaobject.h
 
@@ -6,11 +7,10 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
+our $VERSION = '0.01_02';
 
 
 # FIXME: operator overload
-
 
 
 1;
@@ -23,31 +23,38 @@ Qt::Core::QMetaEnum
 
 =over
 
-=item    QMetaEnum()
+=item   QMetaEnum()
 
-=item   const QMetaObject * enclosingMetaObject()
+=item  const QMetaObject * enclosingMetaObject()
 
-=item   bool isFlag()
+=item  bool isFlag()
 
-=item   bool isValid()
+=item  bool isValid()
 
-=item   const char * key(int index)
+=item  const char * key(int index)
 
-=item   int keyCount()
+=item  int keyCount()
 
-=item   int keyToValue(const char * key)
+=item  int keyToValue(const char * key)
 
-=item   int keysToValue(const char * keys)
+=item  int keysToValue(const char * keys)
 
-=item   const char * name()
+=item  const char * name()
 
-=item   const char * scope()
+=item  const char * scope()
 
-=item   int value(int index)
+=item  int value(int index)
 
-=item   const char * valueToKey(int value)
+=item  const char * valueToKey(int value)
 
-=item   QByteArray valueToKeys(int value)
+=item  QByteArray valueToKeys(int value)
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
 
 
 =back

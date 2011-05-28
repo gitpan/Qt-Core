@@ -1,4 +1,5 @@
 package Qt::Core::QTextStream;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QTextStream
 # file     : QtCore/qtextstream.h
 
@@ -6,28 +7,10 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
+our $VERSION = '0.01_02';
 
 
 # FIXME: operator overload
-
-# enums
-# enum value in perl is enum item index number
-sub SmartNotation() { 0 }
-sub FixedNotation() { 1 }
-sub ScientificNotation() { 2 }
-sub AlignLeft() { 0 }
-sub AlignRight() { 1 }
-sub AlignCenter() { 2 }
-sub AlignAccountingStyle() { 3 }
-sub Ok() { 0 }
-sub ReadPastEnd() { 1 }
-sub ReadCorruptData() { 2 }
-sub ShowBase() { 0 }
-sub ForcePoint() { 1 }
-sub ForceSign() { 2 }
-sub UppercaseBase() { 3 }
-sub UppercaseDigits() { 4 }
 
 
 1;
@@ -40,149 +23,210 @@ Qt::Core::QTextStream
 
 =over
 
-=item    QTextStream()
+=item   QTextStream()
 
-=item    QTextStream(QIODevice * device)
+=item   QTextStream(QIODevice * device)
 
-=item    ~QTextStream()
+=item   QTextStream(FILE * fileHandle, QFlags<QIODevice::OpenModeFlag> openMode)
 
-=item   bool atEnd()
+=item   QTextStream(FILE * fileHandle, QFlags<QIODevice::OpenModeFlag> openMode = QIODevice::ReadWrite)
 
-=item   bool autoDetectUnicode()
+=item   QTextStream(QString * string, QFlags<QIODevice::OpenModeFlag> openMode)
 
-=item   QTextCodec * codec()
+=item   QTextStream(QString * string, QFlags<QIODevice::OpenModeFlag> openMode = QIODevice::ReadWrite)
 
-=item   QIODevice * device()
+=item   QTextStream(QByteArray * array, QFlags<QIODevice::OpenModeFlag> openMode)
 
-=item   QTextStream::FieldAlignment fieldAlignment()
+=item   QTextStream(QByteArray * array, QFlags<QIODevice::OpenModeFlag> openMode = QIODevice::ReadWrite)
 
-=item   int fieldWidth()
+=item   QTextStream(const QByteArray & array, QFlags<QIODevice::OpenModeFlag> openMode)
 
-=item   void flush()
+=item   QTextStream(const QByteArray & array, QFlags<QIODevice::OpenModeFlag> openMode = QIODevice::ReadOnly)
 
-=item   bool generateByteOrderMark()
+=item   ~QTextStream()
 
-=item   int integerBase()
+=item  bool atEnd()
 
-=item   QLocale locale()
+=item  bool autoDetectUnicode()
 
-=item   QTextStream & operator<<(QBool & b)
+=item  QTextCodec * codec()
 
-=item   QTextStream & operator<<(QChar ch)
+=item  QIODevice * device()
 
-=item   QTextStream & operator<<(char ch)
+=item  QTextStream::FieldAlignment fieldAlignment()
 
-=item   QTextStream & operator<<(signed short i)
+=item  int fieldWidth()
 
-=item   QTextStream & operator<<(unsigned short i)
+=item  void flush()
 
-=item   QTextStream & operator<<(signed int i)
+=item  bool generateByteOrderMark()
 
-=item   QTextStream & operator<<(unsigned int i)
+=item  int integerBase()
 
-=item   QTextStream & operator<<(signed long i)
+=item  QLocale locale()
 
-=item   QTextStream & operator<<(unsigned long i)
+=item  QFlags<QTextStream::NumberFlag> numberFlags()
 
-=item   QTextStream & operator<<(qlonglong i)
+=item  QTextStream & operator<<(QBool & b)
 
-=item   QTextStream & operator<<(qulonglong i)
+=item  QTextStream & operator<<(QChar ch)
 
-=item   QTextStream & operator<<(float f)
+=item  QTextStream & operator<<(char ch)
 
-=item   QTextStream & operator<<(double f)
+=item  QTextStream & operator<<(signed short i)
 
-=item   QTextStream & operator<<(const QString & s)
+=item  QTextStream & operator<<(unsigned short i)
 
-=item   QTextStream & operator<<(const QByteArray & array)
+=item  QTextStream & operator<<(signed int i)
 
-=item   QTextStream & operator<<(const char * c)
+=item  QTextStream & operator<<(unsigned int i)
 
-=item   QTextStream & operator<<(const void * ptr)
+=item  QTextStream & operator<<(signed long i)
 
-=item   QTextStream & operator>>(QChar & ch)
+=item  QTextStream & operator<<(unsigned long i)
 
-=item   QTextStream & operator>>(char & ch)
+=item  QTextStream & operator<<(qlonglong i)
 
-=item   QTextStream & operator>>(signed short & i)
+=item  QTextStream & operator<<(qulonglong i)
 
-=item   QTextStream & operator>>(unsigned short & i)
+=item  QTextStream & operator<<(float f)
 
-=item   QTextStream & operator>>(signed int & i)
+=item  QTextStream & operator<<(double f)
 
-=item   QTextStream & operator>>(unsigned int & i)
+=item  QTextStream & operator<<(const QString & s)
 
-=item   QTextStream & operator>>(signed long & i)
+=item  QTextStream & operator<<(const QByteArray & array)
 
-=item   QTextStream & operator>>(unsigned long & i)
+=item  QTextStream & operator<<(const char * c)
 
-=item   QTextStream & operator>>(qlonglong & i)
+=item  QTextStream & operator<<(const void * ptr)
 
-=item   QTextStream & operator>>(qulonglong & i)
+=item  QTextStream & operator>>(QChar & ch)
 
-=item   QTextStream & operator>>(float & f)
+=item  QTextStream & operator>>(char & ch)
 
-=item   QTextStream & operator>>(double & f)
+=item  QTextStream & operator>>(signed short & i)
 
-=item   QTextStream & operator>>(QString & s)
+=item  QTextStream & operator>>(unsigned short & i)
 
-=item   QTextStream & operator>>(QByteArray & array)
+=item  QTextStream & operator>>(signed int & i)
 
-=item   QTextStream & operator>>(char * c)
+=item  QTextStream & operator>>(unsigned int & i)
 
-=item   QChar padChar()
+=item  QTextStream & operator>>(signed long & i)
 
-=item   qint64 pos()
+=item  QTextStream & operator>>(unsigned long & i)
 
-=item   QString read(qint64 maxlen)
+=item  QTextStream & operator>>(qlonglong & i)
 
-=item   QString readAll()
+=item  QTextStream & operator>>(qulonglong & i)
 
-=item   QString readLine(qint64 maxlen = 0)
+=item  QTextStream & operator>>(float & f)
 
-=item   QString readLine(qint64 maxlen)
+=item  QTextStream & operator>>(double & f)
 
-=item   QTextStream::RealNumberNotation realNumberNotation()
+=item  QTextStream & operator>>(QString & s)
 
-=item   int realNumberPrecision()
+=item  QTextStream & operator>>(QByteArray & array)
 
-=item   void reset()
+=item  QTextStream & operator>>(char * c)
 
-=item   void resetStatus()
+=item  QChar padChar()
 
-=item   bool seek(qint64 pos)
+=item  qint64 pos()
 
-=item   void setAutoDetectUnicode(bool enabled)
+=item  QString read(qint64 maxlen)
 
-=item   void setCodec(QTextCodec * codec)
+=item  QString readAll()
 
-=item   void setCodec(const char * codecName)
+=item  QString readLine(qint64 maxlen)
 
-=item   void setDevice(QIODevice * device)
+=item  QString readLine(qint64 maxlen = 0)
 
-=item   void setFieldAlignment(QTextStream::FieldAlignment alignment)
+=item  QTextStream::RealNumberNotation realNumberNotation()
 
-=item   void setFieldWidth(int width)
+=item  int realNumberPrecision()
 
-=item   void setGenerateByteOrderMark(bool generate)
+=item  void reset()
 
-=item   void setIntegerBase(int base)
+=item  void resetStatus()
 
-=item   void setLocale(const QLocale & locale)
+=item  bool seek(qint64 pos)
 
-=item   void setPadChar(QChar ch)
+=item  void setAutoDetectUnicode(bool enabled)
 
-=item   void setRealNumberNotation(QTextStream::RealNumberNotation notation)
+=item  void setCodec(QTextCodec * codec)
 
-=item   void setRealNumberPrecision(int precision)
+=item  void setCodec(const char * codecName)
 
-=item   void setStatus(QTextStream::Status status)
+=item  void setDevice(QIODevice * device)
 
-=item   void skipWhiteSpace()
+=item  void setFieldAlignment(QTextStream::FieldAlignment alignment)
 
-=item   QTextStream::Status status()
+=item  void setFieldWidth(int width)
 
-=item   QString * string()
+=item  void setGenerateByteOrderMark(bool generate)
+
+=item  void setIntegerBase(int base)
+
+=item  void setLocale(const QLocale & locale)
+
+=item  void setNumberFlags(QFlags<QTextStream::NumberFlag> flags)
+
+=item  void setPadChar(QChar ch)
+
+=item  void setRealNumberNotation(QTextStream::RealNumberNotation notation)
+
+=item  void setRealNumberPrecision(int precision)
+
+=item  void setStatus(QTextStream::Status status)
+
+=item  void setString(QString * string, QFlags<QIODevice::OpenModeFlag> openMode)
+
+=item  void setString(QString * string, QFlags<QIODevice::OpenModeFlag> openMode = QIODevice::ReadWrite)
+
+=item  void skipWhiteSpace()
+
+=item  QTextStream::Status status()
+
+=item  QString * string()
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
+
+=item SmartNotation
+
+=item FixedNotation
+
+=item ScientificNotation
+
+=item AlignLeft
+
+=item AlignRight
+
+=item AlignCenter
+
+=item AlignAccountingStyle
+
+=item Ok
+
+=item ReadPastEnd
+
+=item ReadCorruptData
+
+=item ShowBase
+
+=item ForcePoint
+
+=item ForceSign
+
+=item UppercaseBase
+
+=item UppercaseDigits
 
 
 =back

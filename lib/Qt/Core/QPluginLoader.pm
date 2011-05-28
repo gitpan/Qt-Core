@@ -1,4 +1,5 @@
 package Qt::Core::QPluginLoader;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QPluginLoader
 # file     : QtCore/qpluginloader.h
 
@@ -6,12 +7,11 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
-our $ISA     = qw/QObject/;
+our $VERSION = '0.01_02';
+our $ISA     = qw/Qt::Core::QObject/;
 
 
 # FIXME: operator overload
-
 
 
 1;
@@ -24,29 +24,40 @@ Qt::Core::QPluginLoader
 
 =over
 
-=item    QPluginLoader(QObject * parent = 0)
+=item   QPluginLoader(QObject * parent)
 
-=item    QPluginLoader(QObject * parent)
+=item   QPluginLoader(QObject * parent = 0)
 
-=item    QPluginLoader(const QString & fileName, QObject * parent = 0)
+=item   QPluginLoader(const QString & fileName, QObject * parent)
 
-=item    QPluginLoader(const QString & fileName, QObject * parent)
+=item   QPluginLoader(const QString & fileName, QObject * parent = 0)
 
-=item    ~QPluginLoader()
+=item   ~QPluginLoader()
 
-=item   QString errorString()
+=item  QString errorString()
 
-=item   QString fileName()
+=item  QString fileName()
 
-=item   QObject * instance()
+=item  QObject * instance()
 
-=item   bool isLoaded()
+=item  bool isLoaded()
 
-=item   bool load()
+=item  bool load()
 
-=item   void setFileName(const QString & fileName)
+=item  QFlags<QLibrary::LoadHint> loadHints()
 
-=item   bool unload()
+=item  void setFileName(const QString & fileName)
+
+=item  void setLoadHints(QFlags<QLibrary::LoadHint> loadHints)
+
+=item  bool unload()
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
 
 
 =back

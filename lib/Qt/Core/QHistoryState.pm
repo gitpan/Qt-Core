@@ -1,4 +1,5 @@
 package Qt::Core::QHistoryState;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QHistoryState
 # file     : QtCore/qhistorystate.h
 
@@ -6,16 +7,11 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
-our $ISA     = qw/QAbstractState/;
+our $VERSION = '0.01_02';
+our $ISA     = qw/Qt::Core::QAbstractState/;
 
 
 # FIXME: operator overload
-
-# enums
-# enum value in perl is enum item index number
-sub ShallowHistory() { 0 }
-sub DeepHistory() { 1 }
 
 
 1;
@@ -28,23 +24,34 @@ Qt::Core::QHistoryState
 
 =over
 
-=item    QHistoryState(QState * parent = 0)
+=item   QHistoryState(QState * parent)
 
-=item    QHistoryState(QState * parent)
+=item   QHistoryState(QState * parent = 0)
 
-=item    QHistoryState(QHistoryState::HistoryType type, QState * parent = 0)
+=item   QHistoryState(QHistoryState::HistoryType type, QState * parent)
 
-=item    QHistoryState(QHistoryState::HistoryType type, QState * parent)
+=item   QHistoryState(QHistoryState::HistoryType type, QState * parent = 0)
 
-=item    ~QHistoryState()
+=item   ~QHistoryState()
 
-=item   QAbstractState * defaultState()
+=item  QAbstractState * defaultState()
 
-=item   QHistoryState::HistoryType historyType()
+=item  QHistoryState::HistoryType historyType()
 
-=item   void setDefaultState(QAbstractState * state)
+=item  void setDefaultState(QAbstractState * state)
 
-=item   void setHistoryType(QHistoryState::HistoryType type)
+=item  void setHistoryType(QHistoryState::HistoryType type)
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
+
+=item ShallowHistory
+
+=item DeepHistory
 
 
 =back

@@ -1,4 +1,5 @@
 package Qt::Core::QSharedData;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QSharedData
 # file     : QtCore/qshareddata.h
 
@@ -6,11 +7,10 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
+our $VERSION = '0.01_02';
 
 
 # FIXME: operator overload
-
 
 
 1;
@@ -23,9 +23,16 @@ Qt::Core::QSharedData
 
 =over
 
-=item    QSharedData()
+=item   QSharedData()
 
-=item    QSharedData(const QSharedData & arg0)
+=item   QSharedData(const QSharedData & arg0)
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
 
 
 =back

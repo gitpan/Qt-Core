@@ -1,4 +1,5 @@
 package Qt::Core::QThread;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QThread
 # file     : QtCore/qthread.h
 
@@ -6,22 +7,11 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
-our $ISA     = qw/QObject/;
+our $VERSION = '0.01_02';
+our $ISA     = qw/Qt::Core::QObject/;
 
 
 # FIXME: operator overload
-
-# enums
-# enum value in perl is enum item index number
-sub IdlePriority() { 0 }
-sub LowestPriority() { 1 }
-sub LowPriority() { 2 }
-sub NormalPriority() { 3 }
-sub HighPriority() { 4 }
-sub HighestPriority() { 5 }
-sub TimeCriticalPriority() { 6 }
-sub InheritPriority() { 7 }
 
 
 1;
@@ -34,47 +24,70 @@ Qt::Core::QThread
 
 =over
 
-=item    QThread(QObject * parent = 0)
+=item   QThread(QObject * parent)
 
-=item    QThread(QObject * parent)
+=item   QThread(QObject * parent = 0)
 
-=item    ~QThread()
+=item   ~QThread()
 
-=item   static QThread * currentThread()
+=item  static QThread * currentThread()
 
-=item   static unsigned long currentThreadId()
+=item  static unsigned long currentThreadId()
 
-=item   void exit(int retcode = 0)
+=item  void exit(int retcode)
 
-=item   void exit(int retcode)
+=item  void exit(int retcode = 0)
 
-=item   static int idealThreadCount()
+=item  static int idealThreadCount()
 
-=item   bool isFinished()
+=item  bool isFinished()
 
-=item   bool isRunning()
+=item  bool isRunning()
 
-=item   QThread::Priority priority()
+=item  QThread::Priority priority()
 
-=item   void quit()
+=item  void quit()
 
-=item   void setPriority(QThread::Priority priority)
+=item  void setPriority(QThread::Priority priority)
 
-=item   void setStackSize(uint stackSize)
+=item  void setStackSize(uint stackSize)
 
-=item   uint stackSize()
+=item  uint stackSize()
 
-=item   void start(QThread::Priority arg0 = QThread::InheritPriority)
+=item  void start(QThread::Priority arg0)
 
-=item   void start(QThread::Priority arg0)
+=item  void start(QThread::Priority arg0 = QThread::InheritPriority)
 
-=item   void terminate()
+=item  void terminate()
 
-=item   bool wait(unsigned long time = ULONG_MAX)
+=item  bool wait(unsigned long time)
 
-=item   bool wait(unsigned long time)
+=item  bool wait(unsigned long time = ULONG_MAX)
 
-=item   static void yieldCurrentThread()
+=item  static void yieldCurrentThread()
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
+
+=item IdlePriority
+
+=item LowestPriority
+
+=item LowPriority
+
+=item NormalPriority
+
+=item HighPriority
+
+=item HighestPriority
+
+=item TimeCriticalPriority
+
+=item InheritPriority
 
 
 =back

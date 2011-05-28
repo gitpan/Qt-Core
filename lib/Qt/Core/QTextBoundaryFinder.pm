@@ -1,4 +1,5 @@
 package Qt::Core::QTextBoundaryFinder;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QTextBoundaryFinder
 # file     : QtCore/qtextboundaryfinder.h
 
@@ -6,20 +7,10 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
+our $VERSION = '0.01_02';
 
 
 # FIXME: operator overload
-
-# enums
-# enum value in perl is enum item index number
-sub Grapheme() { 0 }
-sub Word() { 1 }
-sub Line() { 2 }
-sub Sentence() { 3 }
-sub NotAtBoundary() { 0 }
-sub StartWord() { 1 }
-sub EndWord() { 2 }
 
 
 1;
@@ -32,43 +23,64 @@ Qt::Core::QTextBoundaryFinder
 
 =over
 
-=item    QTextBoundaryFinder()
+=item   QTextBoundaryFinder()
 
-=item    QTextBoundaryFinder(const QTextBoundaryFinder & other)
+=item   QTextBoundaryFinder(const QTextBoundaryFinder & other)
 
-=item    QTextBoundaryFinder(QTextBoundaryFinder::BoundaryType type, const QString & string)
+=item   QTextBoundaryFinder(QTextBoundaryFinder::BoundaryType type, const QString & string)
 
-=item    QTextBoundaryFinder(QTextBoundaryFinder::BoundaryType type, const QChar * chars, int length, unsigned char * buffer, int bufferSize = 0)
+=item   QTextBoundaryFinder(QTextBoundaryFinder::BoundaryType type, const QChar * chars, int length, unsigned char * buffer, int bufferSize)
 
-=item    QTextBoundaryFinder(QTextBoundaryFinder::BoundaryType type, const QChar * chars, int length, unsigned char * buffer, int bufferSize)
+=item   QTextBoundaryFinder(QTextBoundaryFinder::BoundaryType type, const QChar * chars, int length, unsigned char * buffer, int bufferSize = 0)
 
-=item    QTextBoundaryFinder(QTextBoundaryFinder::BoundaryType type, const QChar * chars, int length, unsigned char * buffer = 0, int bufferSize = 0)
+=item   QTextBoundaryFinder(QTextBoundaryFinder::BoundaryType type, const QChar * chars, int length, unsigned char * buffer = 0, int bufferSize = 0)
 
-=item    QTextBoundaryFinder(QTextBoundaryFinder::BoundaryType type, const QChar * chars, int length, unsigned char * buffer, int bufferSize = 0)
+=item   ~QTextBoundaryFinder()
 
-=item    ~QTextBoundaryFinder()
+=item  QFlags<QTextBoundaryFinder::BoundaryReason> boundaryReasons()
 
-=item   bool isAtBoundary()
+=item  bool isAtBoundary()
 
-=item   bool isValid()
+=item  bool isValid()
 
-=item   QTextBoundaryFinder & operator=(const QTextBoundaryFinder & other)
+=item  QTextBoundaryFinder & operator=(const QTextBoundaryFinder & other)
 
-=item   int position()
+=item  int position()
 
-=item   void setPosition(int position)
+=item  void setPosition(int position)
 
-=item   QString string()
+=item  QString string()
 
-=item   void toEnd()
+=item  void toEnd()
 
-=item   int toNextBoundary()
+=item  int toNextBoundary()
 
-=item   int toPreviousBoundary()
+=item  int toPreviousBoundary()
 
-=item   void toStart()
+=item  void toStart()
 
-=item   QTextBoundaryFinder::BoundaryType type()
+=item  QTextBoundaryFinder::BoundaryType type()
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
+
+=item Grapheme
+
+=item Word
+
+=item Line
+
+=item Sentence
+
+=item NotAtBoundary
+
+=item StartWord
+
+=item EndWord
 
 
 =back

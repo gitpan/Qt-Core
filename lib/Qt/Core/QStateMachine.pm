@@ -1,4 +1,5 @@
 package Qt::Core::QStateMachine;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QStateMachine
 # file     : QtCore/qstatemachine.h
 
@@ -6,22 +7,11 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
-our $ISA     = qw/QState/;
+our $VERSION = '0.01_02';
+our $ISA     = qw/Qt::Core::QState/;
 
 
 # FIXME: operator overload
-
-# enums
-# enum value in perl is enum item index number
-sub NormalPriority() { 0 }
-sub HighPriority() { 1 }
-sub DontRestoreProperties() { 0 }
-sub RestoreProperties() { 1 }
-sub NoError() { 0 }
-sub NoInitialStateError() { 1 }
-sub NoDefaultStateInHistoryStateError() { 2 }
-sub NoCommonAncestorForTransitionError() { 3 }
 
 
 1;
@@ -34,9 +24,32 @@ Qt::Core::QStateMachine
 
 =over
 
-=item   void start()
+=item  void start()
 
-=item   void stop()
+=item  void stop()
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
+
+=item NormalPriority
+
+=item HighPriority
+
+=item DontRestoreProperties
+
+=item RestoreProperties
+
+=item NoError
+
+=item NoInitialStateError
+
+=item NoDefaultStateInHistoryStateError
+
+=item NoCommonAncestorForTransitionError
 
 
 =back

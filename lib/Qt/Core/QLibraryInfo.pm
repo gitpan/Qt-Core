@@ -1,4 +1,5 @@
 package Qt::Core::QLibraryInfo;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QLibraryInfo
 # file     : QtCore/qlibraryinfo.h
 
@@ -6,24 +7,10 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
+our $VERSION = '0.01_02';
 
 
 # FIXME: operator overload
-
-# enums
-# enum value in perl is enum item index number
-sub PrefixPath() { 0 }
-sub DocumentationPath() { 1 }
-sub HeadersPath() { 2 }
-sub LibrariesPath() { 3 }
-sub BinariesPath() { 4 }
-sub PluginsPath() { 5 }
-sub DataPath() { 6 }
-sub TranslationsPath() { 7 }
-sub SettingsPath() { 8 }
-sub DemosPath() { 9 }
-sub ExamplesPath() { 10 }
 
 
 1;
@@ -36,15 +23,46 @@ Qt::Core::QLibraryInfo
 
 =over
 
-=item   static QDate buildDate()
+=item  static QDate buildDate()
 
-=item   static QString buildKey()
+=item  static QString buildKey()
 
-=item   static QString licensedProducts()
+=item  static QString licensedProducts()
 
-=item   static QString licensee()
+=item  static QString licensee()
 
-=item   static QString location(QLibraryInfo::LibraryLocation arg0)
+=item  static QString location(QLibraryInfo::LibraryLocation arg0)
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
+
+=item PrefixPath
+
+=item DocumentationPath
+
+=item HeadersPath
+
+=item LibrariesPath
+
+=item BinariesPath
+
+=item PluginsPath
+
+=item DataPath
+
+=item TranslationsPath
+
+=item SettingsPath
+
+=item DemosPath
+
+=item ExamplesPath
+
+=item ImportsPath
 
 
 =back

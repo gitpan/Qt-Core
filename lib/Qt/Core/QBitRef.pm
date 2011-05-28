@@ -1,4 +1,5 @@
 package Qt::Core::QBitRef;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QBitRef
 # file     : QtCore/qbitarray.h
 
@@ -6,11 +7,10 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
+our $VERSION = '0.01_02';
 
 
 # FIXME: operator overload
-
 
 
 1;
@@ -23,13 +23,20 @@ Qt::Core::QBitRef
 
 =over
 
-=item   bool operator bool()
+=item  bool operator bool()
 
-=item   bool operator!()
+=item  bool operator!()
 
-=item   QBitRef & operator=(const QBitRef & val)
+=item  QBitRef & operator=(const QBitRef & val)
 
-=item   QBitRef & operator=(bool val)
+=item  QBitRef & operator=(bool val)
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
 
 
 =back

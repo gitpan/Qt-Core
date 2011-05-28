@@ -1,4 +1,5 @@
 package Qt::Core::QTimer;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QTimer
 # file     : QtCore/qtimer.h
 
@@ -6,12 +7,11 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
-our $ISA     = qw/QObject/;
+our $VERSION = '0.01_02';
+our $ISA     = qw/Qt::Core::QObject/;
 
 
 # FIXME: operator overload
-
 
 
 1;
@@ -24,31 +24,38 @@ Qt::Core::QTimer
 
 =over
 
-=item    QTimer(QObject * parent = 0)
+=item   QTimer(QObject * parent)
 
-=item    QTimer(QObject * parent)
+=item   QTimer(QObject * parent = 0)
 
-=item    ~QTimer()
+=item   ~QTimer()
 
-=item   int interval()
+=item  int interval()
 
-=item   bool isActive()
+=item  bool isActive()
 
-=item   bool isSingleShot()
+=item  bool isSingleShot()
 
-=item   void setInterval(int msec)
+=item  void setInterval(int msec)
 
-=item   void setSingleShot(bool singleShot)
+=item  void setSingleShot(bool singleShot)
 
-=item   static void singleShot(int msec, QObject * receiver, const char * member)
+=item  static void singleShot(int msec, QObject * receiver, const char * member)
 
-=item   void start()
+=item  void start()
 
-=item   void start(int msec)
+=item  void start(int msec)
 
-=item   void stop()
+=item  void stop()
 
-=item   int timerId()
+=item  int timerId()
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
 
 
 =back

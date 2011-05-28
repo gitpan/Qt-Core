@@ -1,4 +1,5 @@
 package Qt::Core::QMetaClassInfo;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QMetaClassInfo
 # file     : QtCore/qmetaobject.h
 
@@ -6,11 +7,10 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
+our $VERSION = '0.01_02';
 
 
 # FIXME: operator overload
-
 
 
 1;
@@ -23,13 +23,20 @@ Qt::Core::QMetaClassInfo
 
 =over
 
-=item    QMetaClassInfo()
+=item   QMetaClassInfo()
 
-=item   const QMetaObject * enclosingMetaObject()
+=item  const QMetaObject * enclosingMetaObject()
 
-=item   const char * name()
+=item  const char * name()
 
-=item   const char * value()
+=item  const char * value()
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
 
 
 =back

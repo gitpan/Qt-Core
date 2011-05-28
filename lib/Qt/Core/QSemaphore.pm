@@ -1,4 +1,5 @@
 package Qt::Core::QSemaphore;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QSemaphore
 # file     : QtCore/qsemaphore.h
 
@@ -6,11 +7,10 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
+our $VERSION = '0.01_02';
 
 
 # FIXME: operator overload
-
 
 
 1;
@@ -23,27 +23,34 @@ Qt::Core::QSemaphore
 
 =over
 
-=item    QSemaphore(int n = 0)
+=item   QSemaphore(int n)
 
-=item    QSemaphore(int n)
+=item   QSemaphore(int n = 0)
 
-=item    ~QSemaphore()
+=item   ~QSemaphore()
 
-=item   void acquire(int n = 1)
+=item  void acquire(int n)
 
-=item   void acquire(int n)
+=item  void acquire(int n = 1)
 
-=item   int available()
+=item  int available()
 
-=item   void release(int n = 1)
+=item  void release(int n)
 
-=item   void release(int n)
+=item  void release(int n = 1)
 
-=item   bool tryAcquire(int n = 1)
+=item  bool tryAcquire(int n)
 
-=item   bool tryAcquire(int n)
+=item  bool tryAcquire(int n = 1)
 
-=item   bool tryAcquire(int n, int timeout)
+=item  bool tryAcquire(int n, int timeout)
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
 
 
 =back

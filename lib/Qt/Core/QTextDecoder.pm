@@ -1,4 +1,5 @@
 package Qt::Core::QTextDecoder;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QTextDecoder
 # file     : QtCore/qtextcodec.h
 
@@ -6,11 +7,10 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
+our $VERSION = '0.01_02';
 
 
 # FIXME: operator overload
-
 
 
 1;
@@ -23,17 +23,26 @@ Qt::Core::QTextDecoder
 
 =over
 
-=item    QTextDecoder(const QTextCodec * codec)
+=item   QTextDecoder(const QTextCodec * codec)
 
-=item    ~QTextDecoder()
+=item   QTextDecoder(const QTextCodec * codec, QFlags<QTextCodec::ConversionFlag> flags)
 
-=item   bool hasFailure()
+=item   ~QTextDecoder()
 
-=item   QString toUnicode(const QByteArray & ba)
+=item  bool hasFailure()
 
-=item   QString toUnicode(const char * chars, int len)
+=item  QString toUnicode(const QByteArray & ba)
 
-=item   void toUnicode(QString * target, const char * chars, int len)
+=item  QString toUnicode(const char * chars, int len)
+
+=item  void toUnicode(QString * target, const char * chars, int len)
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
 
 
 =back

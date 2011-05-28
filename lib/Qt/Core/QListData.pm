@@ -1,4 +1,5 @@
 package Qt::Core::QListData;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QListData
 # file     : QtCore/qlist.h
 
@@ -6,14 +7,10 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
+our $VERSION = '0.01_02';
 
 
 # FIXME: operator overload
-
-# enums
-# enum value in perl is enum item index number
-sub DataHeaderSize() { 0 }
 
 
 1;
@@ -26,41 +23,56 @@ Qt::Core::QListData
 
 =over
 
-=item   void ** append()
+=item  void ** append()
 
-=item   void ** append(const QListData & l)
+=item  void ** append(int n)
 
-=item   void ** append2(const QListData & l)
+=item  void ** append(const QListData & l)
 
-=item   void ** at(int i)
+=item  void ** append2(const QListData & l)
 
-=item   void ** begin()
+=item  void ** at(int i)
 
-=item   QListData::Data * detach()
+=item  void ** begin()
 
-=item   QListData::Data * detach2()
+=item  QListData::Data * detach()
 
-=item   QListData::Data * detach3()
+=item  QListData::Data * detach(int alloc)
 
-=item   void ** end()
+=item  QListData::Data * detach2()
 
-=item   void ** erase(void ** xi)
+=item  QListData::Data * detach3()
 
-=item   void ** insert(int i)
+=item  QListData::Data * detach_grow(int * i, int n)
 
-=item   bool isEmpty()
+=item  void ** end()
 
-=item   void move(int from, int to)
+=item  void ** erase(void ** xi)
 
-=item   void ** prepend()
+=item  void ** insert(int i)
 
-=item   void realloc(int alloc)
+=item  bool isEmpty()
 
-=item   void remove(int i)
+=item  void move(int from, int to)
 
-=item   void remove(int i, int n)
+=item  void ** prepend()
 
-=item   int size()
+=item  void realloc(int alloc)
+
+=item  void remove(int i)
+
+=item  void remove(int i, int n)
+
+=item  int size()
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
+
+=item DataHeaderSize
 
 
 =back

@@ -1,4 +1,5 @@
 package Qt::Core::QIODevice;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QIODevice
 # file     : QtCore/qiodevice.h
 
@@ -6,22 +7,11 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
-our $ISA     = qw/QObject/;
+our $VERSION = '0.01_02';
+our $ISA     = qw/Qt::Core::QObject/;
 
 
 # FIXME: operator overload
-
-# enums
-# enum value in perl is enum item index number
-sub NotOpen() { 0 }
-sub ReadOnly() { 1 }
-sub WriteOnly() { 2 }
-sub ReadWrite() { 3 }
-sub Append() { 4 }
-sub Truncate() { 5 }
-sub Text() { 6 }
-sub Unbuffered() { 7 }
 
 
 1;
@@ -34,75 +24,102 @@ Qt::Core::QIODevice
 
 =over
 
-=item    QIODevice()
+=item   QIODevice()
 
-=item    QIODevice(QObject * parent)
+=item   QIODevice(QObject * parent)
 
-=item    ~QIODevice()
+=item   ~QIODevice()
 
-=item   bool atEnd()
+=item  bool atEnd()
 
-=item   qint64 bytesAvailable()
+=item  qint64 bytesAvailable()
 
-=item   qint64 bytesToWrite()
+=item  qint64 bytesToWrite()
 
-=item   bool canReadLine()
+=item  bool canReadLine()
 
-=item   void close()
+=item  void close()
 
-=item   QString errorString()
+=item  QString errorString()
 
-=item   bool getChar(char * c)
+=item  bool getChar(char * c)
 
-=item   bool isOpen()
+=item  bool isOpen()
 
-=item   bool isReadable()
+=item  bool isReadable()
 
-=item   bool isSequential()
+=item  bool isSequential()
 
-=item   bool isTextModeEnabled()
+=item  bool isTextModeEnabled()
 
-=item   bool isWritable()
+=item  bool isWritable()
 
-=item   QByteArray peek(qint64 maxlen)
+=item  bool open(QFlags<QIODevice::OpenModeFlag> mode)
 
-=item   qint64 peek(char * data, qint64 maxlen)
+=item  QFlags<QIODevice::OpenModeFlag> openMode()
 
-=item   qint64 pos()
+=item  QByteArray peek(qint64 maxlen)
 
-=item   bool putChar(char c)
+=item  qint64 peek(char * data, qint64 maxlen)
 
-=item   QByteArray read(qint64 maxlen)
+=item  qint64 pos()
 
-=item   qint64 read(char * data, qint64 maxlen)
+=item  bool putChar(char c)
 
-=item   QByteArray readAll()
+=item  QByteArray read(qint64 maxlen)
 
-=item   QByteArray readLine(qint64 maxlen = 0)
+=item  qint64 read(char * data, qint64 maxlen)
 
-=item   QByteArray readLine(qint64 maxlen)
+=item  QByteArray readAll()
 
-=item   qint64 readLine(char * data, qint64 maxlen)
+=item  QByteArray readLine(qint64 maxlen)
 
-=item   bool reset()
+=item  QByteArray readLine(qint64 maxlen = 0)
 
-=item   bool seek(qint64 pos)
+=item  qint64 readLine(char * data, qint64 maxlen)
 
-=item   void setTextModeEnabled(bool enabled)
+=item  bool reset()
 
-=item   qint64 size()
+=item  bool seek(qint64 pos)
 
-=item   void ungetChar(char c)
+=item  void setTextModeEnabled(bool enabled)
 
-=item   bool waitForBytesWritten(int msecs)
+=item  qint64 size()
 
-=item   bool waitForReadyRead(int msecs)
+=item  void ungetChar(char c)
 
-=item   qint64 write(const char * data)
+=item  bool waitForBytesWritten(int msecs)
 
-=item   qint64 write(const QByteArray & data)
+=item  bool waitForReadyRead(int msecs)
 
-=item   qint64 write(const char * data, qint64 len)
+=item  qint64 write(const char * data)
+
+=item  qint64 write(const QByteArray & data)
+
+=item  qint64 write(const char * data, qint64 len)
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
+
+=item NotOpen
+
+=item ReadOnly
+
+=item WriteOnly
+
+=item ReadWrite
+
+=item Append
+
+=item Truncate
+
+=item Text
+
+=item Unbuffered
 
 
 =back

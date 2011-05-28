@@ -1,4 +1,5 @@
 package Qt::Core::QUuid;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QUuid
 # file     : QtCore/quuid.h
 
@@ -6,23 +7,10 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
+our $VERSION = '0.01_02';
 
 
 # FIXME: operator overload
-
-# enums
-# enum value in perl is enum item index number
-sub VarUnknown() { 0 }
-sub NCS() { 1 }
-sub DCE() { 2 }
-sub Microsoft() { 3 }
-sub Reserved() { 4 }
-sub VerUnknown() { 0 }
-sub Time() { 1 }
-sub EmbeddedPOSIX() { 2 }
-sub Name() { 3 }
-sub Random() { 4 }
 
 
 1;
@@ -35,33 +23,60 @@ Qt::Core::QUuid
 
 =over
 
-=item    QUuid()
+=item   QUuid()
 
-=item    QUuid(const QString & arg0)
+=item   QUuid(const QString & arg0)
 
-=item    QUuid(const char * arg0)
+=item   QUuid(const char * arg0)
 
-=item    QUuid(uint l, ushort w1, ushort w2, uchar b1, uchar b2, uchar b3, uchar b4, uchar b5, uchar b6, uchar b7, uchar b8)
+=item   QUuid(uint l, ushort w1, ushort w2, uchar b1, uchar b2, uchar b3, uchar b4, uchar b5, uchar b6, uchar b7, uchar b8)
 
-=item   static QUuid createUuid()
+=item  static QUuid createUuid()
 
-=item   bool isNull()
+=item  bool isNull()
 
-=item   QString operator QString()
+=item  QString operator QString()
 
-=item   bool operator!=(const QUuid & orig)
+=item  bool operator!=(const QUuid & orig)
 
-=item   bool operator<(const QUuid & other)
+=item  bool operator<(const QUuid & other)
 
-=item   bool operator==(const QUuid & orig)
+=item  bool operator==(const QUuid & orig)
 
-=item   bool operator>(const QUuid & other)
+=item  bool operator>(const QUuid & other)
 
-=item   QString toString()
+=item  QString toString()
 
-=item   QUuid::Variant variant()
+=item  QUuid::Variant variant()
 
-=item   QUuid::Version version()
+=item  QUuid::Version version()
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
+
+=item VarUnknown
+
+=item NCS
+
+=item DCE
+
+=item Microsoft
+
+=item Reserved
+
+=item VerUnknown
+
+=item Time
+
+=item EmbeddedPOSIX
+
+=item Name
+
+=item Random
 
 
 =back

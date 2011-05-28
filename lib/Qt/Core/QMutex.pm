@@ -1,4 +1,5 @@
 package Qt::Core::QMutex;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QMutex
 # file     : QtCore/qmutex.h
 
@@ -6,15 +7,10 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
+our $VERSION = '0.01_02';
 
 
 # FIXME: operator overload
-
-# enums
-# enum value in perl is enum item index number
-sub NonRecursive() { 0 }
-sub Recursive() { 1 }
 
 
 1;
@@ -27,19 +23,30 @@ Qt::Core::QMutex
 
 =over
 
-=item    QMutex(QMutex::RecursionMode mode = QMutex::NonRecursive)
+=item   QMutex(QMutex::RecursionMode mode)
 
-=item    QMutex(QMutex::RecursionMode mode)
+=item   QMutex(QMutex::RecursionMode mode = QMutex::NonRecursive)
 
-=item    ~QMutex()
+=item   ~QMutex()
 
-=item   void lock()
+=item  void lock()
 
-=item   bool tryLock()
+=item  bool tryLock()
 
-=item   bool tryLock(int timeout)
+=item  bool tryLock(int timeout)
 
-=item   void unlock()
+=item  void unlock()
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
+
+=item NonRecursive
+
+=item Recursive
 
 
 =back

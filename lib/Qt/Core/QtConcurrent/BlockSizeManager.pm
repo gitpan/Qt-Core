@@ -1,4 +1,5 @@
 package Qt::Core::QtConcurrent::BlockSizeManager;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QtConcurrent::BlockSizeManager
 # file     : QtCore/qtconcurrentiteratekernel.h
 
@@ -6,11 +7,10 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
+our $VERSION = '0.01_02';
 
 
 # FIXME: operator overload
-
 
 
 1;
@@ -23,13 +23,20 @@ Qt::Core::QtConcurrent::BlockSizeManager
 
 =over
 
-=item    QtConcurrent::BlockSizeManager(int iterationCount)
+=item   QtConcurrent::BlockSizeManager(int iterationCount)
 
-=item   int blockSize()
+=item  int blockSize()
 
-=item   void timeAfterUser()
+=item  void timeAfterUser()
 
-=item   void timeBeforeUser()
+=item  void timeBeforeUser()
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
 
 
 =back

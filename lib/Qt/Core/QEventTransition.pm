@@ -1,4 +1,5 @@
 package Qt::Core::QEventTransition;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QEventTransition
 # file     : QtCore/qeventtransition.h
 
@@ -6,12 +7,11 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
-our $ISA     = qw/QAbstractTransition/;
+our $VERSION = '0.01_02';
+our $ISA     = qw/Qt::Core::QAbstractTransition/;
 
 
 # FIXME: operator overload
-
 
 
 1;
@@ -24,23 +24,30 @@ Qt::Core::QEventTransition
 
 =over
 
-=item    QEventTransition(QState * sourceState = 0)
+=item   QEventTransition(QState * sourceState)
 
-=item    QEventTransition(QState * sourceState)
+=item   QEventTransition(QState * sourceState = 0)
 
-=item    QEventTransition(QObject * object, QEvent::Type type, QState * sourceState = 0)
+=item   QEventTransition(QObject * object, QEvent::Type type, QState * sourceState)
 
-=item    QEventTransition(QObject * object, QEvent::Type type, QState * sourceState)
+=item   QEventTransition(QObject * object, QEvent::Type type, QState * sourceState = 0)
 
-=item    ~QEventTransition()
+=item   ~QEventTransition()
 
-=item   QObject * eventSource()
+=item  QObject * eventSource()
 
-=item   QEvent::Type eventType()
+=item  QEvent::Type eventType()
 
-=item   void setEventSource(QObject * object)
+=item  void setEventSource(QObject * object)
 
-=item   void setEventType(QEvent::Type type)
+=item  void setEventType(QEvent::Type type)
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
 
 
 =back

@@ -1,4 +1,5 @@
 package Qt::Core::QTranslator;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QTranslator
 # file     : QtCore/qtranslator.h
 
@@ -6,12 +7,11 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
-our $ISA     = qw/QObject/;
+our $VERSION = '0.01_02';
+our $ISA     = qw/Qt::Core::QObject/;
 
 
 # FIXME: operator overload
-
 
 
 1;
@@ -24,33 +24,36 @@ Qt::Core::QTranslator
 
 =over
 
-=item    QTranslator(QObject * parent = 0)
+=item   QTranslator(QObject * parent)
 
-=item    QTranslator(QObject * parent)
+=item   QTranslator(QObject * parent = 0)
 
-=item    ~QTranslator()
+=item   ~QTranslator()
 
-=item   bool isEmpty()
+=item  bool isEmpty()
 
-=item   bool load(const uchar * data, int len)
+=item  bool load(const uchar * data, int len)
 
-=item   bool load(const QString & filename, const QString & directory, const QString & search_delimiters, const QString & suffix = QString())
+=item  bool load(const QString & filename, const QString & directory, const QString & search_delimiters, const QString & suffix)
 
-=item   bool load(const QString & filename, const QString & directory, const QString & search_delimiters, const QString & suffix)
+=item  bool load(const QString & filename, const QString & directory, const QString & search_delimiters, const QString & suffix = QString())
 
-=item   bool load(const QString & filename, const QString & directory, const QString & search_delimiters = QString(), const QString & suffix = QString())
+=item  bool load(const QString & filename, const QString & directory, const QString & search_delimiters = QString(), const QString & suffix = QString())
 
-=item   bool load(const QString & filename, const QString & directory, const QString & search_delimiters, const QString & suffix = QString())
+=item  bool load(const QString & filename, const QString & directory = QString(), const QString & search_delimiters = QString(), const QString & suffix = QString())
 
-=item   bool load(const QString & filename, const QString & directory = QString(), const QString & search_delimiters = QString(), const QString & suffix = QString())
+=item  QString translate(const char * context, const char * sourceText, const char * disambiguation)
 
-=item   bool load(const QString & filename, const QString & directory, const QString & search_delimiters = QString(), const QString & suffix = QString())
+=item  QString translate(const char * context, const char * sourceText, const char * disambiguation = 0)
 
-=item   QString translate(const char * context, const char * sourceText, const char * disambiguation = 0)
+=item  QString translate(const char * context, const char * sourceText, const char * disambiguation, int n)
 
-=item   QString translate(const char * context, const char * sourceText, const char * disambiguation)
 
-=item   QString translate(const char * context, const char * sourceText, const char * disambiguation, int n)
+=back
+
+=head1 ENUM VALUES
+
+=over
 
 
 =back

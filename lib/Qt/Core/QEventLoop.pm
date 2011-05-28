@@ -1,4 +1,5 @@
 package Qt::Core::QEventLoop;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QEventLoop
 # file     : QtCore/qeventloop.h
 
@@ -6,22 +7,11 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
-our $ISA     = qw/QObject/;
+our $VERSION = '0.01_02';
+our $ISA     = qw/Qt::Core::QObject/;
 
 
 # FIXME: operator overload
-
-# enums
-# enum value in perl is enum item index number
-sub AllEvents() { 0 }
-sub ExcludeUserInputEvents() { 1 }
-sub ExcludeSocketNotifiers() { 2 }
-sub WaitForMoreEvents() { 3 }
-sub X11ExcludeTimers() { 4 }
-sub DeferredDeletion() { 5 }
-sub EventLoopExec() { 6 }
-sub DialogExec() { 7 }
 
 
 1;
@@ -34,21 +24,54 @@ Qt::Core::QEventLoop
 
 =over
 
-=item    QEventLoop(QObject * parent = 0)
+=item   QEventLoop(QObject * parent)
 
-=item    QEventLoop(QObject * parent)
+=item   QEventLoop(QObject * parent = 0)
 
-=item    ~QEventLoop()
+=item   ~QEventLoop()
 
-=item   void exit(int returnCode = 0)
+=item  int exec(QFlags<QEventLoop::ProcessEventsFlag> flags)
 
-=item   void exit(int returnCode)
+=item  int exec(QFlags<QEventLoop::ProcessEventsFlag> flags = QEventLoop::AllEvents)
 
-=item   bool isRunning()
+=item  void exit(int returnCode)
 
-=item   void quit()
+=item  void exit(int returnCode = 0)
 
-=item   void wakeUp()
+=item  bool isRunning()
+
+=item  bool processEvents(QFlags<QEventLoop::ProcessEventsFlag> flags)
+
+=item  bool processEvents(QFlags<QEventLoop::ProcessEventsFlag> flags = QEventLoop::AllEvents)
+
+=item  void processEvents(QFlags<QEventLoop::ProcessEventsFlag> flags, int maximumTime)
+
+=item  void quit()
+
+=item  void wakeUp()
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
+
+=item AllEvents
+
+=item ExcludeUserInputEvents
+
+=item ExcludeSocketNotifiers
+
+=item WaitForMoreEvents
+
+=item X11ExcludeTimers
+
+=item DeferredDeletion
+
+=item EventLoopExec
+
+=item DialogExec
 
 
 =back

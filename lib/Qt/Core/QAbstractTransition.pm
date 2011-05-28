@@ -1,4 +1,5 @@
 package Qt::Core::QAbstractTransition;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QAbstractTransition
 # file     : QtCore/qabstracttransition.h
 
@@ -6,12 +7,11 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
-our $ISA     = qw/QObject/;
+our $VERSION = '0.01_02';
+our $ISA     = qw/Qt::Core::QObject/;
 
 
 # FIXME: operator overload
-
 
 
 1;
@@ -24,23 +24,30 @@ Qt::Core::QAbstractTransition
 
 =over
 
-=item    QAbstractTransition(QState * sourceState = 0)
+=item   QAbstractTransition(QState * sourceState)
 
-=item    QAbstractTransition(QState * sourceState)
+=item   QAbstractTransition(QState * sourceState = 0)
 
-=item    ~QAbstractTransition()
+=item   ~QAbstractTransition()
 
-=item   void addAnimation(QAbstractAnimation * animation)
+=item  void addAnimation(QAbstractAnimation * animation)
 
-=item   QStateMachine * machine()
+=item  QStateMachine * machine()
 
-=item   void removeAnimation(QAbstractAnimation * animation)
+=item  void removeAnimation(QAbstractAnimation * animation)
 
-=item   void setTargetState(QAbstractState * target)
+=item  void setTargetState(QAbstractState * target)
 
-=item   QState * sourceState()
+=item  QState * sourceState()
 
-=item   QAbstractState * targetState()
+=item  QAbstractState * targetState()
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
 
 
 =back

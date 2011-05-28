@@ -1,4 +1,5 @@
 package Qt::Core::QXmlStreamNotationDeclaration;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QXmlStreamNotationDeclaration
 # file     : QtCore/qxmlstream.h
 
@@ -6,11 +7,10 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
+our $VERSION = '0.01_02';
 
 
 # FIXME: operator overload
-
 
 
 1;
@@ -23,23 +23,30 @@ Qt::Core::QXmlStreamNotationDeclaration
 
 =over
 
-=item    QXmlStreamNotationDeclaration()
+=item   QXmlStreamNotationDeclaration()
 
-=item    QXmlStreamNotationDeclaration(const QXmlStreamNotationDeclaration & arg0)
+=item   QXmlStreamNotationDeclaration(const QXmlStreamNotationDeclaration & arg0)
 
-=item    ~QXmlStreamNotationDeclaration()
+=item   ~QXmlStreamNotationDeclaration()
 
-=item   QStringRef name()
+=item  QStringRef name()
 
-=item   bool operator!=(const QXmlStreamNotationDeclaration & other)
+=item  bool operator!=(const QXmlStreamNotationDeclaration & other)
 
-=item   QXmlStreamNotationDeclaration & operator=(const QXmlStreamNotationDeclaration & arg0)
+=item  QXmlStreamNotationDeclaration & operator=(const QXmlStreamNotationDeclaration & arg0)
 
-=item   bool operator==(const QXmlStreamNotationDeclaration & other)
+=item  bool operator==(const QXmlStreamNotationDeclaration & other)
 
-=item   QStringRef publicId()
+=item  QStringRef publicId()
 
-=item   QStringRef systemId()
+=item  QStringRef systemId()
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
 
 
 =back

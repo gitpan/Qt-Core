@@ -1,4 +1,5 @@
 package Qt::Core::QDir;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QDir
 # file     : QtCore/qdir.h
 
@@ -6,43 +7,10 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
+our $VERSION = '0.01_02';
 
 
 # FIXME: operator overload
-
-# enums
-# enum value in perl is enum item index number
-sub Dirs() { 0 }
-sub Files() { 1 }
-sub Drives() { 2 }
-sub NoSymLinks() { 3 }
-sub AllEntries() { 4 }
-sub TypeMask() { 5 }
-sub Readable() { 6 }
-sub Writable() { 7 }
-sub Executable() { 8 }
-sub PermissionMask() { 9 }
-sub Modified() { 10 }
-sub Hidden() { 11 }
-sub System() { 12 }
-sub AccessMask() { 13 }
-sub AllDirs() { 14 }
-sub CaseSensitive() { 15 }
-sub NoDotAndDotDot() { 16 }
-sub NoFilter() { 17 }
-sub Name() { 0 }
-sub Time() { 1 }
-sub Size() { 2 }
-sub Unsorted() { 3 }
-sub SortByMask() { 4 }
-sub DirsFirst() { 5 }
-sub Reversed() { 6 }
-sub IgnoreCase() { 7 }
-sub DirsLast() { 8 }
-sub LocaleAware() { 9 }
-sub Type() { 10 }
-sub NoSort() { 11 }
 
 
 1;
@@ -55,123 +23,220 @@ Qt::Core::QDir
 
 =over
 
-=item    QDir(const QDir & arg0)
+=item   QDir(const QDir & arg0)
 
-=item    QDir(const QString & path = QString())
+=item   QDir(const QString & path)
 
-=item    QDir(const QString & path)
+=item   QDir(const QString & path = QString())
 
-=item    ~QDir()
+=item   QDir(const QString & path, const QString & nameFilter, QFlags<QDir::SortFlag> sort, QFlags<QDir::Filter> filter)
 
-=item   QString absoluteFilePath(const QString & fileName)
+=item   QDir(const QString & path, const QString & nameFilter, QFlags<QDir::SortFlag> sort, QFlags<QDir::Filter> filter = QDir::AllEntries)
 
-=item   QString absolutePath()
+=item   QDir(const QString & path, const QString & nameFilter, QFlags<QDir::SortFlag> sort = QDir::SortFlags(QDir::Name | QDir::IgnoreCase), QFlags<QDir::Filter> filter = QDir::AllEntries)
 
-=item   static void addResourceSearchPath(const QString & path)
+=item   ~QDir()
 
-=item   static void addSearchPath(const QString & prefix, const QString & path)
+=item  QString absoluteFilePath(const QString & fileName)
 
-=item   QString canonicalPath()
+=item  QString absolutePath()
 
-=item   bool cd(const QString & dirName)
+=item  static void addResourceSearchPath(const QString & path)
 
-=item   bool cdUp()
+=item  static void addSearchPath(const QString & prefix, const QString & path)
 
-=item   static QString cleanPath(const QString & path)
+=item  QString canonicalPath()
 
-=item   static QString convertSeparators(const QString & pathName)
+=item  bool cd(const QString & dirName)
 
-=item   uint count()
+=item  bool cdUp()
 
-=item   static QDir current()
+=item  static QString cleanPath(const QString & path)
 
-=item   static QString currentPath()
+=item  static QString convertSeparators(const QString & pathName)
 
-=item   QString dirName()
+=item  uint count()
 
-=item   bool exists()
+=item  static QDir current()
 
-=item   bool exists(const QString & name)
+=item  static QString currentPath()
 
-=item   QString filePath(const QString & fileName)
+=item  QString dirName()
 
-=item   static QString fromNativeSeparators(const QString & pathName)
+=item  QStringList entryList(QFlags<QDir::Filter> filters, QFlags<QDir::SortFlag> sort)
 
-=item   static QDir home()
+=item  QStringList entryList(QFlags<QDir::Filter> filters, QFlags<QDir::SortFlag> sort = QDir::NoSort)
 
-=item   static QString homePath()
+=item  QStringList entryList(QFlags<QDir::Filter> filters = QDir::NoFilter, QFlags<QDir::SortFlag> sort = QDir::NoSort)
 
-=item   bool isAbsolute()
+=item  QStringList entryList(const QStringList & nameFilters, QFlags<QDir::Filter> filters, QFlags<QDir::SortFlag> sort)
 
-=item   static bool isAbsolutePath(const QString & path)
+=item  QStringList entryList(const QStringList & nameFilters, QFlags<QDir::Filter> filters, QFlags<QDir::SortFlag> sort = QDir::NoSort)
 
-=item   bool isReadable()
+=item  QStringList entryList(const QStringList & nameFilters, QFlags<QDir::Filter> filters = QDir::NoFilter, QFlags<QDir::SortFlag> sort = QDir::NoSort)
 
-=item   bool isRelative()
+=item  bool exists()
 
-=item   static bool isRelativePath(const QString & path)
+=item  bool exists(const QString & name)
 
-=item   bool isRoot()
+=item  QString filePath(const QString & fileName)
 
-=item   bool makeAbsolute()
+=item  QFlags<QDir::Filter> filter()
 
-=item   static bool match(const QStringList & filters, const QString & fileName)
+=item  static QString fromNativeSeparators(const QString & pathName)
 
-=item   static bool match(const QString & filter, const QString & fileName)
+=item  static QDir home()
 
-=item   bool mkdir(const QString & dirName)
+=item  static QString homePath()
 
-=item   bool mkpath(const QString & dirPath)
+=item  bool isAbsolute()
 
-=item   QStringList nameFilters()
+=item  static bool isAbsolutePath(const QString & path)
 
-=item   static QStringList nameFiltersFromString(const QString & nameFilter)
+=item  bool isReadable()
 
-=item   bool operator!=(const QDir & dir)
+=item  bool isRelative()
 
-=item   QDir & operator=(const QDir & arg0)
+=item  static bool isRelativePath(const QString & path)
 
-=item   QDir & operator=(const QString & path)
+=item  bool isRoot()
 
-=item   bool operator==(const QDir & dir)
+=item  bool makeAbsolute()
 
-=item   QString operator[](int arg0)
+=item  static bool match(const QStringList & filters, const QString & fileName)
 
-=item   QString path()
+=item  static bool match(const QString & filter, const QString & fileName)
 
-=item   void refresh()
+=item  bool mkdir(const QString & dirName)
 
-=item   QString relativeFilePath(const QString & fileName)
+=item  bool mkpath(const QString & dirPath)
 
-=item   bool remove(const QString & fileName)
+=item  QStringList nameFilters()
 
-=item   bool rename(const QString & oldName, const QString & newName)
+=item  static QStringList nameFiltersFromString(const QString & nameFilter)
 
-=item   bool rmdir(const QString & dirName)
+=item  bool operator!=(const QDir & dir)
 
-=item   bool rmpath(const QString & dirPath)
+=item  QDir & operator=(const QDir & arg0)
 
-=item   static QDir root()
+=item  QDir & operator=(const QString & path)
 
-=item   static QString rootPath()
+=item  bool operator==(const QDir & dir)
 
-=item   static QStringList searchPaths(const QString & prefix)
+=item  QString operator[](int arg0)
 
-=item   static QChar separator()
+=item  QString path()
 
-=item   static bool setCurrent(const QString & path)
+=item  void refresh()
 
-=item   void setNameFilters(const QStringList & nameFilters)
+=item  QString relativeFilePath(const QString & fileName)
 
-=item   void setPath(const QString & path)
+=item  bool remove(const QString & fileName)
 
-=item   static void setSearchPaths(const QString & prefix, const QStringList & searchPaths)
+=item  bool rename(const QString & oldName, const QString & newName)
 
-=item   static QDir temp()
+=item  bool rmdir(const QString & dirName)
 
-=item   static QString tempPath()
+=item  bool rmpath(const QString & dirPath)
 
-=item   static QString toNativeSeparators(const QString & pathName)
+=item  static QDir root()
+
+=item  static QString rootPath()
+
+=item  static QStringList searchPaths(const QString & prefix)
+
+=item  static QChar separator()
+
+=item  static bool setCurrent(const QString & path)
+
+=item  void setFilter(QFlags<QDir::Filter> filter)
+
+=item  void setNameFilters(const QStringList & nameFilters)
+
+=item  void setPath(const QString & path)
+
+=item  static void setSearchPaths(const QString & prefix, const QStringList & searchPaths)
+
+=item  void setSorting(QFlags<QDir::SortFlag> sort)
+
+=item  QFlags<QDir::SortFlag> sorting()
+
+=item  static QDir temp()
+
+=item  static QString tempPath()
+
+=item  static QString toNativeSeparators(const QString & pathName)
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
+
+=item Dirs
+
+=item Files
+
+=item Drives
+
+=item NoSymLinks
+
+=item AllEntries
+
+=item TypeMask
+
+=item Readable
+
+=item Writable
+
+=item Executable
+
+=item PermissionMask
+
+=item Modified
+
+=item Hidden
+
+=item System
+
+=item AccessMask
+
+=item AllDirs
+
+=item CaseSensitive
+
+=item NoDotAndDotDot
+
+=item NoDot
+
+=item NoDotDot
+
+=item NoFilter
+
+=item Name
+
+=item Time
+
+=item Size
+
+=item Unsorted
+
+=item SortByMask
+
+=item DirsFirst
+
+=item Reversed
+
+=item IgnoreCase
+
+=item DirsLast
+
+=item LocaleAware
+
+=item Type
+
+=item NoSort
 
 
 =back

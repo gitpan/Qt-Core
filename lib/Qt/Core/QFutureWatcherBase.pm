@@ -1,4 +1,5 @@
 package Qt::Core::QFutureWatcherBase;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QFutureWatcherBase
 # file     : QtCore/qfuturewatcher.h
 
@@ -6,12 +7,11 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
-our $ISA     = qw/QObject/;
+our $VERSION = '0.01_02';
+our $ISA     = qw/Qt::Core::QObject/;
 
 
 # FIXME: operator overload
-
 
 
 1;
@@ -24,43 +24,50 @@ Qt::Core::QFutureWatcherBase
 
 =over
 
-=item    QFutureWatcherBase(QObject * parent = 0)
+=item   QFutureWatcherBase(QObject * parent)
 
-=item    QFutureWatcherBase(QObject * parent)
+=item   QFutureWatcherBase(QObject * parent = 0)
 
-=item   void cancel()
+=item  void cancel()
 
-=item   bool event(QEvent * event)
+=item  bool event(QEvent * event)
 
-=item   bool isCanceled()
+=item  bool isCanceled()
 
-=item   bool isFinished()
+=item  bool isFinished()
 
-=item   bool isPaused()
+=item  bool isPaused()
 
-=item   bool isRunning()
+=item  bool isRunning()
 
-=item   bool isStarted()
+=item  bool isStarted()
 
-=item   void pause()
+=item  void pause()
 
-=item   int progressMaximum()
+=item  int progressMaximum()
 
-=item   int progressMinimum()
+=item  int progressMinimum()
 
-=item   QString progressText()
+=item  QString progressText()
 
-=item   int progressValue()
+=item  int progressValue()
 
-=item   void resume()
+=item  void resume()
 
-=item   void setPaused(bool paused)
+=item  void setPaused(bool paused)
 
-=item   void setPendingResultsLimit(int limit)
+=item  void setPendingResultsLimit(int limit)
 
-=item   void togglePaused()
+=item  void togglePaused()
 
-=item   void waitForFinished()
+=item  void waitForFinished()
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
 
 
 =back

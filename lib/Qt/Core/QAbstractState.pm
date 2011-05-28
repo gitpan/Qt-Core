@@ -1,4 +1,5 @@
 package Qt::Core::QAbstractState;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QAbstractState
 # file     : QtCore/qabstractstate.h
 
@@ -6,12 +7,11 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
-our $ISA     = qw/QObject/;
+our $VERSION = '0.01_02';
+our $ISA     = qw/Qt::Core::QObject/;
 
 
 # FIXME: operator overload
-
 
 
 1;
@@ -24,11 +24,18 @@ Qt::Core::QAbstractState
 
 =over
 
-=item    ~QAbstractState()
+=item   ~QAbstractState()
 
-=item   QStateMachine * machine()
+=item  QStateMachine * machine()
 
-=item   QState * parentState()
+=item  QState * parentState()
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
 
 
 =back

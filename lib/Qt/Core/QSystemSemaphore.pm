@@ -1,4 +1,5 @@
 package Qt::Core::QSystemSemaphore;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QSystemSemaphore
 # file     : QtCore/qsystemsemaphore.h
 
@@ -6,22 +7,10 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
+our $VERSION = '0.01_02';
 
 
 # FIXME: operator overload
-
-# enums
-# enum value in perl is enum item index number
-sub Open() { 0 }
-sub Create() { 1 }
-sub NoError() { 0 }
-sub PermissionDenied() { 1 }
-sub KeyError() { 2 }
-sub AlreadyExists() { 3 }
-sub NotFound() { 4 }
-sub OutOfResources() { 5 }
-sub UnknownError() { 6 }
 
 
 1;
@@ -34,35 +23,56 @@ Qt::Core::QSystemSemaphore
 
 =over
 
-=item    QSystemSemaphore(const QString & key, int initialValue, QSystemSemaphore::AccessMode mode = QSystemSemaphore::Open)
+=item   QSystemSemaphore(const QString & key, int initialValue, QSystemSemaphore::AccessMode mode)
 
-=item    QSystemSemaphore(const QString & key, int initialValue, QSystemSemaphore::AccessMode mode)
+=item   QSystemSemaphore(const QString & key, int initialValue, QSystemSemaphore::AccessMode mode = QSystemSemaphore::Open)
 
-=item    QSystemSemaphore(const QString & key, int initialValue = 0, QSystemSemaphore::AccessMode mode = QSystemSemaphore::Open)
+=item   QSystemSemaphore(const QString & key, int initialValue = 0, QSystemSemaphore::AccessMode mode = QSystemSemaphore::Open)
 
-=item    QSystemSemaphore(const QString & key, int initialValue, QSystemSemaphore::AccessMode mode = QSystemSemaphore::Open)
+=item   ~QSystemSemaphore()
 
-=item    ~QSystemSemaphore()
+=item  bool acquire()
 
-=item   bool acquire()
+=item  QSystemSemaphore::SystemSemaphoreError error()
 
-=item   QSystemSemaphore::SystemSemaphoreError error()
+=item  QString errorString()
 
-=item   QString errorString()
+=item  QString key()
 
-=item   QString key()
+=item  bool release(int n)
 
-=item   bool release(int n = 1)
+=item  bool release(int n = 1)
 
-=item   bool release(int n)
+=item  void setKey(const QString & key, int initialValue, QSystemSemaphore::AccessMode mode)
 
-=item   void setKey(const QString & key, int initialValue, QSystemSemaphore::AccessMode mode = QSystemSemaphore::Open)
+=item  void setKey(const QString & key, int initialValue, QSystemSemaphore::AccessMode mode = QSystemSemaphore::Open)
 
-=item   void setKey(const QString & key, int initialValue, QSystemSemaphore::AccessMode mode)
+=item  void setKey(const QString & key, int initialValue = 0, QSystemSemaphore::AccessMode mode = QSystemSemaphore::Open)
 
-=item   void setKey(const QString & key, int initialValue = 0, QSystemSemaphore::AccessMode mode = QSystemSemaphore::Open)
 
-=item   void setKey(const QString & key, int initialValue, QSystemSemaphore::AccessMode mode = QSystemSemaphore::Open)
+=back
+
+=head1 ENUM VALUES
+
+=over
+
+=item Open
+
+=item Create
+
+=item NoError
+
+=item PermissionDenied
+
+=item KeyError
+
+=item AlreadyExists
+
+=item NotFound
+
+=item OutOfResources
+
+=item UnknownError
 
 
 =back

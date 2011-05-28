@@ -1,4 +1,5 @@
 package Qt::Core::QFileInfo;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QFileInfo
 # file     : QtCore/qfileinfo.h
 
@@ -6,11 +7,10 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
+our $VERSION = '0.01_02';
 
 
 # FIXME: operator overload
-
 
 
 1;
@@ -23,115 +23,126 @@ Qt::Core::QFileInfo
 
 =over
 
-=item    QFileInfo()
+=item   QFileInfo()
 
-=item    QFileInfo(const QString & file)
+=item   QFileInfo(const QString & file)
 
-=item    QFileInfo(const QFile & file)
+=item   QFileInfo(const QFile & file)
 
-=item    QFileInfo(const QFileInfo & fileinfo)
+=item   QFileInfo(const QFileInfo & fileinfo)
 
-=item    QFileInfo(const QDir & dir, const QString & file)
+=item   QFileInfo(const QDir & dir, const QString & file)
 
-=item    ~QFileInfo()
+=item   ~QFileInfo()
 
-=item   QDir absoluteDir()
+=item  QDir absoluteDir()
 
-=item   QString absoluteFilePath()
+=item  QString absoluteFilePath()
 
-=item   QString absolutePath()
+=item  QString absolutePath()
 
-=item   QString baseName()
+=item  QString baseName()
 
-=item   QString bundleName()
+=item  QString bundleName()
 
-=item   bool caching()
+=item  bool caching()
 
-=item   QString canonicalFilePath()
+=item  QString canonicalFilePath()
 
-=item   QString canonicalPath()
+=item  QString canonicalPath()
 
-=item   QString completeBaseName()
+=item  QString completeBaseName()
 
-=item   QString completeSuffix()
+=item  QString completeSuffix()
 
-=item   QDateTime created()
+=item  QDateTime created()
 
-=item   void detach()
+=item  void detach()
 
-=item   QDir dir()
+=item  QDir dir()
 
-=item   bool exists()
+=item  bool exists()
 
-=item   QString fileName()
+=item  QString fileName()
 
-=item   QString filePath()
+=item  QString filePath()
 
-=item   QString group()
+=item  QString group()
 
-=item   uint groupId()
+=item  uint groupId()
 
-=item   bool isAbsolute()
+=item  bool isAbsolute()
 
-=item   bool isBundle()
+=item  bool isBundle()
 
-=item   bool isDir()
+=item  bool isDir()
 
-=item   bool isExecutable()
+=item  bool isExecutable()
 
-=item   bool isFile()
+=item  bool isFile()
 
-=item   bool isHidden()
+=item  bool isHidden()
 
-=item   bool isReadable()
+=item  bool isReadable()
 
-=item   bool isRelative()
+=item  bool isRelative()
 
-=item   bool isRoot()
+=item  bool isRoot()
 
-=item   bool isSymLink()
+=item  bool isSymLink()
 
-=item   bool isWritable()
+=item  bool isWritable()
 
-=item   QDateTime lastModified()
+=item  QDateTime lastModified()
 
-=item   QDateTime lastRead()
+=item  QDateTime lastRead()
 
-=item   bool makeAbsolute()
+=item  bool makeAbsolute()
 
-=item   bool operator!=(const QFileInfo & fileinfo)
+=item  bool operator!=(const QFileInfo & fileinfo)
 
-=item   bool operator!=(const QFileInfo & fileinfo)
+=item  bool operator!=(const QFileInfo & fileinfo)
 
-=item   QFileInfo & operator=(const QFileInfo & fileinfo)
+=item  QFileInfo & operator=(const QFileInfo & fileinfo)
 
-=item   bool operator==(const QFileInfo & fileinfo)
+=item  bool operator==(const QFileInfo & fileinfo)
 
-=item   bool operator==(const QFileInfo & fileinfo)
+=item  bool operator==(const QFileInfo & fileinfo)
 
-=item   QString owner()
+=item  QString owner()
 
-=item   uint ownerId()
+=item  uint ownerId()
 
-=item   QString path()
+=item  QString path()
 
-=item   QString readLink()
+=item  bool permission(QFlags<QFile::Permission> permissions)
 
-=item   void refresh()
+=item  QFlags<QFile::Permission> permissions()
 
-=item   void setCaching(bool on)
+=item  QString readLink()
 
-=item   void setFile(const QString & file)
+=item  void refresh()
 
-=item   void setFile(const QFile & file)
+=item  void setCaching(bool on)
 
-=item   void setFile(const QDir & dir, const QString & file)
+=item  void setFile(const QString & file)
 
-=item   qint64 size()
+=item  void setFile(const QFile & file)
 
-=item   QString suffix()
+=item  void setFile(const QDir & dir, const QString & file)
 
-=item   QString symLinkTarget()
+=item  qint64 size()
+
+=item  QString suffix()
+
+=item  QString symLinkTarget()
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
 
 
 =back

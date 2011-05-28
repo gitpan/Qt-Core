@@ -1,4 +1,5 @@
 package Qt::Core::QSignalMapper;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QSignalMapper
 # file     : QtCore/qsignalmapper.h
 
@@ -6,12 +7,11 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
-our $ISA     = qw/QObject/;
+our $VERSION = '0.01_02';
+our $ISA     = qw/Qt::Core::QObject/;
 
 
 # FIXME: operator overload
-
 
 
 1;
@@ -24,33 +24,40 @@ Qt::Core::QSignalMapper
 
 =over
 
-=item    QSignalMapper(QObject * parent = 0)
+=item   QSignalMapper(QObject * parent)
 
-=item    QSignalMapper(QObject * parent)
+=item   QSignalMapper(QObject * parent = 0)
 
-=item    ~QSignalMapper()
+=item   ~QSignalMapper()
 
-=item   void map()
+=item  void map()
 
-=item   void map(QObject * sender)
+=item  void map(QObject * sender)
 
-=item   QObject * mapping(int id)
+=item  QObject * mapping(int id)
 
-=item   QObject * mapping(const QString & text)
+=item  QObject * mapping(const QString & text)
 
-=item   QObject * mapping(QWidget * widget)
+=item  QObject * mapping(QWidget * widget)
 
-=item   QObject * mapping(QObject * object)
+=item  QObject * mapping(QObject * object)
 
-=item   void removeMappings(QObject * sender)
+=item  void removeMappings(QObject * sender)
 
-=item   void setMapping(QObject * sender, int id)
+=item  void setMapping(QObject * sender, int id)
 
-=item   void setMapping(QObject * sender, const QString & text)
+=item  void setMapping(QObject * sender, const QString & text)
 
-=item   void setMapping(QObject * sender, QWidget * widget)
+=item  void setMapping(QObject * sender, QWidget * widget)
 
-=item   void setMapping(QObject * sender, QObject * object)
+=item  void setMapping(QObject * sender, QObject * object)
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
 
 
 =back

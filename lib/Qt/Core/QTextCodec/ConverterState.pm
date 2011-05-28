@@ -1,4 +1,5 @@
 package Qt::Core::QTextCodec::ConverterState;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QTextCodec::ConverterState
 # file     : QtCore/qtextcodec.h
 
@@ -6,11 +7,10 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
+our $VERSION = '0.01_02';
 
 
 # FIXME: operator overload
-
 
 
 1;
@@ -23,7 +23,18 @@ Qt::Core::QTextCodec::ConverterState
 
 =over
 
-=item    ~ConverterState()
+=item   QTextCodec::ConverterState(QFlags<QTextCodec::ConversionFlag> f)
+
+=item   QTextCodec::ConverterState(QFlags<QTextCodec::ConversionFlag> f = QTextCodec::DefaultConversion)
+
+=item   ~ConverterState()
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
 
 
 =back

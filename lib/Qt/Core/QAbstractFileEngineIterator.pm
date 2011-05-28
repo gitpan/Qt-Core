@@ -1,4 +1,5 @@
 package Qt::Core::QAbstractFileEngineIterator;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QAbstractFileEngineIterator
 # file     : QtCore/qabstractfileengine.h
 
@@ -6,13 +7,10 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
+our $VERSION = '0.01_02';
 
 
 # FIXME: operator overload
-
-# enums
-# enum value in perl is enum item index number
 
 
 1;
@@ -25,21 +23,32 @@ Qt::Core::QAbstractFileEngineIterator
 
 =over
 
-=item    ~QAbstractFileEngineIterator()
+=item   QAbstractFileEngineIterator(QFlags<QDir::Filter> filters, const QStringList & nameFilters)
 
-=item   QFileInfo currentFileInfo()
+=item   ~QAbstractFileEngineIterator()
 
-=item   QString currentFileName()
+=item  QFileInfo currentFileInfo()
 
-=item   QString currentFilePath()
+=item  QString currentFileName()
 
-=item   bool hasNext()
+=item  QString currentFilePath()
 
-=item   QStringList nameFilters()
+=item  QFlags<QDir::Filter> filters()
 
-=item   QString next()
+=item  bool hasNext()
 
-=item   QString path()
+=item  QStringList nameFilters()
+
+=item  QString next()
+
+=item  QString path()
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
 
 
 =back

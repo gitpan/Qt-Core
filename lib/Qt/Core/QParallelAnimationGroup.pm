@@ -1,4 +1,5 @@
 package Qt::Core::QParallelAnimationGroup;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QParallelAnimationGroup
 # file     : QtCore/qparallelanimationgroup.h
 
@@ -6,12 +7,11 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
-our $ISA     = qw/QAnimationGroup/;
+our $VERSION = '0.01_02';
+our $ISA     = qw/Qt::Core::QAnimationGroup/;
 
 
 # FIXME: operator overload
-
 
 
 1;
@@ -24,13 +24,20 @@ Qt::Core::QParallelAnimationGroup
 
 =over
 
-=item    QParallelAnimationGroup(QObject * parent = 0)
+=item   QParallelAnimationGroup(QObject * parent)
 
-=item    QParallelAnimationGroup(QObject * parent)
+=item   QParallelAnimationGroup(QObject * parent = 0)
 
-=item    ~QParallelAnimationGroup()
+=item   ~QParallelAnimationGroup()
 
-=item   int duration()
+=item  int duration()
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
 
 
 =back

@@ -1,4 +1,5 @@
 package Qt::Core::QXmlStreamEntityResolver;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QXmlStreamEntityResolver
 # file     : QtCore/qxmlstream.h
 
@@ -6,11 +7,10 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
+our $VERSION = '0.01_02';
 
 
 # FIXME: operator overload
-
 
 
 1;
@@ -23,11 +23,18 @@ Qt::Core::QXmlStreamEntityResolver
 
 =over
 
-=item    ~QXmlStreamEntityResolver()
+=item   ~QXmlStreamEntityResolver()
 
-=item   QString resolveEntity(const QString & publicId, const QString & systemId)
+=item  QString resolveEntity(const QString & publicId, const QString & systemId)
 
-=item   QString resolveUndeclaredEntity(const QString & name)
+=item  QString resolveUndeclaredEntity(const QString & name)
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
 
 
 =back

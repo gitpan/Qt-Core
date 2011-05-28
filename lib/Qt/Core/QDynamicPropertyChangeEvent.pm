@@ -1,4 +1,5 @@
 package Qt::Core::QDynamicPropertyChangeEvent;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QDynamicPropertyChangeEvent
 # file     : QtCore/qcoreevent.h
 
@@ -6,12 +7,11 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
-our $ISA     = qw/QEvent/;
+our $VERSION = '0.01_02';
+our $ISA     = qw/Qt::Core::QEvent/;
 
 
 # FIXME: operator overload
-
 
 
 1;
@@ -24,11 +24,18 @@ Qt::Core::QDynamicPropertyChangeEvent
 
 =over
 
-=item    QDynamicPropertyChangeEvent(const QByteArray & name)
+=item   QDynamicPropertyChangeEvent(const QByteArray & name)
 
-=item    ~QDynamicPropertyChangeEvent()
+=item   ~QDynamicPropertyChangeEvent()
 
-=item   QByteArray propertyName()
+=item  QByteArray propertyName()
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
 
 
 =back

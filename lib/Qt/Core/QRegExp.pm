@@ -1,4 +1,5 @@
 package Qt::Core::QRegExp;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QRegExp
 # file     : QtCore/qregexp.h
 
@@ -6,22 +7,10 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
+our $VERSION = '0.01_02';
 
 
 # FIXME: operator overload
-
-# enums
-# enum value in perl is enum item index number
-sub RegExp() { 0 }
-sub Wildcard() { 1 }
-sub FixedString() { 2 }
-sub RegExp2() { 3 }
-sub WildcardUnix() { 4 }
-sub W3CXmlSchema11() { 5 }
-sub CaretAtZero() { 0 }
-sub CaretAtOffset() { 1 }
-sub CaretWontMatch() { 2 }
 
 
 1;
@@ -34,95 +23,114 @@ Qt::Core::QRegExp
 
 =over
 
-=item    QRegExp()
+=item   QRegExp()
 
-=item    QRegExp(const QRegExp & rx)
+=item   QRegExp(const QRegExp & rx)
 
-=item    QRegExp(const QString & pattern, Qt::CaseSensitivity cs, QRegExp::PatternSyntax syntax = QRegExp::RegExp)
+=item   QRegExp(const QString & pattern, Qt::CaseSensitivity cs, QRegExp::PatternSyntax syntax)
 
-=item    QRegExp(const QString & pattern, Qt::CaseSensitivity cs, QRegExp::PatternSyntax syntax)
+=item   QRegExp(const QString & pattern, Qt::CaseSensitivity cs, QRegExp::PatternSyntax syntax = QRegExp::RegExp)
 
-=item    QRegExp(const QString & pattern, Qt::CaseSensitivity cs = Qt::CaseSensitive, QRegExp::PatternSyntax syntax = QRegExp::RegExp)
+=item   QRegExp(const QString & pattern, Qt::CaseSensitivity cs = Qt::CaseSensitive, QRegExp::PatternSyntax syntax = QRegExp::RegExp)
 
-=item    QRegExp(const QString & pattern, Qt::CaseSensitivity cs, QRegExp::PatternSyntax syntax = QRegExp::RegExp)
+=item   ~QRegExp()
 
-=item    ~QRegExp()
+=item  QString cap(int nth)
 
-=item   QString cap(int nth = 0)
+=item  QString cap(int nth = 0)
 
-=item   QString cap(int nth)
+=item  QString cap(int nth)
 
-=item   QString cap(int nth = 0)
+=item  QString cap(int nth = 0)
 
-=item   QString cap(int nth)
+=item  int captureCount()
 
-=item   int captureCount()
+=item  QStringList capturedTexts()
 
-=item   QStringList capturedTexts()
+=item  QStringList capturedTexts()
 
-=item   QStringList capturedTexts()
+=item  Qt::CaseSensitivity caseSensitivity()
 
-=item   Qt::CaseSensitivity caseSensitivity()
+=item  QString errorString()
 
-=item   QString errorString()
+=item  QString errorString()
 
-=item   QString errorString()
+=item  static QString escape(const QString & str)
 
-=item   static QString escape(const QString & str)
+=item  bool exactMatch(const QString & str)
 
-=item   bool exactMatch(const QString & str)
+=item  int indexIn(const QString & str, int offset, QRegExp::CaretMode caretMode)
 
-=item   int indexIn(const QString & str, int offset, QRegExp::CaretMode caretMode = QRegExp::CaretAtZero)
+=item  int indexIn(const QString & str, int offset, QRegExp::CaretMode caretMode = QRegExp::CaretAtZero)
 
-=item   int indexIn(const QString & str, int offset, QRegExp::CaretMode caretMode)
+=item  int indexIn(const QString & str, int offset = 0, QRegExp::CaretMode caretMode = QRegExp::CaretAtZero)
 
-=item   int indexIn(const QString & str, int offset = 0, QRegExp::CaretMode caretMode = QRegExp::CaretAtZero)
+=item  bool isEmpty()
 
-=item   int indexIn(const QString & str, int offset, QRegExp::CaretMode caretMode = QRegExp::CaretAtZero)
+=item  bool isMinimal()
 
-=item   bool isEmpty()
+=item  bool isValid()
 
-=item   bool isMinimal()
+=item  int lastIndexIn(const QString & str, int offset, QRegExp::CaretMode caretMode)
 
-=item   bool isValid()
+=item  int lastIndexIn(const QString & str, int offset, QRegExp::CaretMode caretMode = QRegExp::CaretAtZero)
 
-=item   int lastIndexIn(const QString & str, int offset, QRegExp::CaretMode caretMode = QRegExp::CaretAtZero)
+=item  int lastIndexIn(const QString & str, int offset = -1, QRegExp::CaretMode caretMode = QRegExp::CaretAtZero)
 
-=item   int lastIndexIn(const QString & str, int offset, QRegExp::CaretMode caretMode)
+=item  int matchedLength()
 
-=item   int lastIndexIn(const QString & str, int offset = -1, QRegExp::CaretMode caretMode = QRegExp::CaretAtZero)
+=item  int numCaptures()
 
-=item   int lastIndexIn(const QString & str, int offset, QRegExp::CaretMode caretMode = QRegExp::CaretAtZero)
+=item  bool operator!=(const QRegExp & rx)
 
-=item   int matchedLength()
+=item  QRegExp & operator=(const QRegExp & rx)
 
-=item   int numCaptures()
+=item  bool operator==(const QRegExp & rx)
 
-=item   bool operator!=(const QRegExp & rx)
+=item  QString pattern()
 
-=item   QRegExp & operator=(const QRegExp & rx)
+=item  QRegExp::PatternSyntax patternSyntax()
 
-=item   bool operator==(const QRegExp & rx)
+=item  int pos(int nth)
 
-=item   QString pattern()
+=item  int pos(int nth = 0)
 
-=item   QRegExp::PatternSyntax patternSyntax()
+=item  int pos(int nth)
 
-=item   int pos(int nth = 0)
+=item  int pos(int nth = 0)
 
-=item   int pos(int nth)
+=item  void setCaseSensitivity(Qt::CaseSensitivity cs)
 
-=item   int pos(int nth = 0)
+=item  void setMinimal(bool minimal)
 
-=item   int pos(int nth)
+=item  void setPattern(const QString & pattern)
 
-=item   void setCaseSensitivity(Qt::CaseSensitivity cs)
+=item  void setPatternSyntax(QRegExp::PatternSyntax syntax)
 
-=item   void setMinimal(bool minimal)
 
-=item   void setPattern(const QString & pattern)
+=back
 
-=item   void setPatternSyntax(QRegExp::PatternSyntax syntax)
+=head1 ENUM VALUES
+
+=over
+
+=item RegExp
+
+=item Wildcard
+
+=item FixedString
+
+=item RegExp2
+
+=item WildcardUnix
+
+=item W3CXmlSchema11
+
+=item CaretAtZero
+
+=item CaretAtOffset
+
+=item CaretWontMatch
 
 
 =back

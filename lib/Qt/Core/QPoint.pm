@@ -1,4 +1,5 @@
 package Qt::Core::QPoint;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QPoint
 # file     : QtCore/qpoint.h
 
@@ -6,11 +7,10 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
+our $VERSION = '0.01_02';
 
 
 # FIXME: operator overload
-
 
 
 1;
@@ -23,33 +23,40 @@ Qt::Core::QPoint
 
 =over
 
-=item    QPoint()
+=item   QPoint()
 
-=item    QPoint(int xpos, int ypos)
+=item   QPoint(int xpos, int ypos)
 
-=item   bool isNull()
+=item  bool isNull()
 
-=item   int manhattanLength()
+=item  int manhattanLength()
 
-=item   QPoint & operator*=(qreal c)
+=item  QPoint & operator*=(qreal c)
 
-=item   QPoint & operator+=(const QPoint & p)
+=item  QPoint & operator+=(const QPoint & p)
 
-=item   QPoint & operator-=(const QPoint & p)
+=item  QPoint & operator-=(const QPoint & p)
 
-=item   QPoint & operator/=(qreal c)
+=item  QPoint & operator/=(qreal c)
 
-=item   int & rx()
+=item  int & rx()
 
-=item   int & ry()
+=item  int & ry()
 
-=item   void setX(int x)
+=item  void setX(int x)
 
-=item   void setY(int y)
+=item  void setY(int y)
 
-=item   int x()
+=item  int x()
 
-=item   int y()
+=item  int y()
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
 
 
 =back

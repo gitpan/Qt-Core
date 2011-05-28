@@ -1,4 +1,5 @@
 package Qt::Core::QChildEvent;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QChildEvent
 # file     : QtCore/qcoreevent.h
 
@@ -6,12 +7,11 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
-our $ISA     = qw/QEvent/;
+our $VERSION = '0.01_02';
+our $ISA     = qw/Qt::Core::QEvent/;
 
 
 # FIXME: operator overload
-
 
 
 1;
@@ -24,17 +24,24 @@ Qt::Core::QChildEvent
 
 =over
 
-=item    QChildEvent(QEvent::Type type, QObject * child)
+=item   QChildEvent(QEvent::Type type, QObject * child)
 
-=item    ~QChildEvent()
+=item   ~QChildEvent()
 
-=item   bool added()
+=item  bool added()
 
-=item   QObject * child()
+=item  QObject * child()
 
-=item   bool polished()
+=item  bool polished()
 
-=item   bool removed()
+=item  bool removed()
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
 
 
 =back

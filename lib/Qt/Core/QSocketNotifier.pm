@@ -1,4 +1,5 @@
 package Qt::Core::QSocketNotifier;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QSocketNotifier
 # file     : QtCore/qsocketnotifier.h
 
@@ -6,17 +7,11 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
-our $ISA     = qw/QObject/;
+our $VERSION = '0.01_02';
+our $ISA     = qw/Qt::Core::QObject/;
 
 
 # FIXME: operator overload
-
-# enums
-# enum value in perl is enum item index number
-sub Read() { 0 }
-sub Write() { 1 }
-sub Exception() { 2 }
 
 
 1;
@@ -29,19 +24,32 @@ Qt::Core::QSocketNotifier
 
 =over
 
-=item    QSocketNotifier(int socket, QSocketNotifier::Type arg1, QObject * parent = 0)
+=item   QSocketNotifier(int socket, QSocketNotifier::Type arg1, QObject * parent)
 
-=item    QSocketNotifier(int socket, QSocketNotifier::Type arg1, QObject * parent)
+=item   QSocketNotifier(int socket, QSocketNotifier::Type arg1, QObject * parent = 0)
 
-=item    ~QSocketNotifier()
+=item   ~QSocketNotifier()
 
-=item   bool isEnabled()
+=item  bool isEnabled()
 
-=item   void setEnabled(bool arg0)
+=item  void setEnabled(bool arg0)
 
-=item   int socket()
+=item  int socket()
 
-=item   QSocketNotifier::Type type()
+=item  QSocketNotifier::Type type()
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
+
+=item Read
+
+=item Write
+
+=item Exception
 
 
 =back

@@ -1,4 +1,5 @@
 package Qt::Core::QSize;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QSize
 # file     : QtCore/qsize.h
 
@@ -6,11 +7,10 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
+our $VERSION = '0.01_02';
 
 
 # FIXME: operator overload
-
 
 
 1;
@@ -23,45 +23,52 @@ Qt::Core::QSize
 
 =over
 
-=item    QSize()
+=item   QSize()
 
-=item    QSize(int w, int h)
+=item   QSize(int w, int h)
 
-=item   QSize boundedTo(const QSize & arg0)
+=item  QSize boundedTo(const QSize & arg0)
 
-=item   QSize expandedTo(const QSize & arg0)
+=item  QSize expandedTo(const QSize & arg0)
 
-=item   int height()
+=item  int height()
 
-=item   bool isEmpty()
+=item  bool isEmpty()
 
-=item   bool isNull()
+=item  bool isNull()
 
-=item   bool isValid()
+=item  bool isValid()
 
-=item   QSize & operator*=(qreal c)
+=item  QSize & operator*=(qreal c)
 
-=item   QSize & operator+=(const QSize & arg0)
+=item  QSize & operator+=(const QSize & arg0)
 
-=item   QSize & operator-=(const QSize & arg0)
+=item  QSize & operator-=(const QSize & arg0)
 
-=item   QSize & operator/=(qreal c)
+=item  QSize & operator/=(qreal c)
 
-=item   int & rheight()
+=item  int & rheight()
 
-=item   int & rwidth()
+=item  int & rwidth()
 
-=item   void scale(const QSize & s, Qt::AspectRatioMode mode)
+=item  void scale(const QSize & s, Qt::AspectRatioMode mode)
 
-=item   void scale(int w, int h, Qt::AspectRatioMode mode)
+=item  void scale(int w, int h, Qt::AspectRatioMode mode)
 
-=item   void setHeight(int h)
+=item  void setHeight(int h)
 
-=item   void setWidth(int w)
+=item  void setWidth(int w)
 
-=item   void transpose()
+=item  void transpose()
 
-=item   int width()
+=item  int width()
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
 
 
 =back

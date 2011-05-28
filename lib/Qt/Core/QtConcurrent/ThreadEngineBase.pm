@@ -1,4 +1,5 @@
 package Qt::Core::QtConcurrent::ThreadEngineBase;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QtConcurrent::ThreadEngineBase
 # file     : QtCore/qtconcurrentthreadengine.h
 
@@ -6,12 +7,11 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
-our $ISA     = qw/QRunnable/;
+our $VERSION = '0.01_02';
+our $ISA     = qw/Qt::Core::QRunnable/;
 
 
 # FIXME: operator overload
-
 
 
 1;
@@ -24,27 +24,34 @@ Qt::Core::QtConcurrent::ThreadEngineBase
 
 =over
 
-=item    QtConcurrent::ThreadEngineBase()
+=item   QtConcurrent::ThreadEngineBase()
 
-=item    ~ThreadEngineBase()
+=item   ~ThreadEngineBase()
 
-=item   void acquireBarrierSemaphore()
+=item  void acquireBarrierSemaphore()
 
-=item   bool isCanceled()
+=item  bool isCanceled()
 
-=item   bool isProgressReportingEnabled()
+=item  bool isProgressReportingEnabled()
 
-=item   void setProgressRange(int minimum, int maximum)
+=item  void setProgressRange(int minimum, int maximum)
 
-=item   void setProgressValue(int progress)
+=item  void setProgressValue(int progress)
 
-=item   void startBlocking()
+=item  void startBlocking()
 
-=item   void startSingleThreaded()
+=item  void startSingleThreaded()
 
-=item   void startThread()
+=item  void startThread()
 
-=item   void waitForResume()
+=item  void waitForResume()
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
 
 
 =back

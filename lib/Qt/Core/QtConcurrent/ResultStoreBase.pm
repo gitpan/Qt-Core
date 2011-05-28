@@ -1,4 +1,5 @@
 package Qt::Core::QtConcurrent::ResultStoreBase;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QtConcurrent::ResultStoreBase
 # file     : QtCore/qtconcurrentresultstore.h
 
@@ -6,11 +7,10 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
+our $VERSION = '0.01_02';
 
 
 # FIXME: operator overload
-
 
 
 1;
@@ -23,29 +23,36 @@ Qt::Core::QtConcurrent::ResultStoreBase
 
 =over
 
-=item    QtConcurrent::ResultStoreBase()
+=item   QtConcurrent::ResultStoreBase()
 
-=item    ~ResultStoreBase()
+=item   ~ResultStoreBase()
 
-=item   int addResult(int index, const void * result)
+=item  int addResult(int index, const void * result)
 
-=item   int addResults(int index, const void * results, int vectorSize, int logicalCount)
+=item  int addResults(int index, const void * results, int vectorSize, int logicalCount)
 
-=item   QtConcurrent::ResultIteratorBase begin()
+=item  QtConcurrent::ResultIteratorBase begin()
 
-=item   bool contains(int index)
+=item  bool contains(int index)
 
-=item   int count()
+=item  int count()
 
-=item   QtConcurrent::ResultIteratorBase end()
+=item  QtConcurrent::ResultIteratorBase end()
 
-=item   bool filterMode()
+=item  bool filterMode()
 
-=item   bool hasNextResult()
+=item  bool hasNextResult()
 
-=item   QtConcurrent::ResultIteratorBase resultAt(int index)
+=item  QtConcurrent::ResultIteratorBase resultAt(int index)
 
-=item   void setFilterMode(bool enable)
+=item  void setFilterMode(bool enable)
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
 
 
 =back

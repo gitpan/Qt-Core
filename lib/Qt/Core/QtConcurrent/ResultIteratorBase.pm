@@ -1,4 +1,5 @@
 package Qt::Core::QtConcurrent::ResultIteratorBase;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QtConcurrent::ResultIteratorBase
 # file     : QtCore/qtconcurrentresultstore.h
 
@@ -6,11 +7,10 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
+our $VERSION = '0.01_02';
 
 
 # FIXME: operator overload
-
 
 
 1;
@@ -23,25 +23,32 @@ Qt::Core::QtConcurrent::ResultIteratorBase
 
 =over
 
-=item    QtConcurrent::ResultIteratorBase()
+=item   QtConcurrent::ResultIteratorBase()
 
-=item   int batchSize()
+=item  int batchSize()
 
-=item   void batchedAdvance()
+=item  void batchedAdvance()
 
-=item   bool canIncrementVectorIndex()
+=item  bool canIncrementVectorIndex()
 
-=item   bool isVector()
+=item  bool isVector()
 
-=item   bool operator!=(const QtConcurrent::ResultIteratorBase & other)
+=item  bool operator!=(const QtConcurrent::ResultIteratorBase & other)
 
-=item   QtConcurrent::ResultIteratorBase operator++()
+=item  QtConcurrent::ResultIteratorBase operator++()
 
-=item   bool operator==(const QtConcurrent::ResultIteratorBase & other)
+=item  bool operator==(const QtConcurrent::ResultIteratorBase & other)
 
-=item   int resultIndex()
+=item  int resultIndex()
 
-=item   int vectorIndex()
+=item  int vectorIndex()
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
 
 
 =back

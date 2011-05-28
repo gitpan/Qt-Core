@@ -1,4 +1,5 @@
 package Qt::Core::QFile;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QFile
 # file     : QtCore/qfile.h
 
@@ -6,42 +7,11 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
-our $ISA     = qw/QIODevice/;
+our $VERSION = '0.01_02';
+our $ISA     = qw/Qt::Core::QIODevice/;
 
 
 # FIXME: operator overload
-
-# enums
-# enum value in perl is enum item index number
-sub NoError() { 0 }
-sub ReadError() { 1 }
-sub WriteError() { 2 }
-sub FatalError() { 3 }
-sub ResourceError() { 4 }
-sub OpenError() { 5 }
-sub AbortError() { 6 }
-sub TimeOutError() { 7 }
-sub UnspecifiedError() { 8 }
-sub RemoveError() { 9 }
-sub RenameError() { 10 }
-sub PositionError() { 11 }
-sub ResizeError() { 12 }
-sub PermissionsError() { 13 }
-sub CopyError() { 14 }
-sub ReadOwner() { 0 }
-sub WriteOwner() { 1 }
-sub ExeOwner() { 2 }
-sub ReadUser() { 3 }
-sub WriteUser() { 4 }
-sub ExeUser() { 5 }
-sub ReadGroup() { 6 }
-sub WriteGroup() { 7 }
-sub ExeGroup() { 8 }
-sub ReadOther() { 9 }
-sub WriteOther() { 10 }
-sub ExeOther() { 11 }
-sub NoOptions() { 0 }
 
 
 1;
@@ -54,89 +24,166 @@ Qt::Core::QFile
 
 =over
 
-=item    QFile()
+=item   QFile()
 
-=item    QFile(const QString & name)
+=item   QFile(const QString & name)
 
-=item    QFile(QObject * parent)
+=item   QFile(QObject * parent)
 
-=item    QFile(const QString & name, QObject * parent)
+=item   QFile(const QString & name, QObject * parent)
 
-=item    ~QFile()
+=item   ~QFile()
 
-=item   bool atEnd()
+=item  bool atEnd()
 
-=item   void close()
+=item  void close()
 
-=item   bool copy(const QString & newName)
+=item  bool copy(const QString & newName)
 
-=item   static bool copy(const QString & fileName, const QString & newName)
+=item  static bool copy(const QString & fileName, const QString & newName)
 
-=item   static QString decodeName(const QByteArray & localFileName)
+=item  static QString decodeName(const QByteArray & localFileName)
 
-=item   static QString decodeName(const char * localFileName)
+=item  static QString decodeName(const char * localFileName)
 
-=item   static QByteArray encodeName(const QString & fileName)
+=item  static QByteArray encodeName(const QString & fileName)
 
-=item   QFile::FileError error()
+=item  QFile::FileError error()
 
-=item   bool exists()
+=item  bool exists()
 
-=item   static bool exists(const QString & fileName)
+=item  static bool exists(const QString & fileName)
 
-=item   QAbstractFileEngine * fileEngine()
+=item  QAbstractFileEngine * fileEngine()
 
-=item   QString fileName()
+=item  QString fileName()
 
-=item   bool flush()
+=item  bool flush()
 
-=item   int handle()
+=item  int handle()
 
-=item   bool isSequential()
+=item  bool isSequential()
 
-=item   bool link(const QString & newName)
+=item  bool link(const QString & newName)
 
-=item   static bool link(const QString & oldname, const QString & newName)
+=item  static bool link(const QString & oldname, const QString & newName)
 
-=item   uchar * map(qint64 offset, qint64 size, QFile::MemoryMapFlags flags = QFile::NoOptions)
+=item  uchar * map(qint64 offset, qint64 size, QFile::MemoryMapFlags flags)
 
-=item   uchar * map(qint64 offset, qint64 size, QFile::MemoryMapFlags flags)
+=item  uchar * map(qint64 offset, qint64 size, QFile::MemoryMapFlags flags = QFile::NoOptions)
 
-=item   qint64 pos()
+=item  bool open(QFlags<QIODevice::OpenModeFlag> flags)
 
-=item   QString readLink()
+=item  bool open(FILE * f, QFlags<QIODevice::OpenModeFlag> flags)
 
-=item   static QString readLink(const QString & fileName)
+=item  bool open(int fd, QFlags<QIODevice::OpenModeFlag> flags)
 
-=item   bool remove()
+=item  QFlags<QFile::Permission> permissions()
 
-=item   static bool remove(const QString & fileName)
+=item  static QFlags<QFile::Permission> permissions(const QString & filename)
 
-=item   bool rename(const QString & newName)
+=item  qint64 pos()
 
-=item   static bool rename(const QString & oldName, const QString & newName)
+=item  QString readLink()
 
-=item   bool resize(qint64 sz)
+=item  static QString readLink(const QString & fileName)
 
-=item   static bool resize(const QString & filename, qint64 sz)
+=item  bool remove()
 
-=item   bool seek(qint64 offset)
+=item  static bool remove(const QString & fileName)
 
-=item   static void setDecodingFunction(QFile::DecoderFn arg0)
+=item  bool rename(const QString & newName)
 
-=item   static void setEncodingFunction(QFile::EncoderFn arg0)
+=item  static bool rename(const QString & oldName, const QString & newName)
 
-=item   void setFileName(const QString & name)
+=item  bool resize(qint64 sz)
 
-=item   qint64 size()
+=item  static bool resize(const QString & filename, qint64 sz)
 
-=item   QString symLinkTarget()
+=item  bool seek(qint64 offset)
 
-=item   static QString symLinkTarget(const QString & fileName)
+=item  static void setDecodingFunction(QFile::DecoderFn arg0)
 
-=item   bool unmap(uchar * address)
+=item  static void setEncodingFunction(QFile::EncoderFn arg0)
 
-=item   void unsetError()
+=item  void setFileName(const QString & name)
+
+=item  bool setPermissions(QFlags<QFile::Permission> permissionSpec)
+
+=item  static bool setPermissions(const QString & filename, QFlags<QFile::Permission> permissionSpec)
+
+=item  qint64 size()
+
+=item  QString symLinkTarget()
+
+=item  static QString symLinkTarget(const QString & fileName)
+
+=item  bool unmap(uchar * address)
+
+=item  void unsetError()
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
+
+=item NoError
+
+=item ReadError
+
+=item WriteError
+
+=item FatalError
+
+=item ResourceError
+
+=item OpenError
+
+=item AbortError
+
+=item TimeOutError
+
+=item UnspecifiedError
+
+=item RemoveError
+
+=item RenameError
+
+=item PositionError
+
+=item ResizeError
+
+=item PermissionsError
+
+=item CopyError
+
+=item ReadOwner
+
+=item WriteOwner
+
+=item ExeOwner
+
+=item ReadUser
+
+=item WriteUser
+
+=item ExeUser
+
+=item ReadGroup
+
+=item WriteGroup
+
+=item ExeGroup
+
+=item ReadOther
+
+=item WriteOther
+
+=item ExeOther
+
+=item NoOptions
 
 
 =back

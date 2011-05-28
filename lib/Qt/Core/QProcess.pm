@@ -1,4 +1,5 @@
 package Qt::Core::QProcess;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QProcess
 # file     : QtCore/qprocess.h
 
@@ -6,30 +7,11 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
-our $ISA     = qw/QIODevice/;
+our $VERSION = '0.01_02';
+our $ISA     = qw/Qt::Core::QIODevice/;
 
 
 # FIXME: operator overload
-
-# enums
-# enum value in perl is enum item index number
-sub FailedToStart() { 0 }
-sub Crashed() { 1 }
-sub Timedout() { 2 }
-sub ReadError() { 3 }
-sub WriteError() { 4 }
-sub UnknownError() { 5 }
-sub NotRunning() { 0 }
-sub Starting() { 1 }
-sub Running() { 2 }
-sub StandardOutput() { 0 }
-sub StandardError() { 1 }
-sub SeparateChannels() { 0 }
-sub MergedChannels() { 1 }
-sub ForwardedChannels() { 2 }
-sub NormalExit() { 0 }
-sub CrashExit() { 1 }
 
 
 1;
@@ -42,103 +24,158 @@ Qt::Core::QProcess
 
 =over
 
-=item    QProcess(QObject * parent = 0)
+=item   QProcess(QObject * parent)
 
-=item    QProcess(QObject * parent)
+=item   QProcess(QObject * parent = 0)
 
-=item    ~QProcess()
+=item   ~QProcess()
 
-=item   bool atEnd()
+=item  bool atEnd()
 
-=item   qint64 bytesAvailable()
+=item  qint64 bytesAvailable()
 
-=item   qint64 bytesToWrite()
+=item  qint64 bytesToWrite()
 
-=item   bool canReadLine()
+=item  bool canReadLine()
 
-=item   void close()
+=item  void close()
 
-=item   void closeReadChannel(QProcess::ProcessChannel channel)
+=item  void closeReadChannel(QProcess::ProcessChannel channel)
 
-=item   void closeWriteChannel()
+=item  void closeWriteChannel()
 
-=item   QStringList environment()
+=item  QStringList environment()
 
-=item   QProcess::ProcessError error()
+=item  QProcess::ProcessError error()
 
-=item   static int execute(const QString & program)
+=item  static int execute(const QString & program)
 
-=item   static int execute(const QString & program, const QStringList & arguments)
+=item  static int execute(const QString & program, const QStringList & arguments)
 
-=item   int exitCode()
+=item  int exitCode()
 
-=item   QProcess::ExitStatus exitStatus()
+=item  QProcess::ExitStatus exitStatus()
 
-=item   bool isSequential()
+=item  bool isSequential()
 
-=item   void kill()
+=item  void kill()
 
-=item   qint64 pid()
+=item  qint64 pid()
 
-=item   QProcess::ProcessChannelMode processChannelMode()
+=item  QProcess::ProcessChannelMode processChannelMode()
 
-=item   QProcessEnvironment processEnvironment()
+=item  QProcessEnvironment processEnvironment()
 
-=item   QByteArray readAllStandardError()
+=item  QByteArray readAllStandardError()
 
-=item   QByteArray readAllStandardOutput()
+=item  QByteArray readAllStandardOutput()
 
-=item   QProcess::ProcessChannel readChannel()
+=item  QProcess::ProcessChannel readChannel()
 
-=item   QProcess::ProcessChannelMode readChannelMode()
+=item  QProcess::ProcessChannelMode readChannelMode()
 
-=item   void setEnvironment(const QStringList & environment)
+=item  void setEnvironment(const QStringList & environment)
 
-=item   void setProcessChannelMode(QProcess::ProcessChannelMode mode)
+=item  void setProcessChannelMode(QProcess::ProcessChannelMode mode)
 
-=item   void setProcessEnvironment(const QProcessEnvironment & environment)
+=item  void setProcessEnvironment(const QProcessEnvironment & environment)
 
-=item   void setReadChannel(QProcess::ProcessChannel channel)
+=item  void setReadChannel(QProcess::ProcessChannel channel)
 
-=item   void setReadChannelMode(QProcess::ProcessChannelMode mode)
+=item  void setReadChannelMode(QProcess::ProcessChannelMode mode)
 
-=item   void setStandardInputFile(const QString & fileName)
+=item  void setStandardErrorFile(const QString & fileName, QFlags<QIODevice::OpenModeFlag> mode)
 
-=item   void setStandardOutputProcess(QProcess * destination)
+=item  void setStandardErrorFile(const QString & fileName, QFlags<QIODevice::OpenModeFlag> mode = QIODevice::Truncate)
 
-=item   void setWorkingDirectory(const QString & dir)
+=item  void setStandardInputFile(const QString & fileName)
 
-=item   static bool startDetached(const QString & program)
+=item  void setStandardOutputFile(const QString & fileName, QFlags<QIODevice::OpenModeFlag> mode)
 
-=item   static bool startDetached(const QString & program, const QStringList & arguments)
+=item  void setStandardOutputFile(const QString & fileName, QFlags<QIODevice::OpenModeFlag> mode = QIODevice::Truncate)
 
-=item   static bool startDetached(const QString & program, const QStringList & arguments, const QString & workingDirectory, qint64 * pid = 0)
+=item  void setStandardOutputProcess(QProcess * destination)
 
-=item   static bool startDetached(const QString & program, const QStringList & arguments, const QString & workingDirectory, qint64 * pid)
+=item  void setWorkingDirectory(const QString & dir)
 
-=item   QProcess::ProcessState state()
+=item  void start(const QString & program, QFlags<QIODevice::OpenModeFlag> mode)
 
-=item   static QStringList systemEnvironment()
+=item  void start(const QString & program, QFlags<QIODevice::OpenModeFlag> mode = QIODevice::ReadWrite)
 
-=item   void terminate()
+=item  void start(const QString & program, const QStringList & arguments, QFlags<QIODevice::OpenModeFlag> mode)
 
-=item   bool waitForBytesWritten(int msecs = 30000)
+=item  void start(const QString & program, const QStringList & arguments, QFlags<QIODevice::OpenModeFlag> mode = QIODevice::ReadWrite)
 
-=item   bool waitForBytesWritten(int msecs)
+=item  static bool startDetached(const QString & program)
 
-=item   bool waitForFinished(int msecs = 30000)
+=item  static bool startDetached(const QString & program, const QStringList & arguments)
 
-=item   bool waitForFinished(int msecs)
+=item  static bool startDetached(const QString & program, const QStringList & arguments, const QString & workingDirectory, qint64 * pid)
 
-=item   bool waitForReadyRead(int msecs = 30000)
+=item  static bool startDetached(const QString & program, const QStringList & arguments, const QString & workingDirectory, qint64 * pid = 0)
 
-=item   bool waitForReadyRead(int msecs)
+=item  QProcess::ProcessState state()
 
-=item   bool waitForStarted(int msecs = 30000)
+=item  static QStringList systemEnvironment()
 
-=item   bool waitForStarted(int msecs)
+=item  void terminate()
 
-=item   QString workingDirectory()
+=item  bool waitForBytesWritten(int msecs)
+
+=item  bool waitForBytesWritten(int msecs = 30000)
+
+=item  bool waitForFinished(int msecs)
+
+=item  bool waitForFinished(int msecs = 30000)
+
+=item  bool waitForReadyRead(int msecs)
+
+=item  bool waitForReadyRead(int msecs = 30000)
+
+=item  bool waitForStarted(int msecs)
+
+=item  bool waitForStarted(int msecs = 30000)
+
+=item  QString workingDirectory()
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
+
+=item FailedToStart
+
+=item Crashed
+
+=item Timedout
+
+=item ReadError
+
+=item WriteError
+
+=item UnknownError
+
+=item NotRunning
+
+=item Starting
+
+=item Running
+
+=item StandardOutput
+
+=item StandardError
+
+=item SeparateChannels
+
+=item MergedChannels
+
+=item ForwardedChannels
+
+=item NormalExit
+
+=item CrashExit
 
 
 =back

@@ -1,4 +1,5 @@
 package Qt::Core::QBasicTimer;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QBasicTimer
 # file     : QtCore/qbasictimer.h
 
@@ -6,11 +7,10 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
+our $VERSION = '0.01_02';
 
 
 # FIXME: operator overload
-
 
 
 1;
@@ -23,17 +23,24 @@ Qt::Core::QBasicTimer
 
 =over
 
-=item    QBasicTimer()
+=item   QBasicTimer()
 
-=item    ~QBasicTimer()
+=item   ~QBasicTimer()
 
-=item   bool isActive()
+=item  bool isActive()
 
-=item   void start(int msec, QObject * obj)
+=item  void start(int msec, QObject * obj)
 
-=item   void stop()
+=item  void stop()
 
-=item   int timerId()
+=item  int timerId()
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
 
 
 =back

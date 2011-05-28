@@ -1,4 +1,5 @@
 package Qt::Core::QEasingCurve;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QEasingCurve
 # file     : QtCore/qeasingcurve.h
 
@@ -6,60 +7,10 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
+our $VERSION = '0.01_02';
 
 
 # FIXME: operator overload
-
-# enums
-# enum value in perl is enum item index number
-sub Linear() { 0 }
-sub InQuad() { 1 }
-sub OutQuad() { 2 }
-sub InOutQuad() { 3 }
-sub OutInQuad() { 4 }
-sub InCubic() { 5 }
-sub OutCubic() { 6 }
-sub InOutCubic() { 7 }
-sub OutInCubic() { 8 }
-sub InQuart() { 9 }
-sub OutQuart() { 10 }
-sub InOutQuart() { 11 }
-sub OutInQuart() { 12 }
-sub InQuint() { 13 }
-sub OutQuint() { 14 }
-sub InOutQuint() { 15 }
-sub OutInQuint() { 16 }
-sub InSine() { 17 }
-sub OutSine() { 18 }
-sub InOutSine() { 19 }
-sub OutInSine() { 20 }
-sub InExpo() { 21 }
-sub OutExpo() { 22 }
-sub InOutExpo() { 23 }
-sub OutInExpo() { 24 }
-sub InCirc() { 25 }
-sub OutCirc() { 26 }
-sub InOutCirc() { 27 }
-sub OutInCirc() { 28 }
-sub InElastic() { 29 }
-sub OutElastic() { 30 }
-sub InOutElastic() { 31 }
-sub OutInElastic() { 32 }
-sub InBack() { 33 }
-sub OutBack() { 34 }
-sub InOutBack() { 35 }
-sub OutInBack() { 36 }
-sub InBounce() { 37 }
-sub OutBounce() { 38 }
-sub InOutBounce() { 39 }
-sub OutInBounce() { 40 }
-sub InCurve() { 41 }
-sub OutCurve() { 42 }
-sub SineCurve() { 43 }
-sub CosineCurve() { 44 }
-sub Custom() { 45 }
-sub NCurveTypes() { 46 }
 
 
 1;
@@ -72,41 +23,142 @@ Qt::Core::QEasingCurve
 
 =over
 
-=item    QEasingCurve(QEasingCurve::Type type = QEasingCurve::Linear)
+=item   QEasingCurve(QEasingCurve::Type type)
 
-=item    QEasingCurve(QEasingCurve::Type type)
+=item   QEasingCurve(QEasingCurve::Type type = QEasingCurve::Linear)
 
-=item    QEasingCurve(const QEasingCurve & other)
+=item   QEasingCurve(const QEasingCurve & other)
 
-=item    ~QEasingCurve()
+=item   ~QEasingCurve()
 
-=item   qreal amplitude()
+=item  qreal amplitude()
 
-=item   QEasingCurve::EasingFunction customType()
+=item  QEasingCurve::EasingFunction customType()
 
-=item   bool operator!=(const QEasingCurve & other)
+=item  bool operator!=(const QEasingCurve & other)
 
-=item   QEasingCurve & operator=(const QEasingCurve & other)
+=item  QEasingCurve & operator=(const QEasingCurve & other)
 
-=item   bool operator==(const QEasingCurve & other)
+=item  bool operator==(const QEasingCurve & other)
 
-=item   qreal overshoot()
+=item  qreal overshoot()
 
-=item   qreal period()
+=item  qreal period()
 
-=item   void setAmplitude(qreal amplitude)
+=item  void setAmplitude(qreal amplitude)
 
-=item   void setCustomType(QEasingCurve::EasingFunction func)
+=item  void setCustomType(QEasingCurve::EasingFunction func)
 
-=item   void setOvershoot(qreal overshoot)
+=item  void setOvershoot(qreal overshoot)
 
-=item   void setPeriod(qreal period)
+=item  void setPeriod(qreal period)
 
-=item   void setType(QEasingCurve::Type type)
+=item  void setType(QEasingCurve::Type type)
 
-=item   QEasingCurve::Type type()
+=item  QEasingCurve::Type type()
 
-=item   qreal valueForProgress(qreal progress)
+=item  qreal valueForProgress(qreal progress)
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
+
+=item Linear
+
+=item InQuad
+
+=item OutQuad
+
+=item InOutQuad
+
+=item OutInQuad
+
+=item InCubic
+
+=item OutCubic
+
+=item InOutCubic
+
+=item OutInCubic
+
+=item InQuart
+
+=item OutQuart
+
+=item InOutQuart
+
+=item OutInQuart
+
+=item InQuint
+
+=item OutQuint
+
+=item InOutQuint
+
+=item OutInQuint
+
+=item InSine
+
+=item OutSine
+
+=item InOutSine
+
+=item OutInSine
+
+=item InExpo
+
+=item OutExpo
+
+=item InOutExpo
+
+=item OutInExpo
+
+=item InCirc
+
+=item OutCirc
+
+=item InOutCirc
+
+=item OutInCirc
+
+=item InElastic
+
+=item OutElastic
+
+=item InOutElastic
+
+=item OutInElastic
+
+=item InBack
+
+=item OutBack
+
+=item InOutBack
+
+=item OutInBack
+
+=item InBounce
+
+=item OutBounce
+
+=item InOutBounce
+
+=item OutInBounce
+
+=item InCurve
+
+=item OutCurve
+
+=item SineCurve
+
+=item CosineCurve
+
+=item Custom
+
+=item NCurveTypes
 
 
 =back

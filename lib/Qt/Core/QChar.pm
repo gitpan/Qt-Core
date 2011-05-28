@@ -1,4 +1,5 @@
 package Qt::Core::QChar;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QChar
 # file     : QtCore/qchar.h
 
@@ -6,123 +7,10 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
+our $VERSION = '0.01_02';
 
 
 # FIXME: operator overload
-
-# enums
-# enum value in perl is enum item index number
-sub Null() { 0 }
-sub Nbsp() { 1 }
-sub ReplacementCharacter() { 2 }
-sub ObjectReplacementCharacter() { 3 }
-sub ByteOrderMark() { 4 }
-sub ByteOrderSwapped() { 5 }
-sub ParagraphSeparator() { 6 }
-sub LineSeparator() { 7 }
-sub NoCategory() { 0 }
-sub Mark_NonSpacing() { 1 }
-sub Mark_SpacingCombining() { 2 }
-sub Mark_Enclosing() { 3 }
-sub Number_DecimalDigit() { 4 }
-sub Number_Letter() { 5 }
-sub Number_Other() { 6 }
-sub Separator_Space() { 7 }
-sub Separator_Line() { 8 }
-sub Separator_Paragraph() { 9 }
-sub Other_Control() { 10 }
-sub Other_Format() { 11 }
-sub Other_Surrogate() { 12 }
-sub Other_PrivateUse() { 13 }
-sub Other_NotAssigned() { 14 }
-sub Letter_Uppercase() { 15 }
-sub Letter_Lowercase() { 16 }
-sub Letter_Titlecase() { 17 }
-sub Letter_Modifier() { 18 }
-sub Letter_Other() { 19 }
-sub Punctuation_Connector() { 20 }
-sub Punctuation_Dash() { 21 }
-sub Punctuation_Open() { 22 }
-sub Punctuation_Close() { 23 }
-sub Punctuation_InitialQuote() { 24 }
-sub Punctuation_FinalQuote() { 25 }
-sub Punctuation_Other() { 26 }
-sub Symbol_Math() { 27 }
-sub Symbol_Currency() { 28 }
-sub Symbol_Modifier() { 29 }
-sub Symbol_Other() { 30 }
-sub Punctuation_Dask() { 31 }
-sub DirL() { 0 }
-sub DirR() { 1 }
-sub DirEN() { 2 }
-sub DirES() { 3 }
-sub DirET() { 4 }
-sub DirAN() { 5 }
-sub DirCS() { 6 }
-sub DirB() { 7 }
-sub DirS() { 8 }
-sub DirWS() { 9 }
-sub DirON() { 10 }
-sub DirLRE() { 11 }
-sub DirLRO() { 12 }
-sub DirAL() { 13 }
-sub DirRLE() { 14 }
-sub DirRLO() { 15 }
-sub DirPDF() { 16 }
-sub DirNSM() { 17 }
-sub DirBN() { 18 }
-sub NoDecomposition() { 0 }
-sub Canonical() { 1 }
-sub Font() { 2 }
-sub NoBreak() { 3 }
-sub Initial() { 4 }
-sub Medial() { 5 }
-sub Final() { 6 }
-sub Isolated() { 7 }
-sub Circle() { 8 }
-sub Super() { 9 }
-sub Sub() { 10 }
-sub Vertical() { 11 }
-sub Wide() { 12 }
-sub Narrow() { 13 }
-sub Small() { 14 }
-sub Square() { 15 }
-sub Compat() { 16 }
-sub Fraction() { 17 }
-sub OtherJoining() { 0 }
-sub Dual() { 1 }
-sub Right() { 2 }
-sub Center() { 3 }
-sub Combining_BelowLeftAttached() { 0 }
-sub Combining_BelowAttached() { 1 }
-sub Combining_BelowRightAttached() { 2 }
-sub Combining_LeftAttached() { 3 }
-sub Combining_RightAttached() { 4 }
-sub Combining_AboveLeftAttached() { 5 }
-sub Combining_AboveAttached() { 6 }
-sub Combining_AboveRightAttached() { 7 }
-sub Combining_BelowLeft() { 8 }
-sub Combining_Below() { 9 }
-sub Combining_BelowRight() { 10 }
-sub Combining_Left() { 11 }
-sub Combining_Right() { 12 }
-sub Combining_AboveLeft() { 13 }
-sub Combining_Above() { 14 }
-sub Combining_AboveRight() { 15 }
-sub Combining_DoubleBelow() { 16 }
-sub Combining_DoubleAbove() { 17 }
-sub Combining_IotaSubscript() { 18 }
-sub Unicode_Unassigned() { 0 }
-sub Unicode_1_1() { 1 }
-sub Unicode_2_0() { 2 }
-sub Unicode_2_1_2() { 3 }
-sub Unicode_3_0() { 4 }
-sub Unicode_3_1() { 5 }
-sub Unicode_3_2() { 6 }
-sub Unicode_4_0() { 7 }
-sub Unicode_4_1() { 8 }
-sub Unicode_5_0() { 9 }
 
 
 1;
@@ -135,159 +23,392 @@ Qt::Core::QChar
 
 =over
 
-=item    QChar()
+=item   QChar()
 
-=item    QChar(char c)
+=item   QChar(char c)
 
-=item    QChar(uchar c)
+=item   QChar(uchar c)
 
-=item    QChar(QLatin1Char & ch)
+=item   QChar(QLatin1Char & ch)
 
-=item    QChar(ushort rc)
+=item   QChar(ushort rc)
 
-=item    QChar(short rc)
+=item   QChar(short rc)
 
-=item    QChar(uint rc)
+=item   QChar(uint rc)
 
-=item    QChar(int rc)
+=item   QChar(int rc)
 
-=item    QChar(QChar::SpecialCharacter sc)
+=item   QChar(QChar::SpecialCharacter sc)
 
-=item    QChar(uchar c, uchar r)
+=item   QChar(uchar c, uchar r)
 
-=item   QChar::Category category()
+=item  QChar::Category category()
 
-=item   static QChar::Category category(uint ucs4)
+=item  static QChar::Category category(uint ucs4)
 
-=item   static QChar::Category category(ushort ucs2)
+=item  static QChar::Category category(ushort ucs2)
 
-=item   uchar cell()
+=item  uchar cell()
 
-=item   unsigned char combiningClass()
+=item  unsigned char combiningClass()
 
-=item   static unsigned char combiningClass(uint ucs4)
+=item  static unsigned char combiningClass(uint ucs4)
 
-=item   static unsigned char combiningClass(ushort ucs2)
+=item  static unsigned char combiningClass(ushort ucs2)
 
-=item   QString decomposition()
+=item  QString decomposition()
 
-=item   static QString decomposition(uint ucs4)
+=item  static QString decomposition(uint ucs4)
 
-=item   QChar::Decomposition decompositionTag()
+=item  QChar::Decomposition decompositionTag()
 
-=item   static QChar::Decomposition decompositionTag(uint ucs4)
+=item  static QChar::Decomposition decompositionTag(uint ucs4)
 
-=item   int digitValue()
+=item  int digitValue()
 
-=item   static int digitValue(uint ucs4)
+=item  static int digitValue(uint ucs4)
 
-=item   static int digitValue(ushort ucs2)
+=item  static int digitValue(ushort ucs2)
 
-=item   QChar::Direction direction()
+=item  QChar::Direction direction()
 
-=item   static QChar::Direction direction(uint ucs4)
+=item  static QChar::Direction direction(uint ucs4)
 
-=item   static QChar::Direction direction(ushort ucs2)
+=item  static QChar::Direction direction(ushort ucs2)
 
-=item   static QChar fromAscii(char c)
+=item  static QChar fromAscii(char c)
 
-=item   static QChar fromLatin1(char c)
+=item  static QChar fromLatin1(char c)
 
-=item   bool hasMirrored()
+=item  bool hasMirrored()
 
-=item   static ushort highSurrogate(uint ucs4)
+=item  static ushort highSurrogate(uint ucs4)
 
-=item   bool isDigit()
+=item  bool isDigit()
 
-=item   bool isHighSurrogate()
+=item  bool isHighSurrogate()
 
-=item   bool isLetter()
+=item  static bool isHighSurrogate(uint ucs4)
 
-=item   bool isLetterOrNumber()
+=item  bool isLetter()
 
-=item   bool isLowSurrogate()
+=item  bool isLetterOrNumber()
 
-=item   bool isLower()
+=item  bool isLowSurrogate()
 
-=item   bool isMark()
+=item  static bool isLowSurrogate(uint ucs4)
 
-=item   bool isNull()
+=item  bool isLower()
 
-=item   bool isNumber()
+=item  bool isMark()
 
-=item   bool isPrint()
+=item  bool isNull()
 
-=item   bool isPunct()
+=item  bool isNumber()
 
-=item   bool isSpace()
+=item  bool isPrint()
 
-=item   bool isSymbol()
+=item  bool isPunct()
 
-=item   bool isTitleCase()
+=item  bool isSpace()
 
-=item   bool isUpper()
+=item  bool isSymbol()
 
-=item   QChar::Joining joining()
+=item  bool isTitleCase()
 
-=item   static QChar::Joining joining(uint ucs4)
+=item  bool isUpper()
 
-=item   static QChar::Joining joining(ushort ucs2)
+=item  QChar::Joining joining()
 
-=item   static ushort lowSurrogate(uint ucs4)
+=item  static QChar::Joining joining(uint ucs4)
 
-=item   QChar mirroredChar()
+=item  static QChar::Joining joining(ushort ucs2)
 
-=item   static uint mirroredChar(uint ucs4)
+=item  static ushort lowSurrogate(uint ucs4)
 
-=item   static ushort mirroredChar(ushort ucs2)
+=item  QChar mirroredChar()
 
-=item   uchar row()
+=item  static uint mirroredChar(uint ucs4)
 
-=item   void setCell(uchar cell)
+=item  static ushort mirroredChar(ushort ucs2)
 
-=item   void setRow(uchar row)
+=item  static bool requiresSurrogates(uint ucs4)
 
-=item   static uint surrogateToUcs4(ushort high, ushort low)
+=item  uchar row()
 
-=item   static uint surrogateToUcs4(QChar high, QChar low)
+=item  void setCell(uchar cell)
 
-=item   char toAscii()
+=item  void setRow(uchar row)
 
-=item   QChar toCaseFolded()
+=item  static uint surrogateToUcs4(ushort high, ushort low)
 
-=item   static uint toCaseFolded(uint ucs4)
+=item  static uint surrogateToUcs4(QChar high, QChar low)
 
-=item   static ushort toCaseFolded(ushort ucs2)
+=item  char toAscii()
 
-=item   char toLatin1()
+=item  QChar toCaseFolded()
 
-=item   QChar toLower()
+=item  static uint toCaseFolded(uint ucs4)
 
-=item   static uint toLower(uint ucs4)
+=item  static ushort toCaseFolded(ushort ucs2)
 
-=item   static ushort toLower(ushort ucs2)
+=item  char toLatin1()
 
-=item   QChar toTitleCase()
+=item  QChar toLower()
 
-=item   static uint toTitleCase(uint ucs4)
+=item  static uint toLower(uint ucs4)
 
-=item   static ushort toTitleCase(ushort ucs2)
+=item  static ushort toLower(ushort ucs2)
 
-=item   QChar toUpper()
+=item  QChar toTitleCase()
 
-=item   static uint toUpper(uint ucs4)
+=item  static uint toTitleCase(uint ucs4)
 
-=item   static ushort toUpper(ushort ucs2)
+=item  static ushort toTitleCase(ushort ucs2)
 
-=item   ushort unicode()
+=item  QChar toUpper()
 
-=item   ushort & unicode()
+=item  static uint toUpper(uint ucs4)
 
-=item   QChar::UnicodeVersion unicodeVersion()
+=item  static ushort toUpper(ushort ucs2)
 
-=item   static QChar::UnicodeVersion unicodeVersion(uint ucs4)
+=item  ushort unicode()
 
-=item   static QChar::UnicodeVersion unicodeVersion(ushort ucs2)
+=item  ushort & unicode()
+
+=item  QChar::UnicodeVersion unicodeVersion()
+
+=item  static QChar::UnicodeVersion unicodeVersion(uint ucs4)
+
+=item  static QChar::UnicodeVersion unicodeVersion(ushort ucs2)
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
+
+=item Null
+
+=item Nbsp
+
+=item ReplacementCharacter
+
+=item ObjectReplacementCharacter
+
+=item ByteOrderMark
+
+=item ByteOrderSwapped
+
+=item ParagraphSeparator
+
+=item LineSeparator
+
+=item NoCategory
+
+=item Mark_NonSpacing
+
+=item Mark_SpacingCombining
+
+=item Mark_Enclosing
+
+=item Number_DecimalDigit
+
+=item Number_Letter
+
+=item Number_Other
+
+=item Separator_Space
+
+=item Separator_Line
+
+=item Separator_Paragraph
+
+=item Other_Control
+
+=item Other_Format
+
+=item Other_Surrogate
+
+=item Other_PrivateUse
+
+=item Other_NotAssigned
+
+=item Letter_Uppercase
+
+=item Letter_Lowercase
+
+=item Letter_Titlecase
+
+=item Letter_Modifier
+
+=item Letter_Other
+
+=item Punctuation_Connector
+
+=item Punctuation_Dash
+
+=item Punctuation_Open
+
+=item Punctuation_Close
+
+=item Punctuation_InitialQuote
+
+=item Punctuation_FinalQuote
+
+=item Punctuation_Other
+
+=item Symbol_Math
+
+=item Symbol_Currency
+
+=item Symbol_Modifier
+
+=item Symbol_Other
+
+=item Punctuation_Dask
+
+=item DirL
+
+=item DirR
+
+=item DirEN
+
+=item DirES
+
+=item DirET
+
+=item DirAN
+
+=item DirCS
+
+=item DirB
+
+=item DirS
+
+=item DirWS
+
+=item DirON
+
+=item DirLRE
+
+=item DirLRO
+
+=item DirAL
+
+=item DirRLE
+
+=item DirRLO
+
+=item DirPDF
+
+=item DirNSM
+
+=item DirBN
+
+=item NoDecomposition
+
+=item Canonical
+
+=item Font
+
+=item NoBreak
+
+=item Initial
+
+=item Medial
+
+=item Final
+
+=item Isolated
+
+=item Circle
+
+=item Super
+
+=item Sub
+
+=item Vertical
+
+=item Wide
+
+=item Narrow
+
+=item Small
+
+=item Square
+
+=item Compat
+
+=item Fraction
+
+=item OtherJoining
+
+=item Dual
+
+=item Right
+
+=item Center
+
+=item Combining_BelowLeftAttached
+
+=item Combining_BelowAttached
+
+=item Combining_BelowRightAttached
+
+=item Combining_LeftAttached
+
+=item Combining_RightAttached
+
+=item Combining_AboveLeftAttached
+
+=item Combining_AboveAttached
+
+=item Combining_AboveRightAttached
+
+=item Combining_BelowLeft
+
+=item Combining_Below
+
+=item Combining_BelowRight
+
+=item Combining_Left
+
+=item Combining_Right
+
+=item Combining_AboveLeft
+
+=item Combining_Above
+
+=item Combining_AboveRight
+
+=item Combining_DoubleBelow
+
+=item Combining_DoubleAbove
+
+=item Combining_IotaSubscript
+
+=item Unicode_Unassigned
+
+=item Unicode_1_1
+
+=item Unicode_2_0
+
+=item Unicode_2_1_2
+
+=item Unicode_3_0
+
+=item Unicode_3_1
+
+=item Unicode_3_2
+
+=item Unicode_4_0
+
+=item Unicode_4_1
+
+=item Unicode_5_0
 
 
 =back

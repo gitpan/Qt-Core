@@ -1,4 +1,5 @@
 package Qt::Core::QString;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QString
 # file     : QtCore/qstring.h
 
@@ -6,24 +7,10 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
+our $VERSION = '0.01_02';
 
 
 # FIXME: operator overload
-
-# enums
-# enum value in perl is enum item index number
-sub SectionDefault() { 0 }
-sub SectionSkipEmpty() { 1 }
-sub SectionIncludeLeadingSep() { 2 }
-sub SectionIncludeTrailingSep() { 3 }
-sub SectionCaseInsensitiveSeps() { 4 }
-sub KeepEmptyParts() { 0 }
-sub SkipEmptyParts() { 1 }
-sub NormalizationForm_D() { 0 }
-sub NormalizationForm_C() { 1 }
-sub NormalizationForm_KD() { 2 }
-sub NormalizationForm_KC() { 3 }
 
 # printf family functions
 # implemented upon perl's internal (s)printf
@@ -50,829 +37,796 @@ Qt::Core::QString
 
 =over
 
-=item    QString()
+=item   QString()
 
-=item    QString(QChar c)
+=item   QString(const QChar * unicode)
 
-=item    QString(const QLatin1String & latin1)
+=item   QString(QChar c)
 
-=item    QString(const QString & arg0)
+=item   QString(const QLatin1String & latin1)
 
-=item    QString(const char * ch)
+=item   QString(const QString & arg0)
 
-=item    QString(const QByteArray & a)
+=item   QString(const char * ch)
 
-=item    QString(const QString::Null & arg0)
+=item   QString(const QByteArray & a)
 
-=item    QString(const QChar * unicode, int size)
+=item   QString(const QString::Null & arg0)
 
-=item    QString(int size, QChar c)
+=item   QString(const QChar * unicode, int size)
 
-=item    QString(int size, Qt::Initialization arg1)
+=item   QString(int size, QChar c)
 
-=item    ~QString()
+=item   QString(int size, Qt::Initialization arg1)
 
-=item   QString & append(QChar c)
+=item   ~QString()
 
-=item   QString & append(const QString & s)
+=item  QString & append(QChar c)
 
-=item   QString & append(const QStringRef & s)
+=item  QString & append(const QString & s)
 
-=item   QString & append(const QLatin1String & s)
+=item  QString & append(const QStringRef & s)
 
-=item   QString & append(const char * s)
+=item  QString & append(const QLatin1String & s)
 
-=item   QString & append(const QByteArray & s)
+=item  QString & append(const char * s)
 
-=item   QString arg(const QString & a1, const QString & a2)
+=item  QString & append(const QByteArray & s)
 
-=item   QString arg(char a, int fieldWidth, const QChar & fillChar = QLatin1Char(' '))
+=item  QString arg(const QString & a1, const QString & a2)
 
-=item   QString arg(char a, int fieldWidth, const QChar & fillChar)
+=item  QString arg(char a, int fieldWidth, const QChar & fillChar)
 
-=item   QString arg(char a, int fieldWidth = 0, const QChar & fillChar = QLatin1Char(' '))
+=item  QString arg(char a, int fieldWidth, const QChar & fillChar = QLatin1Char(' '))
 
-=item   QString arg(char a, int fieldWidth, const QChar & fillChar = QLatin1Char(' '))
+=item  QString arg(char a, int fieldWidth = 0, const QChar & fillChar = QLatin1Char(' '))
 
-=item   QString arg(QChar a, int fieldWidth, const QChar & fillChar = QLatin1Char(' '))
+=item  QString arg(QChar a, int fieldWidth, const QChar & fillChar)
 
-=item   QString arg(QChar a, int fieldWidth, const QChar & fillChar)
+=item  QString arg(QChar a, int fieldWidth, const QChar & fillChar = QLatin1Char(' '))
 
-=item   QString arg(QChar a, int fieldWidth = 0, const QChar & fillChar = QLatin1Char(' '))
+=item  QString arg(QChar a, int fieldWidth = 0, const QChar & fillChar = QLatin1Char(' '))
 
-=item   QString arg(QChar a, int fieldWidth, const QChar & fillChar = QLatin1Char(' '))
+=item  QString arg(const QString & a, int fieldWidth, const QChar & fillChar)
 
-=item   QString arg(const QString & a, int fieldWidth, const QChar & fillChar = QLatin1Char(' '))
+=item  QString arg(const QString & a, int fieldWidth, const QChar & fillChar = QLatin1Char(' '))
 
-=item   QString arg(const QString & a, int fieldWidth, const QChar & fillChar)
+=item  QString arg(const QString & a, int fieldWidth = 0, const QChar & fillChar = QLatin1Char(' '))
 
-=item   QString arg(const QString & a, int fieldWidth = 0, const QChar & fillChar = QLatin1Char(' '))
+=item  QString arg(const QString & a1, const QString & a2, const QString & a3)
 
-=item   QString arg(const QString & a, int fieldWidth, const QChar & fillChar = QLatin1Char(' '))
+=item  QString arg(qlonglong a, int fieldwidth, int base, const QChar & fillChar)
 
-=item   QString arg(const QString & a1, const QString & a2, const QString & a3)
+=item  QString arg(qlonglong a, int fieldwidth, int base, const QChar & fillChar = QLatin1Char(' '))
 
-=item   QString arg(qlonglong a, int fieldwidth, int base, const QChar & fillChar = QLatin1Char(' '))
+=item  QString arg(qlonglong a, int fieldwidth, int base = 10, const QChar & fillChar = QLatin1Char(' '))
 
-=item   QString arg(qlonglong a, int fieldwidth, int base, const QChar & fillChar)
+=item  QString arg(qlonglong a, int fieldwidth = 0, int base = 10, const QChar & fillChar = QLatin1Char(' '))
 
-=item   QString arg(qlonglong a, int fieldwidth, int base = 10, const QChar & fillChar = QLatin1Char(' '))
+=item  QString arg(qulonglong a, int fieldwidth, int base, const QChar & fillChar)
 
-=item   QString arg(qlonglong a, int fieldwidth, int base, const QChar & fillChar = QLatin1Char(' '))
+=item  QString arg(qulonglong a, int fieldwidth, int base, const QChar & fillChar = QLatin1Char(' '))
 
-=item   QString arg(qlonglong a, int fieldwidth = 0, int base = 10, const QChar & fillChar = QLatin1Char(' '))
+=item  QString arg(qulonglong a, int fieldwidth, int base = 10, const QChar & fillChar = QLatin1Char(' '))
 
-=item   QString arg(qlonglong a, int fieldwidth, int base = 10, const QChar & fillChar = QLatin1Char(' '))
+=item  QString arg(qulonglong a, int fieldwidth = 0, int base = 10, const QChar & fillChar = QLatin1Char(' '))
 
-=item   QString arg(qulonglong a, int fieldwidth, int base, const QChar & fillChar = QLatin1Char(' '))
+=item  QString arg(long a, int fieldwidth, int base, const QChar & fillChar)
 
-=item   QString arg(qulonglong a, int fieldwidth, int base, const QChar & fillChar)
+=item  QString arg(long a, int fieldwidth, int base, const QChar & fillChar = QLatin1Char(' '))
 
-=item   QString arg(qulonglong a, int fieldwidth, int base = 10, const QChar & fillChar = QLatin1Char(' '))
+=item  QString arg(long a, int fieldwidth, int base = 10, const QChar & fillChar = QLatin1Char(' '))
 
-=item   QString arg(qulonglong a, int fieldwidth, int base, const QChar & fillChar = QLatin1Char(' '))
+=item  QString arg(long a, int fieldwidth = 0, int base = 10, const QChar & fillChar = QLatin1Char(' '))
 
-=item   QString arg(qulonglong a, int fieldwidth = 0, int base = 10, const QChar & fillChar = QLatin1Char(' '))
+=item  QString arg(ulong a, int fieldwidth, int base, const QChar & fillChar)
 
-=item   QString arg(qulonglong a, int fieldwidth, int base = 10, const QChar & fillChar = QLatin1Char(' '))
+=item  QString arg(ulong a, int fieldwidth, int base, const QChar & fillChar = QLatin1Char(' '))
 
-=item   QString arg(long a, int fieldwidth, int base, const QChar & fillChar = QLatin1Char(' '))
+=item  QString arg(ulong a, int fieldwidth, int base = 10, const QChar & fillChar = QLatin1Char(' '))
 
-=item   QString arg(long a, int fieldwidth, int base, const QChar & fillChar)
+=item  QString arg(ulong a, int fieldwidth = 0, int base = 10, const QChar & fillChar = QLatin1Char(' '))
 
-=item   QString arg(long a, int fieldwidth, int base = 10, const QChar & fillChar = QLatin1Char(' '))
+=item  QString arg(int a, int fieldWidth, int base, const QChar & fillChar)
 
-=item   QString arg(long a, int fieldwidth, int base, const QChar & fillChar = QLatin1Char(' '))
+=item  QString arg(int a, int fieldWidth, int base, const QChar & fillChar = QLatin1Char(' '))
 
-=item   QString arg(long a, int fieldwidth = 0, int base = 10, const QChar & fillChar = QLatin1Char(' '))
+=item  QString arg(int a, int fieldWidth, int base = 10, const QChar & fillChar = QLatin1Char(' '))
 
-=item   QString arg(long a, int fieldwidth, int base = 10, const QChar & fillChar = QLatin1Char(' '))
+=item  QString arg(int a, int fieldWidth = 0, int base = 10, const QChar & fillChar = QLatin1Char(' '))
 
-=item   QString arg(ulong a, int fieldwidth, int base, const QChar & fillChar = QLatin1Char(' '))
+=item  QString arg(uint a, int fieldWidth, int base, const QChar & fillChar)
 
-=item   QString arg(ulong a, int fieldwidth, int base, const QChar & fillChar)
+=item  QString arg(uint a, int fieldWidth, int base, const QChar & fillChar = QLatin1Char(' '))
 
-=item   QString arg(ulong a, int fieldwidth, int base = 10, const QChar & fillChar = QLatin1Char(' '))
+=item  QString arg(uint a, int fieldWidth, int base = 10, const QChar & fillChar = QLatin1Char(' '))
 
-=item   QString arg(ulong a, int fieldwidth, int base, const QChar & fillChar = QLatin1Char(' '))
+=item  QString arg(uint a, int fieldWidth = 0, int base = 10, const QChar & fillChar = QLatin1Char(' '))
 
-=item   QString arg(ulong a, int fieldwidth = 0, int base = 10, const QChar & fillChar = QLatin1Char(' '))
+=item  QString arg(short a, int fieldWidth, int base, const QChar & fillChar)
 
-=item   QString arg(ulong a, int fieldwidth, int base = 10, const QChar & fillChar = QLatin1Char(' '))
+=item  QString arg(short a, int fieldWidth, int base, const QChar & fillChar = QLatin1Char(' '))
 
-=item   QString arg(int a, int fieldWidth, int base, const QChar & fillChar = QLatin1Char(' '))
+=item  QString arg(short a, int fieldWidth, int base = 10, const QChar & fillChar = QLatin1Char(' '))
 
-=item   QString arg(int a, int fieldWidth, int base, const QChar & fillChar)
+=item  QString arg(short a, int fieldWidth = 0, int base = 10, const QChar & fillChar = QLatin1Char(' '))
 
-=item   QString arg(int a, int fieldWidth, int base = 10, const QChar & fillChar = QLatin1Char(' '))
+=item  QString arg(ushort a, int fieldWidth, int base, const QChar & fillChar)
 
-=item   QString arg(int a, int fieldWidth, int base, const QChar & fillChar = QLatin1Char(' '))
+=item  QString arg(ushort a, int fieldWidth, int base, const QChar & fillChar = QLatin1Char(' '))
 
-=item   QString arg(int a, int fieldWidth = 0, int base = 10, const QChar & fillChar = QLatin1Char(' '))
+=item  QString arg(ushort a, int fieldWidth, int base = 10, const QChar & fillChar = QLatin1Char(' '))
 
-=item   QString arg(int a, int fieldWidth, int base = 10, const QChar & fillChar = QLatin1Char(' '))
+=item  QString arg(ushort a, int fieldWidth = 0, int base = 10, const QChar & fillChar = QLatin1Char(' '))
 
-=item   QString arg(uint a, int fieldWidth, int base, const QChar & fillChar = QLatin1Char(' '))
+=item  QString arg(const QString & a1, const QString & a2, const QString & a3, const QString & a4)
 
-=item   QString arg(uint a, int fieldWidth, int base, const QChar & fillChar)
+=item  QString arg(double a, int fieldWidth, char fmt, int prec, const QChar & fillChar)
 
-=item   QString arg(uint a, int fieldWidth, int base = 10, const QChar & fillChar = QLatin1Char(' '))
+=item  QString arg(double a, int fieldWidth, char fmt, int prec, const QChar & fillChar = QLatin1Char(' '))
 
-=item   QString arg(uint a, int fieldWidth, int base, const QChar & fillChar = QLatin1Char(' '))
+=item  QString arg(double a, int fieldWidth, char fmt, int prec = -1, const QChar & fillChar = QLatin1Char(' '))
 
-=item   QString arg(uint a, int fieldWidth = 0, int base = 10, const QChar & fillChar = QLatin1Char(' '))
+=item  QString arg(double a, int fieldWidth, char fmt = 'g', int prec = -1, const QChar & fillChar = QLatin1Char(' '))
 
-=item   QString arg(uint a, int fieldWidth, int base = 10, const QChar & fillChar = QLatin1Char(' '))
+=item  QString arg(double a, int fieldWidth = 0, char fmt = 'g', int prec = -1, const QChar & fillChar = QLatin1Char(' '))
 
-=item   QString arg(short a, int fieldWidth, int base, const QChar & fillChar = QLatin1Char(' '))
+=item  QString arg(const QString & a1, const QString & a2, const QString & a3, const QString & a4, const QString & a5)
 
-=item   QString arg(short a, int fieldWidth, int base, const QChar & fillChar)
+=item  QString arg(const QString & a1, const QString & a2, const QString & a3, const QString & a4, const QString & a5, const QString & a6)
 
-=item   QString arg(short a, int fieldWidth, int base = 10, const QChar & fillChar = QLatin1Char(' '))
+=item  QString arg(const QString & a1, const QString & a2, const QString & a3, const QString & a4, const QString & a5, const QString & a6, const QString & a7)
 
-=item   QString arg(short a, int fieldWidth, int base, const QChar & fillChar = QLatin1Char(' '))
+=item  QString arg(const QString & a1, const QString & a2, const QString & a3, const QString & a4, const QString & a5, const QString & a6, const QString & a7, const QString & a8)
 
-=item   QString arg(short a, int fieldWidth = 0, int base = 10, const QChar & fillChar = QLatin1Char(' '))
+=item  QString arg(const QString & a1, const QString & a2, const QString & a3, const QString & a4, const QString & a5, const QString & a6, const QString & a7, const QString & a8, const QString & a9)
 
-=item   QString arg(short a, int fieldWidth, int base = 10, const QChar & fillChar = QLatin1Char(' '))
+=item  const QChar at(int i)
 
-=item   QString arg(ushort a, int fieldWidth, int base, const QChar & fillChar = QLatin1Char(' '))
+=item  QChar * begin()
 
-=item   QString arg(ushort a, int fieldWidth, int base, const QChar & fillChar)
+=item  const QChar * begin()
 
-=item   QString arg(ushort a, int fieldWidth, int base = 10, const QChar & fillChar = QLatin1Char(' '))
+=item  int capacity()
 
-=item   QString arg(ushort a, int fieldWidth, int base, const QChar & fillChar = QLatin1Char(' '))
+=item  void chop(int n)
 
-=item   QString arg(ushort a, int fieldWidth = 0, int base = 10, const QChar & fillChar = QLatin1Char(' '))
+=item  void clear()
 
-=item   QString arg(ushort a, int fieldWidth, int base = 10, const QChar & fillChar = QLatin1Char(' '))
+=item  int compare(const QString & s)
 
-=item   QString arg(const QString & a1, const QString & a2, const QString & a3, const QString & a4)
+=item  int compare(const QString & s, Qt::CaseSensitivity cs)
 
-=item   QString arg(double a, int fieldWidth, char fmt, int prec, const QChar & fillChar = QLatin1Char(' '))
+=item  int compare(const QLatin1String & other, Qt::CaseSensitivity cs)
 
-=item   QString arg(double a, int fieldWidth, char fmt, int prec, const QChar & fillChar)
+=item  int compare(const QLatin1String & other, Qt::CaseSensitivity cs = Qt::CaseSensitive)
 
-=item   QString arg(double a, int fieldWidth, char fmt, int prec = -1, const QChar & fillChar = QLatin1Char(' '))
+=item  static int compare(const QString & s1, const QString & s2)
 
-=item   QString arg(double a, int fieldWidth, char fmt, int prec, const QChar & fillChar = QLatin1Char(' '))
+=item  int compare(const QStringRef & s, Qt::CaseSensitivity cs)
 
-=item   QString arg(double a, int fieldWidth, char fmt = 'g', int prec = -1, const QChar & fillChar = QLatin1Char(' '))
+=item  int compare(const QStringRef & s, Qt::CaseSensitivity cs = Qt::CaseSensitive)
 
-=item   QString arg(double a, int fieldWidth, char fmt, int prec = -1, const QChar & fillChar = QLatin1Char(' '))
+=item  static int compare(const QString & s1, const QString & s2, Qt::CaseSensitivity cs)
 
-=item   QString arg(double a, int fieldWidth = 0, char fmt = 'g', int prec = -1, const QChar & fillChar = QLatin1Char(' '))
+=item  static int compare(const QString & s1, const QLatin1String & s2, Qt::CaseSensitivity cs)
 
-=item   QString arg(double a, int fieldWidth, char fmt = 'g', int prec = -1, const QChar & fillChar = QLatin1Char(' '))
+=item  static int compare(const QString & s1, const QLatin1String & s2, Qt::CaseSensitivity cs = Qt::CaseSensitive)
 
-=item   QString arg(const QString & a1, const QString & a2, const QString & a3, const QString & a4, const QString & a5)
+=item  static int compare(const QLatin1String & s1, const QString & s2, Qt::CaseSensitivity cs)
 
-=item   QString arg(const QString & a1, const QString & a2, const QString & a3, const QString & a4, const QString & a5, const QString & a6)
+=item  static int compare(const QLatin1String & s1, const QString & s2, Qt::CaseSensitivity cs = Qt::CaseSensitive)
 
-=item   QString arg(const QString & a1, const QString & a2, const QString & a3, const QString & a4, const QString & a5, const QString & a6, const QString & a7)
+=item  static int compare(const QString & s1, const QStringRef & s2, Qt::CaseSensitivity arg2)
 
-=item   QString arg(const QString & a1, const QString & a2, const QString & a3, const QString & a4, const QString & a5, const QString & a6, const QString & a7, const QString & a8)
+=item  static int compare(const QString & s1, const QStringRef & s2, Qt::CaseSensitivity arg2 = Qt::CaseSensitive)
 
-=item   QString arg(const QString & a1, const QString & a2, const QString & a3, const QString & a4, const QString & a5, const QString & a6, const QString & a7, const QString & a8, const QString & a9)
+=item  const QChar * constBegin()
 
-=item   const QChar at(int i)
+=item  const QChar * constData()
 
-=item   QChar * begin()
+=item  const QChar * constEnd()
 
-=item   const QChar * begin()
+=item  QBool contains(const QRegExp & rx)
 
-=item   int capacity()
+=item  QBool contains(QRegExp & rx)
 
-=item   void chop(int n)
+=item  QBool contains(QChar c, Qt::CaseSensitivity cs)
 
-=item   void clear()
+=item  QBool contains(QChar c, Qt::CaseSensitivity cs = Qt::CaseSensitive)
 
-=item   int compare(const QString & s)
+=item  QBool contains(const QString & s, Qt::CaseSensitivity cs)
 
-=item   int compare(const QString & s, Qt::CaseSensitivity cs)
+=item  QBool contains(const QString & s, Qt::CaseSensitivity cs = Qt::CaseSensitive)
 
-=item   int compare(const QLatin1String & other, Qt::CaseSensitivity cs = Qt::CaseSensitive)
+=item  int count()
 
-=item   int compare(const QLatin1String & other, Qt::CaseSensitivity cs)
+=item  int count(const QRegExp & arg0)
 
-=item   static int compare(const QString & s1, const QString & s2)
+=item  int count(QChar c, Qt::CaseSensitivity cs)
 
-=item   int compare(const QStringRef & s, Qt::CaseSensitivity cs = Qt::CaseSensitive)
+=item  int count(QChar c, Qt::CaseSensitivity cs = Qt::CaseSensitive)
 
-=item   int compare(const QStringRef & s, Qt::CaseSensitivity cs)
+=item  int count(const QString & s, Qt::CaseSensitivity cs)
 
-=item   static int compare(const QString & s1, const QString & s2, Qt::CaseSensitivity cs)
+=item  int count(const QString & s, Qt::CaseSensitivity cs = Qt::CaseSensitive)
 
-=item   static int compare(const QString & s1, const QLatin1String & s2, Qt::CaseSensitivity cs = Qt::CaseSensitive)
+=item  QChar * data()
 
-=item   static int compare(const QString & s1, const QLatin1String & s2, Qt::CaseSensitivity cs)
+=item  const QChar * data()
 
-=item   static int compare(const QLatin1String & s1, const QString & s2, Qt::CaseSensitivity cs = Qt::CaseSensitive)
+=item  void detach()
 
-=item   static int compare(const QLatin1String & s1, const QString & s2, Qt::CaseSensitivity cs)
+=item  QChar * end()
 
-=item   static int compare(const QString & s1, const QStringRef & s2, Qt::CaseSensitivity arg2 = Qt::CaseSensitive)
+=item  const QChar * end()
 
-=item   static int compare(const QString & s1, const QStringRef & s2, Qt::CaseSensitivity arg2)
+=item  bool endsWith(const QString & s, Qt::CaseSensitivity cs)
 
-=item   const QChar * constBegin()
+=item  bool endsWith(const QString & s, Qt::CaseSensitivity cs = Qt::CaseSensitive)
 
-=item   const QChar * constData()
+=item  bool endsWith(const QLatin1String & s, Qt::CaseSensitivity cs)
 
-=item   const QChar * constEnd()
+=item  bool endsWith(const QLatin1String & s, Qt::CaseSensitivity cs = Qt::CaseSensitive)
 
-=item   QBool contains(const QRegExp & rx)
+=item  bool endsWith(const QChar & c, Qt::CaseSensitivity cs)
 
-=item   QBool contains(QRegExp & rx)
+=item  bool endsWith(const QChar & c, Qt::CaseSensitivity cs = Qt::CaseSensitive)
 
-=item   QBool contains(QChar c, Qt::CaseSensitivity cs = Qt::CaseSensitive)
+=item  QString & fill(QChar c, int size)
 
-=item   QBool contains(QChar c, Qt::CaseSensitivity cs)
+=item  QString & fill(QChar c, int size = -1)
 
-=item   QBool contains(const QString & s, Qt::CaseSensitivity cs = Qt::CaseSensitive)
+=item  static QString fromAscii(const char * arg0, int size)
 
-=item   QBool contains(const QString & s, Qt::CaseSensitivity cs)
+=item  static QString fromAscii(const char * arg0, int size = -1)
 
-=item   int count()
+=item  static QString fromLatin1(const char * arg0, int size)
 
-=item   int count(const QRegExp & arg0)
+=item  static QString fromLatin1(const char * arg0, int size = -1)
 
-=item   int count(QChar c, Qt::CaseSensitivity cs = Qt::CaseSensitive)
+=item  static QString fromLocal8Bit(const char * arg0, int size)
 
-=item   int count(QChar c, Qt::CaseSensitivity cs)
+=item  static QString fromLocal8Bit(const char * arg0, int size = -1)
 
-=item   int count(const QString & s, Qt::CaseSensitivity cs = Qt::CaseSensitive)
+=item  static QString fromRawData(const QChar * arg0, int size)
 
-=item   int count(const QString & s, Qt::CaseSensitivity cs)
+=item  static QString fromStdString(const std::string & s)
 
-=item   QChar * data()
+=item  static QString fromUcs4(const uint * arg0, int size)
 
-=item   const QChar * data()
+=item  static QString fromUcs4(const uint * arg0, int size = -1)
 
-=item   void detach()
+=item  static QString fromUtf16(const ushort * arg0, int size)
 
-=item   QChar * end()
+=item  static QString fromUtf16(const ushort * arg0, int size = -1)
 
-=item   const QChar * end()
+=item  static QString fromUtf8(const char * arg0, int size)
 
-=item   bool endsWith(const QString & s, Qt::CaseSensitivity cs = Qt::CaseSensitive)
+=item  static QString fromUtf8(const char * arg0, int size = -1)
 
-=item   bool endsWith(const QString & s, Qt::CaseSensitivity cs)
+=item  static QString fromWCharArray(const wchar_t * arg0, int size)
 
-=item   bool endsWith(const QLatin1String & s, Qt::CaseSensitivity cs = Qt::CaseSensitive)
+=item  static QString fromWCharArray(const wchar_t * arg0, int size = -1)
 
-=item   bool endsWith(const QLatin1String & s, Qt::CaseSensitivity cs)
+=item  int indexOf(const QRegExp & arg0, int from)
 
-=item   bool endsWith(const QChar & c, Qt::CaseSensitivity cs = Qt::CaseSensitive)
+=item  int indexOf(const QRegExp & arg0, int from = 0)
 
-=item   bool endsWith(const QChar & c, Qt::CaseSensitivity cs)
+=item  int indexOf(QRegExp & arg0, int from)
 
-=item   QString & fill(QChar c, int size = -1)
+=item  int indexOf(QRegExp & arg0, int from = 0)
 
-=item   QString & fill(QChar c, int size)
+=item  int indexOf(QChar c, int from, Qt::CaseSensitivity cs)
 
-=item   static QString fromAscii(const char * arg0, int size = -1)
+=item  int indexOf(QChar c, int from, Qt::CaseSensitivity cs = Qt::CaseSensitive)
 
-=item   static QString fromAscii(const char * arg0, int size)
+=item  int indexOf(QChar c, int from = 0, Qt::CaseSensitivity cs = Qt::CaseSensitive)
 
-=item   static QString fromLatin1(const char * arg0, int size = -1)
+=item  int indexOf(const QString & s, int from, Qt::CaseSensitivity cs)
 
-=item   static QString fromLatin1(const char * arg0, int size)
+=item  int indexOf(const QString & s, int from, Qt::CaseSensitivity cs = Qt::CaseSensitive)
 
-=item   static QString fromLocal8Bit(const char * arg0, int size = -1)
+=item  int indexOf(const QString & s, int from = 0, Qt::CaseSensitivity cs = Qt::CaseSensitive)
 
-=item   static QString fromLocal8Bit(const char * arg0, int size)
+=item  int indexOf(const QLatin1String & s, int from, Qt::CaseSensitivity cs)
 
-=item   static QString fromRawData(const QChar * arg0, int size)
+=item  int indexOf(const QLatin1String & s, int from, Qt::CaseSensitivity cs = Qt::CaseSensitive)
 
-=item   static QString fromStdString(const std::string & s)
+=item  int indexOf(const QLatin1String & s, int from = 0, Qt::CaseSensitivity cs = Qt::CaseSensitive)
 
-=item   static QString fromUcs4(const uint * arg0, int size = -1)
+=item  QString & insert(int i, QChar c)
 
-=item   static QString fromUcs4(const uint * arg0, int size)
+=item  QString & insert(int i, const QString & s)
 
-=item   static QString fromUtf16(const ushort * arg0, int size = -1)
+=item  QString & insert(int i, const QLatin1String & s)
 
-=item   static QString fromUtf16(const ushort * arg0, int size)
+=item  QString & insert(int i, const QChar * uc, int len)
 
-=item   static QString fromUtf8(const char * arg0, int size = -1)
+=item  bool isDetached()
 
-=item   static QString fromUtf8(const char * arg0, int size)
+=item  bool isEmpty()
 
-=item   static QString fromWCharArray(const wchar_t * arg0, int size = -1)
+=item  bool isNull()
 
-=item   static QString fromWCharArray(const wchar_t * arg0, int size)
+=item  bool isRightToLeft()
 
-=item   int indexOf(const QRegExp & arg0, int from = 0)
+=item  bool isSharedWith(const QString & other)
 
-=item   int indexOf(const QRegExp & arg0, int from)
+=item  bool isSimpleText()
 
-=item   int indexOf(QRegExp & arg0, int from = 0)
+=item  int lastIndexOf(const QRegExp & arg0, int from)
 
-=item   int indexOf(QRegExp & arg0, int from)
+=item  int lastIndexOf(const QRegExp & arg0, int from = -1)
 
-=item   int indexOf(QChar c, int from, Qt::CaseSensitivity cs = Qt::CaseSensitive)
+=item  int lastIndexOf(QRegExp & arg0, int from)
 
-=item   int indexOf(QChar c, int from, Qt::CaseSensitivity cs)
+=item  int lastIndexOf(QRegExp & arg0, int from = -1)
 
-=item   int indexOf(QChar c, int from = 0, Qt::CaseSensitivity cs = Qt::CaseSensitive)
+=item  int lastIndexOf(QChar c, int from, Qt::CaseSensitivity cs)
 
-=item   int indexOf(QChar c, int from, Qt::CaseSensitivity cs = Qt::CaseSensitive)
+=item  int lastIndexOf(QChar c, int from, Qt::CaseSensitivity cs = Qt::CaseSensitive)
 
-=item   int indexOf(const QString & s, int from, Qt::CaseSensitivity cs = Qt::CaseSensitive)
+=item  int lastIndexOf(QChar c, int from = -1, Qt::CaseSensitivity cs = Qt::CaseSensitive)
 
-=item   int indexOf(const QString & s, int from, Qt::CaseSensitivity cs)
+=item  int lastIndexOf(const QString & s, int from, Qt::CaseSensitivity cs)
 
-=item   int indexOf(const QString & s, int from = 0, Qt::CaseSensitivity cs = Qt::CaseSensitive)
+=item  int lastIndexOf(const QString & s, int from, Qt::CaseSensitivity cs = Qt::CaseSensitive)
 
-=item   int indexOf(const QString & s, int from, Qt::CaseSensitivity cs = Qt::CaseSensitive)
+=item  int lastIndexOf(const QString & s, int from = -1, Qt::CaseSensitivity cs = Qt::CaseSensitive)
 
-=item   int indexOf(const QLatin1String & s, int from, Qt::CaseSensitivity cs = Qt::CaseSensitive)
+=item  int lastIndexOf(const QLatin1String & s, int from, Qt::CaseSensitivity cs)
 
-=item   int indexOf(const QLatin1String & s, int from, Qt::CaseSensitivity cs)
+=item  int lastIndexOf(const QLatin1String & s, int from, Qt::CaseSensitivity cs = Qt::CaseSensitive)
 
-=item   int indexOf(const QLatin1String & s, int from = 0, Qt::CaseSensitivity cs = Qt::CaseSensitive)
+=item  int lastIndexOf(const QLatin1String & s, int from = -1, Qt::CaseSensitivity cs = Qt::CaseSensitive)
 
-=item   int indexOf(const QLatin1String & s, int from, Qt::CaseSensitivity cs = Qt::CaseSensitive)
+=item  QString left(int n)
 
-=item   QString & insert(int i, QChar c)
+=item  QString leftJustified(int width, QChar fill, bool trunc)
 
-=item   QString & insert(int i, const QString & s)
+=item  QString leftJustified(int width, QChar fill, bool trunc = false)
 
-=item   QString & insert(int i, const QLatin1String & s)
+=item  QString leftJustified(int width, QChar fill = QLatin1Char(' '), bool trunc = false)
 
-=item   QString & insert(int i, const QChar * uc, int len)
+=item  QStringRef leftRef(int n)
 
-=item   bool isDetached()
+=item  int length()
 
-=item   bool isEmpty()
+=item  int localeAwareCompare(const QString & s)
 
-=item   bool isNull()
+=item  int localeAwareCompare(const QStringRef & s)
 
-=item   bool isRightToLeft()
+=item  static int localeAwareCompare(const QString & s1, const QString & s2)
 
-=item   bool isSimpleText()
+=item  static int localeAwareCompare(const QString & s1, const QStringRef & s2)
 
-=item   int lastIndexOf(const QRegExp & arg0, int from = -1)
+=item  QString mid(int position, int n)
 
-=item   int lastIndexOf(const QRegExp & arg0, int from)
+=item  QString mid(int position, int n = -1)
 
-=item   int lastIndexOf(QRegExp & arg0, int from = -1)
+=item  QStringRef midRef(int position, int n)
 
-=item   int lastIndexOf(QRegExp & arg0, int from)
+=item  QStringRef midRef(int position, int n = -1)
 
-=item   int lastIndexOf(QChar c, int from, Qt::CaseSensitivity cs = Qt::CaseSensitive)
+=item  QString normalized(QString::NormalizationForm mode)
 
-=item   int lastIndexOf(QChar c, int from, Qt::CaseSensitivity cs)
+=item  QString normalized(QString::NormalizationForm mode, QChar::UnicodeVersion version)
 
-=item   int lastIndexOf(QChar c, int from = -1, Qt::CaseSensitivity cs = Qt::CaseSensitive)
+=item  static QString number(int arg0, int base)
 
-=item   int lastIndexOf(QChar c, int from, Qt::CaseSensitivity cs = Qt::CaseSensitive)
+=item  static QString number(int arg0, int base = 10)
 
-=item   int lastIndexOf(const QString & s, int from, Qt::CaseSensitivity cs = Qt::CaseSensitive)
+=item  static QString number(uint arg0, int base)
 
-=item   int lastIndexOf(const QString & s, int from, Qt::CaseSensitivity cs)
+=item  static QString number(uint arg0, int base = 10)
 
-=item   int lastIndexOf(const QString & s, int from = -1, Qt::CaseSensitivity cs = Qt::CaseSensitive)
+=item  static QString number(long arg0, int base)
 
-=item   int lastIndexOf(const QString & s, int from, Qt::CaseSensitivity cs = Qt::CaseSensitive)
+=item  static QString number(long arg0, int base = 10)
 
-=item   int lastIndexOf(const QLatin1String & s, int from, Qt::CaseSensitivity cs = Qt::CaseSensitive)
+=item  static QString number(ulong arg0, int base)
 
-=item   int lastIndexOf(const QLatin1String & s, int from, Qt::CaseSensitivity cs)
+=item  static QString number(ulong arg0, int base = 10)
 
-=item   int lastIndexOf(const QLatin1String & s, int from = -1, Qt::CaseSensitivity cs = Qt::CaseSensitive)
+=item  static QString number(qlonglong arg0, int base)
 
-=item   int lastIndexOf(const QLatin1String & s, int from, Qt::CaseSensitivity cs = Qt::CaseSensitive)
+=item  static QString number(qlonglong arg0, int base = 10)
 
-=item   QString left(int n)
+=item  static QString number(qulonglong arg0, int base)
 
-=item   QString leftJustified(int width, QChar fill, bool trunc = false)
+=item  static QString number(qulonglong arg0, int base = 10)
 
-=item   QString leftJustified(int width, QChar fill, bool trunc)
+=item  static QString number(double arg0, char f, int prec)
 
-=item   QString leftJustified(int width, QChar fill = QLatin1Char(' '), bool trunc = false)
+=item  static QString number(double arg0, char f, int prec = 6)
 
-=item   QString leftJustified(int width, QChar fill, bool trunc = false)
+=item  static QString number(double arg0, char f = 'g', int prec = 6)
 
-=item   QStringRef leftRef(int n)
+=item  bool operator!=(const QString & s)
 
-=item   int length()
+=item  bool operator!=(const QLatin1String & s)
 
-=item   int localeAwareCompare(const QString & s)
+=item  bool operator!=(const char * s)
 
-=item   int localeAwareCompare(const QStringRef & s)
+=item  bool operator!=(const QByteArray & s)
 
-=item   static int localeAwareCompare(const QString & s1, const QString & s2)
+=item  QString & operator+=(QChar c)
 
-=item   static int localeAwareCompare(const QString & s1, const QStringRef & s2)
+=item  QString & operator+=(QChar::SpecialCharacter c)
 
-=item   QString mid(int position, int n = -1)
+=item  QString & operator+=(const QString & s)
 
-=item   QString mid(int position, int n)
+=item  QString & operator+=(const QStringRef & s)
 
-=item   QStringRef midRef(int position, int n = -1)
+=item  QString & operator+=(const QLatin1String & s)
 
-=item   QStringRef midRef(int position, int n)
+=item  QString & operator+=(const char * s)
 
-=item   QString normalized(QString::NormalizationForm mode)
+=item  QString & operator+=(const QByteArray & s)
 
-=item   QString normalized(QString::NormalizationForm mode, QChar::UnicodeVersion version)
+=item  QString & operator+=(char c)
 
-=item   static QString number(int arg0, int base = 10)
+=item  bool operator<(const QString & s)
 
-=item   static QString number(int arg0, int base)
+=item  bool operator<(const QLatin1String & s)
 
-=item   static QString number(uint arg0, int base = 10)
+=item  bool operator<(const char * s)
 
-=item   static QString number(uint arg0, int base)
+=item  bool operator<(const QByteArray & s)
 
-=item   static QString number(long arg0, int base = 10)
+=item  bool operator<=(const QString & s)
 
-=item   static QString number(long arg0, int base)
+=item  bool operator<=(const QLatin1String & s)
 
-=item   static QString number(ulong arg0, int base = 10)
+=item  bool operator<=(const char * s2)
 
-=item   static QString number(ulong arg0, int base)
+=item  bool operator<=(const QByteArray & s)
 
-=item   static QString number(qlonglong arg0, int base = 10)
+=item  QString & operator=(QChar c)
 
-=item   static QString number(qlonglong arg0, int base)
+=item  QString & operator=(const QString & arg0)
 
-=item   static QString number(qulonglong arg0, int base = 10)
+=item  QString & operator=(const QLatin1String & arg0)
 
-=item   static QString number(qulonglong arg0, int base)
+=item  QString & operator=(const char * ch)
 
-=item   static QString number(double arg0, char f, int prec = 6)
+=item  QString & operator=(const QByteArray & a)
 
-=item   static QString number(double arg0, char f, int prec)
+=item  QString & operator=(char c)
 
-=item   static QString number(double arg0, char f = 'g', int prec = 6)
+=item  QString & operator=(const QString::Null & arg0)
 
-=item   static QString number(double arg0, char f, int prec = 6)
+=item  bool operator==(const QString & s)
 
-=item   bool operator!=(const QString & s)
+=item  bool operator==(const QLatin1String & s)
 
-=item   bool operator!=(const QLatin1String & s)
+=item  bool operator==(const char * s)
 
-=item   bool operator!=(const char * s)
+=item  bool operator==(const QByteArray & s)
 
-=item   bool operator!=(const QByteArray & s)
+=item  bool operator>(const QString & s)
 
-=item   QString & operator+=(QChar c)
+=item  bool operator>(const QLatin1String & s)
 
-=item   QString & operator+=(QChar::SpecialCharacter c)
+=item  bool operator>(const char * s2)
 
-=item   QString & operator+=(const QString & s)
+=item  bool operator>(const QByteArray & s)
 
-=item   QString & operator+=(const QStringRef & s)
+=item  bool operator>=(const QString & s)
 
-=item   QString & operator+=(const QLatin1String & s)
+=item  bool operator>=(const QLatin1String & s)
 
-=item   QString & operator+=(const char * s)
+=item  bool operator>=(const char * s2)
 
-=item   QString & operator+=(const QByteArray & s)
+=item  bool operator>=(const QByteArray & s)
 
-=item   QString & operator+=(char c)
+=item  const QChar operator[](int i)
 
-=item   bool operator<(const QString & s)
+=item  QCharRef operator[](int i)
 
-=item   bool operator<(const QLatin1String & s)
+=item  const QChar operator[](uint i)
 
-=item   bool operator<(const char * s)
+=item  QCharRef operator[](uint i)
 
-=item   bool operator<(const QByteArray & s)
+=item  QString & prepend(QChar c)
 
-=item   bool operator<=(const QString & s)
+=item  QString & prepend(const QString & s)
 
-=item   bool operator<=(const QLatin1String & s)
+=item  QString & prepend(const QLatin1String & s)
 
-=item   bool operator<=(const char * s2)
+=item  QString & prepend(const char * s)
 
-=item   bool operator<=(const QByteArray & s)
+=item  QString & prepend(const QByteArray & s)
 
-=item   QString & operator=(QChar c)
+=item  void push_back(QChar c)
 
-=item   QString & operator=(const QString & arg0)
+=item  void push_back(const QString & s)
 
-=item   QString & operator=(const QLatin1String & arg0)
+=item  void push_front(QChar c)
 
-=item   QString & operator=(const char * ch)
+=item  void push_front(const QString & s)
 
-=item   QString & operator=(const QByteArray & a)
+=item  QString & remove(const QRegExp & rx)
 
-=item   QString & operator=(char c)
+=item  QString & remove(int i, int len)
 
-=item   QString & operator=(const QString::Null & arg0)
+=item  QString & remove(QChar c, Qt::CaseSensitivity cs)
 
-=item   bool operator==(const QString & s)
+=item  QString & remove(QChar c, Qt::CaseSensitivity cs = Qt::CaseSensitive)
 
-=item   bool operator==(const QLatin1String & s)
+=item  QString & remove(const QString & s, Qt::CaseSensitivity cs)
 
-=item   bool operator==(const char * s)
+=item  QString & remove(const QString & s, Qt::CaseSensitivity cs = Qt::CaseSensitive)
 
-=item   bool operator==(const QByteArray & s)
+=item  QString repeated(int times)
 
-=item   bool operator>(const QString & s)
+=item  QString & replace(const QRegExp & rx, const QString & after)
 
-=item   bool operator>(const QLatin1String & s)
+=item  QString & replace(int i, int len, QChar after)
 
-=item   bool operator>(const char * s2)
+=item  QString & replace(int i, int len, const QString & after)
 
-=item   bool operator>(const QByteArray & s)
+=item  QString & replace(QChar before, QChar after, Qt::CaseSensitivity cs)
 
-=item   bool operator>=(const QString & s)
+=item  QString & replace(QChar before, QChar after, Qt::CaseSensitivity cs = Qt::CaseSensitive)
 
-=item   bool operator>=(const QLatin1String & s)
+=item  QString & replace(const QLatin1String & before, const QLatin1String & after, Qt::CaseSensitivity cs)
 
-=item   bool operator>=(const char * s2)
+=item  QString & replace(const QLatin1String & before, const QLatin1String & after, Qt::CaseSensitivity cs = Qt::CaseSensitive)
 
-=item   bool operator>=(const QByteArray & s)
+=item  QString & replace(const QLatin1String & before, const QString & after, Qt::CaseSensitivity cs)
 
-=item   const QChar operator[](int i)
+=item  QString & replace(const QLatin1String & before, const QString & after, Qt::CaseSensitivity cs = Qt::CaseSensitive)
 
-=item   QCharRef operator[](int i)
+=item  QString & replace(const QString & before, const QLatin1String & after, Qt::CaseSensitivity cs)
 
-=item   const QChar operator[](uint i)
+=item  QString & replace(const QString & before, const QLatin1String & after, Qt::CaseSensitivity cs = Qt::CaseSensitive)
 
-=item   QCharRef operator[](uint i)
+=item  QString & replace(const QString & before, const QString & after, Qt::CaseSensitivity cs)
 
-=item   QString & prepend(QChar c)
+=item  QString & replace(const QString & before, const QString & after, Qt::CaseSensitivity cs = Qt::CaseSensitive)
 
-=item   QString & prepend(const QString & s)
+=item  QString & replace(QChar c, const QString & after, Qt::CaseSensitivity cs)
 
-=item   QString & prepend(const QLatin1String & s)
+=item  QString & replace(QChar c, const QString & after, Qt::CaseSensitivity cs = Qt::CaseSensitive)
 
-=item   QString & prepend(const char * s)
+=item  QString & replace(QChar c, const QLatin1String & after, Qt::CaseSensitivity cs)
 
-=item   QString & prepend(const QByteArray & s)
+=item  QString & replace(QChar c, const QLatin1String & after, Qt::CaseSensitivity cs = Qt::CaseSensitive)
 
-=item   void push_back(QChar c)
+=item  QString & replace(int i, int len, const QChar * s, int slen)
 
-=item   void push_back(const QString & s)
+=item  QString & replace(const QChar * before, int blen, const QChar * after, int alen, Qt::CaseSensitivity cs)
 
-=item   void push_front(QChar c)
+=item  QString & replace(const QChar * before, int blen, const QChar * after, int alen, Qt::CaseSensitivity cs = Qt::CaseSensitive)
 
-=item   void push_front(const QString & s)
+=item  void reserve(int size)
 
-=item   QString & remove(const QRegExp & rx)
+=item  void resize(int size)
 
-=item   QString & remove(int i, int len)
+=item  QString right(int n)
 
-=item   QString & remove(QChar c, Qt::CaseSensitivity cs = Qt::CaseSensitive)
+=item  QString rightJustified(int width, QChar fill, bool trunc)
 
-=item   QString & remove(QChar c, Qt::CaseSensitivity cs)
+=item  QString rightJustified(int width, QChar fill, bool trunc = false)
 
-=item   QString & remove(const QString & s, Qt::CaseSensitivity cs = Qt::CaseSensitive)
+=item  QString rightJustified(int width, QChar fill = QLatin1Char(' '), bool trunc = false)
 
-=item   QString & remove(const QString & s, Qt::CaseSensitivity cs)
+=item  QStringRef rightRef(int n)
 
-=item   QString repeated(int times)
+=item  QString section(QChar sep, int start, int end, QFlags<QString::SectionFlag> flags)
 
-=item   QString & replace(const QRegExp & rx, const QString & after)
+=item  QString section(QChar sep, int start, int end, QFlags<QString::SectionFlag> flags = QString::SectionDefault)
 
-=item   QString & replace(int i, int len, QChar after)
+=item  QString section(QChar sep, int start, int end = -1, QFlags<QString::SectionFlag> flags = QString::SectionDefault)
 
-=item   QString & replace(int i, int len, const QString & after)
+=item  QString section(const QString & in_sep, int start, int end, QFlags<QString::SectionFlag> flags)
 
-=item   QString & replace(QChar before, QChar after, Qt::CaseSensitivity cs = Qt::CaseSensitive)
+=item  QString section(const QString & in_sep, int start, int end, QFlags<QString::SectionFlag> flags = QString::SectionDefault)
 
-=item   QString & replace(QChar before, QChar after, Qt::CaseSensitivity cs)
+=item  QString section(const QString & in_sep, int start, int end = -1, QFlags<QString::SectionFlag> flags = QString::SectionDefault)
 
-=item   QString & replace(const QLatin1String & before, const QLatin1String & after, Qt::CaseSensitivity cs = Qt::CaseSensitive)
+=item  QString section(const QRegExp & reg, int start, int end, QFlags<QString::SectionFlag> flags)
 
-=item   QString & replace(const QLatin1String & before, const QLatin1String & after, Qt::CaseSensitivity cs)
+=item  QString section(const QRegExp & reg, int start, int end, QFlags<QString::SectionFlag> flags = QString::SectionDefault)
 
-=item   QString & replace(const QLatin1String & before, const QString & after, Qt::CaseSensitivity cs = Qt::CaseSensitive)
+=item  QString section(const QRegExp & reg, int start, int end = -1, QFlags<QString::SectionFlag> flags = QString::SectionDefault)
 
-=item   QString & replace(const QLatin1String & before, const QString & after, Qt::CaseSensitivity cs)
+=item  QString & setNum(short arg0, int base)
 
-=item   QString & replace(const QString & before, const QLatin1String & after, Qt::CaseSensitivity cs = Qt::CaseSensitive)
+=item  QString & setNum(short arg0, int base = 10)
 
-=item   QString & replace(const QString & before, const QLatin1String & after, Qt::CaseSensitivity cs)
+=item  QString & setNum(ushort arg0, int base)
 
-=item   QString & replace(const QString & before, const QString & after, Qt::CaseSensitivity cs = Qt::CaseSensitive)
+=item  QString & setNum(ushort arg0, int base = 10)
 
-=item   QString & replace(const QString & before, const QString & after, Qt::CaseSensitivity cs)
+=item  QString & setNum(int arg0, int base)
 
-=item   QString & replace(QChar c, const QString & after, Qt::CaseSensitivity cs = Qt::CaseSensitive)
+=item  QString & setNum(int arg0, int base = 10)
 
-=item   QString & replace(QChar c, const QString & after, Qt::CaseSensitivity cs)
+=item  QString & setNum(uint arg0, int base)
 
-=item   QString & replace(QChar c, const QLatin1String & after, Qt::CaseSensitivity cs = Qt::CaseSensitive)
+=item  QString & setNum(uint arg0, int base = 10)
 
-=item   QString & replace(QChar c, const QLatin1String & after, Qt::CaseSensitivity cs)
+=item  QString & setNum(long arg0, int base)
 
-=item   QString & replace(int i, int len, const QChar * s, int slen)
+=item  QString & setNum(long arg0, int base = 10)
 
-=item   QString & replace(const QChar * before, int blen, const QChar * after, int alen, Qt::CaseSensitivity cs = Qt::CaseSensitive)
+=item  QString & setNum(ulong arg0, int base)
 
-=item   QString & replace(const QChar * before, int blen, const QChar * after, int alen, Qt::CaseSensitivity cs)
+=item  QString & setNum(ulong arg0, int base = 10)
 
-=item   void reserve(int size)
+=item  QString & setNum(qlonglong arg0, int base)
 
-=item   void resize(int size)
+=item  QString & setNum(qlonglong arg0, int base = 10)
 
-=item   QString right(int n)
+=item  QString & setNum(qulonglong arg0, int base)
 
-=item   QString rightJustified(int width, QChar fill, bool trunc = false)
+=item  QString & setNum(qulonglong arg0, int base = 10)
 
-=item   QString rightJustified(int width, QChar fill, bool trunc)
+=item  QString & setNum(float arg0, char f, int prec)
 
-=item   QString rightJustified(int width, QChar fill = QLatin1Char(' '), bool trunc = false)
+=item  QString & setNum(float arg0, char f, int prec = 6)
 
-=item   QString rightJustified(int width, QChar fill, bool trunc = false)
+=item  QString & setNum(float arg0, char f = 'g', int prec = 6)
 
-=item   QStringRef rightRef(int n)
+=item  QString & setNum(double arg0, char f, int prec)
 
-=item   QString & setNum(short arg0, int base = 10)
+=item  QString & setNum(double arg0, char f, int prec = 6)
 
-=item   QString & setNum(short arg0, int base)
+=item  QString & setNum(double arg0, char f = 'g', int prec = 6)
 
-=item   QString & setNum(ushort arg0, int base = 10)
+=item  QString & setRawData(const QChar * unicode, int size)
 
-=item   QString & setNum(ushort arg0, int base)
+=item  QString & setUnicode(const QChar * unicode, int size)
 
-=item   QString & setNum(int arg0, int base = 10)
+=item  QString & setUtf16(const ushort * utf16, int size)
 
-=item   QString & setNum(int arg0, int base)
+=item  QString simplified()
 
-=item   QString & setNum(uint arg0, int base = 10)
+=item  int size()
 
-=item   QString & setNum(uint arg0, int base)
+=item  QStringList split(const QRegExp & sep, QString::SplitBehavior behavior)
 
-=item   QString & setNum(long arg0, int base = 10)
+=item  QStringList split(const QRegExp & sep, QString::SplitBehavior behavior = QString::KeepEmptyParts)
 
-=item   QString & setNum(long arg0, int base)
+=item  QStringList split(const QString & sep, QString::SplitBehavior behavior, Qt::CaseSensitivity cs)
 
-=item   QString & setNum(ulong arg0, int base = 10)
+=item  QStringList split(const QString & sep, QString::SplitBehavior behavior, Qt::CaseSensitivity cs = Qt::CaseSensitive)
 
-=item   QString & setNum(ulong arg0, int base)
+=item  QStringList split(const QString & sep, QString::SplitBehavior behavior = QString::KeepEmptyParts, Qt::CaseSensitivity cs = Qt::CaseSensitive)
 
-=item   QString & setNum(qlonglong arg0, int base = 10)
+=item  QStringList split(const QChar & sep, QString::SplitBehavior behavior, Qt::CaseSensitivity cs)
 
-=item   QString & setNum(qlonglong arg0, int base)
+=item  QStringList split(const QChar & sep, QString::SplitBehavior behavior, Qt::CaseSensitivity cs = Qt::CaseSensitive)
 
-=item   QString & setNum(qulonglong arg0, int base = 10)
+=item  QStringList split(const QChar & sep, QString::SplitBehavior behavior = QString::KeepEmptyParts, Qt::CaseSensitivity cs = Qt::CaseSensitive)
 
-=item   QString & setNum(qulonglong arg0, int base)
+=item  void squeeze()
 
-=item   QString & setNum(float arg0, char f, int prec = 6)
+=item  bool startsWith(const QString & s, Qt::CaseSensitivity cs)
 
-=item   QString & setNum(float arg0, char f, int prec)
+=item  bool startsWith(const QString & s, Qt::CaseSensitivity cs = Qt::CaseSensitive)
 
-=item   QString & setNum(float arg0, char f = 'g', int prec = 6)
+=item  bool startsWith(const QLatin1String & s, Qt::CaseSensitivity cs)
 
-=item   QString & setNum(float arg0, char f, int prec = 6)
+=item  bool startsWith(const QLatin1String & s, Qt::CaseSensitivity cs = Qt::CaseSensitive)
 
-=item   QString & setNum(double arg0, char f, int prec = 6)
+=item  bool startsWith(const QChar & c, Qt::CaseSensitivity cs)
 
-=item   QString & setNum(double arg0, char f, int prec)
+=item  bool startsWith(const QChar & c, Qt::CaseSensitivity cs = Qt::CaseSensitive)
 
-=item   QString & setNum(double arg0, char f = 'g', int prec = 6)
+=item  QByteArray toAscii()
 
-=item   QString & setNum(double arg0, char f, int prec = 6)
+=item  QString toCaseFolded()
 
-=item   QString & setUnicode(const QChar * unicode, int size)
+=item  double toDouble(bool * ok)
 
-=item   QString & setUtf16(const ushort * utf16, int size)
+=item  double toDouble(bool * ok = 0)
 
-=item   QString simplified()
+=item  float toFloat(bool * ok)
 
-=item   int size()
+=item  float toFloat(bool * ok = 0)
 
-=item   QStringList split(const QRegExp & sep, QString::SplitBehavior behavior = QString::KeepEmptyParts)
+=item  int toInt(bool * ok, int base)
 
-=item   QStringList split(const QRegExp & sep, QString::SplitBehavior behavior)
+=item  int toInt(bool * ok, int base = 10)
 
-=item   QStringList split(const QString & sep, QString::SplitBehavior behavior, Qt::CaseSensitivity cs = Qt::CaseSensitive)
+=item  int toInt(bool * ok = 0, int base = 10)
 
-=item   QStringList split(const QString & sep, QString::SplitBehavior behavior, Qt::CaseSensitivity cs)
+=item  QByteArray toLatin1()
 
-=item   QStringList split(const QString & sep, QString::SplitBehavior behavior = QString::KeepEmptyParts, Qt::CaseSensitivity cs = Qt::CaseSensitive)
+=item  QByteArray toLocal8Bit()
 
-=item   QStringList split(const QString & sep, QString::SplitBehavior behavior, Qt::CaseSensitivity cs = Qt::CaseSensitive)
+=item  long toLong(bool * ok, int base)
 
-=item   QStringList split(const QChar & sep, QString::SplitBehavior behavior, Qt::CaseSensitivity cs = Qt::CaseSensitive)
+=item  long toLong(bool * ok, int base = 10)
 
-=item   QStringList split(const QChar & sep, QString::SplitBehavior behavior, Qt::CaseSensitivity cs)
+=item  long toLong(bool * ok = 0, int base = 10)
 
-=item   QStringList split(const QChar & sep, QString::SplitBehavior behavior = QString::KeepEmptyParts, Qt::CaseSensitivity cs = Qt::CaseSensitive)
+=item  qlonglong toLongLong(bool * ok, int base)
 
-=item   QStringList split(const QChar & sep, QString::SplitBehavior behavior, Qt::CaseSensitivity cs = Qt::CaseSensitive)
+=item  qlonglong toLongLong(bool * ok, int base = 10)
 
-=item   void squeeze()
+=item  qlonglong toLongLong(bool * ok = 0, int base = 10)
 
-=item   bool startsWith(const QString & s, Qt::CaseSensitivity cs = Qt::CaseSensitive)
+=item  QString toLower()
 
-=item   bool startsWith(const QString & s, Qt::CaseSensitivity cs)
+=item  short toShort(bool * ok, int base)
 
-=item   bool startsWith(const QLatin1String & s, Qt::CaseSensitivity cs = Qt::CaseSensitive)
+=item  short toShort(bool * ok, int base = 10)
 
-=item   bool startsWith(const QLatin1String & s, Qt::CaseSensitivity cs)
+=item  short toShort(bool * ok = 0, int base = 10)
 
-=item   bool startsWith(const QChar & c, Qt::CaseSensitivity cs = Qt::CaseSensitive)
+=item  std::string toStdString()
 
-=item   bool startsWith(const QChar & c, Qt::CaseSensitivity cs)
+=item  uint toUInt(bool * ok, int base)
 
-=item   QByteArray toAscii()
+=item  uint toUInt(bool * ok, int base = 10)
 
-=item   QString toCaseFolded()
+=item  uint toUInt(bool * ok = 0, int base = 10)
 
-=item   double toDouble(bool * ok = 0)
+=item  ulong toULong(bool * ok, int base)
 
-=item   double toDouble(bool * ok)
+=item  ulong toULong(bool * ok, int base = 10)
 
-=item   float toFloat(bool * ok = 0)
+=item  ulong toULong(bool * ok = 0, int base = 10)
 
-=item   float toFloat(bool * ok)
+=item  qulonglong toULongLong(bool * ok, int base)
 
-=item   int toInt(bool * ok, int base = 10)
+=item  qulonglong toULongLong(bool * ok, int base = 10)
 
-=item   int toInt(bool * ok, int base)
+=item  qulonglong toULongLong(bool * ok = 0, int base = 10)
 
-=item   int toInt(bool * ok = 0, int base = 10)
+=item  ushort toUShort(bool * ok, int base)
 
-=item   int toInt(bool * ok, int base = 10)
+=item  ushort toUShort(bool * ok, int base = 10)
 
-=item   QByteArray toLatin1()
+=item  ushort toUShort(bool * ok = 0, int base = 10)
 
-=item   QByteArray toLocal8Bit()
+=item  QString toUpper()
 
-=item   long toLong(bool * ok, int base = 10)
+=item  QByteArray toUtf8()
 
-=item   long toLong(bool * ok, int base)
+=item  int toWCharArray(wchar_t * array)
 
-=item   long toLong(bool * ok = 0, int base = 10)
+=item  QString trimmed()
 
-=item   long toLong(bool * ok, int base = 10)
+=item  void truncate(int pos)
 
-=item   qlonglong toLongLong(bool * ok, int base = 10)
+=item  const QChar * unicode()
 
-=item   qlonglong toLongLong(bool * ok, int base)
+=item  const ushort * utf16()
 
-=item   qlonglong toLongLong(bool * ok = 0, int base = 10)
 
-=item   qlonglong toLongLong(bool * ok, int base = 10)
+=back
 
-=item   QString toLower()
+=head1 ENUM VALUES
 
-=item   short toShort(bool * ok, int base = 10)
+=over
 
-=item   short toShort(bool * ok, int base)
+=item SectionDefault
 
-=item   short toShort(bool * ok = 0, int base = 10)
+=item SectionSkipEmpty
 
-=item   short toShort(bool * ok, int base = 10)
+=item SectionIncludeLeadingSep
 
-=item   std::string toStdString()
+=item SectionIncludeTrailingSep
 
-=item   uint toUInt(bool * ok, int base = 10)
+=item SectionCaseInsensitiveSeps
 
-=item   uint toUInt(bool * ok, int base)
+=item KeepEmptyParts
 
-=item   uint toUInt(bool * ok = 0, int base = 10)
+=item SkipEmptyParts
 
-=item   uint toUInt(bool * ok, int base = 10)
+=item NormalizationForm_D
 
-=item   ulong toULong(bool * ok, int base = 10)
+=item NormalizationForm_C
 
-=item   ulong toULong(bool * ok, int base)
+=item NormalizationForm_KD
 
-=item   ulong toULong(bool * ok = 0, int base = 10)
-
-=item   ulong toULong(bool * ok, int base = 10)
-
-=item   qulonglong toULongLong(bool * ok, int base = 10)
-
-=item   qulonglong toULongLong(bool * ok, int base)
-
-=item   qulonglong toULongLong(bool * ok = 0, int base = 10)
-
-=item   qulonglong toULongLong(bool * ok, int base = 10)
-
-=item   ushort toUShort(bool * ok, int base = 10)
-
-=item   ushort toUShort(bool * ok, int base)
-
-=item   ushort toUShort(bool * ok = 0, int base = 10)
-
-=item   ushort toUShort(bool * ok, int base = 10)
-
-=item   QString toUpper()
-
-=item   QByteArray toUtf8()
-
-=item   int toWCharArray(wchar_t * array)
-
-=item   QString trimmed()
-
-=item   void truncate(int pos)
-
-=item   const QChar * unicode()
-
-=item   const ushort * utf16()
+=item NormalizationForm_KC
 
 
 =back

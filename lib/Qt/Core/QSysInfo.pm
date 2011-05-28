@@ -1,4 +1,5 @@
 package Qt::Core::QSysInfo;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QSysInfo
 # file     : QtCore/qglobal.h
 
@@ -6,17 +7,10 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
+our $VERSION = '0.01_02';
 
 
 # FIXME: operator overload
-
-# enums
-# enum value in perl is enum item index number
-sub WordSize() { 0 }
-sub BigEndian() { 0 }
-sub LittleEndian() { 1 }
-sub ByteOrder() { 2 }
 
 
 1;
@@ -28,6 +22,21 @@ Qt::Core::QSysInfo
 =head1 PUBLIC METHODS
 
 =over
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
+
+=item WordSize
+
+=item BigEndian
+
+=item LittleEndian
+
+=item ByteOrder
 
 
 =back

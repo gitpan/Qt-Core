@@ -1,4 +1,5 @@
 package Qt::Core::QAbstractFileEngine;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QAbstractFileEngine
 # file     : QtCore/qabstractfileengine.h
 
@@ -6,57 +7,10 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
+our $VERSION = '0.01_02';
 
 
 # FIXME: operator overload
-
-# enums
-# enum value in perl is enum item index number
-sub ReadOwnerPerm() { 0 }
-sub WriteOwnerPerm() { 1 }
-sub ExeOwnerPerm() { 2 }
-sub ReadUserPerm() { 3 }
-sub WriteUserPerm() { 4 }
-sub ExeUserPerm() { 5 }
-sub ReadGroupPerm() { 6 }
-sub WriteGroupPerm() { 7 }
-sub ExeGroupPerm() { 8 }
-sub ReadOtherPerm() { 9 }
-sub WriteOtherPerm() { 10 }
-sub ExeOtherPerm() { 11 }
-sub LinkType() { 12 }
-sub FileType() { 13 }
-sub DirectoryType() { 14 }
-sub BundleType() { 15 }
-sub HiddenFlag() { 16 }
-sub LocalDiskFlag() { 17 }
-sub ExistsFlag() { 18 }
-sub RootFlag() { 19 }
-sub Refresh() { 20 }
-sub PermsMask() { 21 }
-sub TypesMask() { 22 }
-sub FlagsMask() { 23 }
-sub FileInfoAll() { 24 }
-sub DefaultName() { 0 }
-sub BaseName() { 1 }
-sub PathName() { 2 }
-sub AbsoluteName() { 3 }
-sub AbsolutePathName() { 4 }
-sub LinkName() { 5 }
-sub CanonicalName() { 6 }
-sub CanonicalPathName() { 7 }
-sub BundleName() { 8 }
-sub NFileNames() { 9 }
-sub OwnerUser() { 0 }
-sub OwnerGroup() { 1 }
-sub CreationTime() { 0 }
-sub ModificationTime() { 1 }
-sub AccessTime() { 2 }
-sub AtEndExtension() { 0 }
-sub FastReadLineExtension() { 1 }
-sub MapExtension() { 2 }
-sub UnMapExtension() { 3 }
 
 
 1;
@@ -69,71 +23,176 @@ Qt::Core::QAbstractFileEngine
 
 =over
 
-=item    ~QAbstractFileEngine()
+=item   ~QAbstractFileEngine()
 
-=item   bool atEnd()
+=item  bool atEnd()
 
-=item   bool caseSensitive()
+=item  QAbstractFileEngineIterator * beginEntryList(QFlags<QDir::Filter> filters, const QStringList & filterNames)
 
-=item   bool close()
+=item  bool caseSensitive()
 
-=item   bool copy(const QString & newName)
+=item  bool close()
 
-=item   QAbstractFileEngineIterator * endEntryList()
+=item  bool copy(const QString & newName)
 
-=item   QFile::FileError error()
+=item  QAbstractFileEngineIterator * endEntryList()
 
-=item   QString errorString()
+=item  QStringList entryList(QFlags<QDir::Filter> filters, const QStringList & filterNames)
 
-=item   QString fileName(QAbstractFileEngine::FileName file = QAbstractFileEngine::DefaultName)
+=item  QFile::FileError error()
 
-=item   QString fileName(QAbstractFileEngine::FileName file)
+=item  QString errorString()
 
-=item   QDateTime fileTime(QAbstractFileEngine::FileTime time)
+=item  QFlags<QAbstractFileEngine::FileFlag> fileFlags(QFlags<QAbstractFileEngine::FileFlag> type)
 
-=item   bool flush()
+=item  QFlags<QAbstractFileEngine::FileFlag> fileFlags(QFlags<QAbstractFileEngine::FileFlag> type = QAbstractFileEngine::FileInfoAll)
 
-=item   int handle()
+=item  QString fileName(QAbstractFileEngine::FileName file)
 
-=item   bool isRelativePath()
+=item  QString fileName(QAbstractFileEngine::FileName file = QAbstractFileEngine::DefaultName)
 
-=item   bool isSequential()
+=item  QDateTime fileTime(QAbstractFileEngine::FileTime time)
 
-=item   bool link(const QString & newName)
+=item  bool flush()
 
-=item   uchar * map(qint64 offset, qint64 size, QFile::MemoryMapFlags flags)
+=item  int handle()
 
-=item   bool mkdir(const QString & dirName, bool createParentDirectories)
+=item  bool isRelativePath()
 
-=item   QString owner(QAbstractFileEngine::FileOwner arg0)
+=item  bool isSequential()
 
-=item   uint ownerId(QAbstractFileEngine::FileOwner arg0)
+=item  bool link(const QString & newName)
 
-=item   qint64 pos()
+=item  uchar * map(qint64 offset, qint64 size, QFile::MemoryMapFlags flags)
 
-=item   qint64 read(char * data, qint64 maxlen)
+=item  bool mkdir(const QString & dirName, bool createParentDirectories)
 
-=item   qint64 readLine(char * data, qint64 maxlen)
+=item  bool open(QFlags<QIODevice::OpenModeFlag> openMode)
 
-=item   bool remove()
+=item  QString owner(QAbstractFileEngine::FileOwner arg0)
 
-=item   bool rename(const QString & newName)
+=item  uint ownerId(QAbstractFileEngine::FileOwner arg0)
 
-=item   bool rmdir(const QString & dirName, bool recurseParentDirectories)
+=item  qint64 pos()
 
-=item   bool seek(qint64 pos)
+=item  qint64 read(char * data, qint64 maxlen)
 
-=item   void setFileName(const QString & file)
+=item  qint64 readLine(char * data, qint64 maxlen)
 
-=item   bool setPermissions(uint perms)
+=item  bool remove()
 
-=item   bool setSize(qint64 size)
+=item  bool rename(const QString & newName)
 
-=item   qint64 size()
+=item  bool rmdir(const QString & dirName, bool recurseParentDirectories)
 
-=item   bool unmap(uchar * ptr)
+=item  bool seek(qint64 pos)
 
-=item   qint64 write(const char * data, qint64 len)
+=item  void setFileName(const QString & file)
+
+=item  bool setPermissions(uint perms)
+
+=item  bool setSize(qint64 size)
+
+=item  qint64 size()
+
+=item  bool unmap(uchar * ptr)
+
+=item  qint64 write(const char * data, qint64 len)
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
+
+=item ReadOwnerPerm
+
+=item WriteOwnerPerm
+
+=item ExeOwnerPerm
+
+=item ReadUserPerm
+
+=item WriteUserPerm
+
+=item ExeUserPerm
+
+=item ReadGroupPerm
+
+=item WriteGroupPerm
+
+=item ExeGroupPerm
+
+=item ReadOtherPerm
+
+=item WriteOtherPerm
+
+=item ExeOtherPerm
+
+=item LinkType
+
+=item FileType
+
+=item DirectoryType
+
+=item BundleType
+
+=item HiddenFlag
+
+=item LocalDiskFlag
+
+=item ExistsFlag
+
+=item RootFlag
+
+=item Refresh
+
+=item PermsMask
+
+=item TypesMask
+
+=item FlagsMask
+
+=item FileInfoAll
+
+=item DefaultName
+
+=item BaseName
+
+=item PathName
+
+=item AbsoluteName
+
+=item AbsolutePathName
+
+=item LinkName
+
+=item CanonicalName
+
+=item CanonicalPathName
+
+=item BundleName
+
+=item NFileNames
+
+=item OwnerUser
+
+=item OwnerGroup
+
+=item CreationTime
+
+=item ModificationTime
+
+=item AccessTime
+
+=item AtEndExtension
+
+=item FastReadLineExtension
+
+=item MapExtension
+
+=item UnMapExtension
 
 
 =back

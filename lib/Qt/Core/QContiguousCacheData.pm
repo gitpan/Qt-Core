@@ -1,4 +1,5 @@
 package Qt::Core::QContiguousCacheData;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QContiguousCacheData
 # file     : QtCore/qcontiguouscache.h
 
@@ -6,11 +7,10 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
+our $VERSION = '0.01_02';
 
 
 # FIXME: operator overload
-
 
 
 1;
@@ -23,9 +23,16 @@ Qt::Core::QContiguousCacheData
 
 =over
 
-=item   static QContiguousCacheData * allocate(int size, int alignment)
+=item  static QContiguousCacheData * allocate(int size, int alignment)
 
-=item   static void free(QContiguousCacheData * data)
+=item  static void free(QContiguousCacheData * data)
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
 
 
 =back

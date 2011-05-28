@@ -1,4 +1,5 @@
 package Qt::Core::QStateMachine::WrappedEvent;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QStateMachine::WrappedEvent
 # file     : QtCore/qstatemachine.h
 
@@ -6,12 +7,11 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
-our $ISA     = qw/QEvent/;
+our $VERSION = '0.01_02';
+our $ISA     = qw/Qt::Core::QEvent/;
 
 
 # FIXME: operator overload
-
 
 
 1;
@@ -24,13 +24,20 @@ Qt::Core::QStateMachine::WrappedEvent
 
 =over
 
-=item    QStateMachine::WrappedEvent(QObject * object, QEvent * event)
+=item   QStateMachine::WrappedEvent(QObject * object, QEvent * event)
 
-=item    ~WrappedEvent()
+=item   ~WrappedEvent()
 
-=item   QEvent * event()
+=item  QEvent * event()
 
-=item   QObject * object()
+=item  QObject * object()
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
 
 
 =back

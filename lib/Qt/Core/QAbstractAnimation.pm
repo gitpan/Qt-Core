@@ -1,4 +1,5 @@
 package Qt::Core::QAbstractAnimation;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QAbstractAnimation
 # file     : QtCore/qabstractanimation.h
 
@@ -6,21 +7,11 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
-our $ISA     = qw/QObject/;
+our $VERSION = '0.01_02';
+our $ISA     = qw/Qt::Core::QObject/;
 
 
 # FIXME: operator overload
-
-# enums
-# enum value in perl is enum item index number
-sub Forward() { 0 }
-sub Backward() { 1 }
-sub Stopped() { 0 }
-sub Paused() { 1 }
-sub Running() { 2 }
-sub KeepWhenStopped() { 0 }
-sub DeleteWhenStopped() { 1 }
 
 
 1;
@@ -33,47 +24,68 @@ Qt::Core::QAbstractAnimation
 
 =over
 
-=item    QAbstractAnimation(QObject * parent = 0)
+=item   QAbstractAnimation(QObject * parent)
 
-=item    QAbstractAnimation(QObject * parent)
+=item   QAbstractAnimation(QObject * parent = 0)
 
-=item    ~QAbstractAnimation()
+=item   ~QAbstractAnimation()
 
-=item   int currentLoop()
+=item  int currentLoop()
 
-=item   int currentLoopTime()
+=item  int currentLoopTime()
 
-=item   int currentTime()
+=item  int currentTime()
 
-=item   QAbstractAnimation::Direction direction()
+=item  QAbstractAnimation::Direction direction()
 
-=item   int duration()
+=item  int duration()
 
-=item   QAnimationGroup * group()
+=item  QAnimationGroup * group()
 
-=item   int loopCount()
+=item  int loopCount()
 
-=item   void pause()
+=item  void pause()
 
-=item   void resume()
+=item  void resume()
 
-=item   void setCurrentTime(int msecs)
+=item  void setCurrentTime(int msecs)
 
-=item   void setDirection(QAbstractAnimation::Direction direction)
+=item  void setDirection(QAbstractAnimation::Direction direction)
 
-=item   void setLoopCount(int loopCount)
+=item  void setLoopCount(int loopCount)
 
-=item   void setPaused(bool arg0)
+=item  void setPaused(bool arg0)
 
-=item   void start(QAbstractAnimation::DeletionPolicy policy = QAbstractAnimation::KeepWhenStopped)
+=item  void start(QAbstractAnimation::DeletionPolicy policy)
 
-=item   void start(QAbstractAnimation::DeletionPolicy policy)
+=item  void start(QAbstractAnimation::DeletionPolicy policy = QAbstractAnimation::KeepWhenStopped)
 
-=item   QAbstractAnimation::State state()
+=item  QAbstractAnimation::State state()
 
-=item   void stop()
+=item  void stop()
 
-=item   int totalDuration()
+=item  int totalDuration()
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
+
+=item Forward
+
+=item Backward
+
+=item Stopped
+
+=item Paused
+
+=item Running
+
+=item KeepWhenStopped
+
+=item DeleteWhenStopped
 
 
 =back

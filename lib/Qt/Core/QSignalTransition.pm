@@ -1,4 +1,5 @@
 package Qt::Core::QSignalTransition;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QSignalTransition
 # file     : QtCore/qsignaltransition.h
 
@@ -6,12 +7,11 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
-our $ISA     = qw/QAbstractTransition/;
+our $VERSION = '0.01_02';
+our $ISA     = qw/Qt::Core::QAbstractTransition/;
 
 
 # FIXME: operator overload
-
 
 
 1;
@@ -24,23 +24,30 @@ Qt::Core::QSignalTransition
 
 =over
 
-=item    QSignalTransition(QState * sourceState = 0)
+=item   QSignalTransition(QState * sourceState)
 
-=item    QSignalTransition(QState * sourceState)
+=item   QSignalTransition(QState * sourceState = 0)
 
-=item    QSignalTransition(QObject * sender, const char * signal, QState * sourceState = 0)
+=item   QSignalTransition(QObject * sender, const char * signal, QState * sourceState)
 
-=item    QSignalTransition(QObject * sender, const char * signal, QState * sourceState)
+=item   QSignalTransition(QObject * sender, const char * signal, QState * sourceState = 0)
 
-=item    ~QSignalTransition()
+=item   ~QSignalTransition()
 
-=item   QObject * senderObject()
+=item  QObject * senderObject()
 
-=item   void setSenderObject(QObject * sender)
+=item  void setSenderObject(QObject * sender)
 
-=item   void setSignal(const QByteArray & signal)
+=item  void setSignal(const QByteArray & signal)
 
-=item   QByteArray signal()
+=item  QByteArray signal()
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
 
 
 =back

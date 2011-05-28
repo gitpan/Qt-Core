@@ -1,4 +1,5 @@
 package Qt::Core::QDateTime;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QDateTime
 # file     : QtCore/qdatetime.h
 
@@ -6,11 +7,10 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
+our $VERSION = '0.01_02';
 
 
 # FIXME: operator overload
-
 
 
 1;
@@ -23,91 +23,110 @@ Qt::Core::QDateTime
 
 =over
 
-=item    QDateTime()
+=item   QDateTime()
 
-=item    QDateTime(const QDate & arg0)
+=item   QDateTime(const QDate & arg0)
 
-=item    QDateTime(const QDateTime & other)
+=item   QDateTime(const QDateTime & other)
 
-=item    QDateTime(const QDate & arg0, const QTime & arg1, Qt::TimeSpec spec = Qt::LocalTime)
+=item   QDateTime(const QDate & arg0, const QTime & arg1, Qt::TimeSpec spec)
 
-=item    QDateTime(const QDate & arg0, const QTime & arg1, Qt::TimeSpec spec)
+=item   QDateTime(const QDate & arg0, const QTime & arg1, Qt::TimeSpec spec = Qt::LocalTime)
 
-=item    ~QDateTime()
+=item   ~QDateTime()
 
-=item   QDateTime addDays(int days)
+=item  QDateTime addDays(int days)
 
-=item   QDateTime addMSecs(qint64 msecs)
+=item  QDateTime addMSecs(qint64 msecs)
 
-=item   QDateTime addMonths(int months)
+=item  QDateTime addMonths(int months)
 
-=item   QDateTime addSecs(int secs)
+=item  QDateTime addSecs(int secs)
 
-=item   QDateTime addYears(int years)
+=item  QDateTime addYears(int years)
 
-=item   static QDateTime currentDateTime()
+=item  static QDateTime currentDateTime()
 
-=item   QDate date()
+=item  static QDateTime currentDateTimeUtc()
 
-=item   int daysTo(const QDateTime & arg0)
+=item  static qint64 currentMSecsSinceEpoch()
 
-=item   static QDateTime fromString(const QString & s, Qt::DateFormat f = Qt::TextDate)
+=item  QDate date()
 
-=item   static QDateTime fromString(const QString & s, Qt::DateFormat f)
+=item  int daysTo(const QDateTime & arg0)
 
-=item   static QDateTime fromString(const QString & s, const QString & format)
+=item  static QDateTime fromMSecsSinceEpoch(qint64 msecs)
 
-=item   static QDateTime fromTime_t(uint secsSince1Jan1970UTC)
+=item  static QDateTime fromString(const QString & s, Qt::DateFormat f)
 
-=item   bool isNull()
+=item  static QDateTime fromString(const QString & s, Qt::DateFormat f = Qt::TextDate)
 
-=item   bool isValid()
+=item  static QDateTime fromString(const QString & s, const QString & format)
 
-=item   bool operator!=(const QDateTime & other)
+=item  static QDateTime fromTime_t(uint secsSince1Jan1970UTC)
 
-=item   bool operator<(const QDateTime & other)
+=item  bool isNull()
 
-=item   bool operator<=(const QDateTime & other)
+=item  bool isValid()
 
-=item   QDateTime & operator=(const QDateTime & other)
+=item  qint64 msecsTo(const QDateTime & arg0)
 
-=item   bool operator==(const QDateTime & other)
+=item  bool operator!=(const QDateTime & other)
 
-=item   bool operator>(const QDateTime & other)
+=item  bool operator<(const QDateTime & other)
 
-=item   bool operator>=(const QDateTime & other)
+=item  bool operator<=(const QDateTime & other)
 
-=item   int secsTo(const QDateTime & arg0)
+=item  QDateTime & operator=(const QDateTime & other)
 
-=item   void setDate(const QDate & date)
+=item  bool operator==(const QDateTime & other)
 
-=item   void setTime(const QTime & time)
+=item  bool operator>(const QDateTime & other)
 
-=item   void setTimeSpec(Qt::TimeSpec spec)
+=item  bool operator>=(const QDateTime & other)
 
-=item   void setTime_t(uint secsSince1Jan1970UTC)
+=item  int secsTo(const QDateTime & arg0)
 
-=item   void setUtcOffset(int seconds)
+=item  void setDate(const QDate & date)
 
-=item   QTime time()
+=item  void setMSecsSinceEpoch(qint64 msecs)
 
-=item   Qt::TimeSpec timeSpec()
+=item  void setTime(const QTime & time)
 
-=item   QDateTime toLocalTime()
+=item  void setTimeSpec(Qt::TimeSpec spec)
 
-=item   QString toString(Qt::DateFormat f = Qt::TextDate)
+=item  void setTime_t(uint secsSince1Jan1970UTC)
 
-=item   QString toString(Qt::DateFormat f)
+=item  void setUtcOffset(int seconds)
 
-=item   QString toString(const QString & format)
+=item  QTime time()
 
-=item   QDateTime toTimeSpec(Qt::TimeSpec spec)
+=item  Qt::TimeSpec timeSpec()
 
-=item   uint toTime_t()
+=item  QDateTime toLocalTime()
 
-=item   QDateTime toUTC()
+=item  qint64 toMSecsSinceEpoch()
 
-=item   int utcOffset()
+=item  QString toString(Qt::DateFormat f)
+
+=item  QString toString(Qt::DateFormat f = Qt::TextDate)
+
+=item  QString toString(const QString & format)
+
+=item  QDateTime toTimeSpec(Qt::TimeSpec spec)
+
+=item  uint toTime_t()
+
+=item  QDateTime toUTC()
+
+=item  int utcOffset()
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
 
 
 =back

@@ -1,4 +1,5 @@
 package Qt::Core::QMutexLocker;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QMutexLocker
 # file     : QtCore/qmutex.h
 
@@ -6,11 +7,10 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
+our $VERSION = '0.01_02';
 
 
 # FIXME: operator overload
-
 
 
 1;
@@ -23,15 +23,22 @@ Qt::Core::QMutexLocker
 
 =over
 
-=item    QMutexLocker(QMutex * m)
+=item   QMutexLocker(QMutex * m)
 
-=item    ~QMutexLocker()
+=item   ~QMutexLocker()
 
-=item   QMutex * mutex()
+=item  QMutex * mutex()
 
-=item   void relock()
+=item  void relock()
 
-=item   void unlock()
+=item  void unlock()
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
 
 
 =back

@@ -1,4 +1,5 @@
 package Qt::Core::QIncompatibleFlag;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QIncompatibleFlag
 # file     : QtCore/qglobal.h
 
@@ -6,11 +7,10 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
+our $VERSION = '0.01_02';
 
 
 # FIXME: operator overload
-
 
 
 1;
@@ -23,9 +23,16 @@ Qt::Core::QIncompatibleFlag
 
 =over
 
-=item    QIncompatibleFlag(int i)
+=item   QIncompatibleFlag(int i)
 
-=item   int operator int()
+=item  int operator int()
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
 
 
 =back

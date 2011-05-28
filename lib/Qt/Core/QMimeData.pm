@@ -1,4 +1,5 @@
 package Qt::Core::QMimeData;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QMimeData
 # file     : QtCore/qmimedata.h
 
@@ -6,12 +7,11 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
-our $ISA     = qw/QObject/;
+our $VERSION = '0.01_02';
+our $ISA     = qw/Qt::Core::QObject/;
 
 
 # FIXME: operator overload
-
 
 
 1;
@@ -24,47 +24,54 @@ Qt::Core::QMimeData
 
 =over
 
-=item    QMimeData()
+=item   QMimeData()
 
-=item    ~QMimeData()
+=item   ~QMimeData()
 
-=item   void clear()
+=item  void clear()
 
-=item   QVariant colorData()
+=item  QVariant colorData()
 
-=item   QByteArray data(const QString & mimetype)
+=item  QByteArray data(const QString & mimetype)
 
-=item   QStringList formats()
+=item  QStringList formats()
 
-=item   bool hasColor()
+=item  bool hasColor()
 
-=item   bool hasFormat(const QString & mimetype)
+=item  bool hasFormat(const QString & mimetype)
 
-=item   bool hasHtml()
+=item  bool hasHtml()
 
-=item   bool hasImage()
+=item  bool hasImage()
 
-=item   bool hasText()
+=item  bool hasText()
 
-=item   bool hasUrls()
+=item  bool hasUrls()
 
-=item   QString html()
+=item  QString html()
 
-=item   QVariant imageData()
+=item  QVariant imageData()
 
-=item   void removeFormat(const QString & mimetype)
+=item  void removeFormat(const QString & mimetype)
 
-=item   void setColorData(const QVariant & color)
+=item  void setColorData(const QVariant & color)
 
-=item   void setData(const QString & mimetype, const QByteArray & data)
+=item  void setData(const QString & mimetype, const QByteArray & data)
 
-=item   void setHtml(const QString & html)
+=item  void setHtml(const QString & html)
 
-=item   void setImageData(const QVariant & image)
+=item  void setImageData(const QVariant & image)
 
-=item   void setText(const QString & text)
+=item  void setText(const QString & text)
 
-=item   QString text()
+=item  QString text()
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
 
 
 =back

@@ -1,4 +1,5 @@
 package Qt::Core::QSettings;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QSettings
 # file     : QtCore/qsettings.h
 
@@ -6,38 +7,11 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
-our $ISA     = qw/QObject/;
+our $VERSION = '0.01_02';
+our $ISA     = qw/Qt::Core::QObject/;
 
 
 # FIXME: operator overload
-
-# enums
-# enum value in perl is enum item index number
-sub NoError() { 0 }
-sub AccessError() { 1 }
-sub FormatError() { 2 }
-sub NativeFormat() { 0 }
-sub IniFormat() { 1 }
-sub InvalidFormat() { 2 }
-sub CustomFormat1() { 3 }
-sub CustomFormat2() { 4 }
-sub CustomFormat3() { 5 }
-sub CustomFormat4() { 6 }
-sub CustomFormat5() { 7 }
-sub CustomFormat6() { 8 }
-sub CustomFormat7() { 9 }
-sub CustomFormat8() { 10 }
-sub CustomFormat9() { 11 }
-sub CustomFormat10() { 12 }
-sub CustomFormat11() { 13 }
-sub CustomFormat12() { 14 }
-sub CustomFormat13() { 15 }
-sub CustomFormat14() { 16 }
-sub CustomFormat15() { 17 }
-sub CustomFormat16() { 18 }
-sub UserScope() { 0 }
-sub SystemScope() { 1 }
 
 
 1;
@@ -50,113 +24,162 @@ Qt::Core::QSettings
 
 =over
 
-=item    QSettings(QObject * parent = 0)
+=item   QSettings(QObject * parent)
 
-=item    QSettings(QObject * parent)
+=item   QSettings(QObject * parent = 0)
 
-=item    QSettings(const QString & organization, const QString & application, QObject * parent = 0)
+=item   QSettings(const QString & organization, const QString & application, QObject * parent)
 
-=item    QSettings(const QString & organization, const QString & application, QObject * parent)
+=item   QSettings(const QString & organization, const QString & application, QObject * parent = 0)
 
-=item    QSettings(const QString & organization, const QString & application = QString(), QObject * parent = 0)
+=item   QSettings(const QString & organization, const QString & application = QString(), QObject * parent = 0)
 
-=item    QSettings(const QString & organization, const QString & application, QObject * parent = 0)
+=item   QSettings(const QString & fileName, QSettings::Format format, QObject * parent)
 
-=item    QSettings(const QString & fileName, QSettings::Format format, QObject * parent = 0)
+=item   QSettings(const QString & fileName, QSettings::Format format, QObject * parent = 0)
 
-=item    QSettings(const QString & fileName, QSettings::Format format, QObject * parent)
+=item   QSettings(QSettings::Scope scope, const QString & organization, const QString & application, QObject * parent)
 
-=item    QSettings(QSettings::Scope scope, const QString & organization, const QString & application, QObject * parent = 0)
+=item   QSettings(QSettings::Scope scope, const QString & organization, const QString & application, QObject * parent = 0)
 
-=item    QSettings(QSettings::Scope scope, const QString & organization, const QString & application, QObject * parent)
+=item   QSettings(QSettings::Scope scope, const QString & organization, const QString & application = QString(), QObject * parent = 0)
 
-=item    QSettings(QSettings::Scope scope, const QString & organization, const QString & application = QString(), QObject * parent = 0)
+=item   QSettings(QSettings::Format format, QSettings::Scope scope, const QString & organization, const QString & application, QObject * parent)
 
-=item    QSettings(QSettings::Scope scope, const QString & organization, const QString & application, QObject * parent = 0)
+=item   QSettings(QSettings::Format format, QSettings::Scope scope, const QString & organization, const QString & application, QObject * parent = 0)
 
-=item    QSettings(QSettings::Format format, QSettings::Scope scope, const QString & organization, const QString & application, QObject * parent = 0)
+=item   QSettings(QSettings::Format format, QSettings::Scope scope, const QString & organization, const QString & application = QString(), QObject * parent = 0)
 
-=item    QSettings(QSettings::Format format, QSettings::Scope scope, const QString & organization, const QString & application, QObject * parent)
+=item   ~QSettings()
 
-=item    QSettings(QSettings::Format format, QSettings::Scope scope, const QString & organization, const QString & application = QString(), QObject * parent = 0)
+=item  QStringList allKeys()
 
-=item    QSettings(QSettings::Format format, QSettings::Scope scope, const QString & organization, const QString & application, QObject * parent = 0)
+=item  QString applicationName()
 
-=item    ~QSettings()
+=item  void beginGroup(const QString & prefix)
 
-=item   QStringList allKeys()
+=item  int beginReadArray(const QString & prefix)
 
-=item   QString applicationName()
+=item  void beginWriteArray(const QString & prefix, int size)
 
-=item   void beginGroup(const QString & prefix)
+=item  void beginWriteArray(const QString & prefix, int size = -1)
 
-=item   int beginReadArray(const QString & prefix)
+=item  QStringList childGroups()
 
-=item   void beginWriteArray(const QString & prefix, int size = -1)
+=item  QStringList childKeys()
 
-=item   void beginWriteArray(const QString & prefix, int size)
+=item  void clear()
 
-=item   QStringList childGroups()
+=item  bool contains(const QString & key)
 
-=item   QStringList childKeys()
+=item  static QSettings::Format defaultFormat()
 
-=item   void clear()
+=item  void endArray()
 
-=item   bool contains(const QString & key)
+=item  void endGroup()
 
-=item   static QSettings::Format defaultFormat()
+=item  bool fallbacksEnabled()
 
-=item   void endArray()
+=item  QString fileName()
 
-=item   void endGroup()
+=item  QSettings::Format format()
 
-=item   bool fallbacksEnabled()
+=item  QString group()
 
-=item   QString fileName()
+=item  QTextCodec * iniCodec()
 
-=item   QSettings::Format format()
+=item  bool isWritable()
 
-=item   QString group()
+=item  QString organizationName()
 
-=item   QTextCodec * iniCodec()
+=item  static QSettings::Format registerFormat(const QString & extension, QSettings::ReadFunc readFunc, QSettings::WriteFunc writeFunc, Qt::CaseSensitivity caseSensitivity)
 
-=item   bool isWritable()
+=item  static QSettings::Format registerFormat(const QString & extension, QSettings::ReadFunc readFunc, QSettings::WriteFunc writeFunc, Qt::CaseSensitivity caseSensitivity = Qt::CaseSensitive)
 
-=item   QString organizationName()
+=item  void remove(const QString & key)
 
-=item   static QSettings::Format registerFormat(const QString & extension, QSettings::ReadFunc readFunc, QSettings::WriteFunc writeFunc, Qt::CaseSensitivity caseSensitivity = Qt::CaseSensitive)
+=item  QSettings::Scope scope()
 
-=item   static QSettings::Format registerFormat(const QString & extension, QSettings::ReadFunc readFunc, QSettings::WriteFunc writeFunc, Qt::CaseSensitivity caseSensitivity)
+=item  void setArrayIndex(int i)
 
-=item   void remove(const QString & key)
+=item  static void setDefaultFormat(QSettings::Format format)
 
-=item   QSettings::Scope scope()
+=item  void setFallbacksEnabled(bool b)
 
-=item   void setArrayIndex(int i)
+=item  void setIniCodec(QTextCodec * codec)
 
-=item   static void setDefaultFormat(QSettings::Format format)
+=item  void setIniCodec(const char * codecName)
 
-=item   void setFallbacksEnabled(bool b)
+=item  static void setPath(QSettings::Format format, QSettings::Scope scope, const QString & path)
 
-=item   void setIniCodec(QTextCodec * codec)
+=item  static void setSystemIniPath(const QString & dir)
 
-=item   void setIniCodec(const char * codecName)
+=item  static void setUserIniPath(const QString & dir)
 
-=item   static void setPath(QSettings::Format format, QSettings::Scope scope, const QString & path)
+=item  void setValue(const QString & key, const QVariant & value)
 
-=item   static void setSystemIniPath(const QString & dir)
+=item  QSettings::Status status()
 
-=item   static void setUserIniPath(const QString & dir)
+=item  void sync()
 
-=item   void setValue(const QString & key, const QVariant & value)
+=item  QVariant value(const QString & key, const QVariant & defaultValue)
 
-=item   QSettings::Status status()
+=item  QVariant value(const QString & key, const QVariant & defaultValue = QVariant())
 
-=item   void sync()
 
-=item   QVariant value(const QString & key, const QVariant & defaultValue = QVariant())
+=back
 
-=item   QVariant value(const QString & key, const QVariant & defaultValue)
+=head1 ENUM VALUES
+
+=over
+
+=item NoError
+
+=item AccessError
+
+=item FormatError
+
+=item NativeFormat
+
+=item IniFormat
+
+=item InvalidFormat
+
+=item CustomFormat1
+
+=item CustomFormat2
+
+=item CustomFormat3
+
+=item CustomFormat4
+
+=item CustomFormat5
+
+=item CustomFormat6
+
+=item CustomFormat7
+
+=item CustomFormat8
+
+=item CustomFormat9
+
+=item CustomFormat10
+
+=item CustomFormat11
+
+=item CustomFormat12
+
+=item CustomFormat13
+
+=item CustomFormat14
+
+=item CustomFormat15
+
+=item CustomFormat16
+
+=item UserScope
+
+=item SystemScope
 
 
 =back

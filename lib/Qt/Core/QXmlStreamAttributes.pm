@@ -1,4 +1,5 @@
 package Qt::Core::QXmlStreamAttributes;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QXmlStreamAttributes
 # file     : QtCore/qxmlstream.h
 
@@ -6,11 +7,10 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
+our $VERSION = '0.01_02';
 
 
 # FIXME: operator overload
-
 
 
 1;
@@ -23,25 +23,32 @@ Qt::Core::QXmlStreamAttributes
 
 =over
 
-=item   void append(const QString & qualifiedName, const QString & value)
+=item  void append(const QString & qualifiedName, const QString & value)
 
-=item   void append(const QString & namespaceUri, const QString & name, const QString & value)
+=item  void append(const QString & namespaceUri, const QString & name, const QString & value)
 
-=item   bool hasAttribute(const QString & qualifiedName)
+=item  bool hasAttribute(const QString & qualifiedName)
 
-=item   bool hasAttribute(const QLatin1String & qualifiedName)
+=item  bool hasAttribute(const QLatin1String & qualifiedName)
 
-=item   bool hasAttribute(const QString & namespaceUri, const QString & name)
+=item  bool hasAttribute(const QString & namespaceUri, const QString & name)
 
-=item   QStringRef value(const QString & qualifiedName)
+=item  QStringRef value(const QString & qualifiedName)
 
-=item   QStringRef value(const QLatin1String & qualifiedName)
+=item  QStringRef value(const QLatin1String & qualifiedName)
 
-=item   QStringRef value(const QString & namespaceUri, const QString & name)
+=item  QStringRef value(const QString & namespaceUri, const QString & name)
 
-=item   QStringRef value(const QString & namespaceUri, const QLatin1String & name)
+=item  QStringRef value(const QString & namespaceUri, const QLatin1String & name)
 
-=item   QStringRef value(const QLatin1String & namespaceUri, const QLatin1String & name)
+=item  QStringRef value(const QLatin1String & namespaceUri, const QLatin1String & name)
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
 
 
 =back

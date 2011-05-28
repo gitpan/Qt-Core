@@ -1,4 +1,5 @@
 package Qt::Core::QTextEncoder;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QTextEncoder
 # file     : QtCore/qtextcodec.h
 
@@ -6,11 +7,10 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
+our $VERSION = '0.01_02';
 
 
 # FIXME: operator overload
-
 
 
 1;
@@ -23,15 +23,24 @@ Qt::Core::QTextEncoder
 
 =over
 
-=item    QTextEncoder(const QTextCodec * codec)
+=item   QTextEncoder(const QTextCodec * codec)
 
-=item    ~QTextEncoder()
+=item   QTextEncoder(const QTextCodec * codec, QFlags<QTextCodec::ConversionFlag> flags)
 
-=item   QByteArray fromUnicode(const QString & str)
+=item   ~QTextEncoder()
 
-=item   QByteArray fromUnicode(const QChar * uc, int len)
+=item  QByteArray fromUnicode(const QString & str)
 
-=item   bool hasFailure()
+=item  QByteArray fromUnicode(const QChar * uc, int len)
+
+=item  bool hasFailure()
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
 
 
 =back

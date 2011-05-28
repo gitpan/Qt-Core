@@ -1,4 +1,5 @@
 package Qt::Core::QVariant;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QVariant
 # file     : QtCore/qvariant.h
 
@@ -6,69 +7,10 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
+our $VERSION = '0.01_02';
 
 
 # FIXME: operator overload
-
-# enums
-# enum value in perl is enum item index number
-sub Invalid() { 0 }
-sub Bool() { 1 }
-sub Int() { 2 }
-sub UInt() { 3 }
-sub LongLong() { 4 }
-sub ULongLong() { 5 }
-sub Double() { 6 }
-sub Char() { 7 }
-sub Map() { 8 }
-sub List() { 9 }
-sub String() { 10 }
-sub StringList() { 11 }
-sub ByteArray() { 12 }
-sub BitArray() { 13 }
-sub Date() { 14 }
-sub Time() { 15 }
-sub DateTime() { 16 }
-sub Url() { 17 }
-sub Locale() { 18 }
-sub Rect() { 19 }
-sub RectF() { 20 }
-sub Size() { 21 }
-sub SizeF() { 22 }
-sub Line() { 23 }
-sub LineF() { 24 }
-sub Point() { 25 }
-sub PointF() { 26 }
-sub RegExp() { 27 }
-sub Hash() { 28 }
-sub LastCoreType() { 29 }
-sub Font() { 30 }
-sub Pixmap() { 31 }
-sub Brush() { 32 }
-sub Color() { 33 }
-sub Palette() { 34 }
-sub Icon() { 35 }
-sub Image() { 36 }
-sub Polygon() { 37 }
-sub Region() { 38 }
-sub Bitmap() { 39 }
-sub Cursor() { 40 }
-sub SizePolicy() { 41 }
-sub KeySequence() { 42 }
-sub Pen() { 43 }
-sub TextLength() { 44 }
-sub TextFormat() { 45 }
-sub Matrix() { 46 }
-sub Transform() { 47 }
-sub Matrix4x4() { 48 }
-sub Vector2D() { 49 }
-sub Vector3D() { 50 }
-sub Vector4D() { 51 }
-sub Quaternion() { 52 }
-sub LastGuiType() { 53 }
-sub UserType() { 54 }
-sub LastType() { 55 }
 
 
 1;
@@ -81,185 +23,310 @@ Qt::Core::QVariant
 
 =over
 
-=item    QVariant()
+=item   QVariant()
 
-=item    QVariant(QVariant::Type type)
+=item   QVariant(QVariant::Type type)
 
-=item    QVariant(const QVariant & other)
+=item   QVariant(const QVariant & other)
 
-=item    QVariant(QDataStream & s)
+=item   QVariant(QDataStream & s)
 
-=item    QVariant(int i)
+=item   QVariant(int i)
 
-=item    QVariant(uint ui)
+=item   QVariant(uint ui)
 
-=item    QVariant(qlonglong ll)
+=item   QVariant(qlonglong ll)
 
-=item    QVariant(qulonglong ull)
+=item   QVariant(qulonglong ull)
 
-=item    QVariant(bool b)
+=item   QVariant(bool b)
 
-=item    QVariant(double d)
+=item   QVariant(double d)
 
-=item    QVariant(float f)
+=item   QVariant(float f)
 
-=item    QVariant(const char * str)
+=item   QVariant(const char * str)
 
-=item    QVariant(const QByteArray & bytearray)
+=item   QVariant(const QByteArray & bytearray)
 
-=item    QVariant(const QBitArray & bitarray)
+=item   QVariant(const QBitArray & bitarray)
 
-=item    QVariant(const QString & string)
+=item   QVariant(const QString & string)
 
-=item    QVariant(const QLatin1String & string)
+=item   QVariant(const QLatin1String & string)
 
-=item    QVariant(const QStringList & stringlist)
+=item   QVariant(const QStringList & stringlist)
 
-=item    QVariant(const QChar & qchar)
+=item   QVariant(const QChar & qchar)
 
-=item    QVariant(const QDate & date)
+=item   QVariant(const QDate & date)
 
-=item    QVariant(const QTime & time)
+=item   QVariant(const QTime & time)
 
-=item    QVariant(const QDateTime & datetime)
+=item   QVariant(const QDateTime & datetime)
 
-=item    QVariant(const QSize & size)
+=item   QVariant(const QSize & size)
 
-=item    QVariant(const QSizeF & size)
+=item   QVariant(const QSizeF & size)
 
-=item    QVariant(const QPoint & pt)
+=item   QVariant(const QPoint & pt)
 
-=item    QVariant(const QPointF & pt)
+=item   QVariant(const QPointF & pt)
 
-=item    QVariant(const QLine & line)
+=item   QVariant(const QLine & line)
 
-=item    QVariant(const QLineF & line)
+=item   QVariant(const QLineF & line)
 
-=item    QVariant(const QRect & rect)
+=item   QVariant(const QRect & rect)
 
-=item    QVariant(const QRectF & rect)
+=item   QVariant(const QRectF & rect)
 
-=item    QVariant(const QUrl & url)
+=item   QVariant(const QUrl & url)
 
-=item    QVariant(const QLocale & locale)
+=item   QVariant(const QLocale & locale)
 
-=item    QVariant(const QRegExp & regExp)
+=item   QVariant(const QRegExp & regExp)
 
-=item    QVariant(Qt::GlobalColor color)
+=item   QVariant(const QEasingCurve & easing)
 
-=item    QVariant(int typeOrUserType, const void * copy)
+=item   QVariant(Qt::GlobalColor color)
 
-=item    QVariant(int typeOrUserType, const void * copy, uint flags)
+=item   QVariant(int typeOrUserType, const void * copy)
 
-=item    ~QVariant()
+=item   QVariant(int typeOrUserType, const void * copy, uint flags)
 
-=item   bool canConvert(QVariant::Type t)
+=item   ~QVariant()
 
-=item   void clear()
+=item  bool canConvert(QVariant::Type t)
 
-=item   const void * constData()
+=item  void clear()
 
-=item   bool convert(QVariant::Type t)
+=item  const void * constData()
 
-=item   void * data()
+=item  bool convert(QVariant::Type t)
 
-=item   const void * data()
+=item  void * data()
 
-=item   void detach()
+=item  const void * data()
 
-=item   bool isDetached()
+=item  void detach()
 
-=item   bool isNull()
+=item  bool isDetached()
 
-=item   bool isValid()
+=item  bool isNull()
 
-=item   void load(QDataStream & ds)
+=item  bool isValid()
 
-=item   static QVariant::Type nameToType(const char * name)
+=item  void load(QDataStream & ds)
 
-=item   bool operator!=(const QVariant & v)
+=item  static QVariant::Type nameToType(const char * name)
 
-=item   QVariant & operator=(const QVariant & other)
+=item  bool operator!=(const QVariant & v)
 
-=item   bool operator==(const QVariant & v)
+=item  QVariant & operator=(const QVariant & other)
 
-=item   void save(QDataStream & ds)
+=item  bool operator==(const QVariant & v)
 
-=item   QBitArray toBitArray()
+=item  void save(QDataStream & ds)
 
-=item   bool toBool()
+=item  QBitArray toBitArray()
 
-=item   QByteArray toByteArray()
+=item  bool toBool()
 
-=item   QChar toChar()
+=item  QByteArray toByteArray()
 
-=item   QDate toDate()
+=item  QChar toChar()
 
-=item   QDateTime toDateTime()
+=item  QDate toDate()
 
-=item   double toDouble(bool * ok = 0)
+=item  QDateTime toDateTime()
 
-=item   double toDouble(bool * ok)
+=item  double toDouble(bool * ok)
 
-=item   float toFloat(bool * ok = 0)
+=item  double toDouble(bool * ok = 0)
 
-=item   float toFloat(bool * ok)
+=item  QEasingCurve toEasingCurve()
 
-=item   int toInt(bool * ok = 0)
+=item  float toFloat(bool * ok)
 
-=item   int toInt(bool * ok)
+=item  float toFloat(bool * ok = 0)
 
-=item   QLine toLine()
+=item  int toInt(bool * ok)
 
-=item   QLineF toLineF()
+=item  int toInt(bool * ok = 0)
 
-=item   QLocale toLocale()
+=item  QLine toLine()
 
-=item   qlonglong toLongLong(bool * ok = 0)
+=item  QLineF toLineF()
 
-=item   qlonglong toLongLong(bool * ok)
+=item  QLocale toLocale()
 
-=item   QPoint toPoint()
+=item  qlonglong toLongLong(bool * ok)
 
-=item   QPointF toPointF()
+=item  qlonglong toLongLong(bool * ok = 0)
 
-=item   qreal toReal(bool * ok = 0)
+=item  QPoint toPoint()
 
-=item   qreal toReal(bool * ok)
+=item  QPointF toPointF()
 
-=item   QRect toRect()
+=item  qreal toReal(bool * ok)
 
-=item   QRectF toRectF()
+=item  qreal toReal(bool * ok = 0)
 
-=item   QRegExp toRegExp()
+=item  QRect toRect()
 
-=item   QSize toSize()
+=item  QRectF toRectF()
 
-=item   QSizeF toSizeF()
+=item  QRegExp toRegExp()
 
-=item   QString toString()
+=item  QSize toSize()
 
-=item   QStringList toStringList()
+=item  QSizeF toSizeF()
 
-=item   QTime toTime()
+=item  QString toString()
 
-=item   uint toUInt(bool * ok = 0)
+=item  QStringList toStringList()
 
-=item   uint toUInt(bool * ok)
+=item  QTime toTime()
 
-=item   qulonglong toULongLong(bool * ok = 0)
+=item  uint toUInt(bool * ok)
 
-=item   qulonglong toULongLong(bool * ok)
+=item  uint toUInt(bool * ok = 0)
 
-=item   QUrl toUrl()
+=item  qulonglong toULongLong(bool * ok)
 
-=item   QVariant::Type type()
+=item  qulonglong toULongLong(bool * ok = 0)
 
-=item   const char * typeName()
+=item  QUrl toUrl()
 
-=item   static const char * typeToName(QVariant::Type type)
+=item  QVariant::Type type()
 
-=item   int userType()
+=item  const char * typeName()
+
+=item  static const char * typeToName(QVariant::Type type)
+
+=item  int userType()
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
+
+=item Invalid
+
+=item Bool
+
+=item Int
+
+=item UInt
+
+=item LongLong
+
+=item ULongLong
+
+=item Double
+
+=item Char
+
+=item Map
+
+=item List
+
+=item String
+
+=item StringList
+
+=item ByteArray
+
+=item BitArray
+
+=item Date
+
+=item Time
+
+=item DateTime
+
+=item Url
+
+=item Locale
+
+=item Rect
+
+=item RectF
+
+=item Size
+
+=item SizeF
+
+=item Line
+
+=item LineF
+
+=item Point
+
+=item PointF
+
+=item RegExp
+
+=item Hash
+
+=item EasingCurve
+
+=item LastCoreType
+
+=item Font
+
+=item Pixmap
+
+=item Brush
+
+=item Color
+
+=item Palette
+
+=item Icon
+
+=item Image
+
+=item Polygon
+
+=item Region
+
+=item Bitmap
+
+=item Cursor
+
+=item SizePolicy
+
+=item KeySequence
+
+=item Pen
+
+=item TextLength
+
+=item TextFormat
+
+=item Matrix
+
+=item Transform
+
+=item Matrix4x4
+
+=item Vector2D
+
+=item Vector3D
+
+=item Vector4D
+
+=item Quaternion
+
+=item LastGuiType
+
+=item UserType
+
+=item LastType
 
 
 =back

@@ -1,4 +1,5 @@
 package Qt::Core::QFinalState;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QFinalState
 # file     : QtCore/qfinalstate.h
 
@@ -6,12 +7,11 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
-our $ISA     = qw/QAbstractState/;
+our $VERSION = '0.01_02';
+our $ISA     = qw/Qt::Core::QAbstractState/;
 
 
 # FIXME: operator overload
-
 
 
 1;
@@ -24,11 +24,18 @@ Qt::Core::QFinalState
 
 =over
 
-=item    QFinalState(QState * parent = 0)
+=item   QFinalState(QState * parent)
 
-=item    QFinalState(QState * parent)
+=item   QFinalState(QState * parent = 0)
 
-=item    ~QFinalState()
+=item   ~QFinalState()
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
 
 
 =back

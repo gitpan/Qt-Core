@@ -1,4 +1,5 @@
 package Qt::Core::QFactoryInterface;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QFactoryInterface
 # file     : QtCore/qfactoryinterface.h
 
@@ -6,11 +7,10 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
+our $VERSION = '0.01_02';
 
 
 # FIXME: operator overload
-
 
 
 1;
@@ -23,9 +23,16 @@ Qt::Core::QFactoryInterface
 
 =over
 
-=item    ~QFactoryInterface()
+=item   ~QFactoryInterface()
 
-=item   QStringList keys()
+=item  QStringList keys()
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
 
 
 =back

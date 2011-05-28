@@ -1,4 +1,5 @@
 package Qt::Core::QFileSystemWatcher;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QFileSystemWatcher
 # file     : QtCore/qfilesystemwatcher.h
 
@@ -6,12 +7,11 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
-our $ISA     = qw/QObject/;
+our $VERSION = '0.01_02';
+our $ISA     = qw/Qt::Core::QObject/;
 
 
 # FIXME: operator overload
-
 
 
 1;
@@ -24,27 +24,34 @@ Qt::Core::QFileSystemWatcher
 
 =over
 
-=item    QFileSystemWatcher(QObject * parent = 0)
+=item   QFileSystemWatcher(QObject * parent)
 
-=item    QFileSystemWatcher(QObject * parent)
+=item   QFileSystemWatcher(QObject * parent = 0)
 
-=item    QFileSystemWatcher(const QStringList & paths, QObject * parent = 0)
+=item   QFileSystemWatcher(const QStringList & paths, QObject * parent)
 
-=item    QFileSystemWatcher(const QStringList & paths, QObject * parent)
+=item   QFileSystemWatcher(const QStringList & paths, QObject * parent = 0)
 
-=item    ~QFileSystemWatcher()
+=item   ~QFileSystemWatcher()
 
-=item   void addPath(const QString & file)
+=item  void addPath(const QString & file)
 
-=item   void addPaths(const QStringList & files)
+=item  void addPaths(const QStringList & files)
 
-=item   QStringList directories()
+=item  QStringList directories()
 
-=item   QStringList files()
+=item  QStringList files()
 
-=item   void removePath(const QString & file)
+=item  void removePath(const QString & file)
 
-=item   void removePaths(const QStringList & files)
+=item  void removePaths(const QStringList & files)
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
 
 
 =back

@@ -1,4 +1,5 @@
 package Qt::Core::QTimeLine;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QTimeLine
 # file     : QtCore/qtimeline.h
 
@@ -6,25 +7,11 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
-our $ISA     = qw/QObject/;
+our $VERSION = '0.01_02';
+our $ISA     = qw/Qt::Core::QObject/;
 
 
 # FIXME: operator overload
-
-# enums
-# enum value in perl is enum item index number
-sub NotRunning() { 0 }
-sub Paused() { 1 }
-sub Running() { 2 }
-sub Forward() { 0 }
-sub Backward() { 1 }
-sub EaseInCurve() { 0 }
-sub EaseOutCurve() { 1 }
-sub EaseInOutCurve() { 2 }
-sub LinearCurve() { 3 }
-sub SineCurve() { 4 }
-sub CosineCurve() { 5 }
 
 
 1;
@@ -37,73 +24,100 @@ Qt::Core::QTimeLine
 
 =over
 
-=item    QTimeLine(int duration, QObject * parent = 0)
+=item   QTimeLine(int duration, QObject * parent)
 
-=item    QTimeLine(int duration, QObject * parent)
+=item   QTimeLine(int duration, QObject * parent = 0)
 
-=item    QTimeLine(int duration = 1000, QObject * parent = 0)
+=item   QTimeLine(int duration = 1000, QObject * parent = 0)
 
-=item    QTimeLine(int duration, QObject * parent = 0)
+=item   ~QTimeLine()
 
-=item    ~QTimeLine()
+=item  int currentFrame()
 
-=item   int currentFrame()
+=item  int currentTime()
 
-=item   int currentTime()
+=item  qreal currentValue()
 
-=item   qreal currentValue()
+=item  QTimeLine::CurveShape curveShape()
 
-=item   QTimeLine::CurveShape curveShape()
+=item  QTimeLine::Direction direction()
 
-=item   QTimeLine::Direction direction()
+=item  int duration()
 
-=item   int duration()
+=item  QEasingCurve easingCurve()
 
-=item   QEasingCurve easingCurve()
+=item  int endFrame()
 
-=item   int endFrame()
+=item  int frameForTime(int msec)
 
-=item   int frameForTime(int msec)
+=item  int loopCount()
 
-=item   int loopCount()
+=item  void resume()
 
-=item   void resume()
+=item  void setCurrentTime(int msec)
 
-=item   void setCurrentTime(int msec)
+=item  void setCurveShape(QTimeLine::CurveShape shape)
 
-=item   void setCurveShape(QTimeLine::CurveShape shape)
+=item  void setDirection(QTimeLine::Direction direction)
 
-=item   void setDirection(QTimeLine::Direction direction)
+=item  void setDuration(int duration)
 
-=item   void setDuration(int duration)
+=item  void setEasingCurve(const QEasingCurve & curve)
 
-=item   void setEasingCurve(const QEasingCurve & curve)
+=item  void setEndFrame(int frame)
 
-=item   void setEndFrame(int frame)
+=item  void setFrameRange(int startFrame, int endFrame)
 
-=item   void setFrameRange(int startFrame, int endFrame)
+=item  void setLoopCount(int count)
 
-=item   void setLoopCount(int count)
+=item  void setPaused(bool paused)
 
-=item   void setPaused(bool paused)
+=item  void setStartFrame(int frame)
 
-=item   void setStartFrame(int frame)
+=item  void setUpdateInterval(int interval)
 
-=item   void setUpdateInterval(int interval)
+=item  void start()
 
-=item   void start()
+=item  int startFrame()
 
-=item   int startFrame()
+=item  QTimeLine::State state()
 
-=item   QTimeLine::State state()
+=item  void stop()
 
-=item   void stop()
+=item  void toggleDirection()
 
-=item   void toggleDirection()
+=item  int updateInterval()
 
-=item   int updateInterval()
+=item  qreal valueForTime(int msec)
 
-=item   qreal valueForTime(int msec)
+
+=back
+
+=head1 ENUM VALUES
+
+=over
+
+=item NotRunning
+
+=item Paused
+
+=item Running
+
+=item Forward
+
+=item Backward
+
+=item EaseInCurve
+
+=item EaseOutCurve
+
+=item EaseInOutCurve
+
+=item LinearCurve
+
+=item SineCurve
+
+=item CosineCurve
 
 
 =back

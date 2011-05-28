@@ -1,4 +1,5 @@
 package Qt::Core::QXmlStreamStringRef;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QXmlStreamStringRef
 # file     : QtCore/qxmlstream.h
 
@@ -6,11 +7,10 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
+our $VERSION = '0.01_02';
 
 
 # FIXME: operator overload
-
 
 
 1;
@@ -23,23 +23,30 @@ Qt::Core::QXmlStreamStringRef
 
 =over
 
-=item    QXmlStreamStringRef()
+=item   QXmlStreamStringRef()
 
-=item    QXmlStreamStringRef(const QStringRef & aString)
+=item   QXmlStreamStringRef(const QStringRef & aString)
 
-=item    QXmlStreamStringRef(const QString & aString)
+=item   QXmlStreamStringRef(const QString & aString)
 
-=item    ~QXmlStreamStringRef()
+=item   ~QXmlStreamStringRef()
 
-=item   void clear()
+=item  void clear()
 
-=item   QStringRef operator QStringRef()
+=item  QStringRef operator QStringRef()
 
-=item   int position()
+=item  int position()
 
-=item   int size()
+=item  int size()
 
-=item   const QString * string()
+=item  const QString * string()
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
 
 
 =back

@@ -1,4 +1,5 @@
 package Qt::Core::QTemporaryFile;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QTemporaryFile
 # file     : QtCore/qtemporaryfile.h
 
@@ -6,12 +7,11 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
-our $ISA     = qw/QFile/;
+our $VERSION = '0.01_02';
+our $ISA     = qw/Qt::Core::QFile/;
 
 
 # FIXME: operator overload
-
 
 
 1;
@@ -24,33 +24,40 @@ Qt::Core::QTemporaryFile
 
 =over
 
-=item    QTemporaryFile()
+=item   QTemporaryFile()
 
-=item    QTemporaryFile(const QString & templateName)
+=item   QTemporaryFile(const QString & templateName)
 
-=item    QTemporaryFile(QObject * parent)
+=item   QTemporaryFile(QObject * parent)
 
-=item    QTemporaryFile(const QString & templateName, QObject * parent)
+=item   QTemporaryFile(const QString & templateName, QObject * parent)
 
-=item    ~QTemporaryFile()
+=item   ~QTemporaryFile()
 
-=item   bool autoRemove()
+=item  bool autoRemove()
 
-=item   static QTemporaryFile * createLocalFile(const QString & fileName)
+=item  static QTemporaryFile * createLocalFile(const QString & fileName)
 
-=item   static QTemporaryFile * createLocalFile(QFile & file)
+=item  static QTemporaryFile * createLocalFile(QFile & file)
 
-=item   QAbstractFileEngine * fileEngine()
+=item  QAbstractFileEngine * fileEngine()
 
-=item   QString fileName()
+=item  QString fileName()
 
-=item   QString fileTemplate()
+=item  QString fileTemplate()
 
-=item   bool open()
+=item  bool open()
 
-=item   void setAutoRemove(bool b)
+=item  void setAutoRemove(bool b)
 
-=item   void setFileTemplate(const QString & name)
+=item  void setFileTemplate(const QString & name)
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
 
 
 =back

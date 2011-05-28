@@ -1,4 +1,5 @@
 package Qt::Core::QAtomicInt;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QAtomicInt
 # file     : QtCore/qatomic.h
 
@@ -6,12 +7,11 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
-our $ISA     = qw/QBasicAtomicInt/;
+our $VERSION = '0.01_02';
+our $ISA     = qw/Qt::Core::QBasicAtomicInt/;
 
 
 # FIXME: operator overload
-
 
 
 1;
@@ -24,15 +24,22 @@ Qt::Core::QAtomicInt
 
 =over
 
-=item    QAtomicInt(int value = 0)
+=item   QAtomicInt(int value)
 
-=item    QAtomicInt(int value)
+=item   QAtomicInt(int value = 0)
 
-=item    QAtomicInt(const QAtomicInt & other)
+=item   QAtomicInt(const QAtomicInt & other)
 
-=item   QAtomicInt & operator=(int value)
+=item  QAtomicInt & operator=(int value)
 
-=item   QAtomicInt & operator=(const QAtomicInt & other)
+=item  QAtomicInt & operator=(const QAtomicInt & other)
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
 
 
 =back

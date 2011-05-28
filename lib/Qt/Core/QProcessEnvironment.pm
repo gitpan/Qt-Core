@@ -1,4 +1,5 @@
 package Qt::Core::QProcessEnvironment;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QProcessEnvironment
 # file     : QtCore/qprocess.h
 
@@ -6,11 +7,10 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
+our $VERSION = '0.01_02';
 
 
 # FIXME: operator overload
-
 
 
 1;
@@ -23,35 +23,42 @@ Qt::Core::QProcessEnvironment
 
 =over
 
-=item    QProcessEnvironment()
+=item   QProcessEnvironment()
 
-=item    QProcessEnvironment(const QProcessEnvironment & other)
+=item   QProcessEnvironment(const QProcessEnvironment & other)
 
-=item    ~QProcessEnvironment()
+=item   ~QProcessEnvironment()
 
-=item   void clear()
+=item  void clear()
 
-=item   bool contains(const QString & name)
+=item  bool contains(const QString & name)
 
-=item   void insert(const QString & name, const QString & value)
+=item  void insert(const QString & name, const QString & value)
 
-=item   bool isEmpty()
+=item  bool isEmpty()
 
-=item   bool operator!=(const QProcessEnvironment & other)
+=item  bool operator!=(const QProcessEnvironment & other)
 
-=item   QProcessEnvironment & operator=(const QProcessEnvironment & other)
+=item  QProcessEnvironment & operator=(const QProcessEnvironment & other)
 
-=item   bool operator==(const QProcessEnvironment & other)
+=item  bool operator==(const QProcessEnvironment & other)
 
-=item   void remove(const QString & name)
+=item  void remove(const QString & name)
 
-=item   static QProcessEnvironment systemEnvironment()
+=item  static QProcessEnvironment systemEnvironment()
 
-=item   QStringList toStringList()
+=item  QStringList toStringList()
 
-=item   QString value(const QString & name, const QString & defaultValue = QString())
+=item  QString value(const QString & name, const QString & defaultValue)
 
-=item   QString value(const QString & name, const QString & defaultValue)
+=item  QString value(const QString & name, const QString & defaultValue = QString())
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
 
 
 =back

@@ -1,4 +1,5 @@
 package Qt::Core::QAbstractFileEngineHandler;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QAbstractFileEngineHandler
 # file     : QtCore/qabstractfileengine.h
 
@@ -6,11 +7,10 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
+our $VERSION = '0.01_02';
 
 
 # FIXME: operator overload
-
 
 
 1;
@@ -23,11 +23,18 @@ Qt::Core::QAbstractFileEngineHandler
 
 =over
 
-=item    QAbstractFileEngineHandler()
+=item   QAbstractFileEngineHandler()
 
-=item    ~QAbstractFileEngineHandler()
+=item   ~QAbstractFileEngineHandler()
 
-=item   QAbstractFileEngine * create(const QString & fileName)
+=item  QAbstractFileEngine * create(const QString & fileName)
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
 
 
 =back

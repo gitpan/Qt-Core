@@ -1,4 +1,5 @@
 package Qt::Core::QWaitCondition;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QWaitCondition
 # file     : QtCore/qwaitcondition.h
 
@@ -6,11 +7,10 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
+our $VERSION = '0.01_02';
 
 
 # FIXME: operator overload
-
 
 
 1;
@@ -23,21 +23,28 @@ Qt::Core::QWaitCondition
 
 =over
 
-=item    QWaitCondition()
+=item   QWaitCondition()
 
-=item    ~QWaitCondition()
+=item   ~QWaitCondition()
 
-=item   bool wait(QMutex * mutex, unsigned long time = ULONG_MAX)
+=item  bool wait(QMutex * mutex, unsigned long time)
 
-=item   bool wait(QMutex * mutex, unsigned long time)
+=item  bool wait(QMutex * mutex, unsigned long time = ULONG_MAX)
 
-=item   bool wait(QReadWriteLock * readWriteLock, unsigned long time = ULONG_MAX)
+=item  bool wait(QReadWriteLock * readWriteLock, unsigned long time)
 
-=item   bool wait(QReadWriteLock * readWriteLock, unsigned long time)
+=item  bool wait(QReadWriteLock * readWriteLock, unsigned long time = ULONG_MAX)
 
-=item   void wakeAll()
+=item  void wakeAll()
 
-=item   void wakeOne()
+=item  void wakeOne()
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
 
 
 =back

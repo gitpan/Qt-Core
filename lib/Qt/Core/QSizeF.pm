@@ -1,4 +1,5 @@
 package Qt::Core::QSizeF;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QSizeF
 # file     : QtCore/qsize.h
 
@@ -6,11 +7,10 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
+our $VERSION = '0.01_02';
 
 
 # FIXME: operator overload
-
 
 
 1;
@@ -23,49 +23,56 @@ Qt::Core::QSizeF
 
 =over
 
-=item    QSizeF()
+=item   QSizeF()
 
-=item    QSizeF(const QSize & sz)
+=item   QSizeF(const QSize & sz)
 
-=item    QSizeF(qreal w, qreal h)
+=item   QSizeF(qreal w, qreal h)
 
-=item   QSizeF boundedTo(const QSizeF & arg0)
+=item  QSizeF boundedTo(const QSizeF & arg0)
 
-=item   QSizeF expandedTo(const QSizeF & arg0)
+=item  QSizeF expandedTo(const QSizeF & arg0)
 
-=item   qreal height()
+=item  qreal height()
 
-=item   bool isEmpty()
+=item  bool isEmpty()
 
-=item   bool isNull()
+=item  bool isNull()
 
-=item   bool isValid()
+=item  bool isValid()
 
-=item   QSizeF & operator*=(qreal c)
+=item  QSizeF & operator*=(qreal c)
 
-=item   QSizeF & operator+=(const QSizeF & arg0)
+=item  QSizeF & operator+=(const QSizeF & arg0)
 
-=item   QSizeF & operator-=(const QSizeF & arg0)
+=item  QSizeF & operator-=(const QSizeF & arg0)
 
-=item   QSizeF & operator/=(qreal c)
+=item  QSizeF & operator/=(qreal c)
 
-=item   qreal & rheight()
+=item  qreal & rheight()
 
-=item   qreal & rwidth()
+=item  qreal & rwidth()
 
-=item   void scale(const QSizeF & s, Qt::AspectRatioMode mode)
+=item  void scale(const QSizeF & s, Qt::AspectRatioMode mode)
 
-=item   void scale(qreal w, qreal h, Qt::AspectRatioMode mode)
+=item  void scale(qreal w, qreal h, Qt::AspectRatioMode mode)
 
-=item   void setHeight(qreal h)
+=item  void setHeight(qreal h)
 
-=item   void setWidth(qreal w)
+=item  void setWidth(qreal w)
 
-=item   QSize toSize()
+=item  QSize toSize()
 
-=item   void transpose()
+=item  void transpose()
 
-=item   qreal width()
+=item  qreal width()
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
 
 
 =back

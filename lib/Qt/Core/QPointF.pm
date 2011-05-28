@@ -1,4 +1,5 @@
 package Qt::Core::QPointF;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QPointF
 # file     : QtCore/qpoint.h
 
@@ -6,11 +7,10 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
+our $VERSION = '0.01_02';
 
 
 # FIXME: operator overload
-
 
 
 1;
@@ -23,37 +23,44 @@ Qt::Core::QPointF
 
 =over
 
-=item    QPointF()
+=item   QPointF()
 
-=item    QPointF(const QPoint & p)
+=item   QPointF(const QPoint & p)
 
-=item    QPointF(qreal xpos, qreal ypos)
+=item   QPointF(qreal xpos, qreal ypos)
 
-=item   bool isNull()
+=item  bool isNull()
 
-=item   qreal manhattanLength()
+=item  qreal manhattanLength()
 
-=item   QPointF & operator*=(qreal c)
+=item  QPointF & operator*=(qreal c)
 
-=item   QPointF & operator+=(const QPointF & p)
+=item  QPointF & operator+=(const QPointF & p)
 
-=item   QPointF & operator-=(const QPointF & p)
+=item  QPointF & operator-=(const QPointF & p)
 
-=item   QPointF & operator/=(qreal c)
+=item  QPointF & operator/=(qreal c)
 
-=item   qreal & rx()
+=item  qreal & rx()
 
-=item   qreal & ry()
+=item  qreal & ry()
 
-=item   void setX(qreal x)
+=item  void setX(qreal x)
 
-=item   void setY(qreal y)
+=item  void setY(qreal y)
 
-=item   QPoint toPoint()
+=item  QPoint toPoint()
 
-=item   qreal x()
+=item  qreal x()
 
-=item   qreal y()
+=item  qreal y()
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
 
 
 =back

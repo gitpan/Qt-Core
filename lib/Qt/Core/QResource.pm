@@ -1,4 +1,5 @@
 package Qt::Core::QResource;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QResource
 # file     : QtCore/qresource.h
 
@@ -6,11 +7,10 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
+our $VERSION = '0.01_02';
 
 
 # FIXME: operator overload
-
 
 
 1;
@@ -23,53 +23,58 @@ Qt::Core::QResource
 
 =over
 
-=item    QResource(const QString & file, const QLocale & locale = QLocale())
+=item   QResource(const QString & file, const QLocale & locale)
 
-=item    QResource(const QString & file, const QLocale & locale)
+=item   QResource(const QString & file, const QLocale & locale = QLocale())
 
-=item    QResource(const QString & file = QString(), const QLocale & locale = QLocale())
+=item   QResource(const QString & file = QString(), const QLocale & locale = QLocale())
 
-=item    QResource(const QString & file, const QLocale & locale = QLocale())
+=item   ~QResource()
 
-=item    ~QResource()
+=item  QString absoluteFilePath()
 
-=item   QString absoluteFilePath()
+=item  static void addSearchPath(const QString & path)
 
-=item   static void addSearchPath(const QString & path)
+=item  const uchar * data()
 
-=item   const uchar * data()
+=item  QString fileName()
 
-=item   QString fileName()
+=item  bool isCompressed()
 
-=item   bool isCompressed()
+=item  bool isValid()
 
-=item   bool isValid()
+=item  QLocale locale()
 
-=item   QLocale locale()
+=item  static bool registerResource(const QString & rccFilename, const QString & resourceRoot)
 
-=item   static bool registerResource(const QString & rccFilename, const QString & resourceRoot = QString())
+=item  static bool registerResource(const QString & rccFilename, const QString & resourceRoot = QString())
 
-=item   static bool registerResource(const QString & rccFilename, const QString & resourceRoot)
+=item  static bool registerResource(const uchar * rccData, const QString & resourceRoot)
 
-=item   static bool registerResource(const uchar * rccData, const QString & resourceRoot = QString())
+=item  static bool registerResource(const uchar * rccData, const QString & resourceRoot = QString())
 
-=item   static bool registerResource(const uchar * rccData, const QString & resourceRoot)
+=item  static QStringList searchPaths()
 
-=item   static QStringList searchPaths()
+=item  void setFileName(const QString & file)
 
-=item   void setFileName(const QString & file)
+=item  void setLocale(const QLocale & locale)
 
-=item   void setLocale(const QLocale & locale)
+=item  qint64 size()
 
-=item   qint64 size()
+=item  static bool unregisterResource(const QString & rccFilename, const QString & resourceRoot)
 
-=item   static bool unregisterResource(const QString & rccFilename, const QString & resourceRoot = QString())
+=item  static bool unregisterResource(const QString & rccFilename, const QString & resourceRoot = QString())
 
-=item   static bool unregisterResource(const QString & rccFilename, const QString & resourceRoot)
+=item  static bool unregisterResource(const uchar * rccData, const QString & resourceRoot)
 
-=item   static bool unregisterResource(const uchar * rccData, const QString & resourceRoot = QString())
+=item  static bool unregisterResource(const uchar * rccData, const QString & resourceRoot = QString())
 
-=item   static bool unregisterResource(const uchar * rccData, const QString & resourceRoot)
+
+=back
+
+=head1 ENUM VALUES
+
+=over
 
 
 =back

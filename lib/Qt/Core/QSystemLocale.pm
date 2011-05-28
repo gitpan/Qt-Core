@@ -1,4 +1,5 @@
 package Qt::Core::QSystemLocale;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QSystemLocale
 # file     : QtCore/qlocale.h
 
@@ -6,39 +7,10 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
+our $VERSION = '0.01_02';
 
 
 # FIXME: operator overload
-
-# enums
-# enum value in perl is enum item index number
-sub LanguageId() { 0 }
-sub CountryId() { 1 }
-sub DecimalPoint() { 2 }
-sub GroupSeparator() { 3 }
-sub ZeroDigit() { 4 }
-sub NegativeSign() { 5 }
-sub DateFormatLong() { 6 }
-sub DateFormatShort() { 7 }
-sub TimeFormatLong() { 8 }
-sub TimeFormatShort() { 9 }
-sub DayNameLong() { 10 }
-sub DayNameShort() { 11 }
-sub MonthNameLong() { 12 }
-sub MonthNameShort() { 13 }
-sub DateToStringLong() { 14 }
-sub DateToStringShort() { 15 }
-sub TimeToStringLong() { 16 }
-sub TimeToStringShort() { 17 }
-sub DateTimeFormatLong() { 18 }
-sub DateTimeFormatShort() { 19 }
-sub DateTimeToStringLong() { 20 }
-sub DateTimeToStringShort() { 21 }
-sub MeasurementSystem() { 22 }
-sub PositiveSign() { 23 }
-sub AMText() { 24 }
-sub PMText() { 25 }
 
 
 1;
@@ -51,13 +23,72 @@ Qt::Core::QSystemLocale
 
 =over
 
-=item    QSystemLocale()
+=item   QSystemLocale()
 
-=item    ~QSystemLocale()
+=item   ~QSystemLocale()
 
-=item   QLocale fallbackLocale()
+=item  QLocale fallbackLocale()
 
-=item   QVariant query(QSystemLocale::QueryType type, QVariant in)
+=item  QVariant query(QSystemLocale::QueryType type, QVariant in)
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
+
+=item LanguageId
+
+=item CountryId
+
+=item DecimalPoint
+
+=item GroupSeparator
+
+=item ZeroDigit
+
+=item NegativeSign
+
+=item DateFormatLong
+
+=item DateFormatShort
+
+=item TimeFormatLong
+
+=item TimeFormatShort
+
+=item DayNameLong
+
+=item DayNameShort
+
+=item MonthNameLong
+
+=item MonthNameShort
+
+=item DateToStringLong
+
+=item DateToStringShort
+
+=item TimeToStringLong
+
+=item TimeToStringShort
+
+=item DateTimeFormatLong
+
+=item DateTimeFormatShort
+
+=item DateTimeToStringLong
+
+=item DateTimeToStringShort
+
+=item MeasurementSystem
+
+=item PositiveSign
+
+=item AMText
+
+=item PMText
 
 
 =back

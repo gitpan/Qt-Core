@@ -1,4 +1,5 @@
 package Qt::Core::QPropertyAnimation;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QPropertyAnimation
 # file     : QtCore/qpropertyanimation.h
 
@@ -6,12 +7,11 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
-our $ISA     = qw/QVariantAnimation/;
+our $VERSION = '0.01_02';
+our $ISA     = qw/Qt::Core::QVariantAnimation/;
 
 
 # FIXME: operator overload
-
 
 
 1;
@@ -24,23 +24,30 @@ Qt::Core::QPropertyAnimation
 
 =over
 
-=item    QPropertyAnimation(QObject * parent = 0)
+=item   QPropertyAnimation(QObject * parent)
 
-=item    QPropertyAnimation(QObject * parent)
+=item   QPropertyAnimation(QObject * parent = 0)
 
-=item    QPropertyAnimation(QObject * target, const QByteArray & propertyName, QObject * parent = 0)
+=item   QPropertyAnimation(QObject * target, const QByteArray & propertyName, QObject * parent)
 
-=item    QPropertyAnimation(QObject * target, const QByteArray & propertyName, QObject * parent)
+=item   QPropertyAnimation(QObject * target, const QByteArray & propertyName, QObject * parent = 0)
 
-=item    ~QPropertyAnimation()
+=item   ~QPropertyAnimation()
 
-=item   QByteArray propertyName()
+=item  QByteArray propertyName()
 
-=item   void setPropertyName(const QByteArray & propertyName)
+=item  void setPropertyName(const QByteArray & propertyName)
 
-=item   void setTargetObject(QObject * target)
+=item  void setTargetObject(QObject * target)
 
-=item   QObject * targetObject()
+=item  QObject * targetObject()
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
 
 
 =back

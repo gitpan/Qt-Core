@@ -1,4 +1,5 @@
 package Qt::Core::QPauseAnimation;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QPauseAnimation
 # file     : QtCore/qpauseanimation.h
 
@@ -6,12 +7,11 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
-our $ISA     = qw/QAbstractAnimation/;
+our $VERSION = '0.01_02';
+our $ISA     = qw/Qt::Core::QAbstractAnimation/;
 
 
 # FIXME: operator overload
-
 
 
 1;
@@ -24,19 +24,26 @@ Qt::Core::QPauseAnimation
 
 =over
 
-=item    QPauseAnimation(QObject * parent = 0)
+=item   QPauseAnimation(QObject * parent)
 
-=item    QPauseAnimation(QObject * parent)
+=item   QPauseAnimation(QObject * parent = 0)
 
-=item    QPauseAnimation(int msecs, QObject * parent = 0)
+=item   QPauseAnimation(int msecs, QObject * parent)
 
-=item    QPauseAnimation(int msecs, QObject * parent)
+=item   QPauseAnimation(int msecs, QObject * parent = 0)
 
-=item    ~QPauseAnimation()
+=item   ~QPauseAnimation()
 
-=item   int duration()
+=item  int duration()
 
-=item   void setDuration(int msecs)
+=item  void setDuration(int msecs)
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
 
 
 =back

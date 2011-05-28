@@ -1,4 +1,5 @@
 package Qt::Core::QObjectUserData;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QObjectUserData
 # file     : QtCore/qobject.h
 
@@ -6,11 +7,10 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
+our $VERSION = '0.01_02';
 
 
 # FIXME: operator overload
-
 
 
 1;
@@ -23,7 +23,14 @@ Qt::Core::QObjectUserData
 
 =over
 
-=item    ~QObjectUserData()
+=item   ~QObjectUserData()
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
 
 
 =back

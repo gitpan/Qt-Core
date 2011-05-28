@@ -1,4 +1,5 @@
 package Qt::Core::QtConcurrent::internal::ExceptionStore;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QtConcurrent::internal::ExceptionStore
 # file     : QtCore/qtconcurrentexception.h
 
@@ -6,11 +7,10 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
+our $VERSION = '0.01_02';
 
 
 # FIXME: operator overload
-
 
 
 1;
@@ -23,13 +23,20 @@ Qt::Core::QtConcurrent::internal::ExceptionStore
 
 =over
 
-=item   bool hasException()
+=item  bool hasException()
 
-=item   bool hasThrown()
+=item  bool hasThrown()
 
-=item   void setException(const QtConcurrent::Exception & e)
+=item  void setException(const QtConcurrent::Exception & e)
 
-=item   void throwPossibleException()
+=item  void throwPossibleException()
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
 
 
 =back

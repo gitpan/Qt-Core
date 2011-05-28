@@ -1,4 +1,5 @@
 package Qt::Core::QXmlStreamEntityDeclaration;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QXmlStreamEntityDeclaration
 # file     : QtCore/qxmlstream.h
 
@@ -6,11 +7,10 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
+our $VERSION = '0.01_02';
 
 
 # FIXME: operator overload
-
 
 
 1;
@@ -23,27 +23,34 @@ Qt::Core::QXmlStreamEntityDeclaration
 
 =over
 
-=item    QXmlStreamEntityDeclaration()
+=item   QXmlStreamEntityDeclaration()
 
-=item    QXmlStreamEntityDeclaration(const QXmlStreamEntityDeclaration & arg0)
+=item   QXmlStreamEntityDeclaration(const QXmlStreamEntityDeclaration & arg0)
 
-=item    ~QXmlStreamEntityDeclaration()
+=item   ~QXmlStreamEntityDeclaration()
 
-=item   QStringRef name()
+=item  QStringRef name()
 
-=item   QStringRef notationName()
+=item  QStringRef notationName()
 
-=item   bool operator!=(const QXmlStreamEntityDeclaration & other)
+=item  bool operator!=(const QXmlStreamEntityDeclaration & other)
 
-=item   QXmlStreamEntityDeclaration & operator=(const QXmlStreamEntityDeclaration & arg0)
+=item  QXmlStreamEntityDeclaration & operator=(const QXmlStreamEntityDeclaration & arg0)
 
-=item   bool operator==(const QXmlStreamEntityDeclaration & other)
+=item  bool operator==(const QXmlStreamEntityDeclaration & other)
 
-=item   QStringRef publicId()
+=item  QStringRef publicId()
 
-=item   QStringRef systemId()
+=item  QStringRef systemId()
 
-=item   QStringRef value()
+=item  QStringRef value()
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
 
 
 =back

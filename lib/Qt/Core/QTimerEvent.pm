@@ -1,4 +1,5 @@
 package Qt::Core::QTimerEvent;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QTimerEvent
 # file     : QtCore/qcoreevent.h
 
@@ -6,12 +7,11 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
-our $ISA     = qw/QEvent/;
+our $VERSION = '0.01_02';
+our $ISA     = qw/Qt::Core::QEvent/;
 
 
 # FIXME: operator overload
-
 
 
 1;
@@ -24,11 +24,18 @@ Qt::Core::QTimerEvent
 
 =over
 
-=item    QTimerEvent(int timerId)
+=item   QTimerEvent(int timerId)
 
-=item    ~QTimerEvent()
+=item   ~QTimerEvent()
 
-=item   int timerId()
+=item  int timerId()
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
 
 
 =back

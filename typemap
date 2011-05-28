@@ -33,44 +33,44 @@ QParallelAnimationGroup *               		T_PTROBJ_0029
 QSystemSemaphore *                      		T_PTROBJ_0030
 QSignalTransition *                     		T_PTROBJ_0031
 QHistoryState *                         		T_PTROBJ_0032
-QtSharedPointer::ExternalRefCountData * 		T_PTROBJ_0033
-QDynamicPropertyChangeEvent *           		T_PTROBJ_0034
-QLatin1Char *                           		T_PTROBJ_0035
-QListData *                             		T_PTROBJ_0036
-QtConcurrent::ThreadEngineBarrier *     		T_PTROBJ_0037
-QProcess *                              		T_PTROBJ_0038
-QDateTime *                             		T_PTROBJ_0039
-QPointF *                               		T_PTROBJ_0040
-QFactoryInterface *                     		T_PTROBJ_0041
-QStateMachine::SignalEvent *            		T_PTROBJ_0042
-QHashData *                             		T_PTROBJ_0043
-QtConcurrent::Exception *               		T_PTROBJ_0044
-QTextCodec::ConverterState *            		T_PTROBJ_0045
-QTextStream *                           		T_PTROBJ_0046
-QVectorData *                           		T_PTROBJ_0047
-QVariantAnimation *                     		T_PTROBJ_0048
-QEventTransition *                      		T_PTROBJ_0049
-QSysInfo *                              		T_PTROBJ_0050
-QProcessEnvironment *                   		T_PTROBJ_0051
-QTextStreamManipulator *                		T_PTROBJ_0052
-QReadLocker *                           		T_PTROBJ_0053
-QBitRef *                               		T_PTROBJ_0054
-QSignalMapper *                         		T_PTROBJ_0055
-QGenericArgument *                      		T_PTROBJ_0056
-QTime *                                 		T_PTROBJ_0057
-QSharedData *                           		T_PTROBJ_0058
-QTimerEvent *                           		T_PTROBJ_0059
-QFlag *                                 		T_PTROBJ_0060
-QMimeData *                             		T_PTROBJ_0061
-QDataStream *                           		T_PTROBJ_0062
-QXmlStreamReader *                      		T_PTROBJ_0063
-QThreadStorageData *                    		T_PTROBJ_0064
-QCoreApplication *                      		T_PTROBJ_0065
-QDir *                                  		T_PTROBJ_0066
-QtConcurrent::ResultStoreBase *         		T_PTROBJ_0067
-QObjectData *                           		T_PTROBJ_0068
-QDate *                                 		T_PTROBJ_0069
-QAbstractFileEngine *                   		T_PTROBJ_0070
+QDynamicPropertyChangeEvent *           		T_PTROBJ_0033
+QLatin1Char *                           		T_PTROBJ_0034
+QListData *                             		T_PTROBJ_0035
+QtConcurrent::ThreadEngineBarrier *     		T_PTROBJ_0036
+QProcess *                              		T_PTROBJ_0037
+QDateTime *                             		T_PTROBJ_0038
+QPointF *                               		T_PTROBJ_0039
+QFactoryInterface *                     		T_PTROBJ_0040
+QStateMachine::SignalEvent *            		T_PTROBJ_0041
+QHashData *                             		T_PTROBJ_0042
+QtConcurrent::Exception *               		T_PTROBJ_0043
+QTextCodec::ConverterState *            		T_PTROBJ_0044
+QTextStream *                           		T_PTROBJ_0045
+QVectorData *                           		T_PTROBJ_0046
+QVariantAnimation *                     		T_PTROBJ_0047
+QEventTransition *                      		T_PTROBJ_0048
+QSysInfo *                              		T_PTROBJ_0049
+QProcessEnvironment *                   		T_PTROBJ_0050
+QTextStreamManipulator *                		T_PTROBJ_0051
+QReadLocker *                           		T_PTROBJ_0052
+QBitRef *                               		T_PTROBJ_0053
+QSignalMapper *                         		T_PTROBJ_0054
+QGenericArgument *                      		T_PTROBJ_0055
+QTime *                                 		T_PTROBJ_0056
+QSharedData *                           		T_PTROBJ_0057
+QTimerEvent *                           		T_PTROBJ_0058
+QFlag *                                 		T_PTROBJ_0059
+QMimeData *                             		T_PTROBJ_0060
+QDataStream *                           		T_PTROBJ_0061
+QXmlStreamReader *                      		T_PTROBJ_0062
+QThreadStorageData *                    		T_PTROBJ_0063
+QCoreApplication *                      		T_PTROBJ_0064
+QDir *                                  		T_PTROBJ_0065
+QtConcurrent::ResultStoreBase *         		T_PTROBJ_0066
+QObjectData *                           		T_PTROBJ_0067
+QDate *                                 		T_PTROBJ_0068
+QAbstractFileEngine *                   		T_PTROBJ_0069
+Qt *                                    		T_PTROBJ_0070
 QRectF *                                		T_PTROBJ_0071
 QMetaProperty *                         		T_PTROBJ_0072
 QChar *                                 		T_PTROBJ_0073
@@ -97,21 +97,21 @@ QSemaphore *                            		T_PTROBJ_0093
 QBuffer *                               		T_PTROBJ_0094
 QRegExp *                               		T_PTROBJ_0095
 QMutexLocker *                          		T_PTROBJ_0096
-QtSharedPointer::ExternalRefCountWithDestroyFn *		T_PTROBJ_0097
-QCharRef *                              		T_PTROBJ_0098
-QPluginLoader *                         		T_PTROBJ_0099
-QTimer *                                		T_PTROBJ_0100
-QString *                               		T_PTROBJ_0101
-QtConcurrent::UnhandledException *      		T_PTROBJ_0102
-QRect *                                 		T_PTROBJ_0103
-QMetaEnum *                             		T_PTROBJ_0104
-QXmlStreamWriter *                      		T_PTROBJ_0105
-QUuid *                                 		T_PTROBJ_0106
-QFinalState *                           		T_PTROBJ_0107
-QSizeF *                                		T_PTROBJ_0108
-QAbstractFileEngine::UnMapExtensionOption *		T_PTROBJ_0109
-QTranslator *                           		T_PTROBJ_0110
-QLatin1String *                         		T_PTROBJ_0111
+QCharRef *                              		T_PTROBJ_0097
+QPluginLoader *                         		T_PTROBJ_0098
+QTimer *                                		T_PTROBJ_0099
+QString *                               		T_PTROBJ_0100
+QtConcurrent::UnhandledException *      		T_PTROBJ_0101
+QRect *                                 		T_PTROBJ_0102
+QMetaEnum *                             		T_PTROBJ_0103
+QXmlStreamWriter *                      		T_PTROBJ_0104
+QUuid *                                 		T_PTROBJ_0105
+QFinalState *                           		T_PTROBJ_0106
+QSizeF *                                		T_PTROBJ_0107
+QAbstractFileEngine::UnMapExtensionOption *		T_PTROBJ_0108
+QTranslator *                           		T_PTROBJ_0109
+QLatin1String *                         		T_PTROBJ_0110
+QElapsedTimer *                         		T_PTROBJ_0111
 QFileSystemWatcher *                    		T_PTROBJ_0112
 QIODevice *                             		T_PTROBJ_0113
 QStringRef *                            		T_PTROBJ_0114
@@ -373,232 +373,232 @@ T_PTROBJ_0032
         Perl_croak(aTHX_ \"$var is not of type Qt::Core::QHistoryState\");
 
 T_PTROBJ_0033
-    if (sv_derived_from($arg, \"Qt::Core::QtSharedPointer::ExternalRefCountData\"))
-        $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
-    else
-        Perl_croak(aTHX_ \"$var is not of type Qt::Core::QtSharedPointer::ExternalRefCountData\");
-
-T_PTROBJ_0034
     if (sv_derived_from($arg, \"Qt::Core::QDynamicPropertyChangeEvent\"))
         $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
     else
         Perl_croak(aTHX_ \"$var is not of type Qt::Core::QDynamicPropertyChangeEvent\");
 
-T_PTROBJ_0035
+T_PTROBJ_0034
     if (sv_derived_from($arg, \"Qt::Core::QLatin1Char\"))
         $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
     else
         Perl_croak(aTHX_ \"$var is not of type Qt::Core::QLatin1Char\");
 
-T_PTROBJ_0036
+T_PTROBJ_0035
     if (sv_derived_from($arg, \"Qt::Core::QListData\"))
         $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
     else
         Perl_croak(aTHX_ \"$var is not of type Qt::Core::QListData\");
 
-T_PTROBJ_0037
+T_PTROBJ_0036
     if (sv_derived_from($arg, \"Qt::Core::QtConcurrent::ThreadEngineBarrier\"))
         $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
     else
         Perl_croak(aTHX_ \"$var is not of type Qt::Core::QtConcurrent::ThreadEngineBarrier\");
 
-T_PTROBJ_0038
+T_PTROBJ_0037
     if (sv_derived_from($arg, \"Qt::Core::QProcess\"))
         $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
     else
         Perl_croak(aTHX_ \"$var is not of type Qt::Core::QProcess\");
 
-T_PTROBJ_0039
+T_PTROBJ_0038
     if (sv_derived_from($arg, \"Qt::Core::QDateTime\"))
         $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
     else
         Perl_croak(aTHX_ \"$var is not of type Qt::Core::QDateTime\");
 
-T_PTROBJ_0040
+T_PTROBJ_0039
     if (sv_derived_from($arg, \"Qt::Core::QPointF\"))
         $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
     else
         Perl_croak(aTHX_ \"$var is not of type Qt::Core::QPointF\");
 
-T_PTROBJ_0041
+T_PTROBJ_0040
     if (sv_derived_from($arg, \"Qt::Core::QFactoryInterface\"))
         $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
     else
         Perl_croak(aTHX_ \"$var is not of type Qt::Core::QFactoryInterface\");
 
-T_PTROBJ_0042
+T_PTROBJ_0041
     if (sv_derived_from($arg, \"Qt::Core::QStateMachine::SignalEvent\"))
         $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
     else
         Perl_croak(aTHX_ \"$var is not of type Qt::Core::QStateMachine::SignalEvent\");
 
-T_PTROBJ_0043
+T_PTROBJ_0042
     if (sv_derived_from($arg, \"Qt::Core::QHashData\"))
         $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
     else
         Perl_croak(aTHX_ \"$var is not of type Qt::Core::QHashData\");
 
-T_PTROBJ_0044
+T_PTROBJ_0043
     if (sv_derived_from($arg, \"Qt::Core::QtConcurrent::Exception\"))
         $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
     else
         Perl_croak(aTHX_ \"$var is not of type Qt::Core::QtConcurrent::Exception\");
 
-T_PTROBJ_0045
+T_PTROBJ_0044
     if (sv_derived_from($arg, \"Qt::Core::QTextCodec::ConverterState\"))
         $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
     else
         Perl_croak(aTHX_ \"$var is not of type Qt::Core::QTextCodec::ConverterState\");
 
-T_PTROBJ_0046
+T_PTROBJ_0045
     if (sv_derived_from($arg, \"Qt::Core::QTextStream\"))
         $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
     else
         Perl_croak(aTHX_ \"$var is not of type Qt::Core::QTextStream\");
 
-T_PTROBJ_0047
+T_PTROBJ_0046
     if (sv_derived_from($arg, \"Qt::Core::QVectorData\"))
         $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
     else
         Perl_croak(aTHX_ \"$var is not of type Qt::Core::QVectorData\");
 
-T_PTROBJ_0048
+T_PTROBJ_0047
     if (sv_derived_from($arg, \"Qt::Core::QVariantAnimation\"))
         $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
     else
         Perl_croak(aTHX_ \"$var is not of type Qt::Core::QVariantAnimation\");
 
-T_PTROBJ_0049
+T_PTROBJ_0048
     if (sv_derived_from($arg, \"Qt::Core::QEventTransition\"))
         $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
     else
         Perl_croak(aTHX_ \"$var is not of type Qt::Core::QEventTransition\");
 
-T_PTROBJ_0050
+T_PTROBJ_0049
     if (sv_derived_from($arg, \"Qt::Core::QSysInfo\"))
         $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
     else
         Perl_croak(aTHX_ \"$var is not of type Qt::Core::QSysInfo\");
 
-T_PTROBJ_0051
+T_PTROBJ_0050
     if (sv_derived_from($arg, \"Qt::Core::QProcessEnvironment\"))
         $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
     else
         Perl_croak(aTHX_ \"$var is not of type Qt::Core::QProcessEnvironment\");
 
-T_PTROBJ_0052
+T_PTROBJ_0051
     if (sv_derived_from($arg, \"Qt::Core::QTextStreamManipulator\"))
         $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
     else
         Perl_croak(aTHX_ \"$var is not of type Qt::Core::QTextStreamManipulator\");
 
-T_PTROBJ_0053
+T_PTROBJ_0052
     if (sv_derived_from($arg, \"Qt::Core::QReadLocker\"))
         $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
     else
         Perl_croak(aTHX_ \"$var is not of type Qt::Core::QReadLocker\");
 
-T_PTROBJ_0054
+T_PTROBJ_0053
     if (sv_derived_from($arg, \"Qt::Core::QBitRef\"))
         $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
     else
         Perl_croak(aTHX_ \"$var is not of type Qt::Core::QBitRef\");
 
-T_PTROBJ_0055
+T_PTROBJ_0054
     if (sv_derived_from($arg, \"Qt::Core::QSignalMapper\"))
         $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
     else
         Perl_croak(aTHX_ \"$var is not of type Qt::Core::QSignalMapper\");
 
-T_PTROBJ_0056
+T_PTROBJ_0055
     if (sv_derived_from($arg, \"Qt::Core::QGenericArgument\"))
         $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
     else
         Perl_croak(aTHX_ \"$var is not of type Qt::Core::QGenericArgument\");
 
-T_PTROBJ_0057
+T_PTROBJ_0056
     if (sv_derived_from($arg, \"Qt::Core::QTime\"))
         $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
     else
         Perl_croak(aTHX_ \"$var is not of type Qt::Core::QTime\");
 
-T_PTROBJ_0058
+T_PTROBJ_0057
     if (sv_derived_from($arg, \"Qt::Core::QSharedData\"))
         $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
     else
         Perl_croak(aTHX_ \"$var is not of type Qt::Core::QSharedData\");
 
-T_PTROBJ_0059
+T_PTROBJ_0058
     if (sv_derived_from($arg, \"Qt::Core::QTimerEvent\"))
         $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
     else
         Perl_croak(aTHX_ \"$var is not of type Qt::Core::QTimerEvent\");
 
-T_PTROBJ_0060
+T_PTROBJ_0059
     if (sv_derived_from($arg, \"Qt::Core::QFlag\"))
         $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
     else
         Perl_croak(aTHX_ \"$var is not of type Qt::Core::QFlag\");
 
-T_PTROBJ_0061
+T_PTROBJ_0060
     if (sv_derived_from($arg, \"Qt::Core::QMimeData\"))
         $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
     else
         Perl_croak(aTHX_ \"$var is not of type Qt::Core::QMimeData\");
 
-T_PTROBJ_0062
+T_PTROBJ_0061
     if (sv_derived_from($arg, \"Qt::Core::QDataStream\"))
         $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
     else
         Perl_croak(aTHX_ \"$var is not of type Qt::Core::QDataStream\");
 
-T_PTROBJ_0063
+T_PTROBJ_0062
     if (sv_derived_from($arg, \"Qt::Core::QXmlStreamReader\"))
         $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
     else
         Perl_croak(aTHX_ \"$var is not of type Qt::Core::QXmlStreamReader\");
 
-T_PTROBJ_0064
+T_PTROBJ_0063
     if (sv_derived_from($arg, \"Qt::Core::QThreadStorageData\"))
         $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
     else
         Perl_croak(aTHX_ \"$var is not of type Qt::Core::QThreadStorageData\");
 
-T_PTROBJ_0065
+T_PTROBJ_0064
     if (sv_derived_from($arg, \"Qt::Core::QCoreApplication\"))
         $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
     else
         Perl_croak(aTHX_ \"$var is not of type Qt::Core::QCoreApplication\");
 
-T_PTROBJ_0066
+T_PTROBJ_0065
     if (sv_derived_from($arg, \"Qt::Core::QDir\"))
         $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
     else
         Perl_croak(aTHX_ \"$var is not of type Qt::Core::QDir\");
 
-T_PTROBJ_0067
+T_PTROBJ_0066
     if (sv_derived_from($arg, \"Qt::Core::QtConcurrent::ResultStoreBase\"))
         $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
     else
         Perl_croak(aTHX_ \"$var is not of type Qt::Core::QtConcurrent::ResultStoreBase\");
 
-T_PTROBJ_0068
+T_PTROBJ_0067
     if (sv_derived_from($arg, \"Qt::Core::QObjectData\"))
         $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
     else
         Perl_croak(aTHX_ \"$var is not of type Qt::Core::QObjectData\");
 
-T_PTROBJ_0069
+T_PTROBJ_0068
     if (sv_derived_from($arg, \"Qt::Core::QDate\"))
         $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
     else
         Perl_croak(aTHX_ \"$var is not of type Qt::Core::QDate\");
 
-T_PTROBJ_0070
+T_PTROBJ_0069
     if (sv_derived_from($arg, \"Qt::Core::QAbstractFileEngine\"))
         $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
     else
         Perl_croak(aTHX_ \"$var is not of type Qt::Core::QAbstractFileEngine\");
+
+T_PTROBJ_0070
+    if (sv_derived_from($arg, \"Qt\"))
+        $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
+    else
+        Perl_croak(aTHX_ \"$var is not of type Qt\");
 
 T_PTROBJ_0071
     if (sv_derived_from($arg, \"Qt::Core::QRectF\"))
@@ -757,94 +757,94 @@ T_PTROBJ_0096
         Perl_croak(aTHX_ \"$var is not of type Qt::Core::QMutexLocker\");
 
 T_PTROBJ_0097
-    if (sv_derived_from($arg, \"Qt::Core::QtSharedPointer::ExternalRefCountWithDestroyFn\"))
-        $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
-    else
-        Perl_croak(aTHX_ \"$var is not of type Qt::Core::QtSharedPointer::ExternalRefCountWithDestroyFn\");
-
-T_PTROBJ_0098
     if (sv_derived_from($arg, \"Qt::Core::QCharRef\"))
         $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
     else
         Perl_croak(aTHX_ \"$var is not of type Qt::Core::QCharRef\");
 
-T_PTROBJ_0099
+T_PTROBJ_0098
     if (sv_derived_from($arg, \"Qt::Core::QPluginLoader\"))
         $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
     else
         Perl_croak(aTHX_ \"$var is not of type Qt::Core::QPluginLoader\");
 
-T_PTROBJ_0100
+T_PTROBJ_0099
     if (sv_derived_from($arg, \"Qt::Core::QTimer\"))
         $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
     else
         Perl_croak(aTHX_ \"$var is not of type Qt::Core::QTimer\");
 
-T_PTROBJ_0101
+T_PTROBJ_0100
     if (sv_derived_from($arg, \"Qt::Core::QString\"))
         $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
     else
         Perl_croak(aTHX_ \"$var is not of type Qt::Core::QString\");
 
-T_PTROBJ_0102
+T_PTROBJ_0101
     if (sv_derived_from($arg, \"Qt::Core::QtConcurrent::UnhandledException\"))
         $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
     else
         Perl_croak(aTHX_ \"$var is not of type Qt::Core::QtConcurrent::UnhandledException\");
 
-T_PTROBJ_0103
+T_PTROBJ_0102
     if (sv_derived_from($arg, \"Qt::Core::QRect\"))
         $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
     else
         Perl_croak(aTHX_ \"$var is not of type Qt::Core::QRect\");
 
-T_PTROBJ_0104
+T_PTROBJ_0103
     if (sv_derived_from($arg, \"Qt::Core::QMetaEnum\"))
         $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
     else
         Perl_croak(aTHX_ \"$var is not of type Qt::Core::QMetaEnum\");
 
-T_PTROBJ_0105
+T_PTROBJ_0104
     if (sv_derived_from($arg, \"Qt::Core::QXmlStreamWriter\"))
         $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
     else
         Perl_croak(aTHX_ \"$var is not of type Qt::Core::QXmlStreamWriter\");
 
-T_PTROBJ_0106
+T_PTROBJ_0105
     if (sv_derived_from($arg, \"Qt::Core::QUuid\"))
         $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
     else
         Perl_croak(aTHX_ \"$var is not of type Qt::Core::QUuid\");
 
-T_PTROBJ_0107
+T_PTROBJ_0106
     if (sv_derived_from($arg, \"Qt::Core::QFinalState\"))
         $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
     else
         Perl_croak(aTHX_ \"$var is not of type Qt::Core::QFinalState\");
 
-T_PTROBJ_0108
+T_PTROBJ_0107
     if (sv_derived_from($arg, \"Qt::Core::QSizeF\"))
         $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
     else
         Perl_croak(aTHX_ \"$var is not of type Qt::Core::QSizeF\");
 
-T_PTROBJ_0109
+T_PTROBJ_0108
     if (sv_derived_from($arg, \"Qt::Core::QAbstractFileEngine::UnMapExtensionOption\"))
         $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
     else
         Perl_croak(aTHX_ \"$var is not of type Qt::Core::QAbstractFileEngine::UnMapExtensionOption\");
 
-T_PTROBJ_0110
+T_PTROBJ_0109
     if (sv_derived_from($arg, \"Qt::Core::QTranslator\"))
         $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
     else
         Perl_croak(aTHX_ \"$var is not of type Qt::Core::QTranslator\");
 
-T_PTROBJ_0111
+T_PTROBJ_0110
     if (sv_derived_from($arg, \"Qt::Core::QLatin1String\"))
         $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
     else
         Perl_croak(aTHX_ \"$var is not of type Qt::Core::QLatin1String\");
+
+T_PTROBJ_0111
+    if (sv_derived_from($arg, \"Qt::Core::QElapsedTimer\"))
+        $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
+    else
+        Perl_croak(aTHX_ \"$var is not of type Qt::Core::QElapsedTimer\");
 
 T_PTROBJ_0112
     if (sv_derived_from($arg, \"Qt::Core::QFileSystemWatcher\"))
@@ -1303,118 +1303,118 @@ T_PTROBJ_0032
     sv_setref_pv($arg, \"Qt::Core::QHistoryState\", (void *)$var);
 
 T_PTROBJ_0033
-    sv_setref_pv($arg, \"Qt::Core::QtSharedPointer::ExternalRefCountData\", (void *)$var);
-
-T_PTROBJ_0034
     sv_setref_pv($arg, \"Qt::Core::QDynamicPropertyChangeEvent\", (void *)$var);
 
-T_PTROBJ_0035
+T_PTROBJ_0034
     sv_setref_pv($arg, \"Qt::Core::QLatin1Char\", (void *)$var);
 
-T_PTROBJ_0036
+T_PTROBJ_0035
     sv_setref_pv($arg, \"Qt::Core::QListData\", (void *)$var);
 
-T_PTROBJ_0037
+T_PTROBJ_0036
     sv_setref_pv($arg, \"Qt::Core::QtConcurrent::ThreadEngineBarrier\", (void *)$var);
 
-T_PTROBJ_0038
+T_PTROBJ_0037
     sv_setref_pv($arg, \"Qt::Core::QProcess\", (void *)$var);
 
-T_PTROBJ_0039
+T_PTROBJ_0038
     sv_setref_pv($arg, \"Qt::Core::QDateTime\", (void *)$var);
 
-T_PTROBJ_0040
+T_PTROBJ_0039
     sv_setref_pv($arg, \"Qt::Core::QPointF\", (void *)$var);
 
-T_PTROBJ_0041
+T_PTROBJ_0040
     sv_setref_pv($arg, \"Qt::Core::QFactoryInterface\", (void *)$var);
 
-T_PTROBJ_0042
+T_PTROBJ_0041
     sv_setref_pv($arg, \"Qt::Core::QStateMachine::SignalEvent\", (void *)$var);
 
-T_PTROBJ_0043
+T_PTROBJ_0042
     sv_setref_pv($arg, \"Qt::Core::QHashData\", (void *)$var);
 
-T_PTROBJ_0044
+T_PTROBJ_0043
     sv_setref_pv($arg, \"Qt::Core::QtConcurrent::Exception\", (void *)$var);
 
-T_PTROBJ_0045
+T_PTROBJ_0044
     sv_setref_pv($arg, \"Qt::Core::QTextCodec::ConverterState\", (void *)$var);
 
-T_PTROBJ_0046
+T_PTROBJ_0045
     sv_setref_pv($arg, \"Qt::Core::QTextStream\", (void *)$var);
 
-T_PTROBJ_0047
+T_PTROBJ_0046
     sv_setref_pv($arg, \"Qt::Core::QVectorData\", (void *)$var);
 
-T_PTROBJ_0048
+T_PTROBJ_0047
     sv_setref_pv($arg, \"Qt::Core::QVariantAnimation\", (void *)$var);
 
-T_PTROBJ_0049
+T_PTROBJ_0048
     sv_setref_pv($arg, \"Qt::Core::QEventTransition\", (void *)$var);
 
-T_PTROBJ_0050
+T_PTROBJ_0049
     sv_setref_pv($arg, \"Qt::Core::QSysInfo\", (void *)$var);
 
-T_PTROBJ_0051
+T_PTROBJ_0050
     sv_setref_pv($arg, \"Qt::Core::QProcessEnvironment\", (void *)$var);
 
-T_PTROBJ_0052
+T_PTROBJ_0051
     sv_setref_pv($arg, \"Qt::Core::QTextStreamManipulator\", (void *)$var);
 
-T_PTROBJ_0053
+T_PTROBJ_0052
     sv_setref_pv($arg, \"Qt::Core::QReadLocker\", (void *)$var);
 
-T_PTROBJ_0054
+T_PTROBJ_0053
     sv_setref_pv($arg, \"Qt::Core::QBitRef\", (void *)$var);
 
-T_PTROBJ_0055
+T_PTROBJ_0054
     sv_setref_pv($arg, \"Qt::Core::QSignalMapper\", (void *)$var);
 
-T_PTROBJ_0056
+T_PTROBJ_0055
     sv_setref_pv($arg, \"Qt::Core::QGenericArgument\", (void *)$var);
 
-T_PTROBJ_0057
+T_PTROBJ_0056
     sv_setref_pv($arg, \"Qt::Core::QTime\", (void *)$var);
 
-T_PTROBJ_0058
+T_PTROBJ_0057
     sv_setref_pv($arg, \"Qt::Core::QSharedData\", (void *)$var);
 
-T_PTROBJ_0059
+T_PTROBJ_0058
     sv_setref_pv($arg, \"Qt::Core::QTimerEvent\", (void *)$var);
 
-T_PTROBJ_0060
+T_PTROBJ_0059
     sv_setref_pv($arg, \"Qt::Core::QFlag\", (void *)$var);
 
-T_PTROBJ_0061
+T_PTROBJ_0060
     sv_setref_pv($arg, \"Qt::Core::QMimeData\", (void *)$var);
 
-T_PTROBJ_0062
+T_PTROBJ_0061
     sv_setref_pv($arg, \"Qt::Core::QDataStream\", (void *)$var);
 
-T_PTROBJ_0063
+T_PTROBJ_0062
     sv_setref_pv($arg, \"Qt::Core::QXmlStreamReader\", (void *)$var);
 
-T_PTROBJ_0064
+T_PTROBJ_0063
     sv_setref_pv($arg, \"Qt::Core::QThreadStorageData\", (void *)$var);
 
-T_PTROBJ_0065
+T_PTROBJ_0064
     sv_setref_pv($arg, \"Qt::Core::QCoreApplication\", (void *)$var);
 
-T_PTROBJ_0066
+T_PTROBJ_0065
     sv_setref_pv($arg, \"Qt::Core::QDir\", (void *)$var);
 
-T_PTROBJ_0067
+T_PTROBJ_0066
     sv_setref_pv($arg, \"Qt::Core::QtConcurrent::ResultStoreBase\", (void *)$var);
 
-T_PTROBJ_0068
+T_PTROBJ_0067
     sv_setref_pv($arg, \"Qt::Core::QObjectData\", (void *)$var);
 
-T_PTROBJ_0069
+T_PTROBJ_0068
     sv_setref_pv($arg, \"Qt::Core::QDate\", (void *)$var);
 
-T_PTROBJ_0070
+T_PTROBJ_0069
     sv_setref_pv($arg, \"Qt::Core::QAbstractFileEngine\", (void *)$var);
+
+T_PTROBJ_0070
+    sv_setref_pv($arg, \"Qt\", (void *)$var);
 
 T_PTROBJ_0071
     sv_setref_pv($arg, \"Qt::Core::QRectF\", (void *)$var);
@@ -1495,49 +1495,49 @@ T_PTROBJ_0096
     sv_setref_pv($arg, \"Qt::Core::QMutexLocker\", (void *)$var);
 
 T_PTROBJ_0097
-    sv_setref_pv($arg, \"Qt::Core::QtSharedPointer::ExternalRefCountWithDestroyFn\", (void *)$var);
-
-T_PTROBJ_0098
     sv_setref_pv($arg, \"Qt::Core::QCharRef\", (void *)$var);
 
-T_PTROBJ_0099
+T_PTROBJ_0098
     sv_setref_pv($arg, \"Qt::Core::QPluginLoader\", (void *)$var);
 
-T_PTROBJ_0100
+T_PTROBJ_0099
     sv_setref_pv($arg, \"Qt::Core::QTimer\", (void *)$var);
 
-T_PTROBJ_0101
+T_PTROBJ_0100
     sv_setref_pv($arg, \"Qt::Core::QString\", (void *)$var);
 
-T_PTROBJ_0102
+T_PTROBJ_0101
     sv_setref_pv($arg, \"Qt::Core::QtConcurrent::UnhandledException\", (void *)$var);
 
-T_PTROBJ_0103
+T_PTROBJ_0102
     sv_setref_pv($arg, \"Qt::Core::QRect\", (void *)$var);
 
-T_PTROBJ_0104
+T_PTROBJ_0103
     sv_setref_pv($arg, \"Qt::Core::QMetaEnum\", (void *)$var);
 
-T_PTROBJ_0105
+T_PTROBJ_0104
     sv_setref_pv($arg, \"Qt::Core::QXmlStreamWriter\", (void *)$var);
 
-T_PTROBJ_0106
+T_PTROBJ_0105
     sv_setref_pv($arg, \"Qt::Core::QUuid\", (void *)$var);
 
-T_PTROBJ_0107
+T_PTROBJ_0106
     sv_setref_pv($arg, \"Qt::Core::QFinalState\", (void *)$var);
 
-T_PTROBJ_0108
+T_PTROBJ_0107
     sv_setref_pv($arg, \"Qt::Core::QSizeF\", (void *)$var);
 
-T_PTROBJ_0109
+T_PTROBJ_0108
     sv_setref_pv($arg, \"Qt::Core::QAbstractFileEngine::UnMapExtensionOption\", (void *)$var);
 
-T_PTROBJ_0110
+T_PTROBJ_0109
     sv_setref_pv($arg, \"Qt::Core::QTranslator\", (void *)$var);
 
-T_PTROBJ_0111
+T_PTROBJ_0110
     sv_setref_pv($arg, \"Qt::Core::QLatin1String\", (void *)$var);
+
+T_PTROBJ_0111
+    sv_setref_pv($arg, \"Qt::Core::QElapsedTimer\", (void *)$var);
 
 T_PTROBJ_0112
     sv_setref_pv($arg, \"Qt::Core::QFileSystemWatcher\", (void *)$var);

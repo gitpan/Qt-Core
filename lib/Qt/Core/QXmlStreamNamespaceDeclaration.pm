@@ -1,4 +1,5 @@
 package Qt::Core::QXmlStreamNamespaceDeclaration;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QXmlStreamNamespaceDeclaration
 # file     : QtCore/qxmlstream.h
 
@@ -6,11 +7,10 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
+our $VERSION = '0.01_02';
 
 
 # FIXME: operator overload
-
 
 
 1;
@@ -23,23 +23,30 @@ Qt::Core::QXmlStreamNamespaceDeclaration
 
 =over
 
-=item    QXmlStreamNamespaceDeclaration()
+=item   QXmlStreamNamespaceDeclaration()
 
-=item    QXmlStreamNamespaceDeclaration(const QXmlStreamNamespaceDeclaration & arg0)
+=item   QXmlStreamNamespaceDeclaration(const QXmlStreamNamespaceDeclaration & arg0)
 
-=item    QXmlStreamNamespaceDeclaration(const QString & prefix, const QString & namespaceUri)
+=item   QXmlStreamNamespaceDeclaration(const QString & prefix, const QString & namespaceUri)
 
-=item    ~QXmlStreamNamespaceDeclaration()
+=item   ~QXmlStreamNamespaceDeclaration()
 
-=item   QStringRef namespaceUri()
+=item  QStringRef namespaceUri()
 
-=item   bool operator!=(const QXmlStreamNamespaceDeclaration & other)
+=item  bool operator!=(const QXmlStreamNamespaceDeclaration & other)
 
-=item   QXmlStreamNamespaceDeclaration & operator=(const QXmlStreamNamespaceDeclaration & arg0)
+=item  QXmlStreamNamespaceDeclaration & operator=(const QXmlStreamNamespaceDeclaration & arg0)
 
-=item   bool operator==(const QXmlStreamNamespaceDeclaration & other)
+=item  bool operator==(const QXmlStreamNamespaceDeclaration & other)
 
-=item   QStringRef prefix()
+=item  QStringRef prefix()
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
 
 
 =back

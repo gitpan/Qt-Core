@@ -1,4 +1,5 @@
 package Qt::Core::QByteRef;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QByteRef
 # file     : QtCore/qbytearray.h
 
@@ -6,11 +7,10 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
+our $VERSION = '0.01_02';
 
 
 # FIXME: operator overload
-
 
 
 1;
@@ -23,23 +23,30 @@ Qt::Core::QByteRef
 
 =over
 
-=item   char operator char()
+=item  char operator char()
 
-=item   bool operator!=(char c)
+=item  bool operator!=(char c)
 
-=item   bool operator<(char c)
+=item  bool operator<(char c)
 
-=item   bool operator<=(char c)
+=item  bool operator<=(char c)
 
-=item   QByteRef & operator=(char c)
+=item  QByteRef & operator=(char c)
 
-=item   QByteRef & operator=(const QByteRef & c)
+=item  QByteRef & operator=(const QByteRef & c)
 
-=item   bool operator==(char c)
+=item  bool operator==(char c)
 
-=item   bool operator>(char c)
+=item  bool operator>(char c)
 
-=item   bool operator>=(char c)
+=item  bool operator>=(char c)
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
 
 
 =back

@@ -1,4 +1,5 @@
 package Qt::Core::QTextCodecFactoryInterface;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QTextCodecFactoryInterface
 # file     : QtCore/qtextcodecplugin.h
 
@@ -6,12 +7,11 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
-our $ISA     = qw/QFactoryInterface/;
+our $VERSION = '0.01_02';
+our $ISA     = qw/Qt::Core::QFactoryInterface/;
 
 
 # FIXME: operator overload
-
 
 
 1;
@@ -24,7 +24,14 @@ Qt::Core::QTextCodecFactoryInterface
 
 =over
 
-=item   QTextCodec * create(const QString & key)
+=item  QTextCodec * create(const QString & key)
+
+
+=back
+
+=head1 ENUM VALUES
+
+=over
 
 
 =back

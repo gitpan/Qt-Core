@@ -1,4 +1,5 @@
 package Qt::Core::QAbstractListModel;
+# THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 # classname: QAbstractListModel
 # file     : QtCore/qabstractitemmodel.h
 
@@ -6,12 +7,11 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_01';
-our $ISA     = qw/QAbstractItemModel/;
+our $VERSION = '0.01_02';
+our $ISA     = qw/Qt::Core::QAbstractItemModel/;
 
 
 # FIXME: operator overload
-
 
 
 1;
@@ -24,21 +24,26 @@ Qt::Core::QAbstractListModel
 
 =over
 
-=item    QAbstractListModel(QObject * parent = 0)
+=item   QAbstractListModel(QObject * parent)
 
-=item    QAbstractListModel(QObject * parent)
+=item   QAbstractListModel(QObject * parent = 0)
 
-=item    ~QAbstractListModel()
+=item   ~QAbstractListModel()
 
-=item   bool dropMimeData(const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex & parent)
+=item  bool dropMimeData(const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex & parent)
 
-=item   QModelIndex index(int row, int column, const QModelIndex & parent = QModelIndex())
+=item  QModelIndex index(int row, int column, const QModelIndex & parent)
 
-=item   QModelIndex index(int row, int column, const QModelIndex & parent)
+=item  QModelIndex index(int row, int column, const QModelIndex & parent = QModelIndex())
 
-=item   QModelIndex index(int row, int column = 0, const QModelIndex & parent = QModelIndex())
+=item  QModelIndex index(int row, int column = 0, const QModelIndex & parent = QModelIndex())
 
-=item   QModelIndex index(int row, int column, const QModelIndex & parent = QModelIndex())
+
+=back
+
+=head1 ENUM VALUES
+
+=over
 
 
 =back
