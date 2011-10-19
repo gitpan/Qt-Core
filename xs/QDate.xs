@@ -384,7 +384,7 @@ int arg01;
 int arg02;
 int arg03;
 PPCODE:
-    if (SvUOK(ST(1)) && SvIOK(ST(2)) && SvIOK(ST(3)) && SvIOK(ST(4))) {
+    if ((SvIOK(ST(1)) || SvUOK(ST(1))) && SvIOK(ST(2)) && SvIOK(ST(3)) && SvIOK(ST(4))) {
       arg00 = (uint)SvUV(ST(1));
       arg01 = (int)SvIV(ST(2));
       arg02 = (int)SvIV(ST(3));

@@ -114,6 +114,7 @@
 #include "ppport.h"
 #undef do_open
 #undef do_close
+#undef RETURN
 
 typedef const QMetaObject & (*T_FPOINTER_QMETAOBJECTACCESSOR_QOBJECTDEFS)();
 typedef void (*T_FPOINTER_QTMSGHANDLER_QGLOBAL)(QtMsgType,const char *);
@@ -153,6 +154,7 @@ MODULE = Qt		PACKAGE = Qt
 PROTOTYPES: DISABLE
 
 INCLUDE:		xs/QAbstractAnimation.xs
+INCLUDE:		xs/QAbstractConcatenable.xs
 INCLUDE:		xs/QAbstractEventDispatcher.xs
 INCLUDE:		xs/QAbstractFileEngine.xs
 INCLUDE:		xs/QAbstractFileEngineHandler.xs
@@ -274,6 +276,7 @@ INCLUDE:		xs/QTextBoundaryFinder.xs
 INCLUDE:		xs/QTextCodec.xs
 INCLUDE:		xs/QTextCodec__ConverterState.xs
 INCLUDE:		xs/QTextCodecFactoryInterface.xs
+INCLUDE:		xs/QTextCodecPlugin.xs
 INCLUDE:		xs/QTextDecoder.xs
 INCLUDE:		xs/QTextEncoder.xs
 INCLUDE:		xs/QTextStream.xs

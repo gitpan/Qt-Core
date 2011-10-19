@@ -193,7 +193,7 @@ PPCODE:
     sv_setref_pv(ST(0), "Qt::Core::QDataStream", (void *)ret);
     XSRETURN(1);
     }
-        else if (SvUOK(ST(1))) {
+        else if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       arg10 = (quint8)SvUV(ST(1));
     QDataStream * ret = &THIS->operator<<(arg10);
     ST(0) = sv_newmortal();
@@ -207,7 +207,7 @@ PPCODE:
     sv_setref_pv(ST(0), "Qt::Core::QDataStream", (void *)ret);
     XSRETURN(1);
     }
-        else if (SvUOK(ST(1))) {
+        else if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       arg30 = (quint16)SvUV(ST(1));
     QDataStream * ret = &THIS->operator<<(arg30);
     ST(0) = sv_newmortal();
@@ -221,7 +221,7 @@ PPCODE:
     sv_setref_pv(ST(0), "Qt::Core::QDataStream", (void *)ret);
     XSRETURN(1);
     }
-        else if (SvUOK(ST(1))) {
+        else if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       arg50 = (quint32)SvUV(ST(1));
     QDataStream * ret = &THIS->operator<<(arg50);
     ST(0) = sv_newmortal();
@@ -235,7 +235,7 @@ PPCODE:
     sv_setref_pv(ST(0), "Qt::Core::QDataStream", (void *)ret);
     XSRETURN(1);
     }
-        else if (SvUOK(ST(1))) {
+        else if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       arg70 = (quint64)SvUV(ST(1));
     QDataStream * ret = &THIS->operator<<(arg70);
     ST(0) = sv_newmortal();
@@ -317,7 +317,7 @@ PPCODE:
     sv_setref_pv(ST(0), "Qt::Core::QDataStream", (void *)ret);
     XSRETURN(1);
     }
-        else if (SvUOK(ST(1))) {
+        else if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       arg10 = (quint8)SvUV(ST(1));
     QDataStream * ret = &THIS->operator>>(arg10);
     ST(0) = sv_newmortal();
@@ -331,7 +331,7 @@ PPCODE:
     sv_setref_pv(ST(0), "Qt::Core::QDataStream", (void *)ret);
     XSRETURN(1);
     }
-        else if (SvUOK(ST(1))) {
+        else if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       arg30 = (quint16)SvUV(ST(1));
     QDataStream * ret = &THIS->operator>>(arg30);
     ST(0) = sv_newmortal();
@@ -345,7 +345,7 @@ PPCODE:
     sv_setref_pv(ST(0), "Qt::Core::QDataStream", (void *)ret);
     XSRETURN(1);
     }
-        else if (SvUOK(ST(1))) {
+        else if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       arg50 = (quint32)SvUV(ST(1));
     QDataStream * ret = &THIS->operator>>(arg50);
     ST(0) = sv_newmortal();
@@ -359,7 +359,7 @@ PPCODE:
     sv_setref_pv(ST(0), "Qt::Core::QDataStream", (void *)ret);
     XSRETURN(1);
     }
-        else if (SvUOK(ST(1))) {
+        else if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       arg70 = (quint64)SvUV(ST(1));
     QDataStream * ret = &THIS->operator>>(arg70);
     ST(0) = sv_newmortal();
@@ -410,7 +410,7 @@ PREINIT:
 char * arg00;
 uint arg01;
 PPCODE:
-    if (SvPOK(ST(1)) && SvUOK(ST(2))) {
+    if (SvPOK(ST(1)) && (SvIOK(ST(2)) || SvUOK(ST(2)))) {
       arg00 = (char *)SvPV_nolen(ST(1));
       arg01 = (uint)SvUV(ST(2));
     QDataStream * ret = &THIS->readBytes(arg00, arg01);
@@ -571,7 +571,7 @@ PREINIT:
 const char * arg00;
 uint arg01;
 PPCODE:
-    if (SvPOK(ST(1)) && SvUOK(ST(2))) {
+    if (SvPOK(ST(1)) && (SvIOK(ST(2)) || SvUOK(ST(2)))) {
       arg00 = (const char *)SvPV_nolen(ST(1));
       arg01 = (uint)SvUV(ST(2));
     QDataStream * ret = &THIS->writeBytes(arg00, arg01);

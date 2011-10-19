@@ -212,7 +212,7 @@ QThread::setStackSize(...)
 PREINIT:
 uint arg00;
 PPCODE:
-    if (SvUOK(ST(1))) {
+    if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       arg00 = (uint)SvUV(ST(1));
     (void)THIS->setStackSize(arg00);
     XSRETURN(0);
@@ -298,7 +298,7 @@ PPCODE:
       }
       case 2:
       {
-        if (SvUOK(ST(1))) {
+        if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       arg00 = (unsigned long)SvUV(ST(1));
     bool ret = THIS->wait(arg00);
     ST(0) = sv_newmortal();

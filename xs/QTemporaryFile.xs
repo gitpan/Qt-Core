@@ -36,7 +36,10 @@ PPCODE:
       {
         if (1) {
       
-    Perl_croak(aTHX_ "Trying to create abstract class object");
+    ret = new QTemporaryFile();
+    ST(0) = sv_newmortal();
+    sv_setref_pv(ST(0), "Qt::Core::QTemporaryFile", (void *)ret);
+    XSRETURN(1);
     }
         break;
       }
@@ -44,7 +47,10 @@ PPCODE:
       {
         if (sv_isa(ST(1), "Qt::Core::QString")) {
       arg10 = reinterpret_cast<QString *>(SvIV((SV*)SvRV(ST(1))));
-    Perl_croak(aTHX_ "Trying to create abstract class object");
+    ret = new QTemporaryFile(*arg10);
+    ST(0) = sv_newmortal();
+    sv_setref_pv(ST(0), "Qt::Core::QTemporaryFile", (void *)ret);
+    XSRETURN(1);
     }
         else if ((sv_derived_from(ST(1), "Qt::Core::QObject") || ST(1) == &PL_sv_undef)) {
       if (sv_derived_from(ST(1), "Qt::Core::QObject")) {
@@ -55,7 +61,10 @@ PPCODE:
     }
     else
         Perl_croak(aTHX_ "arg20 is not of type Qt::Core::QObject");
-    Perl_croak(aTHX_ "Trying to create abstract class object");
+    ret = new QTemporaryFile(arg20);
+    ST(0) = sv_newmortal();
+    sv_setref_pv(ST(0), "Qt::Core::QTemporaryFile", (void *)ret);
+    XSRETURN(1);
     }
 	else
             Perl_croak(aTHX_ "wrong number/type of arguments passed in");
@@ -73,7 +82,10 @@ PPCODE:
     }
     else
         Perl_croak(aTHX_ "arg31 is not of type Qt::Core::QObject");
-    Perl_croak(aTHX_ "Trying to create abstract class object");
+    ret = new QTemporaryFile(*arg30, arg31);
+    ST(0) = sv_newmortal();
+    sv_setref_pv(ST(0), "Qt::Core::QTemporaryFile", (void *)ret);
+    XSRETURN(1);
     }
 	else
             Perl_croak(aTHX_ "wrong number/type of arguments passed in");

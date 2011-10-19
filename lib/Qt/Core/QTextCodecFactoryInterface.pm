@@ -7,8 +7,9 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_02';
-our $ISA     = qw/Qt::Core::QFactoryInterface/;
+our $VERSION = '0.01_03';
+use base qw/Qt::Core::QFactoryInterface/;
+#our @ISA = qw/Qt::Core::QFactoryInterface/;
 
 
 # FIXME: operator overload
@@ -23,8 +24,6 @@ Qt::Core::QTextCodecFactoryInterface
 =head1 PUBLIC METHODS
 
 =over
-
-=item  QTextCodec * create(const QString & key)
 
 
 =back

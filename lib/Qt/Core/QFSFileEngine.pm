@@ -7,8 +7,9 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_02';
-our $ISA     = qw/Qt::Core::QAbstractFileEngine/;
+our $VERSION = '0.01_03';
+use base qw/Qt::Core::QAbstractFileEngine/;
+#our @ISA = qw/Qt::Core::QAbstractFileEngine/;
 
 
 # FIXME: operator overload

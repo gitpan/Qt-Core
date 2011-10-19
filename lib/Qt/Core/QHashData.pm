@@ -7,7 +7,7 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_02';
+our $VERSION = '0.01_03';
 
 
 # FIXME: operator overload
@@ -22,34 +22,6 @@ Qt::Core::QHashData
 =head1 PUBLIC METHODS
 
 =over
-
-=item  void * allocateNode()
-
-=item  void * allocateNode(int nodeAlign)
-
-=item  void destroyAndFree()
-
-=item  QHashData * detach_helper(T_FPOINTER_NODE_DUPLICATE_QHASH void (*T_FPOINTER_NODE_DUPLICATE_QHASH)(Node *,void *), int nodeSize)
-
-=item  QHashData * detach_helper2(T_FPOINTER_NODE_DUPLICATE_QHASH void (*T_FPOINTER_NODE_DUPLICATE_QHASH)(Node *,void *), T_FPOINTER_NODE_DELETE_QHASH void (*T_FPOINTER_NODE_DELETE_QHASH)(Node *), int nodeSize, int nodeAlign)
-
-=item  QHashData::Node * firstNode()
-
-=item  void freeNode(void * node)
-
-=item  void free_helper(T_FPOINTER_NODE_DELETE_QHASH void (*T_FPOINTER_NODE_DELETE_QHASH)(Node *))
-
-=item  void hasShrunk()
-
-=item  void mightGrow()
-
-=item  static QHashData::Node * nextNode(QHashData::Node * node)
-
-=item  static QHashData::Node * previousNode(QHashData::Node * node)
-
-=item  void rehash(int hint)
-
-=item  bool willGrow()
 
 
 =back

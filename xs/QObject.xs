@@ -667,7 +667,7 @@ PREINIT:
 uint arg00;
 QObjectUserData * arg01;
 PPCODE:
-    if (SvUOK(ST(1)) && (sv_derived_from(ST(2), "Qt::Core::QObjectUserData") || ST(2) == &PL_sv_undef)) {
+    if ((SvIOK(ST(1)) || SvUOK(ST(1))) && (sv_derived_from(ST(2), "Qt::Core::QObjectUserData") || ST(2) == &PL_sv_undef)) {
       arg00 = (uint)SvUV(ST(1));
       if (sv_derived_from(ST(2), "Qt::Core::QObjectUserData")) {
         arg01 = reinterpret_cast<QObjectUserData *>(SvIV((SV*)SvRV(ST(2))));
@@ -727,7 +727,7 @@ QObject::userData(...)
 PREINIT:
 uint arg00;
 PPCODE:
-    if (SvUOK(ST(1))) {
+    if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       arg00 = (uint)SvUV(ST(1));
     QObjectUserData * ret = THIS->userData(arg00);
     ST(0) = sv_newmortal();

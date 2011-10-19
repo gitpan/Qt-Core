@@ -207,14 +207,14 @@ PPCODE:
       
     char * ret = THIS->begin();
     ST(0) = sv_newmortal();
-    sv_setpv((SV*)ST(0), const_cast<const char *>(ret));
+    sv_setpv((SV*)ST(0), (const char *)ret);
     XSRETURN(1);
     }
         else if (1) {
       
     const char * ret = THIS->begin();
     ST(0) = sv_newmortal();
-    sv_setpv((SV*)ST(0), ret);
+    sv_setpv((SV*)ST(0), (const char *)ret);
     XSRETURN(1);
     }
         break;
@@ -269,7 +269,7 @@ PPCODE:
       
     const char * ret = THIS->constBegin();
     ST(0) = sv_newmortal();
-    sv_setpv((SV*)ST(0), ret);
+    sv_setpv((SV*)ST(0), (const char *)ret);
     XSRETURN(1);
     }
 
@@ -282,7 +282,7 @@ PPCODE:
       
     const char * ret = THIS->constData();
     ST(0) = sv_newmortal();
-    sv_setpv((SV*)ST(0), ret);
+    sv_setpv((SV*)ST(0), (const char *)ret);
     XSRETURN(1);
     }
 
@@ -295,7 +295,7 @@ PPCODE:
       
     const char * ret = THIS->constEnd();
     ST(0) = sv_newmortal();
-    sv_setpv((SV*)ST(0), ret);
+    sv_setpv((SV*)ST(0), (const char *)ret);
     XSRETURN(1);
     }
 
@@ -410,14 +410,14 @@ PPCODE:
       
     char * ret = THIS->data();
     ST(0) = sv_newmortal();
-    sv_setpv((SV*)ST(0), const_cast<const char *>(ret));
+    sv_setpv((SV*)ST(0), (const char *)ret);
     XSRETURN(1);
     }
         else if (1) {
       
     const char * ret = THIS->data();
     ST(0) = sv_newmortal();
-    sv_setpv((SV*)ST(0), ret);
+    sv_setpv((SV*)ST(0), (const char *)ret);
     XSRETURN(1);
     }
         break;
@@ -451,14 +451,14 @@ PPCODE:
       
     char * ret = THIS->end();
     ST(0) = sv_newmortal();
-    sv_setpv((SV*)ST(0), const_cast<const char *>(ret));
+    sv_setpv((SV*)ST(0), (const char *)ret);
     XSRETURN(1);
     }
         else if (1) {
       
     const char * ret = THIS->end();
     ST(0) = sv_newmortal();
-    sv_setpv((SV*)ST(0), ret);
+    sv_setpv((SV*)ST(0), (const char *)ret);
     XSRETURN(1);
     }
         break;
@@ -1169,7 +1169,7 @@ PPCODE:
     sv_setref_pv(ST(0), "Qt::Core::QByteArray", (void *)new QByteArray(ret));
     XSRETURN(1);
     }
-        else if (SvUOK(ST(1))) {
+        else if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       arg30 = (uint)SvUV(ST(1));
     QByteArray ret = THIS->number(arg30, arg31);
     ST(0) = sv_newmortal();
@@ -1183,7 +1183,7 @@ PPCODE:
     sv_setref_pv(ST(0), "Qt::Core::QByteArray", (void *)new QByteArray(ret));
     XSRETURN(1);
     }
-        else if (SvUOK(ST(1))) {
+        else if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       arg70 = (qulonglong)SvUV(ST(1));
     QByteArray ret = THIS->number(arg70, arg71);
     ST(0) = sv_newmortal();
@@ -1211,7 +1211,7 @@ PPCODE:
     sv_setref_pv(ST(0), "Qt::Core::QByteArray", (void *)new QByteArray(ret));
     XSRETURN(1);
     }
-        else if (SvUOK(ST(1)) && SvIOK(ST(2))) {
+        else if ((SvIOK(ST(1)) || SvUOK(ST(1))) && SvIOK(ST(2))) {
       arg20 = (uint)SvUV(ST(1));
       arg21 = (int)SvIV(ST(2));
     QByteArray ret = THIS->number(arg20, arg21);
@@ -1227,7 +1227,7 @@ PPCODE:
     sv_setref_pv(ST(0), "Qt::Core::QByteArray", (void *)new QByteArray(ret));
     XSRETURN(1);
     }
-        else if (SvUOK(ST(1)) && SvIOK(ST(2))) {
+        else if ((SvIOK(ST(1)) || SvUOK(ST(1))) && SvIOK(ST(2))) {
       arg60 = (qulonglong)SvUV(ST(1));
       arg61 = (int)SvIV(ST(2));
     QByteArray ret = THIS->number(arg60, arg61);
@@ -1276,7 +1276,7 @@ PPCODE:
       
     const char * ret = THIS->operator const char *();
     ST(0) = sv_newmortal();
-    sv_setpv((SV*)ST(0), ret);
+    sv_setpv((SV*)ST(0), (const char *)ret);
     XSRETURN(1);
     }
 
@@ -1485,7 +1485,7 @@ PPCODE:
     sv_setpvn(ST(0), (char *)&ret, 1);
     XSRETURN(1);
     }
-        else if (SvUOK(ST(1))) {
+        else if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       arg10 = (uint)SvUV(ST(1));
     char ret = THIS->operator[](arg10);
     ST(0) = sv_newmortal();
@@ -1499,7 +1499,7 @@ PPCODE:
     sv_setref_pv(ST(0), "Qt::Core::QByteRef", (void *)new QByteRef(ret));
     XSRETURN(1);
     }
-        else if (SvUOK(ST(1))) {
+        else if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       arg30 = (uint)SvUV(ST(1));
     QByteRef ret = THIS->operator[](arg30);
     ST(0) = sv_newmortal();
@@ -2049,7 +2049,7 @@ PPCODE:
     sv_setref_pv(ST(0), "Qt::Core::QByteArray", (void *)ret);
     XSRETURN(1);
     }
-        else if (SvUOK(ST(1))) {
+        else if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       arg30 = (ushort)SvUV(ST(1));
     QByteArray * ret = &THIS->setNum(arg30, arg31);
     ST(0) = sv_newmortal();
@@ -2063,7 +2063,7 @@ PPCODE:
     sv_setref_pv(ST(0), "Qt::Core::QByteArray", (void *)ret);
     XSRETURN(1);
     }
-        else if (SvUOK(ST(1))) {
+        else if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       arg70 = (uint)SvUV(ST(1));
     QByteArray * ret = &THIS->setNum(arg70, arg71);
     ST(0) = sv_newmortal();
@@ -2077,7 +2077,7 @@ PPCODE:
     sv_setref_pv(ST(0), "Qt::Core::QByteArray", (void *)ret);
     XSRETURN(1);
     }
-        else if (SvUOK(ST(1))) {
+        else if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       argb0 = (qulonglong)SvUV(ST(1));
     QByteArray * ret = &THIS->setNum(argb0, argb1);
     ST(0) = sv_newmortal();
@@ -2112,7 +2112,7 @@ PPCODE:
     sv_setref_pv(ST(0), "Qt::Core::QByteArray", (void *)ret);
     XSRETURN(1);
     }
-        else if (SvUOK(ST(1)) && SvIOK(ST(2))) {
+        else if ((SvIOK(ST(1)) || SvUOK(ST(1))) && SvIOK(ST(2))) {
       arg20 = (ushort)SvUV(ST(1));
       arg21 = (int)SvIV(ST(2));
     QByteArray * ret = &THIS->setNum(arg20, arg21);
@@ -2128,7 +2128,7 @@ PPCODE:
     sv_setref_pv(ST(0), "Qt::Core::QByteArray", (void *)ret);
     XSRETURN(1);
     }
-        else if (SvUOK(ST(1)) && SvIOK(ST(2))) {
+        else if ((SvIOK(ST(1)) || SvUOK(ST(1))) && SvIOK(ST(2))) {
       arg60 = (uint)SvUV(ST(1));
       arg61 = (int)SvIV(ST(2));
     QByteArray * ret = &THIS->setNum(arg60, arg61);
@@ -2144,7 +2144,7 @@ PPCODE:
     sv_setref_pv(ST(0), "Qt::Core::QByteArray", (void *)ret);
     XSRETURN(1);
     }
-        else if (SvUOK(ST(1)) && SvIOK(ST(2))) {
+        else if ((SvIOK(ST(1)) || SvUOK(ST(1))) && SvIOK(ST(2))) {
       arga0 = (qulonglong)SvUV(ST(1));
       arga1 = (int)SvIV(ST(2));
     QByteArray * ret = &THIS->setNum(arga0, arga1);
@@ -2208,7 +2208,7 @@ PREINIT:
 const char * arg00;
 uint arg01;
 PPCODE:
-    if (SvPOK(ST(1)) && SvUOK(ST(2))) {
+    if (SvPOK(ST(1)) && (SvIOK(ST(2)) || SvUOK(ST(2)))) {
       arg00 = (const char *)SvPV_nolen(ST(1));
       arg01 = (uint)SvUV(ST(2));
     QByteArray * ret = &THIS->setRawData(arg00, arg01);

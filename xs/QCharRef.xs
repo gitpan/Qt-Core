@@ -372,7 +372,7 @@ PPCODE:
     sv_setref_pv(ST(0), "Qt::Core::QCharRef", (void *)ret);
     XSRETURN(1);
     }
-        else if (SvUOK(ST(1))) {
+        else if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       arg40 = (ushort)SvUV(ST(1));
     QCharRef * ret = &THIS->operator=(arg40);
     ST(0) = sv_newmortal();
@@ -386,7 +386,7 @@ PPCODE:
     sv_setref_pv(ST(0), "Qt::Core::QCharRef", (void *)ret);
     XSRETURN(1);
     }
-        else if (SvUOK(ST(1))) {
+        else if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       arg60 = (uint)SvUV(ST(1));
     QCharRef * ret = &THIS->operator=(arg60);
     ST(0) = sv_newmortal();

@@ -7,7 +7,7 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_02';
+our $VERSION = '0.01_03';
 
 
 # FIXME: operator overload
@@ -22,16 +22,6 @@ Qt::Core::QVectorData
 =head1 PUBLIC METHODS
 
 =over
-
-=item  static QVectorData * allocate(int size, int alignment)
-
-=item  static void free(QVectorData * data, int alignment)
-
-=item  static int grow(int sizeofTypedData, int size, int sizeofT, bool excessive)
-
-=item  static QVectorData * malloc(int sizeofTypedData, int size, int sizeofT, QVectorData * init)
-
-=item  static QVectorData * reallocate(QVectorData * old, int newsize, int oldsize, int alignment)
 
 
 =back

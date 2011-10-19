@@ -5,7 +5,7 @@
 
 # change 'tests => 1' to 'tests => last_test_to_print';
 
-use Test::More tests => 152;
+use Test::More tests => 154;
 BEGIN {
 use_ok('Qt::Core');
 use_ok('Qt::Core');
@@ -91,6 +91,7 @@ use_ok('Qt::Core::QSystemSemaphore');
 use_ok('Qt::Core::QReadLocker');
 use_ok('Qt::Core::QSemaphore');
 use_ok('Qt::Core::QProcess');
+use_ok('Qt::Core::QAbstractConcatenable');
 use_ok('Qt::Core::QFile');
 use_ok('Qt::Core::QMutex');
 use_ok('Qt::Core::QMetaMethod');
@@ -115,6 +116,7 @@ use_ok('Qt::Core::QXmlStreamAttributes');
 use_ok('Qt::Core::QXmlStreamWriter');
 use_ok('Qt::Core::QMetaClassInfo');
 use_ok('Qt::Core::QObjectUserData');
+use_ok('Qt::Core::QTextCodecPlugin');
 use_ok('Qt::Core::QIncompatibleFlag');
 use_ok('Qt::Core::QGenericReturnArgument');
 use_ok('Qt::Core::QBasicAtomicInt');

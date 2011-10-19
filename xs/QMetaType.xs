@@ -225,7 +225,7 @@ PPCODE:
       arg00 = (int)SvIV(ST(1));
     const char * ret = THIS->typeName(arg00);
     ST(0) = sv_newmortal();
-    sv_setpv((SV*)ST(0), ret);
+    sv_setpv((SV*)ST(0), (const char *)ret);
     XSRETURN(1);
     }
 

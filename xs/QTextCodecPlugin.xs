@@ -8,22 +8,22 @@
 # See http://dev.perl.org/licenses/artistic.html
 ################################################################
 
-MODULE = Qt::Core			PACKAGE = Qt::Core::QParallelAnimationGroup
+MODULE = Qt::Core			PACKAGE = Qt::Core::QTextCodecPlugin
 PROTOTYPES: DISABLE
 
-# classname: QParallelAnimationGroup
+# classname: QTextCodecPlugin
 ################################################################
 #### 
 #### PUBLIC MEMBER FUNCTIONS
 #### 
 ################################################################
 
-##  QParallelAnimationGroup(QObject * parent)
-##  QParallelAnimationGroup(QObject * parent = 0)
+##  QTextCodecPlugin(QObject * parent)
+##  QTextCodecPlugin(QObject * parent = 0)
   void
-QParallelAnimationGroup::new(...)
+QTextCodecPlugin::new(...)
 PREINIT:
-QParallelAnimationGroup *ret;
+QTextCodecPlugin *ret;
 QObject * arg00;
 QObject * arg10 = 0;
 PPCODE:
@@ -32,10 +32,7 @@ PPCODE:
       {
         if (1) {
       
-    ret = new QParallelAnimationGroup(arg10);
-    ST(0) = sv_newmortal();
-    sv_setref_pv(ST(0), "Qt::Core::QParallelAnimationGroup", (void *)ret);
-    XSRETURN(1);
+    Perl_croak(aTHX_ "Trying to create abstract class object");
     }
         break;
       }
@@ -50,10 +47,7 @@ PPCODE:
     }
     else
         Perl_croak(aTHX_ "arg00 is not of type Qt::Core::QObject");
-    ret = new QParallelAnimationGroup(arg00);
-    ST(0) = sv_newmortal();
-    sv_setref_pv(ST(0), "Qt::Core::QParallelAnimationGroup", (void *)ret);
-    XSRETURN(1);
+    Perl_croak(aTHX_ "Trying to create abstract class object");
     }
 	else
             Perl_croak(aTHX_ "wrong number/type of arguments passed in");
@@ -64,22 +58,37 @@ PPCODE:
         break;
     }
 
-##  ~QParallelAnimationGroup()
+##  ~QTextCodecPlugin()
 void
-QParallelAnimationGroup::DESTROY()
+QTextCodecPlugin::DESTROY()
 CODE:
     if(THIS != 0 && !SvREADONLY(SvRV(ST(0))))
         delete THIS;
 
-## int duration()
+## QTextCodec * createForMib(int mib)
 void
-QParallelAnimationGroup::duration(...)
+QTextCodecPlugin::createForMib(...)
 PREINIT:
+int arg00;
 PPCODE:
-    if (1) {
-      
-    int ret = THIS->duration();
+    if (SvIOK(ST(1))) {
+      arg00 = (int)SvIV(ST(1));
+    QTextCodec * ret = THIS->createForMib(arg00);
     ST(0) = sv_newmortal();
-    sv_setiv(ST(0), (IV)ret);
+    sv_setref_pv(ST(0), "Qt::Core::QTextCodec", (void *)ret);
+    XSRETURN(1);
+    }
+
+## QTextCodec * createForName(const QByteArray & name)
+void
+QTextCodecPlugin::createForName(...)
+PREINIT:
+QByteArray * arg00;
+PPCODE:
+    if (sv_isa(ST(1), "Qt::Core::QByteArray")) {
+      arg00 = reinterpret_cast<QByteArray *>(SvIV((SV*)SvRV(ST(1))));
+    QTextCodec * ret = THIS->createForName(*arg00);
+    ST(0) = sv_newmortal();
+    sv_setref_pv(ST(0), "Qt::Core::QTextCodec", (void *)ret);
     XSRETURN(1);
     }

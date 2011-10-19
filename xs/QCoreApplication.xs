@@ -26,9 +26,14 @@ QCoreApplication *ret;
 int arg00;
 char ** arg01;
 PPCODE:
-    if (SvIOK(ST(1)) && SvIOK(ST(2))) {
+    if (SvIOK(ST(1)) && (SvOK(ST(2)) && SvTYPE(SvRV(ST(2)))==SVt_PVAV)) {
       arg00 = (int)SvIV(ST(1));
-      arg01 = reinterpret_cast<char **>(SvIV(ST(2)));
+      char *arg01[av_len((AV *)SvRV(ST(2)))+1];
+    for (int i = 0; i < av_len((AV *)SvRV(ST(2))) + 1; i++) {
+        SV **svp = av_fetch((AV *)SvRV(ST(2)), i, 0);
+	char *str = SvPVX(*svp);
+	arg01[i] = str;
+    }
     ret = new QCoreApplication(arg00, arg01);
     ST(0) = sv_newmortal();
     sv_setref_pv(ST(0), "Qt::Core::QCoreApplication", (void *)ret);
@@ -154,7 +159,11 @@ PPCODE:
       
     char ** ret = THIS->argv();
     ST(0) = sv_newmortal();
-    sv_setiv(ST(0), PTR2IV(ret));
+    AV *av = newAV();
+    int len= sizeof(ret)/sizeof(ret[0]);
+    for (int i = 0; i < len; i++) {
+        av_push(av, newSVpv(ret[i], 0));
+    }ST(0) = newRV((SV *)av);
     XSRETURN(1);
     }
 

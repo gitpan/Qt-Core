@@ -398,7 +398,7 @@ PPCODE:
     sv_setref_pv(ST(0), "Qt::Core::QTextStream", (void *)ret);
     XSRETURN(1);
     }
-        else if (SvUOK(ST(1))) {
+        else if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       arg40 = (unsigned short)SvUV(ST(1));
     QTextStream * ret = &THIS->operator<<(arg40);
     ST(0) = sv_newmortal();
@@ -412,7 +412,7 @@ PPCODE:
     sv_setref_pv(ST(0), "Qt::Core::QTextStream", (void *)ret);
     XSRETURN(1);
     }
-        else if (SvUOK(ST(1))) {
+        else if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       arg60 = (unsigned int)SvUV(ST(1));
     QTextStream * ret = &THIS->operator<<(arg60);
     ST(0) = sv_newmortal();
@@ -426,7 +426,7 @@ PPCODE:
     sv_setref_pv(ST(0), "Qt::Core::QTextStream", (void *)ret);
     XSRETURN(1);
     }
-        else if (SvUOK(ST(1))) {
+        else if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       arg80 = (unsigned long)SvUV(ST(1));
     QTextStream * ret = &THIS->operator<<(arg80);
     ST(0) = sv_newmortal();
@@ -440,7 +440,7 @@ PPCODE:
     sv_setref_pv(ST(0), "Qt::Core::QTextStream", (void *)ret);
     XSRETURN(1);
     }
-        else if (SvUOK(ST(1))) {
+        else if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       arga0 = (qulonglong)SvUV(ST(1));
     QTextStream * ret = &THIS->operator<<(arga0);
     ST(0) = sv_newmortal();
@@ -556,7 +556,7 @@ PPCODE:
     sv_setref_pv(ST(0), "Qt::Core::QTextStream", (void *)ret);
     XSRETURN(1);
     }
-        else if (SvUOK(ST(1))) {
+        else if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       arg30 = (unsigned short)SvUV(ST(1));
     QTextStream * ret = &THIS->operator>>(arg30);
     ST(0) = sv_newmortal();
@@ -570,7 +570,7 @@ PPCODE:
     sv_setref_pv(ST(0), "Qt::Core::QTextStream", (void *)ret);
     XSRETURN(1);
     }
-        else if (SvUOK(ST(1))) {
+        else if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       arg50 = (unsigned int)SvUV(ST(1));
     QTextStream * ret = &THIS->operator>>(arg50);
     ST(0) = sv_newmortal();
@@ -584,7 +584,7 @@ PPCODE:
     sv_setref_pv(ST(0), "Qt::Core::QTextStream", (void *)ret);
     XSRETURN(1);
     }
-        else if (SvUOK(ST(1))) {
+        else if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       arg70 = (unsigned long)SvUV(ST(1));
     QTextStream * ret = &THIS->operator>>(arg70);
     ST(0) = sv_newmortal();
@@ -598,7 +598,7 @@ PPCODE:
     sv_setref_pv(ST(0), "Qt::Core::QTextStream", (void *)ret);
     XSRETURN(1);
     }
-        else if (SvUOK(ST(1))) {
+        else if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       arg90 = (qulonglong)SvUV(ST(1));
     QTextStream * ret = &THIS->operator>>(arg90);
     ST(0) = sv_newmortal();

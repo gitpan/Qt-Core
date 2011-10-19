@@ -40,7 +40,10 @@ PPCODE:
       {
         if (1) {
       
-    Perl_croak(aTHX_ "Trying to create abstract class object");
+    ret = new QPropertyAnimation(arg10);
+    ST(0) = sv_newmortal();
+    sv_setref_pv(ST(0), "Qt::Core::QPropertyAnimation", (void *)ret);
+    XSRETURN(1);
     }
         break;
       }
@@ -55,7 +58,10 @@ PPCODE:
     }
     else
         Perl_croak(aTHX_ "arg00 is not of type Qt::Core::QObject");
-    Perl_croak(aTHX_ "Trying to create abstract class object");
+    ret = new QPropertyAnimation(arg00);
+    ST(0) = sv_newmortal();
+    sv_setref_pv(ST(0), "Qt::Core::QPropertyAnimation", (void *)ret);
+    XSRETURN(1);
     }
 	else
             Perl_croak(aTHX_ "wrong number/type of arguments passed in");
@@ -73,7 +79,10 @@ PPCODE:
     else
         Perl_croak(aTHX_ "arg30 is not of type Qt::Core::QObject");
       arg31 = reinterpret_cast<QByteArray *>(SvIV((SV*)SvRV(ST(2))));
-    Perl_croak(aTHX_ "Trying to create abstract class object");
+    ret = new QPropertyAnimation(arg30, *arg31, arg32);
+    ST(0) = sv_newmortal();
+    sv_setref_pv(ST(0), "Qt::Core::QPropertyAnimation", (void *)ret);
+    XSRETURN(1);
     }
 	else
             Perl_croak(aTHX_ "wrong number/type of arguments passed in");
@@ -99,7 +108,10 @@ PPCODE:
     }
     else
         Perl_croak(aTHX_ "arg22 is not of type Qt::Core::QObject");
-    Perl_croak(aTHX_ "Trying to create abstract class object");
+    ret = new QPropertyAnimation(arg20, *arg21, arg22);
+    ST(0) = sv_newmortal();
+    sv_setref_pv(ST(0), "Qt::Core::QPropertyAnimation", (void *)ret);
+    XSRETURN(1);
     }
 	else
             Perl_croak(aTHX_ "wrong number/type of arguments passed in");

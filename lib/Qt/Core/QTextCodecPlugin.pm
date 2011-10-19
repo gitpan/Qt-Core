@@ -1,13 +1,15 @@
-package Qt::Core::QFactoryInterface;
+package Qt::Core::QTextCodecPlugin;
 # THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
-# classname: QFactoryInterface
-# file     : QtCore/qfactoryinterface.h
+# classname: QTextCodecPlugin
+# file     : QtCore/qtextcodecplugin.h
 
 use strict;
 use warnings;
 #use Carp;
 
 our $VERSION = '0.01_03';
+use base qw/Qt::Core::QObject Qt::Core::QTextCodecFactoryInterface/;
+#our @ISA = qw/Qt::Core::QObject Qt::Core::QTextCodecFactoryInterface/;
 
 
 # FIXME: operator overload
@@ -17,11 +19,21 @@ our $VERSION = '0.01_03';
 
 =head1 NAME
 
-Qt::Core::QFactoryInterface
+Qt::Core::QTextCodecPlugin
 
 =head1 PUBLIC METHODS
 
 =over
+
+=item   QTextCodecPlugin(QObject * parent)
+
+=item   QTextCodecPlugin(QObject * parent = 0)
+
+=item   ~QTextCodecPlugin()
+
+=item  QTextCodec * createForMib(int mib)
+
+=item  QTextCodec * createForName(const QByteArray & name)
 
 
 =back

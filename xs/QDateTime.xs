@@ -319,7 +319,7 @@ QDateTime::fromTime_t(...)
 PREINIT:
 uint arg00;
 PPCODE:
-    if (SvUOK(ST(1))) {
+    if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       arg00 = (uint)SvUV(ST(1));
     QDateTime ret = THIS->fromTime_t(arg00);
     ST(0) = sv_newmortal();
@@ -533,7 +533,7 @@ QDateTime::setTime_t(...)
 PREINIT:
 uint arg00;
 PPCODE:
-    if (SvUOK(ST(1))) {
+    if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       arg00 = (uint)SvUV(ST(1));
     (void)THIS->setTime_t(arg00);
     XSRETURN(0);

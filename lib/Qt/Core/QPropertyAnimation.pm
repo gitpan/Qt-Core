@@ -7,8 +7,9 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_02';
-our $ISA     = qw/Qt::Core::QVariantAnimation/;
+our $VERSION = '0.01_03';
+use base qw/Qt::Core::QVariantAnimation/;
+#our @ISA = qw/Qt::Core::QVariantAnimation/;
 
 
 # FIXME: operator overload

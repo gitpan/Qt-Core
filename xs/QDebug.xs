@@ -204,7 +204,7 @@ PPCODE:
     sv_setref_pv(ST(0), "Qt::Core::QDebug", (void *)ret);
     XSRETURN(1);
     }
-        else if (SvUOK(ST(1))) {
+        else if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       arg50 = (unsigned short)SvUV(ST(1));
     QDebug * ret = &THIS->operator<<(arg50);
     ST(0) = sv_newmortal();
@@ -218,7 +218,7 @@ PPCODE:
     sv_setref_pv(ST(0), "Qt::Core::QDebug", (void *)ret);
     XSRETURN(1);
     }
-        else if (SvUOK(ST(1))) {
+        else if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       arg70 = (unsigned int)SvUV(ST(1));
     QDebug * ret = &THIS->operator<<(arg70);
     ST(0) = sv_newmortal();
@@ -232,7 +232,7 @@ PPCODE:
     sv_setref_pv(ST(0), "Qt::Core::QDebug", (void *)ret);
     XSRETURN(1);
     }
-        else if (SvUOK(ST(1))) {
+        else if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       arg90 = (unsigned long)SvUV(ST(1));
     QDebug * ret = &THIS->operator<<(arg90);
     ST(0) = sv_newmortal();
@@ -246,7 +246,7 @@ PPCODE:
     sv_setref_pv(ST(0), "Qt::Core::QDebug", (void *)ret);
     XSRETURN(1);
     }
-        else if (SvUOK(ST(1))) {
+        else if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       argb0 = (quint64)SvUV(ST(1));
     QDebug * ret = &THIS->operator<<(argb0);
     ST(0) = sv_newmortal();

@@ -587,7 +587,7 @@ PPCODE:
     sv_setref_pv(ST(0), "Qt::Core::QString", (void *)new QString(ret));
     XSRETURN(1);
     }
-        else if (SvUOK(ST(1))) {
+        else if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       arg120 = (qulonglong)SvUV(ST(1));
     QString ret = THIS->arg(arg120, arg121, arg122, *arg123);
     ST(0) = sv_newmortal();
@@ -601,7 +601,7 @@ PPCODE:
     sv_setref_pv(ST(0), "Qt::Core::QString", (void *)new QString(ret));
     XSRETURN(1);
     }
-        else if (SvUOK(ST(1))) {
+        else if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       arg1a0 = (ulong)SvUV(ST(1));
     QString ret = THIS->arg(arg1a0, arg1a1, arg1a2, *arg1a3);
     ST(0) = sv_newmortal();
@@ -615,7 +615,7 @@ PPCODE:
     sv_setref_pv(ST(0), "Qt::Core::QString", (void *)new QString(ret));
     XSRETURN(1);
     }
-        else if (SvUOK(ST(1))) {
+        else if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       arg220 = (uint)SvUV(ST(1));
     QString ret = THIS->arg(arg220, arg221, arg222, *arg223);
     ST(0) = sv_newmortal();
@@ -629,7 +629,7 @@ PPCODE:
     sv_setref_pv(ST(0), "Qt::Core::QString", (void *)new QString(ret));
     XSRETURN(1);
     }
-        else if (SvUOK(ST(1))) {
+        else if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       arg2a0 = (ushort)SvUV(ST(1));
     QString ret = THIS->arg(arg2a0, arg2a1, arg2a2, *arg2a3);
     ST(0) = sv_newmortal();
@@ -689,7 +689,7 @@ PPCODE:
     sv_setref_pv(ST(0), "Qt::Core::QString", (void *)new QString(ret));
     XSRETURN(1);
     }
-        else if (SvUOK(ST(1)) && SvIOK(ST(2))) {
+        else if ((SvIOK(ST(1)) || SvUOK(ST(1))) && SvIOK(ST(2))) {
       arg110 = (qulonglong)SvUV(ST(1));
       arg111 = (int)SvIV(ST(2));
     QString ret = THIS->arg(arg110, arg111, arg112, *arg113);
@@ -705,7 +705,7 @@ PPCODE:
     sv_setref_pv(ST(0), "Qt::Core::QString", (void *)new QString(ret));
     XSRETURN(1);
     }
-        else if (SvUOK(ST(1)) && SvIOK(ST(2))) {
+        else if ((SvIOK(ST(1)) || SvUOK(ST(1))) && SvIOK(ST(2))) {
       arg190 = (ulong)SvUV(ST(1));
       arg191 = (int)SvIV(ST(2));
     QString ret = THIS->arg(arg190, arg191, arg192, *arg193);
@@ -721,7 +721,7 @@ PPCODE:
     sv_setref_pv(ST(0), "Qt::Core::QString", (void *)new QString(ret));
     XSRETURN(1);
     }
-        else if (SvUOK(ST(1)) && SvIOK(ST(2))) {
+        else if ((SvIOK(ST(1)) || SvUOK(ST(1))) && SvIOK(ST(2))) {
       arg210 = (uint)SvUV(ST(1));
       arg211 = (int)SvIV(ST(2));
     QString ret = THIS->arg(arg210, arg211, arg212, *arg213);
@@ -737,7 +737,7 @@ PPCODE:
     sv_setref_pv(ST(0), "Qt::Core::QString", (void *)new QString(ret));
     XSRETURN(1);
     }
-        else if (SvUOK(ST(1)) && SvIOK(ST(2))) {
+        else if ((SvIOK(ST(1)) || SvUOK(ST(1))) && SvIOK(ST(2))) {
       arg290 = (ushort)SvUV(ST(1));
       arg291 = (int)SvIV(ST(2));
     QString ret = THIS->arg(arg290, arg291, arg292, *arg293);
@@ -804,7 +804,7 @@ PPCODE:
     sv_setref_pv(ST(0), "Qt::Core::QString", (void *)new QString(ret));
     XSRETURN(1);
     }
-        else if (SvUOK(ST(1)) && SvIOK(ST(2)) && SvIOK(ST(3))) {
+        else if ((SvIOK(ST(1)) || SvUOK(ST(1))) && SvIOK(ST(2)) && SvIOK(ST(3))) {
       arg100 = (qulonglong)SvUV(ST(1));
       arg101 = (int)SvIV(ST(2));
       arg102 = (int)SvIV(ST(3));
@@ -822,7 +822,7 @@ PPCODE:
     sv_setref_pv(ST(0), "Qt::Core::QString", (void *)new QString(ret));
     XSRETURN(1);
     }
-        else if (SvUOK(ST(1)) && SvIOK(ST(2)) && SvIOK(ST(3))) {
+        else if ((SvIOK(ST(1)) || SvUOK(ST(1))) && SvIOK(ST(2)) && SvIOK(ST(3))) {
       arg180 = (ulong)SvUV(ST(1));
       arg181 = (int)SvIV(ST(2));
       arg182 = (int)SvIV(ST(3));
@@ -840,7 +840,7 @@ PPCODE:
     sv_setref_pv(ST(0), "Qt::Core::QString", (void *)new QString(ret));
     XSRETURN(1);
     }
-        else if (SvUOK(ST(1)) && SvIOK(ST(2)) && SvIOK(ST(3))) {
+        else if ((SvIOK(ST(1)) || SvUOK(ST(1))) && SvIOK(ST(2)) && SvIOK(ST(3))) {
       arg200 = (uint)SvUV(ST(1));
       arg201 = (int)SvIV(ST(2));
       arg202 = (int)SvIV(ST(3));
@@ -858,7 +858,7 @@ PPCODE:
     sv_setref_pv(ST(0), "Qt::Core::QString", (void *)new QString(ret));
     XSRETURN(1);
     }
-        else if (SvUOK(ST(1)) && SvIOK(ST(2)) && SvIOK(ST(3))) {
+        else if ((SvIOK(ST(1)) || SvUOK(ST(1))) && SvIOK(ST(2)) && SvIOK(ST(3))) {
       arg280 = (ushort)SvUV(ST(1));
       arg281 = (int)SvIV(ST(2));
       arg282 = (int)SvIV(ST(3));
@@ -892,7 +892,7 @@ PPCODE:
     sv_setref_pv(ST(0), "Qt::Core::QString", (void *)new QString(ret));
     XSRETURN(1);
     }
-        else if (SvUOK(ST(1)) && SvIOK(ST(2)) && SvIOK(ST(3)) && sv_isa(ST(4), "Qt::Core::QChar")) {
+        else if ((SvIOK(ST(1)) || SvUOK(ST(1))) && SvIOK(ST(2)) && SvIOK(ST(3)) && sv_isa(ST(4), "Qt::Core::QChar")) {
       argf0 = (qulonglong)SvUV(ST(1));
       argf1 = (int)SvIV(ST(2));
       argf2 = (int)SvIV(ST(3));
@@ -912,7 +912,7 @@ PPCODE:
     sv_setref_pv(ST(0), "Qt::Core::QString", (void *)new QString(ret));
     XSRETURN(1);
     }
-        else if (SvUOK(ST(1)) && SvIOK(ST(2)) && SvIOK(ST(3)) && sv_isa(ST(4), "Qt::Core::QChar")) {
+        else if ((SvIOK(ST(1)) || SvUOK(ST(1))) && SvIOK(ST(2)) && SvIOK(ST(3)) && sv_isa(ST(4), "Qt::Core::QChar")) {
       arg170 = (ulong)SvUV(ST(1));
       arg171 = (int)SvIV(ST(2));
       arg172 = (int)SvIV(ST(3));
@@ -932,7 +932,7 @@ PPCODE:
     sv_setref_pv(ST(0), "Qt::Core::QString", (void *)new QString(ret));
     XSRETURN(1);
     }
-        else if (SvUOK(ST(1)) && SvIOK(ST(2)) && SvIOK(ST(3)) && sv_isa(ST(4), "Qt::Core::QChar")) {
+        else if ((SvIOK(ST(1)) || SvUOK(ST(1))) && SvIOK(ST(2)) && SvIOK(ST(3)) && sv_isa(ST(4), "Qt::Core::QChar")) {
       arg1f0 = (uint)SvUV(ST(1));
       arg1f1 = (int)SvIV(ST(2));
       arg1f2 = (int)SvIV(ST(3));
@@ -952,7 +952,7 @@ PPCODE:
     sv_setref_pv(ST(0), "Qt::Core::QString", (void *)new QString(ret));
     XSRETURN(1);
     }
-        else if (SvUOK(ST(1)) && SvIOK(ST(2)) && SvIOK(ST(3)) && sv_isa(ST(4), "Qt::Core::QChar")) {
+        else if ((SvIOK(ST(1)) || SvUOK(ST(1))) && SvIOK(ST(2)) && SvIOK(ST(3)) && sv_isa(ST(4), "Qt::Core::QChar")) {
       arg270 = (ushort)SvUV(ST(1));
       arg271 = (int)SvIV(ST(2));
       arg272 = (int)SvIV(ST(3));
@@ -1999,7 +1999,7 @@ PPCODE:
     switch(items) {
       case 2:
       {
-        if (SvUOK(ST(1))) {
+        if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       {
         ushort tmp = static_cast<ushort>(SvUV(ST(1)));
         arg10 = &tmp;
@@ -2015,7 +2015,7 @@ PPCODE:
       }
       case 3:
       {
-        if (SvUOK(ST(1)) && SvIOK(ST(2))) {
+        if ((SvIOK(ST(1)) || SvUOK(ST(1))) && SvIOK(ST(2))) {
       {
         ushort tmp = static_cast<ushort>(SvUV(ST(1)));
         arg00 = &tmp;
@@ -2994,7 +2994,7 @@ PPCODE:
     sv_setref_pv(ST(0), "Qt::Core::QString", (void *)new QString(ret));
     XSRETURN(1);
     }
-        else if (SvUOK(ST(1))) {
+        else if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       arg30 = (uint)SvUV(ST(1));
     QString ret = THIS->number(arg30, arg31);
     ST(0) = sv_newmortal();
@@ -3008,7 +3008,7 @@ PPCODE:
     sv_setref_pv(ST(0), "Qt::Core::QString", (void *)new QString(ret));
     XSRETURN(1);
     }
-        else if (SvUOK(ST(1))) {
+        else if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       arg70 = (ulong)SvUV(ST(1));
     QString ret = THIS->number(arg70, arg71);
     ST(0) = sv_newmortal();
@@ -3022,7 +3022,7 @@ PPCODE:
     sv_setref_pv(ST(0), "Qt::Core::QString", (void *)new QString(ret));
     XSRETURN(1);
     }
-        else if (SvUOK(ST(1))) {
+        else if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       argb0 = (qulonglong)SvUV(ST(1));
     QString ret = THIS->number(argb0, argb1);
     ST(0) = sv_newmortal();
@@ -3050,7 +3050,7 @@ PPCODE:
     sv_setref_pv(ST(0), "Qt::Core::QString", (void *)new QString(ret));
     XSRETURN(1);
     }
-        else if (SvUOK(ST(1)) && SvIOK(ST(2))) {
+        else if ((SvIOK(ST(1)) || SvUOK(ST(1))) && SvIOK(ST(2))) {
       arg20 = (uint)SvUV(ST(1));
       arg21 = (int)SvIV(ST(2));
     QString ret = THIS->number(arg20, arg21);
@@ -3066,7 +3066,7 @@ PPCODE:
     sv_setref_pv(ST(0), "Qt::Core::QString", (void *)new QString(ret));
     XSRETURN(1);
     }
-        else if (SvUOK(ST(1)) && SvIOK(ST(2))) {
+        else if ((SvIOK(ST(1)) || SvUOK(ST(1))) && SvIOK(ST(2))) {
       arg60 = (ulong)SvUV(ST(1));
       arg61 = (int)SvIV(ST(2));
     QString ret = THIS->number(arg60, arg61);
@@ -3082,7 +3082,7 @@ PPCODE:
     sv_setref_pv(ST(0), "Qt::Core::QString", (void *)new QString(ret));
     XSRETURN(1);
     }
-        else if (SvUOK(ST(1)) && SvIOK(ST(2))) {
+        else if ((SvIOK(ST(1)) || SvUOK(ST(1))) && SvIOK(ST(2))) {
       arga0 = (qulonglong)SvUV(ST(1));
       arga1 = (int)SvIV(ST(2));
     QString ret = THIS->number(arga0, arga1);
@@ -3630,14 +3630,14 @@ PPCODE:
     sv_setref_pv(ST(0), "Qt::Core::QCharRef", (void *)new QCharRef(ret));
     XSRETURN(1);
     }
-        else if (SvUOK(ST(1))) {
+        else if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       arg20 = (uint)SvUV(ST(1));
     const QChar ret = THIS->operator[](arg20);
     ST(0) = sv_newmortal();
     sv_setref_pv(ST(0), "", (void *)new const QChar(ret));
     XSRETURN(1);
     }
-        else if (SvUOK(ST(1))) {
+        else if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       arg30 = (uint)SvUV(ST(1));
     QCharRef ret = THIS->operator[](arg30);
     ST(0) = sv_newmortal();
@@ -4557,7 +4557,7 @@ PPCODE:
     sv_setref_pv(ST(0), "Qt::Core::QString", (void *)ret);
     XSRETURN(1);
     }
-        else if (SvUOK(ST(1))) {
+        else if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       arg30 = (ushort)SvUV(ST(1));
     QString * ret = &THIS->setNum(arg30, arg31);
     ST(0) = sv_newmortal();
@@ -4571,7 +4571,7 @@ PPCODE:
     sv_setref_pv(ST(0), "Qt::Core::QString", (void *)ret);
     XSRETURN(1);
     }
-        else if (SvUOK(ST(1))) {
+        else if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       arg70 = (uint)SvUV(ST(1));
     QString * ret = &THIS->setNum(arg70, arg71);
     ST(0) = sv_newmortal();
@@ -4585,7 +4585,7 @@ PPCODE:
     sv_setref_pv(ST(0), "Qt::Core::QString", (void *)ret);
     XSRETURN(1);
     }
-        else if (SvUOK(ST(1))) {
+        else if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       argb0 = (ulong)SvUV(ST(1));
     QString * ret = &THIS->setNum(argb0, argb1);
     ST(0) = sv_newmortal();
@@ -4599,7 +4599,7 @@ PPCODE:
     sv_setref_pv(ST(0), "Qt::Core::QString", (void *)ret);
     XSRETURN(1);
     }
-        else if (SvUOK(ST(1))) {
+        else if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       argf0 = (qulonglong)SvUV(ST(1));
     QString * ret = &THIS->setNum(argf0, argf1);
     ST(0) = sv_newmortal();
@@ -4634,7 +4634,7 @@ PPCODE:
     sv_setref_pv(ST(0), "Qt::Core::QString", (void *)ret);
     XSRETURN(1);
     }
-        else if (SvUOK(ST(1)) && SvIOK(ST(2))) {
+        else if ((SvIOK(ST(1)) || SvUOK(ST(1))) && SvIOK(ST(2))) {
       arg20 = (ushort)SvUV(ST(1));
       arg21 = (int)SvIV(ST(2));
     QString * ret = &THIS->setNum(arg20, arg21);
@@ -4650,7 +4650,7 @@ PPCODE:
     sv_setref_pv(ST(0), "Qt::Core::QString", (void *)ret);
     XSRETURN(1);
     }
-        else if (SvUOK(ST(1)) && SvIOK(ST(2))) {
+        else if ((SvIOK(ST(1)) || SvUOK(ST(1))) && SvIOK(ST(2))) {
       arg60 = (uint)SvUV(ST(1));
       arg61 = (int)SvIV(ST(2));
     QString * ret = &THIS->setNum(arg60, arg61);
@@ -4666,7 +4666,7 @@ PPCODE:
     sv_setref_pv(ST(0), "Qt::Core::QString", (void *)ret);
     XSRETURN(1);
     }
-        else if (SvUOK(ST(1)) && SvIOK(ST(2))) {
+        else if ((SvIOK(ST(1)) || SvUOK(ST(1))) && SvIOK(ST(2))) {
       arga0 = (ulong)SvUV(ST(1));
       arga1 = (int)SvIV(ST(2));
     QString * ret = &THIS->setNum(arga0, arga1);
@@ -4682,7 +4682,7 @@ PPCODE:
     sv_setref_pv(ST(0), "Qt::Core::QString", (void *)ret);
     XSRETURN(1);
     }
-        else if (SvUOK(ST(1)) && SvIOK(ST(2))) {
+        else if ((SvIOK(ST(1)) || SvUOK(ST(1))) && SvIOK(ST(2))) {
       arge0 = (qulonglong)SvUV(ST(1));
       arge1 = (int)SvIV(ST(2));
     QString * ret = &THIS->setNum(arge0, arge1);
@@ -4792,7 +4792,7 @@ PREINIT:
 const ushort * arg00;
 int arg01;
 PPCODE:
-    if (SvUOK(ST(1)) && SvIOK(ST(2))) {
+    if ((SvIOK(ST(1)) || SvUOK(ST(1))) && SvIOK(ST(2))) {
       {
         ushort tmp = static_cast<ushort>(SvUV(ST(1)));
         arg00 = &tmp;

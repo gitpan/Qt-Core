@@ -1648,7 +1648,7 @@ PPCODE:
       
     const char * ret = THIS->signature();
     ST(0) = sv_newmortal();
-    sv_setpv((SV*)ST(0), ret);
+    sv_setpv((SV*)ST(0), (const char *)ret);
     XSRETURN(1);
     }
 
@@ -1661,7 +1661,7 @@ PPCODE:
       
     const char * ret = THIS->tag();
     ST(0) = sv_newmortal();
-    sv_setpv((SV*)ST(0), ret);
+    sv_setpv((SV*)ST(0), (const char *)ret);
     XSRETURN(1);
     }
 
@@ -1674,7 +1674,7 @@ PPCODE:
       
     const char * ret = THIS->typeName();
     ST(0) = sv_newmortal();
-    sv_setpv((SV*)ST(0), ret);
+    sv_setpv((SV*)ST(0), (const char *)ret);
     XSRETURN(1);
     }
 

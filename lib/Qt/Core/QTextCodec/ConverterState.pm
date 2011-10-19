@@ -7,7 +7,7 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_02';
+our $VERSION = '0.01_03';
 
 
 # FIXME: operator overload
@@ -22,12 +22,6 @@ Qt::Core::QTextCodec::ConverterState
 =head1 PUBLIC METHODS
 
 =over
-
-=item   QTextCodec::ConverterState(QFlags<QTextCodec::ConversionFlag> f)
-
-=item   QTextCodec::ConverterState(QFlags<QTextCodec::ConversionFlag> f = QTextCodec::DefaultConversion)
-
-=item   ~ConverterState()
 
 
 =back

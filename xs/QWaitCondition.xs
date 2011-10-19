@@ -92,7 +92,7 @@ PPCODE:
       }
       case 3:
       {
-        if ((sv_derived_from(ST(1), "Qt::Core::QMutex") || ST(1) == &PL_sv_undef) && SvUOK(ST(2))) {
+        if ((sv_derived_from(ST(1), "Qt::Core::QMutex") || ST(1) == &PL_sv_undef) && (SvIOK(ST(2)) || SvUOK(ST(2)))) {
       if (sv_derived_from(ST(1), "Qt::Core::QMutex")) {
         arg00 = reinterpret_cast<QMutex *>(SvIV((SV*)SvRV(ST(1))));
     }
@@ -107,7 +107,7 @@ PPCODE:
     ST(0) = boolSV(ret);
     XSRETURN(1);
     }
-        else if ((sv_derived_from(ST(1), "Qt::Core::QReadWriteLock") || ST(1) == &PL_sv_undef) && SvUOK(ST(2))) {
+        else if ((sv_derived_from(ST(1), "Qt::Core::QReadWriteLock") || ST(1) == &PL_sv_undef) && (SvIOK(ST(2)) || SvUOK(ST(2)))) {
       if (sv_derived_from(ST(1), "Qt::Core::QReadWriteLock")) {
         arg20 = reinterpret_cast<QReadWriteLock *>(SvIV((SV*)SvRV(ST(1))));
     }

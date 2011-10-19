@@ -7,7 +7,7 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_02';
+our $VERSION = '0.01_03';
 
 
 # FIXME: operator overload
@@ -22,48 +22,6 @@ Qt::Core::QListData
 =head1 PUBLIC METHODS
 
 =over
-
-=item  void ** append()
-
-=item  void ** append(int n)
-
-=item  void ** append(const QListData & l)
-
-=item  void ** append2(const QListData & l)
-
-=item  void ** at(int i)
-
-=item  void ** begin()
-
-=item  QListData::Data * detach()
-
-=item  QListData::Data * detach(int alloc)
-
-=item  QListData::Data * detach2()
-
-=item  QListData::Data * detach3()
-
-=item  QListData::Data * detach_grow(int * i, int n)
-
-=item  void ** end()
-
-=item  void ** erase(void ** xi)
-
-=item  void ** insert(int i)
-
-=item  bool isEmpty()
-
-=item  void move(int from, int to)
-
-=item  void ** prepend()
-
-=item  void realloc(int alloc)
-
-=item  void remove(int i)
-
-=item  void remove(int i, int n)
-
-=item  int size()
 
 
 =back

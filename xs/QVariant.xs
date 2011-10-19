@@ -139,7 +139,7 @@ PPCODE:
     sv_setref_pv(ST(0), "Qt::Core::QVariant", (void *)ret);
     XSRETURN(1);
     }
-        else if (SvUOK(ST(1))) {
+        else if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       arg50 = (uint)SvUV(ST(1));
     ret = new QVariant(arg50);
     ST(0) = sv_newmortal();
@@ -153,7 +153,7 @@ PPCODE:
     sv_setref_pv(ST(0), "Qt::Core::QVariant", (void *)ret);
     XSRETURN(1);
     }
-        else if (SvUOK(ST(1))) {
+        else if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       arg70 = (qulonglong)SvUV(ST(1));
     ret = new QVariant(arg70);
     ST(0) = sv_newmortal();
@@ -362,7 +362,7 @@ PPCODE:
       }
       case 4:
       {
-        if (SvIOK(ST(1)) && SvIOK(ST(2)) && SvUOK(ST(3))) {
+        if (SvIOK(ST(1)) && SvIOK(ST(2)) && (SvIOK(ST(3)) || SvUOK(ST(3)))) {
       arg230 = (int)SvIV(ST(1));
       arg231 = reinterpret_cast<void *>(SvIV(ST(2)));
       arg232 = (uint)SvUV(ST(3));
@@ -1181,7 +1181,7 @@ PPCODE:
       
     const char * ret = THIS->typeName();
     ST(0) = sv_newmortal();
-    sv_setpv((SV*)ST(0), ret);
+    sv_setpv((SV*)ST(0), (const char *)ret);
     XSRETURN(1);
     }
 
@@ -1195,7 +1195,7 @@ PPCODE:
       arg00 = (QVariant::Type)SvIV(ST(1));
     const char * ret = THIS->typeToName(arg00);
     ST(0) = sv_newmortal();
-    sv_setpv((SV*)ST(0), ret);
+    sv_setpv((SV*)ST(0), (const char *)ret);
     XSRETURN(1);
     }
 

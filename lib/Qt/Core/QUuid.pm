@@ -7,7 +7,7 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_02';
+our $VERSION = '0.01_03';
 
 
 # FIXME: operator overload
@@ -22,34 +22,6 @@ Qt::Core::QUuid
 =head1 PUBLIC METHODS
 
 =over
-
-=item   QUuid()
-
-=item   QUuid(const QString & arg0)
-
-=item   QUuid(const char * arg0)
-
-=item   QUuid(uint l, ushort w1, ushort w2, uchar b1, uchar b2, uchar b3, uchar b4, uchar b5, uchar b6, uchar b7, uchar b8)
-
-=item  static QUuid createUuid()
-
-=item  bool isNull()
-
-=item  QString operator QString()
-
-=item  bool operator!=(const QUuid & orig)
-
-=item  bool operator<(const QUuid & other)
-
-=item  bool operator==(const QUuid & orig)
-
-=item  bool operator>(const QUuid & other)
-
-=item  QString toString()
-
-=item  QUuid::Variant variant()
-
-=item  QUuid::Version version()
 
 
 =back

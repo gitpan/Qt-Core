@@ -7,7 +7,7 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_02';
+our $VERSION = '0.01_03';
 
 
 # FIXME: operator overload
@@ -22,18 +22,6 @@ Qt::Core::QMapData
 =head1 PUBLIC METHODS
 
 =over
-
-=item  void continueFreeData(int offset)
-
-=item  static QMapData * createData()
-
-=item  static QMapData * createData(int alignment)
-
-=item  QMapData::Node * node_create(T_ARRAY_UPDATE Node ** T_ARRAY_UPDATE, int offset)
-
-=item  QMapData::Node * node_create(T_ARRAY_UPDATE Node ** T_ARRAY_UPDATE, int offset, int alignment)
-
-=item  void node_delete(T_ARRAY_UPDATE Node ** T_ARRAY_UPDATE, int offset, QMapData::Node * node)
 
 
 =back

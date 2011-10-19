@@ -1,7 +1,7 @@
-package Qt::Core::QFactoryInterface;
+package Qt::Core::QAbstractConcatenable;
 # THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
-# classname: QFactoryInterface
-# file     : QtCore/qfactoryinterface.h
+# classname: QAbstractConcatenable
+# file     : QtCore/qstringbuilder.h
 
 use strict;
 use warnings;
@@ -17,7 +17,7 @@ our $VERSION = '0.01_03';
 
 =head1 NAME
 
-Qt::Core::QFactoryInterface
+Qt::Core::QAbstractConcatenable
 
 =head1 PUBLIC METHODS
 

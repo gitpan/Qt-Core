@@ -354,14 +354,14 @@ PPCODE:
     ST(0) = boolSV(ret);
     XSRETURN(1);
     }
-        else if (SvUOK(ST(1))) {
+        else if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       arg20 = (uint)SvUV(ST(1));
     QBitRef ret = THIS->operator[](arg20);
     ST(0) = sv_newmortal();
     sv_setref_pv(ST(0), "Qt::Core::QBitRef", (void *)new QBitRef(ret));
     XSRETURN(1);
     }
-        else if (SvUOK(ST(1))) {
+        else if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       arg30 = (uint)SvUV(ST(1));
     bool ret = THIS->operator[](arg30);
     ST(0) = sv_newmortal();

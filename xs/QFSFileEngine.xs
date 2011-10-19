@@ -637,7 +637,7 @@ QFSFileEngine::setPermissions(...)
 PREINIT:
 uint arg00;
 PPCODE:
-    if (SvUOK(ST(1))) {
+    if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       arg00 = (uint)SvUV(ST(1));
     bool ret = THIS->setPermissions(arg00);
     ST(0) = sv_newmortal();

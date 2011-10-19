@@ -78,7 +78,7 @@ PPCODE:
     sv_setref_pv(ST(0), "Qt::Core::QChar", (void *)ret);
     XSRETURN(1);
     }
-        else if (SvUOK(ST(1))) {
+        else if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       arg40 = (ushort)SvUV(ST(1));
     ret = new QChar(arg40);
     ST(0) = sv_newmortal();
@@ -92,7 +92,7 @@ PPCODE:
     sv_setref_pv(ST(0), "Qt::Core::QChar", (void *)ret);
     XSRETURN(1);
     }
-        else if (SvUOK(ST(1))) {
+        else if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       arg60 = (uint)SvUV(ST(1));
     ret = new QChar(arg60);
     ST(0) = sv_newmortal();
@@ -161,14 +161,14 @@ PPCODE:
       }
       case 2:
       {
-        if (SvUOK(ST(1))) {
+        if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       arg10 = (uint)SvUV(ST(1));
     QChar::Category ret = THIS->category(arg10);
     ST(0) = sv_newmortal();
     sv_setiv(ST(0), (IV)ret);
     XSRETURN(1);
     }
-        else if (SvUOK(ST(1))) {
+        else if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       arg20 = (ushort)SvUV(ST(1));
     QChar::Category ret = THIS->category(arg20);
     ST(0) = sv_newmortal();
@@ -220,14 +220,14 @@ PPCODE:
       }
       case 2:
       {
-        if (SvUOK(ST(1))) {
+        if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       arg10 = (uint)SvUV(ST(1));
     unsigned char ret = THIS->combiningClass(arg10);
     ST(0) = sv_newmortal();
     sv_setuv(ST(0), (UV)ret);
     XSRETURN(1);
     }
-        else if (SvUOK(ST(1))) {
+        else if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       arg20 = (ushort)SvUV(ST(1));
     unsigned char ret = THIS->combiningClass(arg20);
     ST(0) = sv_newmortal();
@@ -264,7 +264,7 @@ PPCODE:
       }
       case 2:
       {
-        if (SvUOK(ST(1))) {
+        if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       arg10 = (uint)SvUV(ST(1));
     QString ret = THIS->decomposition(arg10);
     ST(0) = sv_newmortal();
@@ -301,7 +301,7 @@ PPCODE:
       }
       case 2:
       {
-        if (SvUOK(ST(1))) {
+        if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       arg10 = (uint)SvUV(ST(1));
     QChar::Decomposition ret = THIS->decompositionTag(arg10);
     ST(0) = sv_newmortal();
@@ -340,14 +340,14 @@ PPCODE:
       }
       case 2:
       {
-        if (SvUOK(ST(1))) {
+        if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       arg10 = (uint)SvUV(ST(1));
     int ret = THIS->digitValue(arg10);
     ST(0) = sv_newmortal();
     sv_setiv(ST(0), (IV)ret);
     XSRETURN(1);
     }
-        else if (SvUOK(ST(1))) {
+        else if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       arg20 = (ushort)SvUV(ST(1));
     int ret = THIS->digitValue(arg20);
     ST(0) = sv_newmortal();
@@ -386,14 +386,14 @@ PPCODE:
       }
       case 2:
       {
-        if (SvUOK(ST(1))) {
+        if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       arg10 = (uint)SvUV(ST(1));
     QChar::Direction ret = THIS->direction(arg10);
     ST(0) = sv_newmortal();
     sv_setiv(ST(0), (IV)ret);
     XSRETURN(1);
     }
-        else if (SvUOK(ST(1))) {
+        else if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       arg20 = (ushort)SvUV(ST(1));
     QChar::Direction ret = THIS->direction(arg20);
     ST(0) = sv_newmortal();
@@ -456,7 +456,7 @@ QChar::highSurrogate(...)
 PREINIT:
 uint arg00;
 PPCODE:
-    if (SvUOK(ST(1))) {
+    if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       arg00 = (uint)SvUV(ST(1));
     ushort ret = THIS->highSurrogate(arg00);
     ST(0) = sv_newmortal();
@@ -498,7 +498,7 @@ PPCODE:
       }
       case 2:
       {
-        if (SvUOK(ST(1))) {
+        if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       arg10 = (uint)SvUV(ST(1));
     bool ret = THIS->isHighSurrogate(arg10);
     ST(0) = sv_newmortal();
@@ -561,7 +561,7 @@ PPCODE:
       }
       case 2:
       {
-        if (SvUOK(ST(1))) {
+        if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       arg10 = (uint)SvUV(ST(1));
     bool ret = THIS->isLowSurrogate(arg10);
     ST(0) = sv_newmortal();
@@ -730,14 +730,14 @@ PPCODE:
       }
       case 2:
       {
-        if (SvUOK(ST(1))) {
+        if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       arg10 = (uint)SvUV(ST(1));
     QChar::Joining ret = THIS->joining(arg10);
     ST(0) = sv_newmortal();
     sv_setiv(ST(0), (IV)ret);
     XSRETURN(1);
     }
-        else if (SvUOK(ST(1))) {
+        else if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       arg20 = (ushort)SvUV(ST(1));
     QChar::Joining ret = THIS->joining(arg20);
     ST(0) = sv_newmortal();
@@ -759,7 +759,7 @@ QChar::lowSurrogate(...)
 PREINIT:
 uint arg00;
 PPCODE:
-    if (SvUOK(ST(1))) {
+    if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       arg00 = (uint)SvUV(ST(1));
     ushort ret = THIS->lowSurrogate(arg00);
     ST(0) = sv_newmortal();
@@ -790,14 +790,14 @@ PPCODE:
       }
       case 2:
       {
-        if (SvUOK(ST(1))) {
+        if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       arg10 = (uint)SvUV(ST(1));
     uint ret = THIS->mirroredChar(arg10);
     ST(0) = sv_newmortal();
     sv_setuv(ST(0), (UV)ret);
     XSRETURN(1);
     }
-        else if (SvUOK(ST(1))) {
+        else if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       arg20 = (ushort)SvUV(ST(1));
     ushort ret = THIS->mirroredChar(arg20);
     ST(0) = sv_newmortal();
@@ -819,7 +819,7 @@ QChar::requiresSurrogates(...)
 PREINIT:
 uint arg00;
 PPCODE:
-    if (SvUOK(ST(1))) {
+    if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       arg00 = (uint)SvUV(ST(1));
     bool ret = THIS->requiresSurrogates(arg00);
     ST(0) = sv_newmortal();
@@ -877,7 +877,7 @@ PPCODE:
     switch(items) {
       case 3:
       {
-        if (SvUOK(ST(1)) && SvUOK(ST(2))) {
+        if ((SvIOK(ST(1)) || SvUOK(ST(1))) && (SvIOK(ST(2)) || SvUOK(ST(2)))) {
       arg00 = (ushort)SvUV(ST(1));
       arg01 = (ushort)SvUV(ST(2));
     uint ret = THIS->surrogateToUcs4(arg00, arg01);
@@ -938,14 +938,14 @@ PPCODE:
       }
       case 2:
       {
-        if (SvUOK(ST(1))) {
+        if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       arg10 = (uint)SvUV(ST(1));
     uint ret = THIS->toCaseFolded(arg10);
     ST(0) = sv_newmortal();
     sv_setuv(ST(0), (UV)ret);
     XSRETURN(1);
     }
-        else if (SvUOK(ST(1))) {
+        else if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       arg20 = (ushort)SvUV(ST(1));
     ushort ret = THIS->toCaseFolded(arg20);
     ST(0) = sv_newmortal();
@@ -997,14 +997,14 @@ PPCODE:
       }
       case 2:
       {
-        if (SvUOK(ST(1))) {
+        if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       arg10 = (uint)SvUV(ST(1));
     uint ret = THIS->toLower(arg10);
     ST(0) = sv_newmortal();
     sv_setuv(ST(0), (UV)ret);
     XSRETURN(1);
     }
-        else if (SvUOK(ST(1))) {
+        else if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       arg20 = (ushort)SvUV(ST(1));
     ushort ret = THIS->toLower(arg20);
     ST(0) = sv_newmortal();
@@ -1043,14 +1043,14 @@ PPCODE:
       }
       case 2:
       {
-        if (SvUOK(ST(1))) {
+        if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       arg10 = (uint)SvUV(ST(1));
     uint ret = THIS->toTitleCase(arg10);
     ST(0) = sv_newmortal();
     sv_setuv(ST(0), (UV)ret);
     XSRETURN(1);
     }
-        else if (SvUOK(ST(1))) {
+        else if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       arg20 = (ushort)SvUV(ST(1));
     ushort ret = THIS->toTitleCase(arg20);
     ST(0) = sv_newmortal();
@@ -1089,14 +1089,14 @@ PPCODE:
       }
       case 2:
       {
-        if (SvUOK(ST(1))) {
+        if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       arg10 = (uint)SvUV(ST(1));
     uint ret = THIS->toUpper(arg10);
     ST(0) = sv_newmortal();
     sv_setuv(ST(0), (UV)ret);
     XSRETURN(1);
     }
-        else if (SvUOK(ST(1))) {
+        else if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       arg20 = (ushort)SvUV(ST(1));
     ushort ret = THIS->toUpper(arg20);
     ST(0) = sv_newmortal();
@@ -1165,14 +1165,14 @@ PPCODE:
       }
       case 2:
       {
-        if (SvUOK(ST(1))) {
+        if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       arg10 = (uint)SvUV(ST(1));
     QChar::UnicodeVersion ret = THIS->unicodeVersion(arg10);
     ST(0) = sv_newmortal();
     sv_setiv(ST(0), (IV)ret);
     XSRETURN(1);
     }
-        else if (SvUOK(ST(1))) {
+        else if ((SvIOK(ST(1)) || SvUOK(ST(1)))) {
       arg20 = (ushort)SvUV(ST(1));
     QChar::UnicodeVersion ret = THIS->unicodeVersion(arg20);
     ST(0) = sv_newmortal();

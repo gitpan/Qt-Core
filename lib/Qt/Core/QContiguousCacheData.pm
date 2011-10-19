@@ -7,7 +7,7 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_02';
+our $VERSION = '0.01_03';
 
 
 # FIXME: operator overload
@@ -22,10 +22,6 @@ Qt::Core::QContiguousCacheData
 =head1 PUBLIC METHODS
 
 =over
-
-=item  static QContiguousCacheData * allocate(int size, int alignment)
-
-=item  static void free(QContiguousCacheData * data)
 
 
 =back
