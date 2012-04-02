@@ -1639,6 +1639,19 @@ PPCODE:
     XSRETURN(1);
     }
 
+## int revision()
+void
+QMetaMethod::revision(...)
+PREINIT:
+PPCODE:
+    if (1) {
+      
+    int ret = THIS->revision();
+    ST(0) = sv_newmortal();
+    sv_setiv(ST(0), (IV)ret);
+    XSRETURN(1);
+    }
+
 ## const char * signature()
 void
 QMetaMethod::signature(...)

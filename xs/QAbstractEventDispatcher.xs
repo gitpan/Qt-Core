@@ -177,7 +177,7 @@ PREINIT:
 QFlags<QEventLoop::ProcessEventsFlag> arg00;
 PPCODE:
     if (SvIOK(ST(1))) {
-      arg00 = QFlags<QEventLoop::ProcessEventsFlag>((int)SvIV(ST(1)));
+      arg00 = QFlags<QEventLoop::ProcessEventsFlag>((QEventLoop::ProcessEventsFlag)SvIV(ST(1)));
     bool ret = THIS->processEvents(arg00);
     ST(0) = sv_newmortal();
     ST(0) = boolSV(ret);

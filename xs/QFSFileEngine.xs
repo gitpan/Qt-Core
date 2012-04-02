@@ -71,7 +71,7 @@ QFlags<QDir::Filter> arg00;
 QStringList * arg01;
 PPCODE:
     if (SvIOK(ST(1)) && sv_isa(ST(2), "Qt::Core::QStringList")) {
-      arg00 = QFlags<QDir::Filter>((int)SvIV(ST(1)));
+      arg00 = QFlags<QDir::Filter>((QDir::Filter)SvIV(ST(1)));
       arg01 = reinterpret_cast<QStringList *>(SvIV((SV*)SvRV(ST(2))));
     QAbstractFileEngineIterator * ret = THIS->beginEntryList(arg00, *arg01);
     ST(0) = sv_newmortal();
@@ -179,7 +179,7 @@ QFlags<QDir::Filter> arg00;
 QStringList * arg01;
 PPCODE:
     if (SvIOK(ST(1)) && sv_isa(ST(2), "Qt::Core::QStringList")) {
-      arg00 = QFlags<QDir::Filter>((int)SvIV(ST(1)));
+      arg00 = QFlags<QDir::Filter>((QDir::Filter)SvIV(ST(1)));
       arg01 = reinterpret_cast<QStringList *>(SvIV((SV*)SvRV(ST(2))));
     QStringList ret = THIS->entryList(arg00, *arg01);
     ST(0) = sv_newmortal();
@@ -279,10 +279,10 @@ PREINIT:
 QFlags<QAbstractFileEngine::FileFlag> arg00;
 PPCODE:
     if (SvIOK(ST(1))) {
-      arg00 = QFlags<QAbstractFileEngine::FileFlag>((int)SvIV(ST(1)));
+      arg00 = QFlags<QAbstractFileEngine::FileFlag>((QAbstractFileEngine::FileFlag)SvIV(ST(1)));
     QFlags<QAbstractFileEngine::FileFlag> ret = THIS->fileFlags(arg00);
     ST(0) = sv_newmortal();
-    sv_setiv(ST(0), (IV)ret);
+    sv_setiv(ST(0), (int)ret);
     XSRETURN(1);
     }
 
@@ -425,7 +425,7 @@ PPCODE:
       case 2:
       {
         if (SvIOK(ST(1))) {
-      arg00 = QFlags<QIODevice::OpenModeFlag>((int)SvIV(ST(1)));
+      arg00 = QFlags<QIODevice::OpenModeFlag>((QIODevice::OpenModeFlag)SvIV(ST(1)));
     bool ret = THIS->open(arg00);
     ST(0) = sv_newmortal();
     ST(0) = boolSV(ret);
@@ -438,7 +438,7 @@ PPCODE:
       case 3:
       {
         if (SvIOK(ST(1)) && SvOK(ST(2))) {
-      arg10 = QFlags<QIODevice::OpenModeFlag>((int)SvIV(ST(1)));
+      arg10 = QFlags<QIODevice::OpenModeFlag>((QIODevice::OpenModeFlag)SvIV(ST(1)));
       arg11 = PerlIO_findFILE(IoIFP(sv_2io(ST(2))));
     bool ret = THIS->open(arg10, arg11);
     ST(0) = sv_newmortal();
@@ -446,7 +446,7 @@ PPCODE:
     XSRETURN(1);
     }
         else if (SvIOK(ST(1)) && SvIOK(ST(2))) {
-      arg20 = QFlags<QIODevice::OpenModeFlag>((int)SvIV(ST(1)));
+      arg20 = QFlags<QIODevice::OpenModeFlag>((QIODevice::OpenModeFlag)SvIV(ST(1)));
       arg21 = (int)SvIV(ST(2));
     bool ret = THIS->open(arg20, arg21);
     ST(0) = sv_newmortal();

@@ -4436,7 +4436,7 @@ PPCODE:
       arg00 = *reinterpret_cast<QChar *>(SvIV((SV*)SvRV(ST(1))));
       arg01 = (int)SvIV(ST(2));
       arg02 = (int)SvIV(ST(3));
-      arg03 = QFlags<QString::SectionFlag>((int)SvIV(ST(4)));
+      arg03 = QFlags<QString::SectionFlag>((QString::SectionFlag)SvIV(ST(4)));
     QString ret = THIS->section(arg00, arg01, arg02, arg03);
     ST(0) = sv_newmortal();
     sv_setref_pv(ST(0), "Qt::Core::QString", (void *)new QString(ret));
@@ -4446,7 +4446,7 @@ PPCODE:
       arg30 = reinterpret_cast<QString *>(SvIV((SV*)SvRV(ST(1))));
       arg31 = (int)SvIV(ST(2));
       arg32 = (int)SvIV(ST(3));
-      arg33 = QFlags<QString::SectionFlag>((int)SvIV(ST(4)));
+      arg33 = QFlags<QString::SectionFlag>((QString::SectionFlag)SvIV(ST(4)));
     QString ret = THIS->section(*arg30, arg31, arg32, arg33);
     ST(0) = sv_newmortal();
     sv_setref_pv(ST(0), "Qt::Core::QString", (void *)new QString(ret));
@@ -4456,7 +4456,7 @@ PPCODE:
       arg60 = reinterpret_cast<QRegExp *>(SvIV((SV*)SvRV(ST(1))));
       arg61 = (int)SvIV(ST(2));
       arg62 = (int)SvIV(ST(3));
-      arg63 = QFlags<QString::SectionFlag>((int)SvIV(ST(4)));
+      arg63 = QFlags<QString::SectionFlag>((QString::SectionFlag)SvIV(ST(4)));
     QString ret = THIS->section(*arg60, arg61, arg62, arg63);
     ST(0) = sv_newmortal();
     sv_setref_pv(ST(0), "Qt::Core::QString", (void *)new QString(ret));

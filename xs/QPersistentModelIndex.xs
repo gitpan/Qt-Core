@@ -148,7 +148,7 @@ PPCODE:
       
     QFlags<Qt::ItemFlag> ret = THIS->flags();
     ST(0) = sv_newmortal();
-    sv_setiv(ST(0), (IV)ret);
+    sv_setiv(ST(0), (int)ret);
     XSRETURN(1);
     }
 

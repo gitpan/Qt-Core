@@ -452,7 +452,7 @@ PPCODE:
       {
         if (sv_isa(ST(1), "Qt::Core::QString") && SvIOK(ST(2))) {
       arg00 = reinterpret_cast<QString *>(SvIV((SV*)SvRV(ST(1))));
-      arg01 = QFlags<QIODevice::OpenModeFlag>((int)SvIV(ST(2)));
+      arg01 = QFlags<QIODevice::OpenModeFlag>((QIODevice::OpenModeFlag)SvIV(ST(2)));
     (void)THIS->setStandardErrorFile(*arg00, arg01);
     XSRETURN(0);
     }
@@ -503,7 +503,7 @@ PPCODE:
       {
         if (sv_isa(ST(1), "Qt::Core::QString") && SvIOK(ST(2))) {
       arg00 = reinterpret_cast<QString *>(SvIV((SV*)SvRV(ST(1))));
-      arg01 = QFlags<QIODevice::OpenModeFlag>((int)SvIV(ST(2)));
+      arg01 = QFlags<QIODevice::OpenModeFlag>((QIODevice::OpenModeFlag)SvIV(ST(2)));
     (void)THIS->setStandardOutputFile(*arg00, arg01);
     XSRETURN(0);
     }
@@ -581,7 +581,7 @@ PPCODE:
       {
         if (sv_isa(ST(1), "Qt::Core::QString") && SvIOK(ST(2))) {
       arg00 = reinterpret_cast<QString *>(SvIV((SV*)SvRV(ST(1))));
-      arg01 = QFlags<QIODevice::OpenModeFlag>((int)SvIV(ST(2)));
+      arg01 = QFlags<QIODevice::OpenModeFlag>((QIODevice::OpenModeFlag)SvIV(ST(2)));
     (void)THIS->start(*arg00, arg01);
     XSRETURN(0);
     }
@@ -600,7 +600,7 @@ PPCODE:
         if (sv_isa(ST(1), "Qt::Core::QString") && sv_isa(ST(2), "Qt::Core::QStringList") && SvIOK(ST(3))) {
       arg20 = reinterpret_cast<QString *>(SvIV((SV*)SvRV(ST(1))));
       arg21 = reinterpret_cast<QStringList *>(SvIV((SV*)SvRV(ST(2))));
-      arg22 = QFlags<QIODevice::OpenModeFlag>((int)SvIV(ST(3)));
+      arg22 = QFlags<QIODevice::OpenModeFlag>((QIODevice::OpenModeFlag)SvIV(ST(3)));
     (void)THIS->start(*arg20, *arg21, arg22);
     XSRETURN(0);
     }

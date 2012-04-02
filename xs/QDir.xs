@@ -96,7 +96,7 @@ PPCODE:
         if (sv_isa(ST(1), "Qt::Core::QString") && sv_isa(ST(2), "Qt::Core::QString") && SvIOK(ST(3))) {
       arg40 = reinterpret_cast<QString *>(SvIV((SV*)SvRV(ST(1))));
       arg41 = reinterpret_cast<QString *>(SvIV((SV*)SvRV(ST(2))));
-      arg42 = QFlags<QDir::SortFlag>((int)SvIV(ST(3)));
+      arg42 = QFlags<QDir::SortFlag>((QDir::SortFlag)SvIV(ST(3)));
     ret = new QDir(*arg40, *arg41, arg42, arg43);
     ST(0) = sv_newmortal();
     sv_setref_pv(ST(0), "Qt::Core::QDir", (void *)ret);
@@ -111,8 +111,8 @@ PPCODE:
         if (sv_isa(ST(1), "Qt::Core::QString") && sv_isa(ST(2), "Qt::Core::QString") && SvIOK(ST(3)) && SvIOK(ST(4))) {
       arg30 = reinterpret_cast<QString *>(SvIV((SV*)SvRV(ST(1))));
       arg31 = reinterpret_cast<QString *>(SvIV((SV*)SvRV(ST(2))));
-      arg32 = QFlags<QDir::SortFlag>((int)SvIV(ST(3)));
-      arg33 = QFlags<QDir::Filter>((int)SvIV(ST(4)));
+      arg32 = QFlags<QDir::SortFlag>((QDir::SortFlag)SvIV(ST(3)));
+      arg33 = QFlags<QDir::Filter>((QDir::Filter)SvIV(ST(4)));
     ret = new QDir(*arg30, *arg31, arg32, arg33);
     ST(0) = sv_newmortal();
     sv_setref_pv(ST(0), "Qt::Core::QDir", (void *)ret);
@@ -347,7 +347,7 @@ PPCODE:
       case 2:
       {
         if (SvIOK(ST(1))) {
-      arg10 = QFlags<QDir::Filter>((int)SvIV(ST(1)));
+      arg10 = QFlags<QDir::Filter>((QDir::Filter)SvIV(ST(1)));
     QStringList ret = THIS->entryList(arg10, arg11);
     ST(0) = sv_newmortal();
     sv_setref_pv(ST(0), "Qt::Core::QStringList", (void *)new QStringList(ret));
@@ -367,8 +367,8 @@ PPCODE:
       case 3:
       {
         if (SvIOK(ST(1)) && SvIOK(ST(2))) {
-      arg00 = QFlags<QDir::Filter>((int)SvIV(ST(1)));
-      arg01 = QFlags<QDir::SortFlag>((int)SvIV(ST(2)));
+      arg00 = QFlags<QDir::Filter>((QDir::Filter)SvIV(ST(1)));
+      arg01 = QFlags<QDir::SortFlag>((QDir::SortFlag)SvIV(ST(2)));
     QStringList ret = THIS->entryList(arg00, arg01);
     ST(0) = sv_newmortal();
     sv_setref_pv(ST(0), "Qt::Core::QStringList", (void *)new QStringList(ret));
@@ -376,7 +376,7 @@ PPCODE:
     }
         else if (sv_isa(ST(1), "Qt::Core::QStringList") && SvIOK(ST(2))) {
       arg40 = reinterpret_cast<QStringList *>(SvIV((SV*)SvRV(ST(1))));
-      arg41 = QFlags<QDir::Filter>((int)SvIV(ST(2)));
+      arg41 = QFlags<QDir::Filter>((QDir::Filter)SvIV(ST(2)));
     QStringList ret = THIS->entryList(*arg40, arg41, arg42);
     ST(0) = sv_newmortal();
     sv_setref_pv(ST(0), "Qt::Core::QStringList", (void *)new QStringList(ret));
@@ -390,8 +390,8 @@ PPCODE:
       {
         if (sv_isa(ST(1), "Qt::Core::QStringList") && SvIOK(ST(2)) && SvIOK(ST(3))) {
       arg30 = reinterpret_cast<QStringList *>(SvIV((SV*)SvRV(ST(1))));
-      arg31 = QFlags<QDir::Filter>((int)SvIV(ST(2)));
-      arg32 = QFlags<QDir::SortFlag>((int)SvIV(ST(3)));
+      arg31 = QFlags<QDir::Filter>((QDir::Filter)SvIV(ST(2)));
+      arg32 = QFlags<QDir::SortFlag>((QDir::SortFlag)SvIV(ST(3)));
     QStringList ret = THIS->entryList(*arg30, arg31, arg32);
     ST(0) = sv_newmortal();
     sv_setref_pv(ST(0), "Qt::Core::QStringList", (void *)new QStringList(ret));
@@ -466,7 +466,7 @@ PPCODE:
       
     QFlags<QDir::Filter> ret = THIS->filter();
     ST(0) = sv_newmortal();
-    sv_setiv(ST(0), (IV)ret);
+    sv_setiv(ST(0), (int)ret);
     XSRETURN(1);
     }
 
@@ -942,7 +942,7 @@ PREINIT:
 QFlags<QDir::Filter> arg00;
 PPCODE:
     if (SvIOK(ST(1))) {
-      arg00 = QFlags<QDir::Filter>((int)SvIV(ST(1)));
+      arg00 = QFlags<QDir::Filter>((QDir::Filter)SvIV(ST(1)));
     (void)THIS->setFilter(arg00);
     XSRETURN(0);
     }
@@ -992,7 +992,7 @@ PREINIT:
 QFlags<QDir::SortFlag> arg00;
 PPCODE:
     if (SvIOK(ST(1))) {
-      arg00 = QFlags<QDir::SortFlag>((int)SvIV(ST(1)));
+      arg00 = QFlags<QDir::SortFlag>((QDir::SortFlag)SvIV(ST(1)));
     (void)THIS->setSorting(arg00);
     XSRETURN(0);
     }
@@ -1006,7 +1006,7 @@ PPCODE:
       
     QFlags<QDir::SortFlag> ret = THIS->sorting();
     ST(0) = sv_newmortal();
-    sv_setiv(ST(0), (IV)ret);
+    sv_setiv(ST(0), (int)ret);
     XSRETURN(1);
     }
 

@@ -206,7 +206,7 @@ PREINIT:
 QFlags<QIODevice::OpenModeFlag> arg00;
 PPCODE:
     if (SvIOK(ST(1))) {
-      arg00 = QFlags<QIODevice::OpenModeFlag>((int)SvIV(ST(1)));
+      arg00 = QFlags<QIODevice::OpenModeFlag>((QIODevice::OpenModeFlag)SvIV(ST(1)));
     bool ret = THIS->open(arg00);
     ST(0) = sv_newmortal();
     ST(0) = boolSV(ret);

@@ -1115,7 +1115,7 @@ PPCODE:
       case 2:
       {
         if (SvIOK(ST(1))) {
-      arg00 = QFlags<QUrl::FormattingOption>((int)SvIV(ST(1)));
+      arg00 = QFlags<QUrl::FormattingOption>((QUrl::FormattingOption)SvIV(ST(1)));
     QByteArray ret = THIS->toEncoded(arg00);
     ST(0) = sv_newmortal();
     sv_setref_pv(ST(0), "Qt::Core::QByteArray", (void *)new QByteArray(ret));
@@ -1247,7 +1247,7 @@ PPCODE:
       case 2:
       {
         if (SvIOK(ST(1))) {
-      arg00 = QFlags<QUrl::FormattingOption>((int)SvIV(ST(1)));
+      arg00 = QFlags<QUrl::FormattingOption>((QUrl::FormattingOption)SvIV(ST(1)));
     QString ret = THIS->toString(arg00);
     ST(0) = sv_newmortal();
     sv_setref_pv(ST(0), "Qt::Core::QString", (void *)new QString(ret));

@@ -226,7 +226,7 @@ PPCODE:
       arg00 = reinterpret_cast<QModelIndex *>(SvIV((SV*)SvRV(ST(1))));
     QFlags<Qt::ItemFlag> ret = THIS->flags(*arg00);
     ST(0) = sv_newmortal();
-    sv_setiv(ST(0), (IV)ret);
+    sv_setiv(ST(0), (int)ret);
     XSRETURN(1);
     }
 
@@ -962,7 +962,7 @@ PREINIT:
 QFlags<Qt::DropAction> arg00;
 PPCODE:
     if (SvIOK(ST(1))) {
-      arg00 = QFlags<Qt::DropAction>((int)SvIV(ST(1)));
+      arg00 = QFlags<Qt::DropAction>((Qt::DropAction)SvIV(ST(1)));
     (void)THIS->setSupportedDragActions(arg00);
     XSRETURN(0);
     }
@@ -1060,7 +1060,7 @@ PPCODE:
       
     QFlags<Qt::DropAction> ret = THIS->supportedDragActions();
     ST(0) = sv_newmortal();
-    sv_setiv(ST(0), (IV)ret);
+    sv_setiv(ST(0), (int)ret);
     XSRETURN(1);
     }
 
@@ -1073,6 +1073,6 @@ PPCODE:
       
     QFlags<Qt::DropAction> ret = THIS->supportedDropActions();
     ST(0) = sv_newmortal();
-    sv_setiv(ST(0), (IV)ret);
+    sv_setiv(ST(0), (int)ret);
     XSRETURN(1);
     }

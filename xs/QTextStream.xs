@@ -128,7 +128,7 @@ PPCODE:
       {
         if (SvOK(ST(1)) && SvIOK(ST(2))) {
       arg20 = PerlIO_findFILE(IoIFP(sv_2io(ST(1))));
-      arg21 = QFlags<QIODevice::OpenModeFlag>((int)SvIV(ST(2)));
+      arg21 = QFlags<QIODevice::OpenModeFlag>((QIODevice::OpenModeFlag)SvIV(ST(2)));
     ret = new QTextStream(arg20, arg21);
     ST(0) = sv_newmortal();
     sv_setref_pv(ST(0), "Qt::Core::QTextStream", (void *)ret);
@@ -143,7 +143,7 @@ PPCODE:
     }
     else
         Perl_croak(aTHX_ "arg40 is not of type Qt::Core::QString");
-      arg41 = QFlags<QIODevice::OpenModeFlag>((int)SvIV(ST(2)));
+      arg41 = QFlags<QIODevice::OpenModeFlag>((QIODevice::OpenModeFlag)SvIV(ST(2)));
     ret = new QTextStream(arg40, arg41);
     ST(0) = sv_newmortal();
     sv_setref_pv(ST(0), "Qt::Core::QTextStream", (void *)ret);
@@ -158,7 +158,7 @@ PPCODE:
     }
     else
         Perl_croak(aTHX_ "arg60 is not of type Qt::Core::QByteArray");
-      arg61 = QFlags<QIODevice::OpenModeFlag>((int)SvIV(ST(2)));
+      arg61 = QFlags<QIODevice::OpenModeFlag>((QIODevice::OpenModeFlag)SvIV(ST(2)));
     ret = new QTextStream(arg60, arg61);
     ST(0) = sv_newmortal();
     sv_setref_pv(ST(0), "Qt::Core::QTextStream", (void *)ret);
@@ -166,7 +166,7 @@ PPCODE:
     }
         else if (sv_isa(ST(1), "Qt::Core::QByteArray") && SvIOK(ST(2))) {
       arg80 = reinterpret_cast<QByteArray *>(SvIV((SV*)SvRV(ST(1))));
-      arg81 = QFlags<QIODevice::OpenModeFlag>((int)SvIV(ST(2)));
+      arg81 = QFlags<QIODevice::OpenModeFlag>((QIODevice::OpenModeFlag)SvIV(ST(2)));
     ret = new QTextStream(*arg80, arg81);
     ST(0) = sv_newmortal();
     sv_setref_pv(ST(0), "Qt::Core::QTextStream", (void *)ret);
@@ -325,7 +325,7 @@ PPCODE:
       
     QFlags<QTextStream::NumberFlag> ret = THIS->numberFlags();
     ST(0) = sv_newmortal();
-    sv_setiv(ST(0), (IV)ret);
+    sv_setiv(ST(0), (int)ret);
     XSRETURN(1);
     }
 
@@ -937,7 +937,7 @@ PREINIT:
 QFlags<QTextStream::NumberFlag> arg00;
 PPCODE:
     if (SvIOK(ST(1))) {
-      arg00 = QFlags<QTextStream::NumberFlag>((int)SvIV(ST(1)));
+      arg00 = QFlags<QTextStream::NumberFlag>((QTextStream::NumberFlag)SvIV(ST(1)));
     (void)THIS->setNumberFlags(arg00);
     XSRETURN(0);
     }
@@ -1030,7 +1030,7 @@ PPCODE:
     }
     else
         Perl_croak(aTHX_ "arg00 is not of type Qt::Core::QString");
-      arg01 = QFlags<QIODevice::OpenModeFlag>((int)SvIV(ST(2)));
+      arg01 = QFlags<QIODevice::OpenModeFlag>((QIODevice::OpenModeFlag)SvIV(ST(2)));
     (void)THIS->setString(arg00, arg01);
     XSRETURN(0);
     }

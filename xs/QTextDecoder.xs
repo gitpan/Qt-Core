@@ -60,7 +60,7 @@ PPCODE:
     }
     else
         Perl_croak(aTHX_ "arg10 is not of type Qt::Core::QTextCodec");
-      arg11 = QFlags<QTextCodec::ConversionFlag>((int)SvIV(ST(2)));
+      arg11 = QFlags<QTextCodec::ConversionFlag>((QTextCodec::ConversionFlag)SvIV(ST(2)));
     ret = new QTextDecoder(arg10, arg11);
     ST(0) = sv_newmortal();
     sv_setref_pv(ST(0), "Qt::Core::QTextDecoder", (void *)ret);

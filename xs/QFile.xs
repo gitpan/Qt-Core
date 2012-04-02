@@ -437,7 +437,7 @@ PPCODE:
       case 2:
       {
         if (SvIOK(ST(1))) {
-      arg00 = QFlags<QIODevice::OpenModeFlag>((int)SvIV(ST(1)));
+      arg00 = QFlags<QIODevice::OpenModeFlag>((QIODevice::OpenModeFlag)SvIV(ST(1)));
     bool ret = THIS->open(arg00);
     ST(0) = sv_newmortal();
     ST(0) = boolSV(ret);
@@ -451,7 +451,7 @@ PPCODE:
       {
         if (SvOK(ST(1)) && SvIOK(ST(2))) {
       arg10 = PerlIO_findFILE(IoIFP(sv_2io(ST(1))));
-      arg11 = QFlags<QIODevice::OpenModeFlag>((int)SvIV(ST(2)));
+      arg11 = QFlags<QIODevice::OpenModeFlag>((QIODevice::OpenModeFlag)SvIV(ST(2)));
     bool ret = THIS->open(arg10, arg11);
     ST(0) = sv_newmortal();
     ST(0) = boolSV(ret);
@@ -459,7 +459,7 @@ PPCODE:
     }
         else if (SvIOK(ST(1)) && SvIOK(ST(2))) {
       arg20 = (int)SvIV(ST(1));
-      arg21 = QFlags<QIODevice::OpenModeFlag>((int)SvIV(ST(2)));
+      arg21 = QFlags<QIODevice::OpenModeFlag>((QIODevice::OpenModeFlag)SvIV(ST(2)));
     bool ret = THIS->open(arg20, arg21);
     ST(0) = sv_newmortal();
     ST(0) = boolSV(ret);
@@ -488,7 +488,7 @@ PPCODE:
       
     QFlags<QFile::Permission> ret = THIS->permissions();
     ST(0) = sv_newmortal();
-    sv_setiv(ST(0), (IV)ret);
+    sv_setiv(ST(0), (int)ret);
     XSRETURN(1);
     }
         break;
@@ -499,7 +499,7 @@ PPCODE:
       arg10 = reinterpret_cast<QString *>(SvIV((SV*)SvRV(ST(1))));
     QFlags<QFile::Permission> ret = THIS->permissions(*arg10);
     ST(0) = sv_newmortal();
-    sv_setiv(ST(0), (IV)ret);
+    sv_setiv(ST(0), (int)ret);
     XSRETURN(1);
     }
 	else
@@ -745,7 +745,7 @@ PPCODE:
       case 2:
       {
         if (SvIOK(ST(1))) {
-      arg00 = QFlags<QFile::Permission>((int)SvIV(ST(1)));
+      arg00 = QFlags<QFile::Permission>((QFile::Permission)SvIV(ST(1)));
     bool ret = THIS->setPermissions(arg00);
     ST(0) = sv_newmortal();
     ST(0) = boolSV(ret);
@@ -759,7 +759,7 @@ PPCODE:
       {
         if (sv_isa(ST(1), "Qt::Core::QString") && SvIOK(ST(2))) {
       arg10 = reinterpret_cast<QString *>(SvIV((SV*)SvRV(ST(1))));
-      arg11 = QFlags<QFile::Permission>((int)SvIV(ST(2)));
+      arg11 = QFlags<QFile::Permission>((QFile::Permission)SvIV(ST(2)));
     bool ret = THIS->setPermissions(*arg10, arg11);
     ST(0) = sv_newmortal();
     ST(0) = boolSV(ret);

@@ -509,6 +509,19 @@ PPCODE:
     XSRETURN(1);
     }
 
+## int revision()
+void
+QMetaProperty::revision(...)
+PREINIT:
+PPCODE:
+    if (1) {
+      
+    int ret = THIS->revision();
+    ST(0) = sv_newmortal();
+    sv_setiv(ST(0), (IV)ret);
+    XSRETURN(1);
+    }
+
 ## QVariant::Type type()
 void
 QMetaProperty::type(...)

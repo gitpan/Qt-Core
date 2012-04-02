@@ -465,7 +465,7 @@ PPCODE:
       case 2:
       {
         if (SvIOK(ST(1))) {
-      arg00 = QFlags<QEventLoop::ProcessEventsFlag>((int)SvIV(ST(1)));
+      arg00 = QFlags<QEventLoop::ProcessEventsFlag>((QEventLoop::ProcessEventsFlag)SvIV(ST(1)));
     (void)THIS->processEvents(arg00);
     XSRETURN(0);
     }
@@ -476,7 +476,7 @@ PPCODE:
       case 3:
       {
         if (SvIOK(ST(1)) && SvIOK(ST(2))) {
-      arg20 = QFlags<QEventLoop::ProcessEventsFlag>((int)SvIV(ST(1)));
+      arg20 = QFlags<QEventLoop::ProcessEventsFlag>((QEventLoop::ProcessEventsFlag)SvIV(ST(1)));
       arg21 = (int)SvIV(ST(2));
     (void)THIS->processEvents(arg20, arg21);
     XSRETURN(0);

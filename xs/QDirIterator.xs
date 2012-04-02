@@ -83,7 +83,7 @@ PPCODE:
       {
         if (sv_isa(ST(1), "Qt::Core::QDir") && SvIOK(ST(2))) {
       arg00 = reinterpret_cast<QDir *>(SvIV((SV*)SvRV(ST(1))));
-      arg01 = QFlags<QDirIterator::IteratorFlag>((int)SvIV(ST(2)));
+      arg01 = QFlags<QDirIterator::IteratorFlag>((QDirIterator::IteratorFlag)SvIV(ST(2)));
     ret = new QDirIterator(*arg00, arg01);
     ST(0) = sv_newmortal();
     sv_setref_pv(ST(0), "Qt::Core::QDirIterator", (void *)ret);
@@ -91,7 +91,7 @@ PPCODE:
     }
         else if (sv_isa(ST(1), "Qt::Core::QString") && SvIOK(ST(2))) {
       arg20 = reinterpret_cast<QString *>(SvIV((SV*)SvRV(ST(1))));
-      arg21 = QFlags<QDirIterator::IteratorFlag>((int)SvIV(ST(2)));
+      arg21 = QFlags<QDirIterator::IteratorFlag>((QDirIterator::IteratorFlag)SvIV(ST(2)));
     ret = new QDirIterator(*arg20, arg21);
     ST(0) = sv_newmortal();
     sv_setref_pv(ST(0), "Qt::Core::QDirIterator", (void *)ret);
@@ -99,7 +99,7 @@ PPCODE:
     }
         else if (sv_isa(ST(1), "Qt::Core::QString") && SvIOK(ST(2))) {
       arg50 = reinterpret_cast<QString *>(SvIV((SV*)SvRV(ST(1))));
-      arg51 = QFlags<QDir::Filter>((int)SvIV(ST(2)));
+      arg51 = QFlags<QDir::Filter>((QDir::Filter)SvIV(ST(2)));
     ret = new QDirIterator(*arg50, arg51, arg52);
     ST(0) = sv_newmortal();
     sv_setref_pv(ST(0), "Qt::Core::QDirIterator", (void *)ret);
@@ -121,8 +121,8 @@ PPCODE:
       {
         if (sv_isa(ST(1), "Qt::Core::QString") && SvIOK(ST(2)) && SvIOK(ST(3))) {
       arg40 = reinterpret_cast<QString *>(SvIV((SV*)SvRV(ST(1))));
-      arg41 = QFlags<QDir::Filter>((int)SvIV(ST(2)));
-      arg42 = QFlags<QDirIterator::IteratorFlag>((int)SvIV(ST(3)));
+      arg41 = QFlags<QDir::Filter>((QDir::Filter)SvIV(ST(2)));
+      arg42 = QFlags<QDirIterator::IteratorFlag>((QDirIterator::IteratorFlag)SvIV(ST(3)));
     ret = new QDirIterator(*arg40, arg41, arg42);
     ST(0) = sv_newmortal();
     sv_setref_pv(ST(0), "Qt::Core::QDirIterator", (void *)ret);
@@ -131,7 +131,7 @@ PPCODE:
         else if (sv_isa(ST(1), "Qt::Core::QString") && sv_isa(ST(2), "Qt::Core::QStringList") && SvIOK(ST(3))) {
       arg70 = reinterpret_cast<QString *>(SvIV((SV*)SvRV(ST(1))));
       arg71 = reinterpret_cast<QStringList *>(SvIV((SV*)SvRV(ST(2))));
-      arg72 = QFlags<QDir::Filter>((int)SvIV(ST(3)));
+      arg72 = QFlags<QDir::Filter>((QDir::Filter)SvIV(ST(3)));
     ret = new QDirIterator(*arg70, *arg71, arg72, arg73);
     ST(0) = sv_newmortal();
     sv_setref_pv(ST(0), "Qt::Core::QDirIterator", (void *)ret);
@@ -146,8 +146,8 @@ PPCODE:
         if (sv_isa(ST(1), "Qt::Core::QString") && sv_isa(ST(2), "Qt::Core::QStringList") && SvIOK(ST(3)) && SvIOK(ST(4))) {
       arg60 = reinterpret_cast<QString *>(SvIV((SV*)SvRV(ST(1))));
       arg61 = reinterpret_cast<QStringList *>(SvIV((SV*)SvRV(ST(2))));
-      arg62 = QFlags<QDir::Filter>((int)SvIV(ST(3)));
-      arg63 = QFlags<QDirIterator::IteratorFlag>((int)SvIV(ST(4)));
+      arg62 = QFlags<QDir::Filter>((QDir::Filter)SvIV(ST(3)));
+      arg63 = QFlags<QDirIterator::IteratorFlag>((QDirIterator::IteratorFlag)SvIV(ST(4)));
     ret = new QDirIterator(*arg60, *arg61, arg62, arg63);
     ST(0) = sv_newmortal();
     sv_setref_pv(ST(0), "Qt::Core::QDirIterator", (void *)ret);

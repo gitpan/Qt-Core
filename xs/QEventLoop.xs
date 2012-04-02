@@ -94,7 +94,7 @@ PPCODE:
       case 2:
       {
         if (SvIOK(ST(1))) {
-      arg00 = QFlags<QEventLoop::ProcessEventsFlag>((int)SvIV(ST(1)));
+      arg00 = QFlags<QEventLoop::ProcessEventsFlag>((QEventLoop::ProcessEventsFlag)SvIV(ST(1)));
     int ret = THIS->exec(arg00);
     ST(0) = sv_newmortal();
     sv_setiv(ST(0), (IV)ret);
@@ -182,7 +182,7 @@ PPCODE:
       case 2:
       {
         if (SvIOK(ST(1))) {
-      arg00 = QFlags<QEventLoop::ProcessEventsFlag>((int)SvIV(ST(1)));
+      arg00 = QFlags<QEventLoop::ProcessEventsFlag>((QEventLoop::ProcessEventsFlag)SvIV(ST(1)));
     bool ret = THIS->processEvents(arg00);
     ST(0) = sv_newmortal();
     ST(0) = boolSV(ret);
@@ -195,7 +195,7 @@ PPCODE:
       case 3:
       {
         if (SvIOK(ST(1)) && SvIOK(ST(2))) {
-      arg20 = QFlags<QEventLoop::ProcessEventsFlag>((int)SvIV(ST(1)));
+      arg20 = QFlags<QEventLoop::ProcessEventsFlag>((QEventLoop::ProcessEventsFlag)SvIV(ST(1)));
       arg21 = (int)SvIV(ST(2));
     (void)THIS->processEvents(arg20, arg21);
     XSRETURN(0);

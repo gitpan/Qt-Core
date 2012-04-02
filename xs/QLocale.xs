@@ -423,7 +423,7 @@ PPCODE:
       
     QFlags<QLocale::NumberOption> ret = THIS->numberOptions();
     ST(0) = sv_newmortal();
-    sv_setiv(ST(0), (IV)ret);
+    sv_setiv(ST(0), (int)ret);
     XSRETURN(1);
     }
 
@@ -527,7 +527,7 @@ PREINIT:
 QFlags<QLocale::NumberOption> arg00;
 PPCODE:
     if (SvIOK(ST(1))) {
-      arg00 = QFlags<QLocale::NumberOption>((int)SvIV(ST(1)));
+      arg00 = QFlags<QLocale::NumberOption>((QLocale::NumberOption)SvIV(ST(1)));
     (void)THIS->setNumberOptions(arg00);
     XSRETURN(0);
     }

@@ -27,7 +27,7 @@ QFlags<QDir::Filter> arg00;
 QStringList * arg01;
 PPCODE:
     if (SvIOK(ST(1)) && sv_isa(ST(2), "Qt::Core::QStringList")) {
-      arg00 = QFlags<QDir::Filter>((int)SvIV(ST(1)));
+      arg00 = QFlags<QDir::Filter>((QDir::Filter)SvIV(ST(1)));
       arg01 = reinterpret_cast<QStringList *>(SvIV((SV*)SvRV(ST(2))));
     Perl_croak(aTHX_ "Trying to create abstract class object");
     }
@@ -87,7 +87,7 @@ PPCODE:
       
     QFlags<QDir::Filter> ret = THIS->filters();
     ST(0) = sv_newmortal();
-    sv_setiv(ST(0), (IV)ret);
+    sv_setiv(ST(0), (int)ret);
     XSRETURN(1);
     }
 

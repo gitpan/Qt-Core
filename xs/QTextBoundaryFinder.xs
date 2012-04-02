@@ -176,7 +176,7 @@ PPCODE:
       
     QFlags<QTextBoundaryFinder::BoundaryReason> ret = THIS->boundaryReasons();
     ST(0) = sv_newmortal();
-    sv_setiv(ST(0), (IV)ret);
+    sv_setiv(ST(0), (int)ret);
     XSRETURN(1);
     }
 

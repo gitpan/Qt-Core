@@ -81,7 +81,7 @@ PPCODE:
     }
     else
         Perl_croak(aTHX_ "arg30 is not of type Qt::Core::QByteArray");
-      arg31 = QFlags<QIODevice::OpenModeFlag>((int)SvIV(ST(2)));
+      arg31 = QFlags<QIODevice::OpenModeFlag>((QIODevice::OpenModeFlag)SvIV(ST(2)));
     ret = new QDataStream(arg30, arg31);
     ST(0) = sv_newmortal();
     sv_setref_pv(ST(0), "Qt::Core::QDataStream", (void *)ret);

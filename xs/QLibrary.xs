@@ -250,7 +250,7 @@ PPCODE:
       
     QFlags<QLibrary::LoadHint> ret = THIS->loadHints();
     ST(0) = sv_newmortal();
-    sv_setiv(ST(0), (IV)ret);
+    sv_setiv(ST(0), (int)ret);
     XSRETURN(1);
     }
 
@@ -381,7 +381,7 @@ PREINIT:
 QFlags<QLibrary::LoadHint> arg00;
 PPCODE:
     if (SvIOK(ST(1))) {
-      arg00 = QFlags<QLibrary::LoadHint>((int)SvIV(ST(1)));
+      arg00 = QFlags<QLibrary::LoadHint>((QLibrary::LoadHint)SvIV(ST(1)));
     (void)THIS->setLoadHints(arg00);
     XSRETURN(0);
     }

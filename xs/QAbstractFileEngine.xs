@@ -48,7 +48,7 @@ QFlags<QDir::Filter> arg00;
 QStringList * arg01;
 PPCODE:
     if (SvIOK(ST(1)) && sv_isa(ST(2), "Qt::Core::QStringList")) {
-      arg00 = QFlags<QDir::Filter>((int)SvIV(ST(1)));
+      arg00 = QFlags<QDir::Filter>((QDir::Filter)SvIV(ST(1)));
       arg01 = reinterpret_cast<QStringList *>(SvIV((SV*)SvRV(ST(2))));
     QAbstractFileEngineIterator * ret = THIS->beginEntryList(arg00, *arg01);
     ST(0) = sv_newmortal();
@@ -117,7 +117,7 @@ QFlags<QDir::Filter> arg00;
 QStringList * arg01;
 PPCODE:
     if (SvIOK(ST(1)) && sv_isa(ST(2), "Qt::Core::QStringList")) {
-      arg00 = QFlags<QDir::Filter>((int)SvIV(ST(1)));
+      arg00 = QFlags<QDir::Filter>((QDir::Filter)SvIV(ST(1)));
       arg01 = reinterpret_cast<QStringList *>(SvIV((SV*)SvRV(ST(2))));
     QStringList ret = THIS->entryList(arg00, *arg01);
     ST(0) = sv_newmortal();
@@ -166,7 +166,7 @@ PPCODE:
       
     QFlags<QAbstractFileEngine::FileFlag> ret = THIS->fileFlags(arg10);
     ST(0) = sv_newmortal();
-    sv_setiv(ST(0), (IV)ret);
+    sv_setiv(ST(0), (int)ret);
     XSRETURN(1);
     }
         break;
@@ -174,10 +174,10 @@ PPCODE:
       case 2:
       {
         if (SvIOK(ST(1))) {
-      arg00 = QFlags<QAbstractFileEngine::FileFlag>((int)SvIV(ST(1)));
+      arg00 = QFlags<QAbstractFileEngine::FileFlag>((QAbstractFileEngine::FileFlag)SvIV(ST(1)));
     QFlags<QAbstractFileEngine::FileFlag> ret = THIS->fileFlags(arg00);
     ST(0) = sv_newmortal();
-    sv_setiv(ST(0), (IV)ret);
+    sv_setiv(ST(0), (int)ret);
     XSRETURN(1);
     }
 	else
@@ -348,7 +348,7 @@ PREINIT:
 QFlags<QIODevice::OpenModeFlag> arg00;
 PPCODE:
     if (SvIOK(ST(1))) {
-      arg00 = QFlags<QIODevice::OpenModeFlag>((int)SvIV(ST(1)));
+      arg00 = QFlags<QIODevice::OpenModeFlag>((QIODevice::OpenModeFlag)SvIV(ST(1)));
     bool ret = THIS->open(arg00);
     ST(0) = sv_newmortal();
     ST(0) = boolSV(ret);

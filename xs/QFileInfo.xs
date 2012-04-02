@@ -640,7 +640,7 @@ PREINIT:
 QFlags<QFile::Permission> arg00;
 PPCODE:
     if (SvIOK(ST(1))) {
-      arg00 = QFlags<QFile::Permission>((int)SvIV(ST(1)));
+      arg00 = QFlags<QFile::Permission>((QFile::Permission)SvIV(ST(1)));
     bool ret = THIS->permission(arg00);
     ST(0) = sv_newmortal();
     ST(0) = boolSV(ret);
@@ -656,7 +656,7 @@ PPCODE:
       
     QFlags<QFile::Permission> ret = THIS->permissions();
     ST(0) = sv_newmortal();
-    sv_setiv(ST(0), (IV)ret);
+    sv_setiv(ST(0), (int)ret);
     XSRETURN(1);
     }
 
