@@ -7,7 +7,7 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_04';
+our $VERSION = '0.01_05';
 use base qw/Qt::Core::QAbstractFileEngine/;
 #our @ISA = qw/Qt::Core::QAbstractFileEngine/;
 
@@ -42,6 +42,8 @@ Qt::Core::QFSFileEngine
 =item  static QString currentPath(const QString & path)
 
 =item  static QString currentPath(const QString & path = QString())
+
+=item  static QList<QFileInfo> drives()
 
 =item  QAbstractFileEngineIterator * endEntryList()
 

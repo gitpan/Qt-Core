@@ -7,7 +7,7 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_04';
+our $VERSION = '0.01_05';
 
 
 # FIXME: operator overload
@@ -43,8 +43,6 @@ Qt::Core::QXmlStreamAttributes
 
 =item  QStringRef value(const QLatin1String & namespaceUri, const QLatin1String & name)
 
-=item  const QXmlStreamAttribute & at(int i)
-
 =item  int capacity()
 
 =item  void clear()
@@ -59,6 +57,10 @@ Qt::Core::QXmlStreamAttributes
 
 =item  void detach()
 
+=item  QVector<QXmlStreamAttribute> & fill(const QXmlStreamAttribute & t, int size)
+
+=item  QVector<QXmlStreamAttribute> & fill(const QXmlStreamAttribute & t, int size = -1)
+
 =item  int indexOf(const QXmlStreamAttribute & t, int from)
 
 =item  int indexOf(const QXmlStreamAttribute & t, int from = 0)
@@ -71,9 +73,15 @@ Qt::Core::QXmlStreamAttributes
 
 =item  bool isEmpty()
 
+=item  bool isSharedWith(const QVector<QXmlStreamAttribute> & other)
+
 =item  int lastIndexOf(const QXmlStreamAttribute & t, int from)
 
 =item  int lastIndexOf(const QXmlStreamAttribute & t, int from = -1)
+
+=item  bool operator!=(const QVector<QXmlStreamAttribute> & v)
+
+=item  bool operator==(const QVector<QXmlStreamAttribute> & v)
 
 =item  const QXmlStreamAttribute & operator[](int i)
 

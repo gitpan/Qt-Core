@@ -7,7 +7,7 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_04';
+our $VERSION = '0.01_05';
 use base qw/Qt::Core::QFactoryInterface/;
 #our @ISA = qw/Qt::Core::QFactoryInterface/;
 

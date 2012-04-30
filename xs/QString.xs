@@ -1,7 +1,7 @@
 ################################################################
 # THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 #
-# Copyright (C) 2007 - 2011 by Dongxu Ma <dongxu _at_ cpan _dot_ org>
+# Copyright (C) 2007 - 2012 by Dongxu Ma <dongxu _at_ cpan _dot_ org>
 #
 # This library is free software; you can redistribute it and/or 
 # modify it under the same terms as Perl itself.
@@ -1095,20 +1095,6 @@ PPCODE:
       default:
         Perl_croak(aTHX_ "wrong number/type of arguments passed in");
         break;
-    }
-
-## const QChar at(int i)
-void
-QString::at(...)
-PREINIT:
-int arg00;
-PPCODE:
-    if (SvIOK(ST(1))) {
-      arg00 = (int)SvIV(ST(1));
-    const QChar ret = THIS->at(arg00);
-    ST(0) = sv_newmortal();
-    sv_setref_pv(ST(0), "", (void *)new const QChar(ret));
-    XSRETURN(1);
     }
 
 ## QChar * begin()
@@ -5709,6 +5695,19 @@ PPCODE:
       default:
         Perl_croak(aTHX_ "wrong number/type of arguments passed in");
         break;
+    }
+
+## QVector<unsigned int> toUcs4()
+void
+QString::toUcs4(...)
+PREINIT:
+PPCODE:
+    if (1) {
+      
+    QVector<unsigned int> ret = THIS->toUcs4();
+    ST(0) = sv_newmortal();
+    sv_setref_pv(ST(0), "Qt::Core::Template::T002", (void *)new QVector<unsigned int>(ret));
+    XSRETURN(1);
     }
 
 ## QString toUpper()

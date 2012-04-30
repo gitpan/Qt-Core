@@ -7,7 +7,7 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_04';
+our $VERSION = '0.01_05';
 
 
 # FIXME: operator overload
@@ -36,6 +36,8 @@ Qt::Core::QLocale
 =item  QString amText()
 
 =item  static QLocale c()
+
+=item  static QList<QLocale::Country> countriesForLanguage(QLocale::Language lang)
 
 =item  QLocale::Country country()
 

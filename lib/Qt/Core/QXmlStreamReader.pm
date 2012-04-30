@@ -7,7 +7,7 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_04';
+our $VERSION = '0.01_05';
 
 
 # FIXME: operator overload
@@ -43,6 +43,8 @@ Qt::Core::QXmlStreamReader
 
 =item  void addExtraNamespaceDeclaration(const QXmlStreamNamespaceDeclaration & extraNamespaceDeclaraction)
 
+=item  void addExtraNamespaceDeclarations(const QVector<QXmlStreamNamespaceDeclaration> & extraNamespaceDeclaractions)
+
 =item  bool atEnd()
 
 =item  QXmlStreamAttributes attributes()
@@ -64,6 +66,8 @@ Qt::Core::QXmlStreamReader
 =item  QStringRef dtdPublicId()
 
 =item  QStringRef dtdSystemId()
+
+=item  QVector<QXmlStreamEntityDeclaration> entityDeclarations()
 
 =item  QXmlStreamEntityResolver * entityResolver()
 
@@ -101,9 +105,13 @@ Qt::Core::QXmlStreamReader
 
 =item  QStringRef name()
 
+=item  QVector<QXmlStreamNamespaceDeclaration> namespaceDeclarations()
+
 =item  bool namespaceProcessing()
 
 =item  QStringRef namespaceUri()
+
+=item  QVector<QXmlStreamNotationDeclaration> notationDeclarations()
 
 =item  QStringRef prefix()
 

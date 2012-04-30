@@ -7,7 +7,7 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_04';
+our $VERSION = '0.01_05';
 
 
 # FIXME: operator overload
@@ -46,8 +46,6 @@ Qt::Core::QByteArray
 =item  QByteArray & append(const QString & s)
 
 =item  QByteArray & append(const char * s, int len)
-
-=item  char at(int i)
 
 =item  char * begin()
 
@@ -336,6 +334,8 @@ Qt::Core::QByteArray
 =item  QByteArray simplified()
 
 =item  int size()
+
+=item  QList<QByteArray> split(char sep)
 
 =item  void squeeze()
 

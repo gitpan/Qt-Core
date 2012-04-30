@@ -5,7 +5,7 @@
 
 # change 'tests => 1' to 'tests => last_test_to_print';
 
-use Test::More tests => 154;
+use Test::More tests => 155;
 BEGIN {
 use_ok('Qt::Core');
 use_ok('Qt::Core');
@@ -29,6 +29,7 @@ use_ok('Qt::Core::QSystemLocale');
 use_ok('Qt::Core::QLatin1String');
 use_ok('Qt::Core::QByteRef');
 use_ok('Qt::Core::QSysInfo');
+use_ok('Qt::Core::Template');
 use_ok('Qt::Core::QMapData');
 use_ok('Qt::Core::QAbstractTransition');
 use_ok('Qt::Core::QDataStream');

@@ -172,6 +172,36 @@ QTemporaryFile *                        		T_PTROBJ_0168
 QLatin1Literal *                        		T_PTROBJ_0169
 QAbstractConcatenable *                 		T_PTROBJ_0170
 QBool *                                 		T_PTROBJ_0171
+T000 *                                  		T_PTROBJ_0172
+T001 *                                  		T_PTROBJ_0173
+T002 *                                  		T_PTROBJ_0174
+T003 *                                  		T_PTROBJ_0175
+T004 *                                  		T_PTROBJ_0176
+T005 *                                  		T_PTROBJ_0177
+T006 *                                  		T_PTROBJ_0178
+T007 *                                  		T_PTROBJ_0179
+T008 *                                  		T_PTROBJ_0180
+T009 *                                  		T_PTROBJ_0181
+T010 *                                  		T_PTROBJ_0182
+T011 *                                  		T_PTROBJ_0183
+T012 *                                  		T_PTROBJ_0184
+T013 *                                  		T_PTROBJ_0185
+T014 *                                  		T_PTROBJ_0186
+T015 *                                  		T_PTROBJ_0187
+T016 *                                  		T_PTROBJ_0188
+T017 *                                  		T_PTROBJ_0189
+T018 *                                  		T_PTROBJ_0190
+T019 *                                  		T_PTROBJ_0191
+T020 *                                  		T_PTROBJ_0192
+T021 *                                  		T_PTROBJ_0193
+T022 *                                  		T_PTROBJ_0194
+T023 *                                  		T_PTROBJ_0195
+T024 *                                  		T_PTROBJ_0196
+T025 *                                  		T_PTROBJ_0197
+T026 *                                  		T_PTROBJ_0198
+T027 *                                  		T_PTROBJ_0199
+T028 *                                  		T_PTROBJ_0200
+T029 *                                  		T_PTROBJ_0201
 
 ################################################################
 INPUT
@@ -1207,6 +1237,186 @@ T_PTROBJ_0171
     else
         Perl_croak(aTHX_ \"$var is not of type Qt::Core::QBool\");
 
+T_PTROBJ_0172
+    if (sv_derived_from($arg, \"Qt::Core::Template::T000\"))
+        $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
+    else
+        Perl_croak(aTHX_ \"$var is not of type Qt::Core::Template::T000\");
+
+T_PTROBJ_0173
+    if (sv_derived_from($arg, \"Qt::Core::Template::T001\"))
+        $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
+    else
+        Perl_croak(aTHX_ \"$var is not of type Qt::Core::Template::T001\");
+
+T_PTROBJ_0174
+    if (sv_derived_from($arg, \"Qt::Core::Template::T002\"))
+        $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
+    else
+        Perl_croak(aTHX_ \"$var is not of type Qt::Core::Template::T002\");
+
+T_PTROBJ_0175
+    if (sv_derived_from($arg, \"Qt::Core::Template::T003\"))
+        $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
+    else
+        Perl_croak(aTHX_ \"$var is not of type Qt::Core::Template::T003\");
+
+T_PTROBJ_0176
+    if (sv_derived_from($arg, \"Qt::Core::Template::T004\"))
+        $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
+    else
+        Perl_croak(aTHX_ \"$var is not of type Qt::Core::Template::T004\");
+
+T_PTROBJ_0177
+    if (sv_derived_from($arg, \"Qt::Core::Template::T005\"))
+        $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
+    else
+        Perl_croak(aTHX_ \"$var is not of type Qt::Core::Template::T005\");
+
+T_PTROBJ_0178
+    if (sv_derived_from($arg, \"Qt::Core::Template::T006\"))
+        $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
+    else
+        Perl_croak(aTHX_ \"$var is not of type Qt::Core::Template::T006\");
+
+T_PTROBJ_0179
+    if (sv_derived_from($arg, \"Qt::Core::Template::T007\"))
+        $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
+    else
+        Perl_croak(aTHX_ \"$var is not of type Qt::Core::Template::T007\");
+
+T_PTROBJ_0180
+    if (sv_derived_from($arg, \"Qt::Core::Template::T008\"))
+        $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
+    else
+        Perl_croak(aTHX_ \"$var is not of type Qt::Core::Template::T008\");
+
+T_PTROBJ_0181
+    if (sv_derived_from($arg, \"Qt::Core::Template::T009\"))
+        $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
+    else
+        Perl_croak(aTHX_ \"$var is not of type Qt::Core::Template::T009\");
+
+T_PTROBJ_0182
+    if (sv_derived_from($arg, \"Qt::Core::Template::T010\"))
+        $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
+    else
+        Perl_croak(aTHX_ \"$var is not of type Qt::Core::Template::T010\");
+
+T_PTROBJ_0183
+    if (sv_derived_from($arg, \"Qt::Core::Template::T011\"))
+        $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
+    else
+        Perl_croak(aTHX_ \"$var is not of type Qt::Core::Template::T011\");
+
+T_PTROBJ_0184
+    if (sv_derived_from($arg, \"Qt::Core::Template::T012\"))
+        $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
+    else
+        Perl_croak(aTHX_ \"$var is not of type Qt::Core::Template::T012\");
+
+T_PTROBJ_0185
+    if (sv_derived_from($arg, \"Qt::Core::Template::T013\"))
+        $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
+    else
+        Perl_croak(aTHX_ \"$var is not of type Qt::Core::Template::T013\");
+
+T_PTROBJ_0186
+    if (sv_derived_from($arg, \"Qt::Core::Template::T014\"))
+        $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
+    else
+        Perl_croak(aTHX_ \"$var is not of type Qt::Core::Template::T014\");
+
+T_PTROBJ_0187
+    if (sv_derived_from($arg, \"Qt::Core::Template::T015\"))
+        $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
+    else
+        Perl_croak(aTHX_ \"$var is not of type Qt::Core::Template::T015\");
+
+T_PTROBJ_0188
+    if (sv_derived_from($arg, \"Qt::Core::Template::T016\"))
+        $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
+    else
+        Perl_croak(aTHX_ \"$var is not of type Qt::Core::Template::T016\");
+
+T_PTROBJ_0189
+    if (sv_derived_from($arg, \"Qt::Core::Template::T017\"))
+        $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
+    else
+        Perl_croak(aTHX_ \"$var is not of type Qt::Core::Template::T017\");
+
+T_PTROBJ_0190
+    if (sv_derived_from($arg, \"Qt::Core::Template::T018\"))
+        $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
+    else
+        Perl_croak(aTHX_ \"$var is not of type Qt::Core::Template::T018\");
+
+T_PTROBJ_0191
+    if (sv_derived_from($arg, \"Qt::Core::Template::T019\"))
+        $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
+    else
+        Perl_croak(aTHX_ \"$var is not of type Qt::Core::Template::T019\");
+
+T_PTROBJ_0192
+    if (sv_derived_from($arg, \"Qt::Core::Template::T020\"))
+        $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
+    else
+        Perl_croak(aTHX_ \"$var is not of type Qt::Core::Template::T020\");
+
+T_PTROBJ_0193
+    if (sv_derived_from($arg, \"Qt::Core::Template::T021\"))
+        $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
+    else
+        Perl_croak(aTHX_ \"$var is not of type Qt::Core::Template::T021\");
+
+T_PTROBJ_0194
+    if (sv_derived_from($arg, \"Qt::Core::Template::T022\"))
+        $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
+    else
+        Perl_croak(aTHX_ \"$var is not of type Qt::Core::Template::T022\");
+
+T_PTROBJ_0195
+    if (sv_derived_from($arg, \"Qt::Core::Template::T023\"))
+        $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
+    else
+        Perl_croak(aTHX_ \"$var is not of type Qt::Core::Template::T023\");
+
+T_PTROBJ_0196
+    if (sv_derived_from($arg, \"Qt::Core::Template::T024\"))
+        $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
+    else
+        Perl_croak(aTHX_ \"$var is not of type Qt::Core::Template::T024\");
+
+T_PTROBJ_0197
+    if (sv_derived_from($arg, \"Qt::Core::Template::T025\"))
+        $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
+    else
+        Perl_croak(aTHX_ \"$var is not of type Qt::Core::Template::T025\");
+
+T_PTROBJ_0198
+    if (sv_derived_from($arg, \"Qt::Core::Template::T026\"))
+        $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
+    else
+        Perl_croak(aTHX_ \"$var is not of type Qt::Core::Template::T026\");
+
+T_PTROBJ_0199
+    if (sv_derived_from($arg, \"Qt::Core::Template::T027\"))
+        $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
+    else
+        Perl_croak(aTHX_ \"$var is not of type Qt::Core::Template::T027\");
+
+T_PTROBJ_0200
+    if (sv_derived_from($arg, \"Qt::Core::Template::T028\"))
+        $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
+    else
+        Perl_croak(aTHX_ \"$var is not of type Qt::Core::Template::T028\");
+
+T_PTROBJ_0201
+    if (sv_derived_from($arg, \"Qt::Core::Template::T029\"))
+        $var = reinterpret_cast<$type>(SvIV((SV*)SvRV($arg)));
+    else
+        Perl_croak(aTHX_ \"$var is not of type Qt::Core::Template::T029\");
+
 
 ################################################################
 OUTPUT
@@ -1725,4 +1935,94 @@ T_PTROBJ_0170
 
 T_PTROBJ_0171
     sv_setref_pv($arg, \"Qt::Core::QBool\", (void *)$var);
+
+T_PTROBJ_0172
+    sv_setref_pv($arg, \"Qt::Core::Template::T000\", (void *)$var);
+
+T_PTROBJ_0173
+    sv_setref_pv($arg, \"Qt::Core::Template::T001\", (void *)$var);
+
+T_PTROBJ_0174
+    sv_setref_pv($arg, \"Qt::Core::Template::T002\", (void *)$var);
+
+T_PTROBJ_0175
+    sv_setref_pv($arg, \"Qt::Core::Template::T003\", (void *)$var);
+
+T_PTROBJ_0176
+    sv_setref_pv($arg, \"Qt::Core::Template::T004\", (void *)$var);
+
+T_PTROBJ_0177
+    sv_setref_pv($arg, \"Qt::Core::Template::T005\", (void *)$var);
+
+T_PTROBJ_0178
+    sv_setref_pv($arg, \"Qt::Core::Template::T006\", (void *)$var);
+
+T_PTROBJ_0179
+    sv_setref_pv($arg, \"Qt::Core::Template::T007\", (void *)$var);
+
+T_PTROBJ_0180
+    sv_setref_pv($arg, \"Qt::Core::Template::T008\", (void *)$var);
+
+T_PTROBJ_0181
+    sv_setref_pv($arg, \"Qt::Core::Template::T009\", (void *)$var);
+
+T_PTROBJ_0182
+    sv_setref_pv($arg, \"Qt::Core::Template::T010\", (void *)$var);
+
+T_PTROBJ_0183
+    sv_setref_pv($arg, \"Qt::Core::Template::T011\", (void *)$var);
+
+T_PTROBJ_0184
+    sv_setref_pv($arg, \"Qt::Core::Template::T012\", (void *)$var);
+
+T_PTROBJ_0185
+    sv_setref_pv($arg, \"Qt::Core::Template::T013\", (void *)$var);
+
+T_PTROBJ_0186
+    sv_setref_pv($arg, \"Qt::Core::Template::T014\", (void *)$var);
+
+T_PTROBJ_0187
+    sv_setref_pv($arg, \"Qt::Core::Template::T015\", (void *)$var);
+
+T_PTROBJ_0188
+    sv_setref_pv($arg, \"Qt::Core::Template::T016\", (void *)$var);
+
+T_PTROBJ_0189
+    sv_setref_pv($arg, \"Qt::Core::Template::T017\", (void *)$var);
+
+T_PTROBJ_0190
+    sv_setref_pv($arg, \"Qt::Core::Template::T018\", (void *)$var);
+
+T_PTROBJ_0191
+    sv_setref_pv($arg, \"Qt::Core::Template::T019\", (void *)$var);
+
+T_PTROBJ_0192
+    sv_setref_pv($arg, \"Qt::Core::Template::T020\", (void *)$var);
+
+T_PTROBJ_0193
+    sv_setref_pv($arg, \"Qt::Core::Template::T021\", (void *)$var);
+
+T_PTROBJ_0194
+    sv_setref_pv($arg, \"Qt::Core::Template::T022\", (void *)$var);
+
+T_PTROBJ_0195
+    sv_setref_pv($arg, \"Qt::Core::Template::T023\", (void *)$var);
+
+T_PTROBJ_0196
+    sv_setref_pv($arg, \"Qt::Core::Template::T024\", (void *)$var);
+
+T_PTROBJ_0197
+    sv_setref_pv($arg, \"Qt::Core::Template::T025\", (void *)$var);
+
+T_PTROBJ_0198
+    sv_setref_pv($arg, \"Qt::Core::Template::T026\", (void *)$var);
+
+T_PTROBJ_0199
+    sv_setref_pv($arg, \"Qt::Core::Template::T027\", (void *)$var);
+
+T_PTROBJ_0200
+    sv_setref_pv($arg, \"Qt::Core::Template::T028\", (void *)$var);
+
+T_PTROBJ_0201
+    sv_setref_pv($arg, \"Qt::Core::Template::T029\", (void *)$var);
 

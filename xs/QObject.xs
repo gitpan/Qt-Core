@@ -1,7 +1,7 @@
 ################################################################
 # THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 #
-# Copyright (C) 2007 - 2011 by Dongxu Ma <dongxu _at_ cpan _dot_ org>
+# Copyright (C) 2007 - 2012 by Dongxu Ma <dongxu _at_ cpan _dot_ org>
 #
 # This library is free software; you can redistribute it and/or 
 # modify it under the same terms as Perl itself.
@@ -85,6 +85,19 @@ PPCODE:
     XSRETURN(1);
     }
 
+## const QList<QObject *> & children()
+void
+QObject::children(...)
+PREINIT:
+PPCODE:
+    if (1) {
+      
+    const QList<QObject *> * ret = &THIS->children();
+    ST(0) = sv_newmortal();
+    sv_setref_pv(ST(0), "Qt::Core::Template::T021", (void *)ret);
+    XSRETURN(1);
+    }
+
 ## bool connect(const QObject * sender, const char * signal, const char * member, Qt::ConnectionType type)
 ## bool connect(const QObject * sender, const char * signal, const char * member, Qt::ConnectionType type = Qt::AutoConnection)
 ## static bool connect(const QObject * sender, const char * signal, const QObject * receiver, const char * member, Qt::ConnectionType arg4)
@@ -114,15 +127,8 @@ PPCODE:
     switch(items) {
       case 4:
       {
-        if ((sv_derived_from(ST(1), "Qt::Core::QObject") || ST(1) == &PL_sv_undef) && SvPOK(ST(2)) && SvPOK(ST(3))) {
-      if (sv_derived_from(ST(1), "Qt::Core::QObject")) {
-        arg10 = reinterpret_cast<QObject *>(SvIV((SV*)SvRV(ST(1))));
-    }
-    else if (ST(1) == &PL_sv_undef) {
-        arg10 = 0;
-    }
-    else
-        Perl_croak(aTHX_ "arg10 is not of type Qt::Core::QObject");
+        if (sv_isobject(ST(1)) && SvPOK(ST(2)) && SvPOK(ST(3))) {
+      arg10 = *reinterpret_cast<QObject * *>(SvIV((SV*)SvRV(ST(1))));
       arg11 = (const char *)SvPV_nolen(ST(2));
       arg12 = (const char *)SvPV_nolen(ST(3));
     bool ret = THIS->connect(arg10, arg11, arg12, arg13);
@@ -136,15 +142,8 @@ PPCODE:
       }
       case 5:
       {
-        if ((sv_derived_from(ST(1), "Qt::Core::QObject") || ST(1) == &PL_sv_undef) && SvPOK(ST(2)) && SvPOK(ST(3)) && SvIOK(ST(4))) {
-      if (sv_derived_from(ST(1), "Qt::Core::QObject")) {
-        arg00 = reinterpret_cast<QObject *>(SvIV((SV*)SvRV(ST(1))));
-    }
-    else if (ST(1) == &PL_sv_undef) {
-        arg00 = 0;
-    }
-    else
-        Perl_croak(aTHX_ "arg00 is not of type Qt::Core::QObject");
+        if (sv_isobject(ST(1)) && SvPOK(ST(2)) && SvPOK(ST(3)) && SvIOK(ST(4))) {
+      arg00 = *reinterpret_cast<QObject * *>(SvIV((SV*)SvRV(ST(1))));
       arg01 = (const char *)SvPV_nolen(ST(2));
       arg02 = (const char *)SvPV_nolen(ST(3));
       arg03 = (Qt::ConnectionType)SvIV(ST(4));
@@ -153,24 +152,10 @@ PPCODE:
     ST(0) = boolSV(ret);
     XSRETURN(1);
     }
-        else if ((sv_derived_from(ST(1), "Qt::Core::QObject") || ST(1) == &PL_sv_undef) && SvPOK(ST(2)) && (sv_derived_from(ST(3), "Qt::Core::QObject") || ST(3) == &PL_sv_undef) && SvPOK(ST(4))) {
-      if (sv_derived_from(ST(1), "Qt::Core::QObject")) {
-        arg30 = reinterpret_cast<QObject *>(SvIV((SV*)SvRV(ST(1))));
-    }
-    else if (ST(1) == &PL_sv_undef) {
-        arg30 = 0;
-    }
-    else
-        Perl_croak(aTHX_ "arg30 is not of type Qt::Core::QObject");
+        else if (sv_isobject(ST(1)) && SvPOK(ST(2)) && sv_isobject(ST(3)) && SvPOK(ST(4))) {
+      arg30 = *reinterpret_cast<QObject * *>(SvIV((SV*)SvRV(ST(1))));
       arg31 = (const char *)SvPV_nolen(ST(2));
-      if (sv_derived_from(ST(3), "Qt::Core::QObject")) {
-        arg32 = reinterpret_cast<QObject *>(SvIV((SV*)SvRV(ST(3))));
-    }
-    else if (ST(3) == &PL_sv_undef) {
-        arg32 = 0;
-    }
-    else
-        Perl_croak(aTHX_ "arg32 is not of type Qt::Core::QObject");
+      arg32 = *reinterpret_cast<QObject * *>(SvIV((SV*)SvRV(ST(3))));
       arg33 = (const char *)SvPV_nolen(ST(4));
     bool ret = THIS->connect(arg30, arg31, arg32, arg33, arg34);
     ST(0) = sv_newmortal();
@@ -183,24 +168,10 @@ PPCODE:
       }
       case 6:
       {
-        if ((sv_derived_from(ST(1), "Qt::Core::QObject") || ST(1) == &PL_sv_undef) && SvPOK(ST(2)) && (sv_derived_from(ST(3), "Qt::Core::QObject") || ST(3) == &PL_sv_undef) && SvPOK(ST(4)) && SvIOK(ST(5))) {
-      if (sv_derived_from(ST(1), "Qt::Core::QObject")) {
-        arg20 = reinterpret_cast<QObject *>(SvIV((SV*)SvRV(ST(1))));
-    }
-    else if (ST(1) == &PL_sv_undef) {
-        arg20 = 0;
-    }
-    else
-        Perl_croak(aTHX_ "arg20 is not of type Qt::Core::QObject");
+        if (sv_isobject(ST(1)) && SvPOK(ST(2)) && sv_isobject(ST(3)) && SvPOK(ST(4)) && SvIOK(ST(5))) {
+      arg20 = *reinterpret_cast<QObject * *>(SvIV((SV*)SvRV(ST(1))));
       arg21 = (const char *)SvPV_nolen(ST(2));
-      if (sv_derived_from(ST(3), "Qt::Core::QObject")) {
-        arg22 = reinterpret_cast<QObject *>(SvIV((SV*)SvRV(ST(3))));
-    }
-    else if (ST(3) == &PL_sv_undef) {
-        arg22 = 0;
-    }
-    else
-        Perl_croak(aTHX_ "arg22 is not of type Qt::Core::QObject");
+      arg22 = *reinterpret_cast<QObject * *>(SvIV((SV*)SvRV(ST(3))));
       arg23 = (const char *)SvPV_nolen(ST(4));
       arg24 = (Qt::ConnectionType)SvIV(ST(5));
     bool ret = THIS->connect(arg20, arg21, arg22, arg23, arg24);
@@ -273,15 +244,8 @@ PPCODE:
       }
       case 2:
       {
-        if ((sv_derived_from(ST(1), "Qt::Core::QObject") || ST(1) == &PL_sv_undef)) {
-      if (sv_derived_from(ST(1), "Qt::Core::QObject")) {
-        arg10 = reinterpret_cast<QObject *>(SvIV((SV*)SvRV(ST(1))));
-    }
-    else if (ST(1) == &PL_sv_undef) {
-        arg10 = 0;
-    }
-    else
-        Perl_croak(aTHX_ "arg10 is not of type Qt::Core::QObject");
+        if (sv_isobject(ST(1))) {
+      arg10 = *reinterpret_cast<QObject * *>(SvIV((SV*)SvRV(ST(1))));
     bool ret = THIS->disconnect(arg10, arg11);
     ST(0) = sv_newmortal();
     ST(0) = boolSV(ret);
@@ -300,31 +264,17 @@ PPCODE:
       }
       case 3:
       {
-        if ((sv_derived_from(ST(1), "Qt::Core::QObject") || ST(1) == &PL_sv_undef) && SvPOK(ST(2))) {
-      if (sv_derived_from(ST(1), "Qt::Core::QObject")) {
-        arg00 = reinterpret_cast<QObject *>(SvIV((SV*)SvRV(ST(1))));
-    }
-    else if (ST(1) == &PL_sv_undef) {
-        arg00 = 0;
-    }
-    else
-        Perl_croak(aTHX_ "arg00 is not of type Qt::Core::QObject");
+        if (sv_isobject(ST(1)) && SvPOK(ST(2))) {
+      arg00 = *reinterpret_cast<QObject * *>(SvIV((SV*)SvRV(ST(1))));
       arg01 = (const char *)SvPV_nolen(ST(2));
     bool ret = THIS->disconnect(arg00, arg01);
     ST(0) = sv_newmortal();
     ST(0) = boolSV(ret);
     XSRETURN(1);
     }
-        else if (SvPOK(ST(1)) && (sv_derived_from(ST(2), "Qt::Core::QObject") || ST(2) == &PL_sv_undef)) {
+        else if (SvPOK(ST(1)) && sv_isobject(ST(2))) {
       arg30 = (const char *)SvPV_nolen(ST(1));
-      if (sv_derived_from(ST(2), "Qt::Core::QObject")) {
-        arg31 = reinterpret_cast<QObject *>(SvIV((SV*)SvRV(ST(2))));
-    }
-    else if (ST(2) == &PL_sv_undef) {
-        arg31 = 0;
-    }
-    else
-        Perl_croak(aTHX_ "arg31 is not of type Qt::Core::QObject");
+      arg31 = *reinterpret_cast<QObject * *>(SvIV((SV*)SvRV(ST(2))));
     bool ret = THIS->disconnect(arg30, arg31, arg32);
     ST(0) = sv_newmortal();
     ST(0) = boolSV(ret);
@@ -336,16 +286,9 @@ PPCODE:
       }
       case 4:
       {
-        if (SvPOK(ST(1)) && (sv_derived_from(ST(2), "Qt::Core::QObject") || ST(2) == &PL_sv_undef) && SvPOK(ST(3))) {
+        if (SvPOK(ST(1)) && sv_isobject(ST(2)) && SvPOK(ST(3))) {
       arg20 = (const char *)SvPV_nolen(ST(1));
-      if (sv_derived_from(ST(2), "Qt::Core::QObject")) {
-        arg21 = reinterpret_cast<QObject *>(SvIV((SV*)SvRV(ST(2))));
-    }
-    else if (ST(2) == &PL_sv_undef) {
-        arg21 = 0;
-    }
-    else
-        Perl_croak(aTHX_ "arg21 is not of type Qt::Core::QObject");
+      arg21 = *reinterpret_cast<QObject * *>(SvIV((SV*)SvRV(ST(2))));
       arg22 = (const char *)SvPV_nolen(ST(3));
     bool ret = THIS->disconnect(arg20, arg21, arg22);
     ST(0) = sv_newmortal();
@@ -358,24 +301,10 @@ PPCODE:
       }
       case 5:
       {
-        if ((sv_derived_from(ST(1), "Qt::Core::QObject") || ST(1) == &PL_sv_undef) && SvPOK(ST(2)) && (sv_derived_from(ST(3), "Qt::Core::QObject") || ST(3) == &PL_sv_undef) && SvPOK(ST(4))) {
-      if (sv_derived_from(ST(1), "Qt::Core::QObject")) {
-        arg60 = reinterpret_cast<QObject *>(SvIV((SV*)SvRV(ST(1))));
-    }
-    else if (ST(1) == &PL_sv_undef) {
-        arg60 = 0;
-    }
-    else
-        Perl_croak(aTHX_ "arg60 is not of type Qt::Core::QObject");
+        if (sv_isobject(ST(1)) && SvPOK(ST(2)) && sv_isobject(ST(3)) && SvPOK(ST(4))) {
+      arg60 = *reinterpret_cast<QObject * *>(SvIV((SV*)SvRV(ST(1))));
       arg61 = (const char *)SvPV_nolen(ST(2));
-      if (sv_derived_from(ST(3), "Qt::Core::QObject")) {
-        arg62 = reinterpret_cast<QObject *>(SvIV((SV*)SvRV(ST(3))));
-    }
-    else if (ST(3) == &PL_sv_undef) {
-        arg62 = 0;
-    }
-    else
-        Perl_croak(aTHX_ "arg62 is not of type Qt::Core::QObject");
+      arg62 = *reinterpret_cast<QObject * *>(SvIV((SV*)SvRV(ST(3))));
       arg63 = (const char *)SvPV_nolen(ST(4));
     bool ret = THIS->disconnect(arg60, arg61, arg62, arg63);
     ST(0) = sv_newmortal();
@@ -411,6 +340,19 @@ PPCODE:
       
     (void)THIS->dumpObjectTree();
     XSRETURN(0);
+    }
+
+## QList<QByteArray> dynamicPropertyNames()
+void
+QObject::dynamicPropertyNames(...)
+PREINIT:
+PPCODE:
+    if (1) {
+      
+    QList<QByteArray> ret = THIS->dynamicPropertyNames();
+    ST(0) = sv_newmortal();
+    sv_setref_pv(ST(0), "Qt::Core::Template::T000", (void *)new QList<QByteArray>(ret));
+    XSRETURN(1);
     }
 
 ## bool event(QEvent * arg0)

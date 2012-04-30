@@ -7,7 +7,7 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_04';
+our $VERSION = '0.01_05';
 
 
 # FIXME: operator overload
@@ -62,6 +62,20 @@ Qt::Core::QDir
 =item  static QString currentPath()
 
 =item  QString dirName()
+
+=item  static QList<QFileInfo> drives()
+
+=item  QList<QFileInfo> entryInfoList(QFlags<QDir::Filter> filters, QFlags<QDir::SortFlag> sort)
+
+=item  QList<QFileInfo> entryInfoList(QFlags<QDir::Filter> filters, QFlags<QDir::SortFlag> sort = QDir::NoSort)
+
+=item  QList<QFileInfo> entryInfoList(QFlags<QDir::Filter> filters = QDir::NoFilter, QFlags<QDir::SortFlag> sort = QDir::NoSort)
+
+=item  QList<QFileInfo> entryInfoList(const QStringList & nameFilters, QFlags<QDir::Filter> filters, QFlags<QDir::SortFlag> sort)
+
+=item  QList<QFileInfo> entryInfoList(const QStringList & nameFilters, QFlags<QDir::Filter> filters, QFlags<QDir::SortFlag> sort = QDir::NoSort)
+
+=item  QList<QFileInfo> entryInfoList(const QStringList & nameFilters, QFlags<QDir::Filter> filters = QDir::NoFilter, QFlags<QDir::SortFlag> sort = QDir::NoSort)
 
 =item  QStringList entryList(QFlags<QDir::Filter> filters, QFlags<QDir::SortFlag> sort)
 

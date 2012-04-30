@@ -7,7 +7,7 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_04';
+our $VERSION = '0.01_05';
 use base qw/Qt::Core::QObject/;
 #our @ISA = qw/Qt::Core::QObject/;
 
@@ -52,6 +52,8 @@ Qt::Core::QAbstractEventDispatcher
 =item  int registerTimer(int interval, QObject * object)
 
 =item  void registerTimer(int timerId, int interval, QObject * object)
+
+=item  QList<QPair<int,int> > registeredTimers(QObject * object)
 
 =item  QAbstractEventDispatcher::EventFilter setEventFilter(QAbstractEventDispatcher::EventFilter filter)
 

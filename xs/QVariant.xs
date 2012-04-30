@@ -1,7 +1,7 @@
 ################################################################
 # THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 #
-# Copyright (C) 2007 - 2011 by Dongxu Ma <dongxu _at_ cpan _dot_ org>
+# Copyright (C) 2007 - 2012 by Dongxu Ma <dongxu _at_ cpan _dot_ org>
 #
 # This library is free software; you can redistribute it and/or 
 # modify it under the same terms as Perl itself.
@@ -39,6 +39,9 @@ PROTOTYPES: DISABLE
 ##  QVariant(const QDate & date)
 ##  QVariant(const QTime & time)
 ##  QVariant(const QDateTime & datetime)
+##  QVariant(const QList<QVariant> & list)
+##  QVariant(const QMap<QString,QVariant> & map)
+##  QVariant(const QHash<QString,QVariant> & hash)
 ##  QVariant(const QSize & size)
 ##  QVariant(const QSizeF & size)
 ##  QVariant(const QPoint & pt)
@@ -78,24 +81,27 @@ QChar * arg110;
 QDate * arg120;
 QTime * arg130;
 QDateTime * arg140;
-QSize * arg150;
-QSizeF * arg160;
-QPoint * arg170;
-QPointF * arg180;
-QLine * arg190;
-QLineF * arg1a0;
-QRect * arg1b0;
-QRectF * arg1c0;
-QUrl * arg1d0;
-QLocale * arg1e0;
-QRegExp * arg1f0;
-QEasingCurve * arg200;
-Qt::GlobalColor arg210;
-int arg220;
-const void * arg221;
-int arg230;
-const void * arg231;
-uint arg232;
+QList<QVariant> * arg150;
+QMap<QString,QVariant> * arg160;
+QHash<QString,QVariant> * arg170;
+QSize * arg180;
+QSizeF * arg190;
+QPoint * arg1a0;
+QPointF * arg1b0;
+QLine * arg1c0;
+QLineF * arg1d0;
+QRect * arg1e0;
+QRectF * arg1f0;
+QUrl * arg200;
+QLocale * arg210;
+QRegExp * arg220;
+QEasingCurve * arg230;
+Qt::GlobalColor arg240;
+int arg250;
+const void * arg251;
+int arg260;
+const void * arg261;
+uint arg262;
 PPCODE:
     switch(items) {
       case 1:
@@ -251,93 +257,114 @@ PPCODE:
     sv_setref_pv(ST(0), "Qt::Core::QVariant", (void *)ret);
     XSRETURN(1);
     }
-        else if (sv_isa(ST(1), "Qt::Core::QSize")) {
-      arg150 = reinterpret_cast<QSize *>(SvIV((SV*)SvRV(ST(1))));
+        else if (sv_isa(ST(1), "Qt::Core::Template::T010")) {
+      arg150 = reinterpret_cast<QList<QVariant> *>(SvIV((SV*)SvRV(ST(1))));
     ret = new QVariant(*arg150);
     ST(0) = sv_newmortal();
     sv_setref_pv(ST(0), "Qt::Core::QVariant", (void *)ret);
     XSRETURN(1);
     }
-        else if (sv_isa(ST(1), "Qt::Core::QSizeF")) {
-      arg160 = reinterpret_cast<QSizeF *>(SvIV((SV*)SvRV(ST(1))));
+        else if (sv_isa(ST(1), "Qt::Core::Template::T011")) {
+      arg160 = reinterpret_cast<QMap<QString,QVariant> *>(SvIV((SV*)SvRV(ST(1))));
     ret = new QVariant(*arg160);
     ST(0) = sv_newmortal();
     sv_setref_pv(ST(0), "Qt::Core::QVariant", (void *)ret);
     XSRETURN(1);
     }
-        else if (sv_isa(ST(1), "Qt::Core::QPoint")) {
-      arg170 = reinterpret_cast<QPoint *>(SvIV((SV*)SvRV(ST(1))));
+        else if (sv_isa(ST(1), "Qt::Core::Template::T012")) {
+      arg170 = reinterpret_cast<QHash<QString,QVariant> *>(SvIV((SV*)SvRV(ST(1))));
     ret = new QVariant(*arg170);
     ST(0) = sv_newmortal();
     sv_setref_pv(ST(0), "Qt::Core::QVariant", (void *)ret);
     XSRETURN(1);
     }
-        else if (sv_isa(ST(1), "Qt::Core::QPointF")) {
-      arg180 = reinterpret_cast<QPointF *>(SvIV((SV*)SvRV(ST(1))));
+        else if (sv_isa(ST(1), "Qt::Core::QSize")) {
+      arg180 = reinterpret_cast<QSize *>(SvIV((SV*)SvRV(ST(1))));
     ret = new QVariant(*arg180);
     ST(0) = sv_newmortal();
     sv_setref_pv(ST(0), "Qt::Core::QVariant", (void *)ret);
     XSRETURN(1);
     }
-        else if (sv_isa(ST(1), "Qt::Core::QLine")) {
-      arg190 = reinterpret_cast<QLine *>(SvIV((SV*)SvRV(ST(1))));
+        else if (sv_isa(ST(1), "Qt::Core::QSizeF")) {
+      arg190 = reinterpret_cast<QSizeF *>(SvIV((SV*)SvRV(ST(1))));
     ret = new QVariant(*arg190);
     ST(0) = sv_newmortal();
     sv_setref_pv(ST(0), "Qt::Core::QVariant", (void *)ret);
     XSRETURN(1);
     }
-        else if (sv_isa(ST(1), "Qt::Core::QLineF")) {
-      arg1a0 = reinterpret_cast<QLineF *>(SvIV((SV*)SvRV(ST(1))));
+        else if (sv_isa(ST(1), "Qt::Core::QPoint")) {
+      arg1a0 = reinterpret_cast<QPoint *>(SvIV((SV*)SvRV(ST(1))));
     ret = new QVariant(*arg1a0);
     ST(0) = sv_newmortal();
     sv_setref_pv(ST(0), "Qt::Core::QVariant", (void *)ret);
     XSRETURN(1);
     }
-        else if (sv_isa(ST(1), "Qt::Core::QRect")) {
-      arg1b0 = reinterpret_cast<QRect *>(SvIV((SV*)SvRV(ST(1))));
+        else if (sv_isa(ST(1), "Qt::Core::QPointF")) {
+      arg1b0 = reinterpret_cast<QPointF *>(SvIV((SV*)SvRV(ST(1))));
     ret = new QVariant(*arg1b0);
     ST(0) = sv_newmortal();
     sv_setref_pv(ST(0), "Qt::Core::QVariant", (void *)ret);
     XSRETURN(1);
     }
-        else if (sv_isa(ST(1), "Qt::Core::QRectF")) {
-      arg1c0 = reinterpret_cast<QRectF *>(SvIV((SV*)SvRV(ST(1))));
+        else if (sv_isa(ST(1), "Qt::Core::QLine")) {
+      arg1c0 = reinterpret_cast<QLine *>(SvIV((SV*)SvRV(ST(1))));
     ret = new QVariant(*arg1c0);
     ST(0) = sv_newmortal();
     sv_setref_pv(ST(0), "Qt::Core::QVariant", (void *)ret);
     XSRETURN(1);
     }
-        else if (sv_isa(ST(1), "Qt::Core::QUrl")) {
-      arg1d0 = reinterpret_cast<QUrl *>(SvIV((SV*)SvRV(ST(1))));
+        else if (sv_isa(ST(1), "Qt::Core::QLineF")) {
+      arg1d0 = reinterpret_cast<QLineF *>(SvIV((SV*)SvRV(ST(1))));
     ret = new QVariant(*arg1d0);
     ST(0) = sv_newmortal();
     sv_setref_pv(ST(0), "Qt::Core::QVariant", (void *)ret);
     XSRETURN(1);
     }
-        else if (sv_isa(ST(1), "Qt::Core::QLocale")) {
-      arg1e0 = reinterpret_cast<QLocale *>(SvIV((SV*)SvRV(ST(1))));
+        else if (sv_isa(ST(1), "Qt::Core::QRect")) {
+      arg1e0 = reinterpret_cast<QRect *>(SvIV((SV*)SvRV(ST(1))));
     ret = new QVariant(*arg1e0);
     ST(0) = sv_newmortal();
     sv_setref_pv(ST(0), "Qt::Core::QVariant", (void *)ret);
     XSRETURN(1);
     }
-        else if (sv_isa(ST(1), "Qt::Core::QRegExp")) {
-      arg1f0 = reinterpret_cast<QRegExp *>(SvIV((SV*)SvRV(ST(1))));
+        else if (sv_isa(ST(1), "Qt::Core::QRectF")) {
+      arg1f0 = reinterpret_cast<QRectF *>(SvIV((SV*)SvRV(ST(1))));
     ret = new QVariant(*arg1f0);
     ST(0) = sv_newmortal();
     sv_setref_pv(ST(0), "Qt::Core::QVariant", (void *)ret);
     XSRETURN(1);
     }
-        else if (sv_isa(ST(1), "Qt::Core::QEasingCurve")) {
-      arg200 = reinterpret_cast<QEasingCurve *>(SvIV((SV*)SvRV(ST(1))));
+        else if (sv_isa(ST(1), "Qt::Core::QUrl")) {
+      arg200 = reinterpret_cast<QUrl *>(SvIV((SV*)SvRV(ST(1))));
     ret = new QVariant(*arg200);
     ST(0) = sv_newmortal();
     sv_setref_pv(ST(0), "Qt::Core::QVariant", (void *)ret);
     XSRETURN(1);
     }
+        else if (sv_isa(ST(1), "Qt::Core::QLocale")) {
+      arg210 = reinterpret_cast<QLocale *>(SvIV((SV*)SvRV(ST(1))));
+    ret = new QVariant(*arg210);
+    ST(0) = sv_newmortal();
+    sv_setref_pv(ST(0), "Qt::Core::QVariant", (void *)ret);
+    XSRETURN(1);
+    }
+        else if (sv_isa(ST(1), "Qt::Core::QRegExp")) {
+      arg220 = reinterpret_cast<QRegExp *>(SvIV((SV*)SvRV(ST(1))));
+    ret = new QVariant(*arg220);
+    ST(0) = sv_newmortal();
+    sv_setref_pv(ST(0), "Qt::Core::QVariant", (void *)ret);
+    XSRETURN(1);
+    }
+        else if (sv_isa(ST(1), "Qt::Core::QEasingCurve")) {
+      arg230 = reinterpret_cast<QEasingCurve *>(SvIV((SV*)SvRV(ST(1))));
+    ret = new QVariant(*arg230);
+    ST(0) = sv_newmortal();
+    sv_setref_pv(ST(0), "Qt::Core::QVariant", (void *)ret);
+    XSRETURN(1);
+    }
         else if (SvIOK(ST(1))) {
-      arg210 = (Qt::GlobalColor)SvIV(ST(1));
-    ret = new QVariant(arg210);
+      arg240 = (Qt::GlobalColor)SvIV(ST(1));
+    ret = new QVariant(arg240);
     ST(0) = sv_newmortal();
     sv_setref_pv(ST(0), "Qt::Core::QVariant", (void *)ret);
     XSRETURN(1);
@@ -349,9 +376,9 @@ PPCODE:
       case 3:
       {
         if (SvIOK(ST(1)) && SvIOK(ST(2))) {
-      arg220 = (int)SvIV(ST(1));
-      arg221 = reinterpret_cast<void *>(SvIV(ST(2)));
-    ret = new QVariant(arg220, arg221);
+      arg250 = (int)SvIV(ST(1));
+      arg251 = reinterpret_cast<void *>(SvIV(ST(2)));
+    ret = new QVariant(arg250, arg251);
     ST(0) = sv_newmortal();
     sv_setref_pv(ST(0), "Qt::Core::QVariant", (void *)ret);
     XSRETURN(1);
@@ -363,10 +390,10 @@ PPCODE:
       case 4:
       {
         if (SvIOK(ST(1)) && SvIOK(ST(2)) && (SvIOK(ST(3)) || SvUOK(ST(3)))) {
-      arg230 = (int)SvIV(ST(1));
-      arg231 = reinterpret_cast<void *>(SvIV(ST(2)));
-      arg232 = (uint)SvUV(ST(3));
-    ret = new QVariant(arg230, arg231, arg232);
+      arg260 = (int)SvIV(ST(1));
+      arg261 = reinterpret_cast<void *>(SvIV(ST(2)));
+      arg262 = (uint)SvUV(ST(3));
+    ret = new QVariant(arg260, arg261, arg262);
     ST(0) = sv_newmortal();
     sv_setref_pv(ST(0), "Qt::Core::QVariant", (void *)ret);
     XSRETURN(1);
@@ -772,6 +799,19 @@ PPCODE:
         break;
     }
 
+## QHash<QString,QVariant> toHash()
+void
+QVariant::toHash(...)
+PREINIT:
+PPCODE:
+    if (1) {
+      
+    QHash<QString,QVariant> ret = THIS->toHash();
+    ST(0) = sv_newmortal();
+    sv_setref_pv(ST(0), "Qt::Core::Template::T012", (void *)new QHash<QString,QVariant>(ret));
+    XSRETURN(1);
+    }
+
 ## int toInt(bool * ok)
 ## int toInt(bool * ok = 0)
 void
@@ -839,6 +879,19 @@ PPCODE:
     XSRETURN(1);
     }
 
+## QList<QVariant> toList()
+void
+QVariant::toList(...)
+PREINIT:
+PPCODE:
+    if (1) {
+      
+    QList<QVariant> ret = THIS->toList();
+    ST(0) = sv_newmortal();
+    sv_setref_pv(ST(0), "Qt::Core::Template::T010", (void *)new QList<QVariant>(ret));
+    XSRETURN(1);
+    }
+
 ## QLocale toLocale()
 void
 QVariant::toLocale(...)
@@ -891,6 +944,19 @@ PPCODE:
       default:
         Perl_croak(aTHX_ "wrong number/type of arguments passed in");
         break;
+    }
+
+## QMap<QString,QVariant> toMap()
+void
+QVariant::toMap(...)
+PREINIT:
+PPCODE:
+    if (1) {
+      
+    QMap<QString,QVariant> ret = THIS->toMap();
+    ST(0) = sv_newmortal();
+    sv_setref_pv(ST(0), "Qt::Core::Template::T011", (void *)new QMap<QString,QVariant>(ret));
+    XSRETURN(1);
     }
 
 ## QPoint toPoint()

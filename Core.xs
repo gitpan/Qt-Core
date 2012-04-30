@@ -149,6 +149,36 @@ typedef bool (*T_FPOINTER_F_COMPARE_QVARIANT)(const QVariant::Private *,const QV
 typedef void (*T_FPOINTER_F_CLEAR_QVARIANT)(QVariant::Private *);
 typedef bool (*T_FPOINTER_F_CANCONVERT_QVARIANT)(const QVariant::Private *d,QVariant::Type t);
 typedef void (*T_FPOINTER_F_DEBUGSTREAM_QVARIANT)(QDebug,const QVariant &);
+typedef QList<QByteArray> T000;
+typedef QList<int> T001;
+typedef QVector<unsigned int> T002;
+typedef QPair<int,int> T003;
+typedef QList<QPair<int,int> > T004;
+typedef QList<QFileInfo> T005;
+typedef QList<QString> T006;
+typedef QVector<QXmlStreamNamespaceDeclaration> T007;
+typedef QVector<QXmlStreamNotationDeclaration> T008;
+typedef QVector<QXmlStreamEntityDeclaration> T009;
+typedef QList<QVariant> T010;
+typedef QMap<QString,QVariant> T011;
+typedef QHash<QString,QVariant> T012;
+typedef QList<QAbstractState *> T013;
+typedef QList<QAbstractAnimation *> T014;
+typedef QPair<QString,QString> T015;
+typedef QList<QPair<QString,QString> > T016;
+typedef QPair<QByteArray,QByteArray> T017;
+typedef QList<QPair<QByteArray,QByteArray> > T018;
+typedef QList<QUrl> T019;
+typedef QVector<QXmlStreamAttribute> T020;
+typedef QList<QObject *> T021;
+typedef QList<void *> T022;
+typedef QList<QLocale::Country> T023;
+typedef QList<QAbstractTransition *> T024;
+typedef QMap<int,QVariant> T025;
+typedef QList<QModelIndex> T026;
+typedef QHash<int,QByteArray> T027;
+typedef QPair<double,QVariant> T028;
+typedef QVector<QPair<double,QVariant> > T029;
 
 MODULE = Qt		PACKAGE = Qt
 PROTOTYPES: DISABLE
@@ -305,3 +335,33 @@ INCLUDE:		xs/QXmlStreamNotationDeclaration.xs
 INCLUDE:		xs/QXmlStreamReader.xs
 INCLUDE:		xs/QXmlStreamStringRef.xs
 INCLUDE:		xs/QXmlStreamWriter.xs
+INCLUDE:		xs/T000.xs
+INCLUDE:		xs/T001.xs
+INCLUDE:		xs/T002.xs
+INCLUDE:		xs/T003.xs
+INCLUDE:		xs/T004.xs
+INCLUDE:		xs/T005.xs
+INCLUDE:		xs/T006.xs
+INCLUDE:		xs/T007.xs
+INCLUDE:		xs/T008.xs
+INCLUDE:		xs/T009.xs
+INCLUDE:		xs/T010.xs
+INCLUDE:		xs/T011.xs
+INCLUDE:		xs/T012.xs
+INCLUDE:		xs/T013.xs
+INCLUDE:		xs/T014.xs
+INCLUDE:		xs/T015.xs
+INCLUDE:		xs/T016.xs
+INCLUDE:		xs/T017.xs
+INCLUDE:		xs/T018.xs
+INCLUDE:		xs/T019.xs
+INCLUDE:		xs/T020.xs
+INCLUDE:		xs/T021.xs
+INCLUDE:		xs/T022.xs
+INCLUDE:		xs/T023.xs
+INCLUDE:		xs/T024.xs
+INCLUDE:		xs/T025.xs
+INCLUDE:		xs/T026.xs
+INCLUDE:		xs/T027.xs
+INCLUDE:		xs/T028.xs
+INCLUDE:		xs/T029.xs

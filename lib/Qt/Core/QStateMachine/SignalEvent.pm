@@ -7,7 +7,7 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_04';
+our $VERSION = '0.01_05';
 use base qw/Qt::Core::QEvent/;
 #our @ISA = qw/Qt::Core::QEvent/;
 
@@ -25,7 +25,11 @@ Qt::Core::QStateMachine::SignalEvent
 
 =over
 
+=item   QStateMachine::SignalEvent(QObject * sender, int signalIndex, const QList<QVariant> & arguments)
+
 =item   ~SignalEvent()
+
+=item  QList<QVariant> arguments()
 
 =item  QObject * sender()
 

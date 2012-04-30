@@ -1,7 +1,7 @@
 ################################################################
 # THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 #
-# Copyright (C) 2007 - 2011 by Dongxu Ma <dongxu _at_ cpan _dot_ org>
+# Copyright (C) 2007 - 2012 by Dongxu Ma <dongxu _at_ cpan _dot_ org>
 #
 # This library is free software; you can redistribute it and/or 
 # modify it under the same terms as Perl itself.
@@ -596,6 +596,110 @@ PPCODE:
         break;
     }
 
+## QMap<int,QVariant> itemData(const QModelIndex & index)
+void
+QAbstractItemModel::itemData(...)
+PREINIT:
+QModelIndex * arg00;
+PPCODE:
+    if (sv_isa(ST(1), "Qt::Core::QModelIndex")) {
+      arg00 = reinterpret_cast<QModelIndex *>(SvIV((SV*)SvRV(ST(1))));
+    QMap<int,QVariant> ret = THIS->itemData(*arg00);
+    ST(0) = sv_newmortal();
+    sv_setref_pv(ST(0), "Qt::Core::Template::T025", (void *)new QMap<int,QVariant>(ret));
+    XSRETURN(1);
+    }
+
+## QList<QModelIndex> match(const QModelIndex & start, int role, const QVariant & value, int hits, QFlags<Qt::MatchFlag> flags)
+## QList<QModelIndex> match(const QModelIndex & start, int role, const QVariant & value, int hits, QFlags<Qt::MatchFlag> flags = Qt::MatchFlags(Qt::MatchStartsWith|Qt::MatchWrap))
+## QList<QModelIndex> match(const QModelIndex & start, int role, const QVariant & value, int hits = 1, QFlags<Qt::MatchFlag> flags = Qt::MatchFlags(Qt::MatchStartsWith|Qt::MatchWrap))
+void
+QAbstractItemModel::match(...)
+PREINIT:
+QModelIndex * arg00;
+int arg01;
+QVariant * arg02;
+int arg03;
+QFlags<Qt::MatchFlag> arg04;
+QModelIndex * arg10;
+int arg11;
+QVariant * arg12;
+int arg13;
+QFlags<Qt::MatchFlag> arg14 = Qt::MatchFlags(Qt::MatchStartsWith|Qt::MatchWrap);
+QModelIndex * arg20;
+int arg21;
+QVariant * arg22;
+int arg23 = 1;
+QFlags<Qt::MatchFlag> arg24 = Qt::MatchFlags(Qt::MatchStartsWith|Qt::MatchWrap);
+PPCODE:
+    switch(items) {
+      case 4:
+      {
+        if (sv_isa(ST(1), "Qt::Core::QModelIndex") && SvIOK(ST(2)) && sv_isa(ST(3), "Qt::Core::QVariant")) {
+      arg20 = reinterpret_cast<QModelIndex *>(SvIV((SV*)SvRV(ST(1))));
+      arg21 = (int)SvIV(ST(2));
+      arg22 = reinterpret_cast<QVariant *>(SvIV((SV*)SvRV(ST(3))));
+    QList<QModelIndex> ret = THIS->match(*arg20, arg21, *arg22, arg23, arg24);
+    ST(0) = sv_newmortal();
+    sv_setref_pv(ST(0), "Qt::Core::Template::T026", (void *)new QList<QModelIndex>(ret));
+    XSRETURN(1);
+    }
+	else
+            Perl_croak(aTHX_ "wrong number/type of arguments passed in");
+        break;
+      }
+      case 5:
+      {
+        if (sv_isa(ST(1), "Qt::Core::QModelIndex") && SvIOK(ST(2)) && sv_isa(ST(3), "Qt::Core::QVariant") && SvIOK(ST(4))) {
+      arg10 = reinterpret_cast<QModelIndex *>(SvIV((SV*)SvRV(ST(1))));
+      arg11 = (int)SvIV(ST(2));
+      arg12 = reinterpret_cast<QVariant *>(SvIV((SV*)SvRV(ST(3))));
+      arg13 = (int)SvIV(ST(4));
+    QList<QModelIndex> ret = THIS->match(*arg10, arg11, *arg12, arg13, arg14);
+    ST(0) = sv_newmortal();
+    sv_setref_pv(ST(0), "Qt::Core::Template::T026", (void *)new QList<QModelIndex>(ret));
+    XSRETURN(1);
+    }
+	else
+            Perl_croak(aTHX_ "wrong number/type of arguments passed in");
+        break;
+      }
+      case 6:
+      {
+        if (sv_isa(ST(1), "Qt::Core::QModelIndex") && SvIOK(ST(2)) && sv_isa(ST(3), "Qt::Core::QVariant") && SvIOK(ST(4)) && SvIOK(ST(5))) {
+      arg00 = reinterpret_cast<QModelIndex *>(SvIV((SV*)SvRV(ST(1))));
+      arg01 = (int)SvIV(ST(2));
+      arg02 = reinterpret_cast<QVariant *>(SvIV((SV*)SvRV(ST(3))));
+      arg03 = (int)SvIV(ST(4));
+      arg04 = QFlags<Qt::MatchFlag>((Qt::MatchFlag)SvIV(ST(5)));
+    QList<QModelIndex> ret = THIS->match(*arg00, arg01, *arg02, arg03, arg04);
+    ST(0) = sv_newmortal();
+    sv_setref_pv(ST(0), "Qt::Core::Template::T026", (void *)new QList<QModelIndex>(ret));
+    XSRETURN(1);
+    }
+	else
+            Perl_croak(aTHX_ "wrong number/type of arguments passed in");
+        break;
+      }
+      default:
+        Perl_croak(aTHX_ "wrong number/type of arguments passed in");
+        break;
+    }
+
+## QMimeData * mimeData(const QList<QModelIndex> & indexes)
+void
+QAbstractItemModel::mimeData(...)
+PREINIT:
+QList<QModelIndex> * arg00;
+PPCODE:
+    if (sv_isa(ST(1), "Qt::Core::Template::T026")) {
+      arg00 = reinterpret_cast<QList<QModelIndex> *>(SvIV((SV*)SvRV(ST(1))));
+    QMimeData * ret = THIS->mimeData(*arg00);
+    ST(0) = sv_newmortal();
+    sv_setref_pv(ST(0), "Qt::Core::QMimeData", (void *)ret);
+    XSRETURN(1);
+    }
+
 ## QStringList mimeTypes()
 void
 QAbstractItemModel::mimeTypes(...)
@@ -818,6 +922,19 @@ PPCODE:
     XSRETURN(0);
     }
 
+## const QHash<int,QByteArray> & roleNames()
+void
+QAbstractItemModel::roleNames(...)
+PREINIT:
+PPCODE:
+    if (1) {
+      
+    const QHash<int,QByteArray> * ret = &THIS->roleNames();
+    ST(0) = sv_newmortal();
+    sv_setref_pv(ST(0), "Qt::Core::Template::T027", (void *)ret);
+    XSRETURN(1);
+    }
+
 ## int rowCount(const QModelIndex & parent)
 ## int rowCount(const QModelIndex & parent = QModelIndex())
 void
@@ -953,6 +1070,22 @@ PPCODE:
       default:
         Perl_croak(aTHX_ "wrong number/type of arguments passed in");
         break;
+    }
+
+## bool setItemData(const QModelIndex & index, const QMap<int,QVariant> & roles)
+void
+QAbstractItemModel::setItemData(...)
+PREINIT:
+QModelIndex * arg00;
+QMap<int,QVariant> * arg01;
+PPCODE:
+    if (sv_isa(ST(1), "Qt::Core::QModelIndex") && sv_isa(ST(2), "Qt::Core::Template::T025")) {
+      arg00 = reinterpret_cast<QModelIndex *>(SvIV((SV*)SvRV(ST(1))));
+      arg01 = reinterpret_cast<QMap<int,QVariant> *>(SvIV((SV*)SvRV(ST(2))));
+    bool ret = THIS->setItemData(*arg00, *arg01);
+    ST(0) = sv_newmortal();
+    ST(0) = boolSV(ret);
+    XSRETURN(1);
     }
 
 ## void setSupportedDragActions(QFlags<Qt::DropAction> arg0)

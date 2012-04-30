@@ -7,7 +7,7 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_04';
+our $VERSION = '0.01_05';
 
 
 # FIXME: operator overload
@@ -64,6 +64,12 @@ Qt::Core::QVariant
 =item   QVariant(const QTime & time)
 
 =item   QVariant(const QDateTime & datetime)
+
+=item   QVariant(const QList<QVariant> & list)
+
+=item   QVariant(const QMap<QString,QVariant> & map)
+
+=item   QVariant(const QHash<QString,QVariant> & hash)
 
 =item   QVariant(const QSize & size)
 
@@ -151,6 +157,8 @@ Qt::Core::QVariant
 
 =item  float toFloat(bool * ok = 0)
 
+=item  QHash<QString,QVariant> toHash()
+
 =item  int toInt(bool * ok)
 
 =item  int toInt(bool * ok = 0)
@@ -159,11 +167,15 @@ Qt::Core::QVariant
 
 =item  QLineF toLineF()
 
+=item  QList<QVariant> toList()
+
 =item  QLocale toLocale()
 
 =item  qlonglong toLongLong(bool * ok)
 
 =item  qlonglong toLongLong(bool * ok = 0)
+
+=item  QMap<QString,QVariant> toMap()
 
 =item  QPoint toPoint()
 

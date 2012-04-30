@@ -1,7 +1,7 @@
 ################################################################
 # THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 #
-# Copyright (C) 2007 - 2011 by Dongxu Ma <dongxu _at_ cpan _dot_ org>
+# Copyright (C) 2007 - 2012 by Dongxu Ma <dongxu _at_ cpan _dot_ org>
 #
 # This library is free software; you can redistribute it and/or 
 # modify it under the same terms as Perl itself.
@@ -305,6 +305,118 @@ PPCODE:
     ST(0) = sv_newmortal();
     sv_setref_pv(ST(0), "Qt::Core::QString", (void *)new QString(ret));
     XSRETURN(1);
+    }
+
+## static QList<QFileInfo> drives()
+void
+QDir::drives(...)
+PREINIT:
+PPCODE:
+    if (1) {
+      
+    QList<QFileInfo> ret = THIS->drives();
+    ST(0) = sv_newmortal();
+    sv_setref_pv(ST(0), "Qt::Core::Template::T005", (void *)new QList<QFileInfo>(ret));
+    XSRETURN(1);
+    }
+
+## QList<QFileInfo> entryInfoList(QFlags<QDir::Filter> filters, QFlags<QDir::SortFlag> sort)
+## QList<QFileInfo> entryInfoList(QFlags<QDir::Filter> filters, QFlags<QDir::SortFlag> sort = QDir::NoSort)
+## QList<QFileInfo> entryInfoList(QFlags<QDir::Filter> filters = QDir::NoFilter, QFlags<QDir::SortFlag> sort = QDir::NoSort)
+## QList<QFileInfo> entryInfoList(const QStringList & nameFilters, QFlags<QDir::Filter> filters, QFlags<QDir::SortFlag> sort)
+## QList<QFileInfo> entryInfoList(const QStringList & nameFilters, QFlags<QDir::Filter> filters, QFlags<QDir::SortFlag> sort = QDir::NoSort)
+## QList<QFileInfo> entryInfoList(const QStringList & nameFilters, QFlags<QDir::Filter> filters = QDir::NoFilter, QFlags<QDir::SortFlag> sort = QDir::NoSort)
+void
+QDir::entryInfoList(...)
+PREINIT:
+QFlags<QDir::Filter> arg00;
+QFlags<QDir::SortFlag> arg01;
+QFlags<QDir::Filter> arg10;
+QFlags<QDir::SortFlag> arg11 = QDir::NoSort;
+QFlags<QDir::Filter> arg20 = QDir::NoFilter;
+QFlags<QDir::SortFlag> arg21 = QDir::NoSort;
+QStringList * arg30;
+QFlags<QDir::Filter> arg31;
+QFlags<QDir::SortFlag> arg32;
+QStringList * arg40;
+QFlags<QDir::Filter> arg41;
+QFlags<QDir::SortFlag> arg42 = QDir::NoSort;
+QStringList * arg50;
+QFlags<QDir::Filter> arg51 = QDir::NoFilter;
+QFlags<QDir::SortFlag> arg52 = QDir::NoSort;
+PPCODE:
+    switch(items) {
+      case 1:
+      {
+        if (1) {
+      
+    QList<QFileInfo> ret = THIS->entryInfoList(arg20, arg21);
+    ST(0) = sv_newmortal();
+    sv_setref_pv(ST(0), "Qt::Core::Template::T005", (void *)new QList<QFileInfo>(ret));
+    XSRETURN(1);
+    }
+        break;
+      }
+      case 2:
+      {
+        if (SvIOK(ST(1))) {
+      arg10 = QFlags<QDir::Filter>((QDir::Filter)SvIV(ST(1)));
+    QList<QFileInfo> ret = THIS->entryInfoList(arg10, arg11);
+    ST(0) = sv_newmortal();
+    sv_setref_pv(ST(0), "Qt::Core::Template::T005", (void *)new QList<QFileInfo>(ret));
+    XSRETURN(1);
+    }
+        else if (sv_isa(ST(1), "Qt::Core::QStringList")) {
+      arg50 = reinterpret_cast<QStringList *>(SvIV((SV*)SvRV(ST(1))));
+    QList<QFileInfo> ret = THIS->entryInfoList(*arg50, arg51, arg52);
+    ST(0) = sv_newmortal();
+    sv_setref_pv(ST(0), "Qt::Core::Template::T005", (void *)new QList<QFileInfo>(ret));
+    XSRETURN(1);
+    }
+	else
+            Perl_croak(aTHX_ "wrong number/type of arguments passed in");
+        break;
+      }
+      case 3:
+      {
+        if (SvIOK(ST(1)) && SvIOK(ST(2))) {
+      arg00 = QFlags<QDir::Filter>((QDir::Filter)SvIV(ST(1)));
+      arg01 = QFlags<QDir::SortFlag>((QDir::SortFlag)SvIV(ST(2)));
+    QList<QFileInfo> ret = THIS->entryInfoList(arg00, arg01);
+    ST(0) = sv_newmortal();
+    sv_setref_pv(ST(0), "Qt::Core::Template::T005", (void *)new QList<QFileInfo>(ret));
+    XSRETURN(1);
+    }
+        else if (sv_isa(ST(1), "Qt::Core::QStringList") && SvIOK(ST(2))) {
+      arg40 = reinterpret_cast<QStringList *>(SvIV((SV*)SvRV(ST(1))));
+      arg41 = QFlags<QDir::Filter>((QDir::Filter)SvIV(ST(2)));
+    QList<QFileInfo> ret = THIS->entryInfoList(*arg40, arg41, arg42);
+    ST(0) = sv_newmortal();
+    sv_setref_pv(ST(0), "Qt::Core::Template::T005", (void *)new QList<QFileInfo>(ret));
+    XSRETURN(1);
+    }
+	else
+            Perl_croak(aTHX_ "wrong number/type of arguments passed in");
+        break;
+      }
+      case 4:
+      {
+        if (sv_isa(ST(1), "Qt::Core::QStringList") && SvIOK(ST(2)) && SvIOK(ST(3))) {
+      arg30 = reinterpret_cast<QStringList *>(SvIV((SV*)SvRV(ST(1))));
+      arg31 = QFlags<QDir::Filter>((QDir::Filter)SvIV(ST(2)));
+      arg32 = QFlags<QDir::SortFlag>((QDir::SortFlag)SvIV(ST(3)));
+    QList<QFileInfo> ret = THIS->entryInfoList(*arg30, arg31, arg32);
+    ST(0) = sv_newmortal();
+    sv_setref_pv(ST(0), "Qt::Core::Template::T005", (void *)new QList<QFileInfo>(ret));
+    XSRETURN(1);
+    }
+	else
+            Perl_croak(aTHX_ "wrong number/type of arguments passed in");
+        break;
+      }
+      default:
+        Perl_croak(aTHX_ "wrong number/type of arguments passed in");
+        break;
     }
 
 ## QStringList entryList(QFlags<QDir::Filter> filters, QFlags<QDir::SortFlag> sort)

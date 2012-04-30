@@ -7,7 +7,7 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_04';
+our $VERSION = '0.01_05';
 
 
 # FIXME: operator overload
@@ -22,6 +22,10 @@ Qt::Core::QTextCodec
 =head1 PUBLIC METHODS
 
 =over
+
+=item  static QList<QByteArray> availableCodecs()
+
+=item  static QList<int> availableMibs()
 
 =item  bool canEncode(QChar arg0)
 

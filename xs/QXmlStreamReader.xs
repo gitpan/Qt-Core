@@ -1,7 +1,7 @@
 ################################################################
 # THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 #
-# Copyright (C) 2007 - 2011 by Dongxu Ma <dongxu _at_ cpan _dot_ org>
+# Copyright (C) 2007 - 2012 by Dongxu Ma <dongxu _at_ cpan _dot_ org>
 #
 # This library is free software; you can redistribute it and/or 
 # modify it under the same terms as Perl itself.
@@ -146,6 +146,18 @@ PPCODE:
     XSRETURN(0);
     }
 
+## void addExtraNamespaceDeclarations(const QVector<QXmlStreamNamespaceDeclaration> & extraNamespaceDeclaractions)
+void
+QXmlStreamReader::addExtraNamespaceDeclarations(...)
+PREINIT:
+QVector<QXmlStreamNamespaceDeclaration> * arg00;
+PPCODE:
+    if (sv_isa(ST(1), "Qt::Core::Template::T007")) {
+      arg00 = reinterpret_cast<QVector<QXmlStreamNamespaceDeclaration> *>(SvIV((SV*)SvRV(ST(1))));
+    (void)THIS->addExtraNamespaceDeclarations(*arg00);
+    XSRETURN(0);
+    }
+
 ## bool atEnd()
 void
 QXmlStreamReader::atEnd(...)
@@ -284,6 +296,19 @@ PPCODE:
     QStringRef ret = THIS->dtdSystemId();
     ST(0) = sv_newmortal();
     sv_setref_pv(ST(0), "Qt::Core::QStringRef", (void *)new QStringRef(ret));
+    XSRETURN(1);
+    }
+
+## QVector<QXmlStreamEntityDeclaration> entityDeclarations()
+void
+QXmlStreamReader::entityDeclarations(...)
+PREINIT:
+PPCODE:
+    if (1) {
+      
+    QVector<QXmlStreamEntityDeclaration> ret = THIS->entityDeclarations();
+    ST(0) = sv_newmortal();
+    sv_setref_pv(ST(0), "Qt::Core::Template::T009", (void *)new QVector<QXmlStreamEntityDeclaration>(ret));
     XSRETURN(1);
     }
 
@@ -521,6 +546,19 @@ PPCODE:
     XSRETURN(1);
     }
 
+## QVector<QXmlStreamNamespaceDeclaration> namespaceDeclarations()
+void
+QXmlStreamReader::namespaceDeclarations(...)
+PREINIT:
+PPCODE:
+    if (1) {
+      
+    QVector<QXmlStreamNamespaceDeclaration> ret = THIS->namespaceDeclarations();
+    ST(0) = sv_newmortal();
+    sv_setref_pv(ST(0), "Qt::Core::Template::T007", (void *)new QVector<QXmlStreamNamespaceDeclaration>(ret));
+    XSRETURN(1);
+    }
+
 ## bool namespaceProcessing()
 void
 QXmlStreamReader::namespaceProcessing(...)
@@ -544,6 +582,19 @@ PPCODE:
     QStringRef ret = THIS->namespaceUri();
     ST(0) = sv_newmortal();
     sv_setref_pv(ST(0), "Qt::Core::QStringRef", (void *)new QStringRef(ret));
+    XSRETURN(1);
+    }
+
+## QVector<QXmlStreamNotationDeclaration> notationDeclarations()
+void
+QXmlStreamReader::notationDeclarations(...)
+PREINIT:
+PPCODE:
+    if (1) {
+      
+    QVector<QXmlStreamNotationDeclaration> ret = THIS->notationDeclarations();
+    ST(0) = sv_newmortal();
+    sv_setref_pv(ST(0), "Qt::Core::Template::T008", (void *)new QVector<QXmlStreamNotationDeclaration>(ret));
     XSRETURN(1);
     }
 

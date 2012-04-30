@@ -7,7 +7,7 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_04';
+our $VERSION = '0.01_05';
 
 
 # FIXME: operator overload
@@ -122,6 +122,10 @@ Qt::Core::QMetaMethod
 =item  int methodIndex()
 
 =item  QMetaMethod::MethodType methodType()
+
+=item  QList<QByteArray> parameterNames()
+
+=item  QList<QByteArray> parameterTypes()
 
 =item  int revision()
 

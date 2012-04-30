@@ -7,7 +7,7 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_04';
+our $VERSION = '0.01_05';
 use base qw/Qt::Core::QObject/;
 #our @ISA = qw/Qt::Core::QObject/;
 
@@ -81,6 +81,16 @@ Qt::Core::QAbstractItemModel
 
 =item  bool insertRows(int row, int count, const QModelIndex & parent = QModelIndex())
 
+=item  QMap<int,QVariant> itemData(const QModelIndex & index)
+
+=item  QList<QModelIndex> match(const QModelIndex & start, int role, const QVariant & value, int hits, QFlags<Qt::MatchFlag> flags)
+
+=item  QList<QModelIndex> match(const QModelIndex & start, int role, const QVariant & value, int hits, QFlags<Qt::MatchFlag> flags = Qt::MatchFlags(Qt::MatchStartsWith|Qt::MatchWrap))
+
+=item  QList<QModelIndex> match(const QModelIndex & start, int role, const QVariant & value, int hits = 1, QFlags<Qt::MatchFlag> flags = Qt::MatchFlags(Qt::MatchStartsWith|Qt::MatchWrap))
+
+=item  QMimeData * mimeData(const QList<QModelIndex> & indexes)
+
 =item  QStringList mimeTypes()
 
 =item  QModelIndex parent(const QModelIndex & child)
@@ -103,6 +113,8 @@ Qt::Core::QAbstractItemModel
 
 =item  void revert()
 
+=item  const QHash<int,QByteArray> & roleNames()
+
 =item  int rowCount(const QModelIndex & parent)
 
 =item  int rowCount(const QModelIndex & parent = QModelIndex())
@@ -114,6 +126,8 @@ Qt::Core::QAbstractItemModel
 =item  bool setHeaderData(int section, Qt::Orientation orientation, const QVariant & value, int role)
 
 =item  bool setHeaderData(int section, Qt::Orientation orientation, const QVariant & value, int role = Qt::EditRole)
+
+=item  bool setItemData(const QModelIndex & index, const QMap<int,QVariant> & roles)
 
 =item  void setSupportedDragActions(QFlags<Qt::DropAction> arg0)
 

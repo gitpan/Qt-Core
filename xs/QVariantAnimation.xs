@@ -1,7 +1,7 @@
 ################################################################
 # THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 #
-# Copyright (C) 2007 - 2011 by Dongxu Ma <dongxu _at_ cpan _dot_ org>
+# Copyright (C) 2007 - 2012 by Dongxu Ma <dongxu _at_ cpan _dot_ org>
 #
 # This library is free software; you can redistribute it and/or 
 # modify it under the same terms as Perl itself.
@@ -131,6 +131,19 @@ PPCODE:
     XSRETURN(1);
     }
 
+## QVector<QPair<double,QVariant> > keyValues()
+void
+QVariantAnimation::keyValues(...)
+PREINIT:
+PPCODE:
+    if (1) {
+      
+    QVector<QPair<double,QVariant> > ret = THIS->keyValues();
+    ST(0) = sv_newmortal();
+    sv_setref_pv(ST(0), "Qt::Core::Template::T029", (void *)new QVector<QPair<double,QVariant> >(ret));
+    XSRETURN(1);
+    }
+
 ## void setDuration(int msecs)
 void
 QVariantAnimation::setDuration(...)
@@ -178,6 +191,18 @@ PPCODE:
       arg00 = (double)SvNV(ST(1));
       arg01 = reinterpret_cast<QVariant *>(SvIV((SV*)SvRV(ST(2))));
     (void)THIS->setKeyValueAt(arg00, *arg01);
+    XSRETURN(0);
+    }
+
+## void setKeyValues(const QVector<QPair<double,QVariant> > & values)
+void
+QVariantAnimation::setKeyValues(...)
+PREINIT:
+QVector<QPair<double,QVariant> > * arg00;
+PPCODE:
+    if (sv_isa(ST(1), "Qt::Core::Template::T029")) {
+      arg00 = reinterpret_cast<QVector<QPair<double,QVariant> > *>(SvIV((SV*)SvRV(ST(1))));
+    (void)THIS->setKeyValues(*arg00);
     XSRETURN(0);
     }
 

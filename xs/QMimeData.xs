@@ -1,7 +1,7 @@
 ################################################################
 # THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 #
-# Copyright (C) 2007 - 2011 by Dongxu Ma <dongxu _at_ cpan _dot_ org>
+# Copyright (C) 2007 - 2012 by Dongxu Ma <dongxu _at_ cpan _dot_ org>
 #
 # This library is free software; you can redistribute it and/or 
 # modify it under the same terms as Perl itself.
@@ -269,6 +269,18 @@ PPCODE:
     XSRETURN(0);
     }
 
+## void setUrls(const QList<QUrl> & urls)
+void
+QMimeData::setUrls(...)
+PREINIT:
+QList<QUrl> * arg00;
+PPCODE:
+    if (sv_isa(ST(1), "Qt::Core::Template::T019")) {
+      arg00 = reinterpret_cast<QList<QUrl> *>(SvIV((SV*)SvRV(ST(1))));
+    (void)THIS->setUrls(*arg00);
+    XSRETURN(0);
+    }
+
 ## QString text()
 void
 QMimeData::text(...)
@@ -279,5 +291,18 @@ PPCODE:
     QString ret = THIS->text();
     ST(0) = sv_newmortal();
     sv_setref_pv(ST(0), "Qt::Core::QString", (void *)new QString(ret));
+    XSRETURN(1);
+    }
+
+## QList<QUrl> urls()
+void
+QMimeData::urls(...)
+PREINIT:
+PPCODE:
+    if (1) {
+      
+    QList<QUrl> ret = THIS->urls();
+    ST(0) = sv_newmortal();
+    sv_setref_pv(ST(0), "Qt::Core::Template::T019", (void *)new QList<QUrl>(ret));
     XSRETURN(1);
     }

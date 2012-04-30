@@ -7,7 +7,7 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_04';
+our $VERSION = '0.01_05';
 use base qw/Qt::Core::QObject/;
 #our @ISA = qw/Qt::Core::QObject/;
 
@@ -65,7 +65,11 @@ Qt::Core::QMimeData
 
 =item  void setText(const QString & text)
 
+=item  void setUrls(const QList<QUrl> & urls)
+
 =item  QString text()
+
+=item  QList<QUrl> urls()
 
 
 =back

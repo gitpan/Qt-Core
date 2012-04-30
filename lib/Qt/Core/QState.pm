@@ -7,7 +7,7 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_04';
+our $VERSION = '0.01_05';
 use base qw/Qt::Core::QAbstractState/;
 #our @ISA = qw/Qt::Core::QAbstractState/;
 
@@ -56,6 +56,8 @@ Qt::Core::QState
 =item  void setErrorState(QAbstractState * state)
 
 =item  void setInitialState(QAbstractState * state)
+
+=item  QList<QAbstractTransition *> transitions()
 
 
 =back

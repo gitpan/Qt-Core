@@ -7,7 +7,7 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_04';
+our $VERSION = '0.01_05';
 use base qw/Qt::Core::QAbstractAnimation/;
 #our @ISA = qw/Qt::Core::QAbstractAnimation/;
 
@@ -41,6 +41,8 @@ Qt::Core::QVariantAnimation
 
 =item  QVariant keyValueAt(qreal step)
 
+=item  QVector<QPair<double,QVariant> > keyValues()
+
 =item  void setDuration(int msecs)
 
 =item  void setEasingCurve(const QEasingCurve & easing)
@@ -48,6 +50,8 @@ Qt::Core::QVariantAnimation
 =item  void setEndValue(const QVariant & value)
 
 =item  void setKeyValueAt(qreal step, const QVariant & value)
+
+=item  void setKeyValues(const QVector<QPair<double,QVariant> > & values)
 
 =item  void setStartValue(const QVariant & value)
 

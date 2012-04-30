@@ -7,7 +7,7 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_04';
+our $VERSION = '0.01_05';
 use base qw/Qt::Core::QObject/;
 #our @ISA = qw/Qt::Core::QObject/;
 
@@ -33,15 +33,21 @@ Qt::Core::QAbstractTransition
 
 =item  void addAnimation(QAbstractAnimation * animation)
 
+=item  QList<QAbstractAnimation *> animations()
+
 =item  QStateMachine * machine()
 
 =item  void removeAnimation(QAbstractAnimation * animation)
 
 =item  void setTargetState(QAbstractState * target)
 
+=item  void setTargetStates(const QList<QAbstractState *> & targets)
+
 =item  QState * sourceState()
 
 =item  QAbstractState * targetState()
+
+=item  QList<QAbstractState *> targetStates()
 
 
 =back

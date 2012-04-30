@@ -1,7 +1,7 @@
 ################################################################
 # THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 #
-# Copyright (C) 2007 - 2011 by Dongxu Ma <dongxu _at_ cpan _dot_ org>
+# Copyright (C) 2007 - 2012 by Dongxu Ma <dongxu _at_ cpan _dot_ org>
 #
 # This library is free software; you can redistribute it and/or 
 # modify it under the same terms as Perl itself.
@@ -156,6 +156,19 @@ PPCODE:
       default:
         Perl_croak(aTHX_ "wrong number/type of arguments passed in");
         break;
+    }
+
+## static QList<QFileInfo> drives()
+void
+QFSFileEngine::drives(...)
+PREINIT:
+PPCODE:
+    if (1) {
+      
+    QList<QFileInfo> ret = THIS->drives();
+    ST(0) = sv_newmortal();
+    sv_setref_pv(ST(0), "Qt::Core::Template::T005", (void *)new QList<QFileInfo>(ret));
+    XSRETURN(1);
     }
 
 ## QAbstractFileEngineIterator * endEntryList()

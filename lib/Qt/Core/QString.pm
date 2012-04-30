@@ -7,7 +7,7 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_04';
+our $VERSION = '0.01_05';
 
 
 # FIXME: operator overload
@@ -180,8 +180,6 @@ Qt::Core::QString
 =item  QString arg(const QString & a1, const QString & a2, const QString & a3, const QString & a4, const QString & a5, const QString & a6, const QString & a7, const QString & a8)
 
 =item  QString arg(const QString & a1, const QString & a2, const QString & a3, const QString & a4, const QString & a5, const QString & a6, const QString & a7, const QString & a8, const QString & a9)
-
-=item  const QChar at(int i)
 
 =item  QChar * begin()
 
@@ -784,6 +782,8 @@ Qt::Core::QString
 =item  ushort toUShort(bool * ok, int base = 10)
 
 =item  ushort toUShort(bool * ok = 0, int base = 10)
+
+=item  QVector<unsigned int> toUcs4()
 
 =item  QString toUpper()
 

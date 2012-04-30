@@ -1,7 +1,7 @@
 ################################################################
 # THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 #
-# Copyright (C) 2007 - 2011 by Dongxu Ma <dongxu _at_ cpan _dot_ org>
+# Copyright (C) 2007 - 2012 by Dongxu Ma <dongxu _at_ cpan _dot_ org>
 #
 # This library is free software; you can redistribute it and/or 
 # modify it under the same terms as Perl itself.
@@ -84,6 +84,19 @@ PPCODE:
     XSRETURN(0);
     }
 
+## QList<QAbstractAnimation *> animations()
+void
+QAbstractTransition::animations(...)
+PREINIT:
+PPCODE:
+    if (1) {
+      
+    QList<QAbstractAnimation *> ret = THIS->animations();
+    ST(0) = sv_newmortal();
+    sv_setref_pv(ST(0), "Qt::Core::Template::T014", (void *)new QList<QAbstractAnimation *>(ret));
+    XSRETURN(1);
+    }
+
 ## QStateMachine * machine()
 void
 QAbstractTransition::machine(...)
@@ -135,6 +148,18 @@ PPCODE:
     XSRETURN(0);
     }
 
+## void setTargetStates(const QList<QAbstractState *> & targets)
+void
+QAbstractTransition::setTargetStates(...)
+PREINIT:
+QList<QAbstractState *> * arg00;
+PPCODE:
+    if (sv_isa(ST(1), "Qt::Core::Template::T013")) {
+      arg00 = reinterpret_cast<QList<QAbstractState *> *>(SvIV((SV*)SvRV(ST(1))));
+    (void)THIS->setTargetStates(*arg00);
+    XSRETURN(0);
+    }
+
 ## QState * sourceState()
 void
 QAbstractTransition::sourceState(...)
@@ -158,5 +183,18 @@ PPCODE:
     QAbstractState * ret = THIS->targetState();
     ST(0) = sv_newmortal();
     sv_setref_pv(ST(0), "Qt::Core::QAbstractState", (void *)ret);
+    XSRETURN(1);
+    }
+
+## QList<QAbstractState *> targetStates()
+void
+QAbstractTransition::targetStates(...)
+PREINIT:
+PPCODE:
+    if (1) {
+      
+    QList<QAbstractState *> ret = THIS->targetStates();
+    ST(0) = sv_newmortal();
+    sv_setref_pv(ST(0), "Qt::Core::Template::T013", (void *)new QList<QAbstractState *>(ret));
     XSRETURN(1);
     }

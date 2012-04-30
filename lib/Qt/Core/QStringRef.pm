@@ -7,7 +7,7 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_04';
+our $VERSION = '0.01_05';
 
 
 # FIXME: operator overload
@@ -34,8 +34,6 @@ Qt::Core::QStringRef
 =item   ~QStringRef()
 
 =item  QStringRef appendTo(QString * string)
-
-=item  const QChar at(int i)
 
 =item  void clear()
 

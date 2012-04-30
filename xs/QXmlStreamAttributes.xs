@@ -1,7 +1,7 @@
 ################################################################
 # THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 #
-# Copyright (C) 2007 - 2011 by Dongxu Ma <dongxu _at_ cpan _dot_ org>
+# Copyright (C) 2007 - 2012 by Dongxu Ma <dongxu _at_ cpan _dot_ org>
 #
 # This library is free software; you can redistribute it and/or 
 # modify it under the same terms as Perl itself.
@@ -190,7 +190,7 @@ PPCODE:
 ################################################################
 # THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 #
-# Copyright (C) 2007 - 2011 by Dongxu Ma <dongxu _at_ cpan _dot_ org>
+# Copyright (C) 2007 - 2012 by Dongxu Ma <dongxu _at_ cpan _dot_ org>
 #
 # This library is free software; you can redistribute it and/or 
 # modify it under the same terms as Perl itself.
@@ -210,20 +210,6 @@ PROTOTYPES: DISABLE
 
 
 
-
-## const QXmlStreamAttribute & at(int i)
-void
-QXmlStreamAttributes::at(...)
-PREINIT:
-int arg00;
-PPCODE:
-    if (SvIOK(ST(1))) {
-      arg00 = (int)SvIV(ST(1));
-    const QXmlStreamAttribute * ret = &THIS->at(arg00);
-    ST(0) = sv_newmortal();
-    sv_setref_pv(ST(0), "Qt::Core::QXmlStreamAttribute", (void *)ret);
-    XSRETURN(1);
-    }
 
 ## int capacity()
 void
@@ -312,6 +298,49 @@ PPCODE:
       
     (void)THIS->detach();
     XSRETURN(0);
+    }
+
+## QVector<QXmlStreamAttribute> & fill(const QXmlStreamAttribute & t, int size)
+## QVector<QXmlStreamAttribute> & fill(const QXmlStreamAttribute & t, int size = -1)
+void
+QXmlStreamAttributes::fill(...)
+PREINIT:
+QXmlStreamAttribute * arg00;
+int arg01;
+QXmlStreamAttribute * arg10;
+int arg11 = -1;
+PPCODE:
+    switch(items) {
+      case 2:
+      {
+        if (sv_isa(ST(1), "Qt::Core::QXmlStreamAttribute")) {
+      arg10 = reinterpret_cast<QXmlStreamAttribute *>(SvIV((SV*)SvRV(ST(1))));
+    QVector<QXmlStreamAttribute> * ret = &THIS->fill(*arg10, arg11);
+    ST(0) = sv_newmortal();
+    sv_setref_pv(ST(0), "Qt::Core::Template::T020", (void *)ret);
+    XSRETURN(1);
+    }
+	else
+            Perl_croak(aTHX_ "wrong number/type of arguments passed in");
+        break;
+      }
+      case 3:
+      {
+        if (sv_isa(ST(1), "Qt::Core::QXmlStreamAttribute") && SvIOK(ST(2))) {
+      arg00 = reinterpret_cast<QXmlStreamAttribute *>(SvIV((SV*)SvRV(ST(1))));
+      arg01 = (int)SvIV(ST(2));
+    QVector<QXmlStreamAttribute> * ret = &THIS->fill(*arg00, arg01);
+    ST(0) = sv_newmortal();
+    sv_setref_pv(ST(0), "Qt::Core::Template::T020", (void *)ret);
+    XSRETURN(1);
+    }
+	else
+            Perl_croak(aTHX_ "wrong number/type of arguments passed in");
+        break;
+      }
+      default:
+        Perl_croak(aTHX_ "wrong number/type of arguments passed in");
+        break;
     }
 
 ## int indexOf(const QXmlStreamAttribute & t, int from)
@@ -425,6 +454,20 @@ PPCODE:
     XSRETURN(1);
     }
 
+## bool isSharedWith(const QVector<QXmlStreamAttribute> & other)
+void
+QXmlStreamAttributes::isSharedWith(...)
+PREINIT:
+QVector<QXmlStreamAttribute> * arg00;
+PPCODE:
+    if (sv_isa(ST(1), "Qt::Core::Template::T020")) {
+      arg00 = reinterpret_cast<QVector<QXmlStreamAttribute> *>(SvIV((SV*)SvRV(ST(1))));
+    bool ret = THIS->isSharedWith(*arg00);
+    ST(0) = sv_newmortal();
+    ST(0) = boolSV(ret);
+    XSRETURN(1);
+    }
+
 ## int lastIndexOf(const QXmlStreamAttribute & t, int from)
 ## int lastIndexOf(const QXmlStreamAttribute & t, int from = -1)
 void
@@ -466,6 +509,34 @@ PPCODE:
       default:
         Perl_croak(aTHX_ "wrong number/type of arguments passed in");
         break;
+    }
+
+## bool operator!=(const QVector<QXmlStreamAttribute> & v)
+void
+QXmlStreamAttributes::operator_not_equal(...)
+PREINIT:
+QVector<QXmlStreamAttribute> * arg00;
+PPCODE:
+    if (sv_isa(ST(1), "Qt::Core::Template::T020")) {
+      arg00 = reinterpret_cast<QVector<QXmlStreamAttribute> *>(SvIV((SV*)SvRV(ST(1))));
+    bool ret = THIS->operator!=(*arg00);
+    ST(0) = sv_newmortal();
+    ST(0) = boolSV(ret);
+    XSRETURN(1);
+    }
+
+## bool operator==(const QVector<QXmlStreamAttribute> & v)
+void
+QXmlStreamAttributes::operator_equal_to(...)
+PREINIT:
+QVector<QXmlStreamAttribute> * arg00;
+PPCODE:
+    if (sv_isa(ST(1), "Qt::Core::Template::T020")) {
+      arg00 = reinterpret_cast<QVector<QXmlStreamAttribute> *>(SvIV((SV*)SvRV(ST(1))));
+    bool ret = THIS->operator==(*arg00);
+    ST(0) = sv_newmortal();
+    ST(0) = boolSV(ret);
+    XSRETURN(1);
     }
 
 ## const QXmlStreamAttribute & operator[](int i)

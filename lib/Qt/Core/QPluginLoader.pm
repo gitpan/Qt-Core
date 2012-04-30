@@ -7,7 +7,7 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_04';
+our $VERSION = '0.01_05';
 use base qw/Qt::Core::QObject/;
 #our @ISA = qw/Qt::Core::QObject/;
 
@@ -50,6 +50,8 @@ Qt::Core::QPluginLoader
 =item  void setFileName(const QString & fileName)
 
 =item  void setLoadHints(QFlags<QLibrary::LoadHint> loadHints)
+
+=item  static QList<QObject *> staticInstances()
 
 =item  bool unload()
 

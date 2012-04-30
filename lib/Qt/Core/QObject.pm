@@ -7,7 +7,7 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_04';
+our $VERSION = '0.01_05';
 
 
 # FIXME: operator overload
@@ -30,6 +30,8 @@ Qt::Core::QObject
 =item   ~QObject()
 
 =item  bool blockSignals(bool b)
+
+=item  const QList<QObject *> & children()
 
 =item  bool connect(const QObject * sender, const char * signal, const char * member, Qt::ConnectionType type)
 
@@ -58,6 +60,8 @@ Qt::Core::QObject
 =item  void dumpObjectInfo()
 
 =item  void dumpObjectTree()
+
+=item  QList<QByteArray> dynamicPropertyNames()
 
 =item  bool event(QEvent * arg0)
 

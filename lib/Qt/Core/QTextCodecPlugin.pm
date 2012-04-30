@@ -7,7 +7,7 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_04';
+our $VERSION = '0.01_05';
 use base qw/Qt::Core::QObject Qt::Core::QTextCodecFactoryInterface/;
 #our @ISA = qw/Qt::Core::QObject Qt::Core::QTextCodecFactoryInterface/;
 
@@ -31,9 +31,15 @@ Qt::Core::QTextCodecPlugin
 
 =item   ~QTextCodecPlugin()
 
+=item  QList<QByteArray> aliases()
+
 =item  QTextCodec * createForMib(int mib)
 
 =item  QTextCodec * createForName(const QByteArray & name)
+
+=item  QList<int> mibEnums()
+
+=item  QList<QByteArray> names()
 
 
 =back

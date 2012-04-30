@@ -1,7 +1,7 @@
 ################################################################
 # THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 #
-# Copyright (C) 2007 - 2011 by Dongxu Ma <dongxu _at_ cpan _dot_ org>
+# Copyright (C) 2007 - 2012 by Dongxu Ma <dongxu _at_ cpan _dot_ org>
 #
 # This library is free software; you can redistribute it and/or 
 # modify it under the same terms as Perl itself.
@@ -178,20 +178,6 @@ PPCODE:
       default:
         Perl_croak(aTHX_ "wrong number/type of arguments passed in");
         break;
-    }
-
-## char at(int i)
-void
-QByteArray::at(...)
-PREINIT:
-int arg00;
-PPCODE:
-    if (SvIOK(ST(1))) {
-      arg00 = (int)SvIV(ST(1));
-    char ret = THIS->at(arg00);
-    ST(0) = sv_newmortal();
-    sv_setpvn(ST(0), (char *)&ret, 1);
-    XSRETURN(1);
     }
 
 ## char * begin()
@@ -2240,6 +2226,20 @@ PPCODE:
     int ret = THIS->size();
     ST(0) = sv_newmortal();
     sv_setiv(ST(0), (IV)ret);
+    XSRETURN(1);
+    }
+
+## QList<QByteArray> split(char sep)
+void
+QByteArray::split(...)
+PREINIT:
+char arg00;
+PPCODE:
+    if (SvPOK(ST(1))) {
+      arg00 = (char)*SvPV_nolen(ST(1));
+    QList<QByteArray> ret = THIS->split(arg00);
+    ST(0) = sv_newmortal();
+    sv_setref_pv(ST(0), "Qt::Core::Template::T000", (void *)new QList<QByteArray>(ret));
     XSRETURN(1);
     }
 

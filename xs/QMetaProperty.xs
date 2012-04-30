@@ -1,7 +1,7 @@
 ################################################################
 # THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 #
-# Copyright (C) 2007 - 2011 by Dongxu Ma <dongxu _at_ cpan _dot_ org>
+# Copyright (C) 2007 - 2012 by Dongxu Ma <dongxu _at_ cpan _dot_ org>
 #
 # This library is free software; you can redistribute it and/or 
 # modify it under the same terms as Perl itself.
@@ -121,15 +121,8 @@ PPCODE:
       }
       case 2:
       {
-        if ((sv_derived_from(ST(1), "Qt::Core::QObject") || ST(1) == &PL_sv_undef)) {
-      if (sv_derived_from(ST(1), "Qt::Core::QObject")) {
-        arg00 = reinterpret_cast<QObject *>(SvIV((SV*)SvRV(ST(1))));
-    }
-    else if (ST(1) == &PL_sv_undef) {
-        arg00 = 0;
-    }
-    else
-        Perl_croak(aTHX_ "arg00 is not of type Qt::Core::QObject");
+        if (sv_isobject(ST(1))) {
+      arg00 = *reinterpret_cast<QObject * *>(SvIV((SV*)SvRV(ST(1))));
     bool ret = THIS->isDesignable(arg00);
     ST(0) = sv_newmortal();
     ST(0) = boolSV(ret);
@@ -166,15 +159,8 @@ PPCODE:
       }
       case 2:
       {
-        if ((sv_derived_from(ST(1), "Qt::Core::QObject") || ST(1) == &PL_sv_undef)) {
-      if (sv_derived_from(ST(1), "Qt::Core::QObject")) {
-        arg00 = reinterpret_cast<QObject *>(SvIV((SV*)SvRV(ST(1))));
-    }
-    else if (ST(1) == &PL_sv_undef) {
-        arg00 = 0;
-    }
-    else
-        Perl_croak(aTHX_ "arg00 is not of type Qt::Core::QObject");
+        if (sv_isobject(ST(1))) {
+      arg00 = *reinterpret_cast<QObject * *>(SvIV((SV*)SvRV(ST(1))));
     bool ret = THIS->isEditable(arg00);
     ST(0) = sv_newmortal();
     ST(0) = boolSV(ret);
@@ -276,15 +262,8 @@ PPCODE:
       }
       case 2:
       {
-        if ((sv_derived_from(ST(1), "Qt::Core::QObject") || ST(1) == &PL_sv_undef)) {
-      if (sv_derived_from(ST(1), "Qt::Core::QObject")) {
-        arg00 = reinterpret_cast<QObject *>(SvIV((SV*)SvRV(ST(1))));
-    }
-    else if (ST(1) == &PL_sv_undef) {
-        arg00 = 0;
-    }
-    else
-        Perl_croak(aTHX_ "arg00 is not of type Qt::Core::QObject");
+        if (sv_isobject(ST(1))) {
+      arg00 = *reinterpret_cast<QObject * *>(SvIV((SV*)SvRV(ST(1))));
     bool ret = THIS->isScriptable(arg00);
     ST(0) = sv_newmortal();
     ST(0) = boolSV(ret);
@@ -321,15 +300,8 @@ PPCODE:
       }
       case 2:
       {
-        if ((sv_derived_from(ST(1), "Qt::Core::QObject") || ST(1) == &PL_sv_undef)) {
-      if (sv_derived_from(ST(1), "Qt::Core::QObject")) {
-        arg00 = reinterpret_cast<QObject *>(SvIV((SV*)SvRV(ST(1))));
-    }
-    else if (ST(1) == &PL_sv_undef) {
-        arg00 = 0;
-    }
-    else
-        Perl_croak(aTHX_ "arg00 is not of type Qt::Core::QObject");
+        if (sv_isobject(ST(1))) {
+      arg00 = *reinterpret_cast<QObject * *>(SvIV((SV*)SvRV(ST(1))));
     bool ret = THIS->isStored(arg00);
     ST(0) = sv_newmortal();
     ST(0) = boolSV(ret);
@@ -366,15 +338,8 @@ PPCODE:
       }
       case 2:
       {
-        if ((sv_derived_from(ST(1), "Qt::Core::QObject") || ST(1) == &PL_sv_undef)) {
-      if (sv_derived_from(ST(1), "Qt::Core::QObject")) {
-        arg00 = reinterpret_cast<QObject *>(SvIV((SV*)SvRV(ST(1))));
-    }
-    else if (ST(1) == &PL_sv_undef) {
-        arg00 = 0;
-    }
-    else
-        Perl_croak(aTHX_ "arg00 is not of type Qt::Core::QObject");
+        if (sv_isobject(ST(1))) {
+      arg00 = *reinterpret_cast<QObject * *>(SvIV((SV*)SvRV(ST(1))));
     bool ret = THIS->isUser(arg00);
     ST(0) = sv_newmortal();
     ST(0) = boolSV(ret);
@@ -473,15 +438,8 @@ QMetaProperty::read(...)
 PREINIT:
 const QObject * arg00;
 PPCODE:
-    if ((sv_derived_from(ST(1), "Qt::Core::QObject") || ST(1) == &PL_sv_undef)) {
-      if (sv_derived_from(ST(1), "Qt::Core::QObject")) {
-        arg00 = reinterpret_cast<QObject *>(SvIV((SV*)SvRV(ST(1))));
-    }
-    else if (ST(1) == &PL_sv_undef) {
-        arg00 = 0;
-    }
-    else
-        Perl_croak(aTHX_ "arg00 is not of type Qt::Core::QObject");
+    if (sv_isobject(ST(1))) {
+      arg00 = *reinterpret_cast<QObject * *>(SvIV((SV*)SvRV(ST(1))));
     QVariant ret = THIS->read(arg00);
     ST(0) = sv_newmortal();
     sv_setref_pv(ST(0), "Qt::Core::QVariant", (void *)new QVariant(ret));

@@ -7,7 +7,7 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_04';
+our $VERSION = '0.01_05';
 
 
 # FIXME: operator overload
@@ -37,6 +37,8 @@ Qt::Core::QUrl
 
 =item  void addQueryItem(const QString & key, const QString & value)
 
+=item  QList<QByteArray> allEncodedQueryItemValues(const QByteArray & key)
+
 =item  QStringList allQueryItemValues(const QString & key)
 
 =item  QString authority()
@@ -56,6 +58,8 @@ Qt::Core::QUrl
 =item  QByteArray encodedQuery()
 
 =item  QByteArray encodedQueryItemValue(const QByteArray & key)
+
+=item  QList<QPair<QByteArray,QByteArray> > encodedQueryItems()
 
 =item  QByteArray encodedUserName()
 
@@ -119,6 +123,8 @@ Qt::Core::QUrl
 
 =item  QString queryItemValue(const QString & key)
 
+=item  QList<QPair<QString,QString> > queryItems()
+
 =item  char queryPairDelimiter()
 
 =item  char queryValueDelimiter()
@@ -147,6 +153,8 @@ Qt::Core::QUrl
 
 =item  void setEncodedQuery(const QByteArray & query)
 
+=item  void setEncodedQueryItems(const QList<QPair<QByteArray,QByteArray> > & query)
+
 =item  void setEncodedUrl(const QByteArray & url)
 
 =item  void setEncodedUrl(const QByteArray & url, QUrl::ParsingMode mode)
@@ -166,6 +174,8 @@ Qt::Core::QUrl
 =item  void setPort(int port)
 
 =item  void setQueryDelimiters(char valueDelimiter, char pairDelimiter)
+
+=item  void setQueryItems(const QList<QPair<QString,QString> > & query)
 
 =item  void setScheme(const QString & scheme)
 

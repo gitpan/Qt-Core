@@ -7,7 +7,7 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.01_04';
+our $VERSION = '0.01_05';
 
 
 # FIXME: operator overload
@@ -30,8 +30,6 @@ Qt::Core::QBitArray
 =item   QBitArray(int size, bool val)
 
 =item   QBitArray(int size, bool val = false)
-
-=item  bool at(int i)
 
 =item  void clear()
 

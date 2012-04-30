@@ -1,7 +1,7 @@
 ################################################################
 # THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 #
-# Copyright (C) 2007 - 2011 by Dongxu Ma <dongxu _at_ cpan _dot_ org>
+# Copyright (C) 2007 - 2012 by Dongxu Ma <dongxu _at_ cpan _dot_ org>
 #
 # This library is free software; you can redistribute it and/or 
 # modify it under the same terms as Perl itself.
@@ -117,6 +117,20 @@ PPCODE:
     QLocale ret = THIS->c();
     ST(0) = sv_newmortal();
     sv_setref_pv(ST(0), "Qt::Core::QLocale", (void *)new QLocale(ret));
+    XSRETURN(1);
+    }
+
+## static QList<QLocale::Country> countriesForLanguage(QLocale::Language lang)
+void
+QLocale::countriesForLanguage(...)
+PREINIT:
+QLocale::Language arg00;
+PPCODE:
+    if (SvIOK(ST(1))) {
+      arg00 = (QLocale::Language)SvIV(ST(1));
+    QList<QLocale::Country> ret = THIS->countriesForLanguage(arg00);
+    ST(0) = sv_newmortal();
+    sv_setref_pv(ST(0), "Qt::Core::Template::T023", (void *)new QList<QLocale::Country>(ret));
     XSRETURN(1);
     }
 

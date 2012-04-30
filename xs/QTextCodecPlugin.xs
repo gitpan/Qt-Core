@@ -1,7 +1,7 @@
 ################################################################
 # THE FOLLOWING CODE IS AUTOMATED, ANY MODIFICATION WILL BE LOST!
 #
-# Copyright (C) 2007 - 2011 by Dongxu Ma <dongxu _at_ cpan _dot_ org>
+# Copyright (C) 2007 - 2012 by Dongxu Ma <dongxu _at_ cpan _dot_ org>
 #
 # This library is free software; you can redistribute it and/or 
 # modify it under the same terms as Perl itself.
@@ -65,6 +65,19 @@ CODE:
     if(THIS != 0 && !SvREADONLY(SvRV(ST(0))))
         delete THIS;
 
+## QList<QByteArray> aliases()
+void
+QTextCodecPlugin::aliases(...)
+PREINIT:
+PPCODE:
+    if (1) {
+      
+    QList<QByteArray> ret = THIS->aliases();
+    ST(0) = sv_newmortal();
+    sv_setref_pv(ST(0), "Qt::Core::Template::T000", (void *)new QList<QByteArray>(ret));
+    XSRETURN(1);
+    }
+
 ## QTextCodec * createForMib(int mib)
 void
 QTextCodecPlugin::createForMib(...)
@@ -90,5 +103,31 @@ PPCODE:
     QTextCodec * ret = THIS->createForName(*arg00);
     ST(0) = sv_newmortal();
     sv_setref_pv(ST(0), "Qt::Core::QTextCodec", (void *)ret);
+    XSRETURN(1);
+    }
+
+## QList<int> mibEnums()
+void
+QTextCodecPlugin::mibEnums(...)
+PREINIT:
+PPCODE:
+    if (1) {
+      
+    QList<int> ret = THIS->mibEnums();
+    ST(0) = sv_newmortal();
+    sv_setref_pv(ST(0), "Qt::Core::Template::T001", (void *)new QList<int>(ret));
+    XSRETURN(1);
+    }
+
+## QList<QByteArray> names()
+void
+QTextCodecPlugin::names(...)
+PREINIT:
+PPCODE:
+    if (1) {
+      
+    QList<QByteArray> ret = THIS->names();
+    ST(0) = sv_newmortal();
+    sv_setref_pv(ST(0), "Qt::Core::Template::T000", (void *)new QList<QByteArray>(ret));
     XSRETURN(1);
     }
